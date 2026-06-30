@@ -2,40 +2,24 @@
 
 # Educare
 [![pipeline status](https://git.drupalcode.org/project/educare/badges/1.0.x/pipeline.svg)](https://git.drupalcode.org/project/educare/-/pipelines)
-[![Educare](https://img.shields.io/badge/Educare-1.0.0--alpha2-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/educare/-/pipelines?ref=1.0.0-alpha2)
-[![Automated Functional Testing](https://git.drupalcode.org/project/varbase_project/badges/11.0.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_project/-/pipelines)
+[![Educare](https://img.shields.io/badge/Educare-1.0.x--dev-0d6efc?labelColor=001d38&style=flat-square)](https://www.drupal.org/project/educare)
 
-A starter site template recipe for Varbase, providing a modern recipe-first approach to initializing Varbase sites.
+A Drupal CMS site template recipe for education websites (schools, universities, academies, e-learning), built the Varbase recipe-first way.
 
-## Overview
+## Requirement
 
-Educare builds on [Drupal CMS Starter](https://www.drupal.org/project/drupal_cms_starter) and assembles a complete site with essential Varbase features through the Recipe Installer Kit.
+After creating a **Varbase 11** or a **Drupal CMS** project with DDEV, require Educare and apply the recipe:
 
-## Included Features
+```bash
+ddev composer require drupal/educare:1.0.x-dev
+ddev drush recipe ../recipes/contrib/educare
+ddev drush cache:rebuild
+```
 
-This recipe bundles:
-
-- **Drupal CMS Core**: Admin UI, Anti-spam, Authentication, Blog, Forms, Media, Privacy, SEO tools
-- **Varbase Base**: Admin interface and theming foundation
-- **Email**: Easy Email Express integration
-- **Theme**: Vartheme BS5 (Bootstrap 5)
-- **Utilities**: Project Browser for managing extensions
-
-## Default Configuration
-
-- Front page: `/home`
-- 404 page: `/404`
-- Default theme: Vartheme BS5
-- Blog featured images: Required
-- Canvas components: Available for all content types
-- Contact form: Modal confirmation
-- Page menus: Main, Footer, Utility
-
-## Usage
-
-Install via Drupal Recipe Installer Kit. After installation, you'll be redirected to `/admin/dashboard/welcome`.
+The recipe assembles a complete site through the Drupal Recipe Installer Kit and ships the [vartheme_bs5_educare](https://www.drupal.org/project/vartheme_bs5_educare) Bootstrap 5 front-end theme.
 
 ## Learn More
 
-- [Issue #3567072](https://www.drupal.org/project/educare/issues/3567072)
+- [Issue #3607227](https://www.drupal.org/project/educare/issues/3607227)
 - [Drupal Recipes](https://www.drupal.org/docs/extending-drupal/drupal-recipes)
+- [Varbase Starter](https://www.drupal.org/project/varbase_starter)
