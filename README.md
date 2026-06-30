@@ -6,9 +6,15 @@
 
 A Drupal CMS site template recipe for education websites (schools, universities, academies, e-learning), built the Varbase recipe-first way.
 
-## Requirement
+## Install with Composer
 
-After creating a **Varbase 11** or a **Drupal CMS** project with DDEV, require Educare and apply the recipe:
+To install the most recent release of Varbase 11.0.x, run this command:
+
+```bash
+composer create-project drupal/varbase_project:~11.0.0 PROJECT_DIR_NAME --no-dev --no-interaction
+```
+
+Then require the recipe and apply it with DDEV:
 
 ```bash
 ddev composer require drupal/educare:1.0.x-dev
@@ -16,7 +22,6 @@ ddev drush recipe ../recipes/contrib/educare
 ddev drush cache:rebuild
 ```
 
-The recipe assembles a complete site through the Drupal Recipe Installer Kit and ships the [vartheme_bs5_educare](https://www.drupal.org/project/vartheme_bs5_educare) Bootstrap 5 front-end theme.
 
 ## Learn More
 
