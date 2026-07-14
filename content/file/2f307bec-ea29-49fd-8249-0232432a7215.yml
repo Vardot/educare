@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 2f307bec-ea29-49fd-8249-0232432a7215
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: quote-mark-orange.png
+  uri:
+  - value: public://2026-07/quote-mark-orange.png
+  filemime:
+  - value: image/png
+  filesize:
+  - value: 691
+  status:
+  - value: true

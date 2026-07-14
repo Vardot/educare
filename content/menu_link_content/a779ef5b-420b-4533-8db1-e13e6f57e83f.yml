@@ -1,0 +1,48 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: a779ef5b-420b-4533-8db1-e13e6f57e83f
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    d6d4c475-2a54-4c8c-bf68-ae0e40ccb63d: menu_link_content
+    4c26d116-854e-4cfa-af90-d4cf1a32a91e: canvas_page
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log_message:
+    -
+      value: 'Created new Custom menu link'
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: About
+  menu_name:
+    -
+      value: secondary
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: 4c26d116-854e-4cfa-af90-d4cf1a32a91e
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -50
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:d6d4c475-2a54-4c8c-bf68-ae0e40ccb63d'
+  revision_translation_affected:
+    -
+      value: true

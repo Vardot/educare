@@ -1,0 +1,632 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: ed0619b8-e234-44cc-bd15-9b363deaf302
+  default_langcode: en
+  depends:
+    6348a550-a830-4c67-9262-cb29df062872: file
+    960f66fb-613d-41bb-b2ec-201e888fd0b7: media
+    15f79701-5664-431f-b53a-1de467eac0a2: file
+    e243ed0a-1a7f-41dd-9cc0-0f3485b4d45f: media
+    1eeafcc5-fd89-4ef3-856e-6019c7be0e22: file
+    734ebd92-74a9-4e14-93a3-b428af41f89e: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Updated the Components field'
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Tech & AI Innovation Conference'
+  components:
+    -
+      uuid: f7f76352-b727-45d2-bc0a-3ed06ca98084
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: '100'
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: f7f76352-b727-45d2-bc0a-3ed06ca98084
+      slot: header_slot
+      uuid: d570f317-ee5f-4a2b-971c-888402b006ad
+      component_id: block.system_breadcrumb_block
+      inputs:
+        label: Breadcrumbs
+        label_display: '0'
+    -
+      parent_uuid: f7f76352-b727-45d2-bc0a-3ed06ca98084
+      slot: header_slot
+      uuid: 6224f68e-a42b-4817-a4b7-a9fdc7bbd69e
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Tech & AI Innovation Conference'
+        level: 1
+        text_size: h2
+        target: _self
+    -
+      parent_uuid: f7f76352-b727-45d2-bc0a-3ed06ca98084
+      slot: col_1
+      uuid: bfc64b95-9754-4b5f-8088-81dd2a2e7a7f
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 960f66fb-613d-41bb-b2ec-201e888fd0b7
+            target_type: media
+        target: self
+        ratio: ratio-auto
+        fit: object-fit-cover
+        align: me-auto
+        width: w-auto
+        rounded: none
+        loading: lazy
+    -
+      uuid: 5d8cf60f-1e1f-42a2-8134-b5513d6751a9
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 50-50
+        gutter: 'gx-4 gy-4'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_block_end: mb-5
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 5d8cf60f-1e1f-42a2-8134-b5513d6751a9
+      slot: header_slot
+      uuid: 788ff584-f1a5-4eff-ab41-e63ee0d67bbb
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 60-40
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-end
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 788ff584-f1a5-4eff-ab41-e63ee0d67bbb
+      slot: col_1
+      uuid: 2cfd490d-2ce1-45be-b786-a7c56b85c98a
+      component_id: sdc.vartheme_bs5_educare.subtitle
+      inputs:
+        subtitle_text: Stories
+        font_size: small
+        font_weight: fw-semibold
+        text_transform: text-uppercase
+        line_position: start
+        line_size: sm
+    -
+      parent_uuid: 788ff584-f1a5-4eff-ab41-e63ee0d67bbb
+      slot: col_1
+      uuid: 29862bd6-20fe-49f1-aba2-11008f46c611
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'How Our Students Are Thriving'
+        level: 2
+        target: _self
+    -
+      parent_uuid: 788ff584-f1a5-4eff-ab41-e63ee0d67bbb
+      slot: col_1
+      uuid: ae8309c7-6bfe-462f-8417-675b8d97a1a4
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Preparing students to make meaningful contributions to society as engaged citizens and leaders in a complex world</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: 788ff584-f1a5-4eff-ab41-e63ee0d67bbb
+      slot: col_2
+      uuid: dacd0442-47f5-4a42-8bfa-ef184e154723
+      component_id: sdc.vartheme_bs5_educare.button
+      inputs:
+        variant: btn-primary
+        outline: false
+        size: btn-md
+        label: 'SEE ALL STORIES'
+        href:
+          uri: 'internal:/events/'
+          options: {  }
+        target: self
+        disabled: false
+        icon: chevron-right
+        icon_first: true
+        icon_circle: true
+        icon_circle_white_text: false
+        alignment: inline
+        full_width: false
+        radius: rounded-1
+        icon_circle_grow: true
+    -
+      parent_uuid: 788ff584-f1a5-4eff-ab41-e63ee0d67bbb
+      slot: col_2
+      uuid: 42cd846b-6113-4f65-b81f-8a9b7d24b26c
+      component_id: sdc.vartheme_bs5_educare.button
+      inputs:
+        variant: btn-primary
+        outline: false
+        size: btn-md
+        label: 'VIEW ALL EVENTS'
+        href:
+          uri: 'internal:/events/'
+          options: {  }
+        target: self
+        disabled: false
+        icon: chevron-right
+        icon_first: true
+        icon_circle: true
+        icon_circle_white_text: false
+        alignment: inline
+        full_width: false
+        radius: rounded-1
+        icon_circle_grow: true
+    -
+      parent_uuid: 5d8cf60f-1e1f-42a2-8134-b5513d6751a9
+      slot: col_1
+      uuid: 269cb2d2-9e19-4f7d-b96c-2b13512fef09
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-03'
+        title: 'Open Day. Meet faculty, tour campus'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 5d8cf60f-1e1f-42a2-8134-b5513d6751a9
+      slot: col_1
+      uuid: 6f317561-cdf9-42ef-91fd-356ee5013f3d
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-3
+    -
+      parent_uuid: 5d8cf60f-1e1f-42a2-8134-b5513d6751a9
+      slot: col_1
+      uuid: b054b191-30eb-470c-b362-b96af902a128
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-10'
+        title: 'University Launches New Artificial Intelligence Research Center'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 5d8cf60f-1e1f-42a2-8134-b5513d6751a9
+      slot: col_1
+      uuid: 7c6c1dc6-5068-4aee-99d0-4b7d4f616eb0
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-3
+    -
+      parent_uuid: 5d8cf60f-1e1f-42a2-8134-b5513d6751a9
+      slot: col_1
+      uuid: be2821fc-d34b-42c1-a250-99a8a848f0db
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-08'
+        title: 'University Launches New Artificial Intelligence Research Center'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 5d8cf60f-1e1f-42a2-8134-b5513d6751a9
+      slot: col_1
+      uuid: ed947645-002c-4401-9995-00ee7497ae1c
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-3
+    -
+      parent_uuid: 5d8cf60f-1e1f-42a2-8134-b5513d6751a9
+      slot: col_1
+      uuid: 17c945ba-5f5c-4825-81c2-8889ea0885c0
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-07'
+        title: 'University Launches New Artificial Intelligence Research Center'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 5d8cf60f-1e1f-42a2-8134-b5513d6751a9
+      slot: col_2
+      uuid: 22869fa9-f939-4026-9c7f-8d7948d0121e
+      component_id: sdc.vartheme_bs5_educare.card-featured
+      inputs:
+        media_position: start
+        media_image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e243ed0a-1a7f-41dd-9cc0-0f3485b4d45f
+            target_type: media
+        ratio: ratio-auto
+        fit: object-fit-cover
+        card_border: false
+        corner_style: rounded-0
+        show_action_icon: true
+        padded: false
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/african-and-african-american-studies/'
+          options: {  }
+        link_target: default
+        content_vertical_alignment: align-items-center
+        gutters_between: 'g-2 g-lg-3'
+        columns_xs_size: '06_06'
+        columns_sm_size: '06_06'
+        columns_md_size: '06_06'
+        columns_lg_size: '06_06'
+        columns_xl_size: '06_06'
+        columns_xxl_size: '06_06'
+    -
+      parent_uuid: 22869fa9-f939-4026-9c7f-8d7948d0121e
+      slot: content
+      uuid: b3a85c07-e468-4b82-b714-4c4af3dbf63d
+      component_id: sdc.vartheme_bs5_educare.date
+      inputs:
+        text_color: text-body
+        size: fs-6
+    -
+      parent_uuid: 22869fa9-f939-4026-9c7f-8d7948d0121e
+      slot: content
+      uuid: a6bf593f-ba21-48c9-be2c-77cf5a91303e
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'University Launches New Artificial Intelligence Research Center'
+        level: 5
+        target: _self
+    -
+      parent_uuid: 5d8cf60f-1e1f-42a2-8134-b5513d6751a9
+      slot: col_2
+      uuid: 457e280e-ac70-46c3-a273-a497130304ca
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-2
+    -
+      parent_uuid: 5d8cf60f-1e1f-42a2-8134-b5513d6751a9
+      slot: col_2
+      uuid: de9ec5b6-584b-4e8f-9677-124033999005
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-1
+    -
+      parent_uuid: 5d8cf60f-1e1f-42a2-8134-b5513d6751a9
+      slot: col_2
+      uuid: f9f3efdd-0bb8-4725-8d71-4f315c18c016
+      component_id: sdc.vartheme_bs5_educare.card-featured
+      inputs:
+        media_position: start
+        media_image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 734ebd92-74a9-4e14-93a3-b428af41f89e
+            target_type: media
+        ratio: ratio-auto
+        fit: object-fit-cover
+        card_border: false
+        corner_style: rounded-0
+        show_action_icon: true
+        padded: false
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/african-and-african-american-studies/'
+          options: {  }
+        link_target: default
+        content_vertical_alignment: align-items-center
+        gutters_between: 'g-2 g-lg-3'
+        columns_xs_size: '06_06'
+        columns_sm_size: '06_06'
+        columns_md_size: '06_06'
+        columns_lg_size: '06_06'
+        columns_xl_size: '06_06'
+        columns_xxl_size: '06_06'
+    -
+      parent_uuid: f9f3efdd-0bb8-4725-8d71-4f315c18c016
+      slot: content
+      uuid: 9ff0ac30-4c65-4a9c-90a2-2ef48fa2dee9
+      component_id: sdc.vartheme_bs5_educare.date
+      inputs:
+        text_color: text-body
+        size: fs-6
+    -
+      parent_uuid: f9f3efdd-0bb8-4725-8d71-4f315c18c016
+      slot: content
+      uuid: ea315950-8e7c-4a81-9634-bbd2750b21ce
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'University Launches New Artificial Intelligence Research Center'
+        level: 5
+        target: _self
+    -
+      uuid: fa117bf1-1b24-4950-8244-c804e5614e21
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 33-33-33
+        gutter: 'gx-4 gy-4'
+        padding_block_start: pt-3
+        padding_block_end: pb-2
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: fa117bf1-1b24-4950-8244-c804e5614e21
+      slot: col_1
+      uuid: 4da9dc6f-ca33-4f43-8aeb-027ab5c32896
+      component_id: sdc.vartheme_bs5_educare.card-action-text
+      inputs:
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/admissions/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 4da9dc6f-ca33-4f43-8aeb-027ab5c32896
+      slot: content
+      uuid: 8ac6872a-fb54-4998-bc56-6d5933590c93
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: Admissions
+        level: 5
+        target: _self
+    -
+      parent_uuid: 4da9dc6f-ca33-4f43-8aeb-027ab5c32896
+      slot: content
+      uuid: 8aef3641-6720-41da-a38b-856a16d1ef6e
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 4da9dc6f-ca33-4f43-8aeb-027ab5c32896
+      slot: content
+      uuid: e35ad20f-ffb8-4254-80f3-e353893110d9
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: fa117bf1-1b24-4950-8244-c804e5614e21
+      slot: col_2
+      uuid: 54e2adee-d5b5-4f67-893e-e882b58298a1
+      component_id: sdc.vartheme_bs5_educare.card-action-text
+      inputs:
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/programs/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 54e2adee-d5b5-4f67-893e-e882b58298a1
+      slot: content
+      uuid: 2f623267-5a99-4555-b453-c9a0e3c851fd
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: Programs
+        level: 5
+        target: _self
+    -
+      parent_uuid: 54e2adee-d5b5-4f67-893e-e882b58298a1
+      slot: content
+      uuid: 17284563-bed1-4aea-973e-5d622ffb3fea
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 54e2adee-d5b5-4f67-893e-e882b58298a1
+      slot: content
+      uuid: 485450c1-d3a1-429a-a3f1-4a8d7a5ed78f
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: fa117bf1-1b24-4950-8244-c804e5614e21
+      slot: col_3
+      uuid: d86a76fa-4675-486b-a7d6-725200731c3c
+      component_id: sdc.vartheme_bs5_educare.card-action-text
+      inputs:
+        show_action_icon: true
+        card_border: false
+        background_color: bg-dark
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/contact-us'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: d86a76fa-4675-486b-a7d6-725200731c3c
+      slot: content
+      uuid: 146f825f-f2be-4918-a2ab-dc777cf343dd
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Contact Us'
+        level: 5
+        text_color: text-white
+        target: _self
+    -
+      parent_uuid: d86a76fa-4675-486b-a7d6-725200731c3c
+      slot: content
+      uuid: 76d66f24-a431-4001-b444-41391efdb0bb
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: d86a76fa-4675-486b-a7d6-725200731c3c
+      slot: content
+      uuid: 5ecc5412-6b04-44fd-8321-9f1564be0997
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-white
+  path:
+    -
+      alias: /tech-ai-innovation-conference
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

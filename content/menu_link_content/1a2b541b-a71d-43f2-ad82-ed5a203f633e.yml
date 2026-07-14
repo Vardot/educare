@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 1a2b541b-a71d-43f2-ad82-ed5a203f633e
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    d0201df4-97a0-40b8-bfcb-756bdd1a1b20: menu_link_content
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log_message:
+    -
+      value: 'Created new Custom menu link'
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'International Students'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:#'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:d0201df4-97a0-40b8-bfcb-756bdd1a1b20'
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,82 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 2f5be1a8-cd0c-4432-8578-b7bbddd6f832
+  bundle: event
+  default_langcode: en
+  depends:
+    a071170e-0d41-4eeb-8381-34ea1df984e8: taxonomy_term
+    d022bed1-e3ad-43ab-89a0-c35c4e898359: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new Event'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Sports Scholarship Trials'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /events/sports-scholarship-trials
+      langcode: en
+  body:
+    -
+      value: |-
+        <p>Trials for the sports scholarship programme, across athletics, football, swimming and rowing.</p>
+
+        <p>The doors are open, and the day is built for you to ask the questions a prospectus cannot answer.</p>
+
+        <p>Current students run much of the day, so what you hear about the place comes from the people actually living in it.</p>
+
+        <p>The morning opens with a short introduction to the programme, so that anyone arriving without context is not left behind. From there the day splits: sessions run in parallel, and you are free to move between them.</p>
+
+        <p>Faculty from across the department take part, alongside researchers and, where the subject calls for it, partners from outside the university. They are here to be asked difficult questions, and the good ones tend to come from the floor rather than the panel.</p>
+
+        <p>"The people who get the most out of a day like this are the ones who come with a question they actually care about," says one of the organisers. "The programme is a scaffold. The conversations are the thing."</p>
+
+        <p>Lunch and refreshments are provided, and the breaks are deliberately long: most of what people remember from these events happens between the sessions rather than during them.</p>
+
+        <p>The venue is <strong>The Schermerhorn Building, Room 214, North Campus</strong>. It is step-free throughout, a hearing loop is available, and if you have an access requirement we would rather hear about it in advance than improvise on the day.</p>
+
+        <p>Places are limited and they do go. If you would like to come, <a href="/contact-us">get in touch with the team</a> and we will hold you a place and send the joining details a week beforehand.</p>
+
+        <p>If you cannot make this one, the programme runs through the year, and the <a href="/events">events listing</a> carries everything that is coming up next.</p>
+      format: full_html
+      summary: ''
+  field_description:
+    -
+      value: 'Trials for the sports scholarship programme, across athletics, football, swimming and rowing.'
+  field_event_categories:
+    -
+      entity: a071170e-0d41-4eeb-8381-34ea1df984e8
+  field_location:
+    -
+      value: 'The Schermerhorn Building, Room 214, North Campus'
+  field_tags:
+    -
+      entity: d022bed1-e3ad-43ab-89a0-c35c4e898359
+  field_when:
+    -
+      value: 1794034800
+      end_value: 1794056400
+      duration: 360
+      rrule: 0
+      rrule_index: 0
+      timezone: ''

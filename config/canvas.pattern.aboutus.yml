@@ -1,0 +1,107 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_educare.heading
+    - canvas.component.sdc.vartheme_bs5_educare.image
+    - canvas.component.sdc.vartheme_bs5_educare.section
+    - canvas.component.sdc.vartheme_bs5_educare.subtitle
+    - canvas.component.sdc.vartheme_bs5_educare.text
+    - field.field.media.image.field_media_image
+    - field.field.media.svg_image.field_media_svg_image
+    - filter.format.canvas_html_block
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - media.type.svg_image
+  module:
+    - file
+    - media
+    - options
+    - text
+id: aboutus
+label: 'About Us'
+component_tree:
+  dd6b70fb-c5e2-4ee7-94bd-e792e3f1ec0a:
+    uuid: dd6b70fb-c5e2-4ee7-94bd-e792e3f1ec0a
+    component_id: sdc.vartheme_bs5_educare.section
+    component_version: 9b679273be9319ad
+    inputs:
+      bg_edge2edge: false
+      container_type: none
+      background_color: none
+      text_color: auto
+      background_overlay: none
+      columns: 67-33
+      gutter: 'gx-5 gy-5'
+      padding_block_start: pt-5
+      padding_block_end: pb-5
+      padding_inline_start: ps-0
+      padding_inline_end: pe-0
+      margin_block_start: mt-5
+      margin_block_end: mb-0
+      margin_inline_start: ms-0
+      margin_inline_end: me-0
+      shadow: none
+      radius: none
+      border: none
+      border_color: none
+      border_width: none
+      vertical_alignment: align-items-start
+      horizontal_alignment: text-start
+      section_header: false
+      section_footer: false
+      aos_animation: none
+      aos_duration: default
+      aos_delay: '0'
+      aos_once: true
+  d3c8814b-15e8-447e-bfc6-0480823dfc40:
+    parent_uuid: dd6b70fb-c5e2-4ee7-94bd-e792e3f1ec0a
+    slot: col_1
+    uuid: d3c8814b-15e8-447e-bfc6-0480823dfc40
+    component_id: sdc.vartheme_bs5_educare.image
+    component_version: 20b07c548b4cf729
+    inputs:
+      media:
+        target_id: '9'
+      target: self
+      ratio: ratio-auto
+      fit: object-fit-cover
+      align: me-auto
+      width: w-auto
+      rounded: none
+      loading: lazy
+  fe2c547b-9eda-43c3-9c02-96b238059416:
+    parent_uuid: dd6b70fb-c5e2-4ee7-94bd-e792e3f1ec0a
+    slot: col_2
+    uuid: fe2c547b-9eda-43c3-9c02-96b238059416
+    component_id: sdc.vartheme_bs5_educare.subtitle
+    component_version: b86e67a882361219
+    inputs:
+      subtitle_text: 'about us'
+      font_size: small
+      font_weight: fw-semibold
+      text_transform: text-uppercase
+      line_position: start
+      line_size: sm
+  5f21c150-449f-4c75-a80d-c41dfb4c1356:
+    parent_uuid: dd6b70fb-c5e2-4ee7-94bd-e792e3f1ec0a
+    slot: col_2
+    uuid: 5f21c150-449f-4c75-a80d-c41dfb4c1356
+    component_id: sdc.vartheme_bs5_educare.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: 'When Dreams Align With the Right Chance, the Possibilities Become Endless'
+      level: 2
+      target: _self
+  6057c4f3-0799-43f2-89fe-90e91587e676:
+    parent_uuid: dd6b70fb-c5e2-4ee7-94bd-e792e3f1ec0a
+    slot: col_2
+    uuid: 6057c4f3-0799-43f2-89fe-90e91587e676
+    component_id: sdc.vartheme_bs5_educare.text
+    component_version: c4ddb22de87220b3
+    inputs:
+      text:
+        value: '<p>Founded in 1850, Eduzin is a community-driven institution renowned for its unique contributions.</p>'
+        format: canvas_html_block
+      text_size: fs-6
+      text_color: text-muted

@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 808dc349-4f2a-4088-bc08-9b52ae02626a
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: student-studying-at-a-computer.png
+  uri:
+  - value: public://2026-07/student-studying-at-a-computer.png
+  filemime:
+  - value: image/png
+  filesize:
+  - value: 190848
+  status:
+  - value: true

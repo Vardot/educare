@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ebfecdc5-8300-413c-b437-fc7d9552e597
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: quote-mark-light.png
+  uri:
+  - value: public://2026-07/quote-mark-light.png
+  filemime:
+  - value: image/png
+  filesize:
+  - value: 448
+  status:
+  - value: true

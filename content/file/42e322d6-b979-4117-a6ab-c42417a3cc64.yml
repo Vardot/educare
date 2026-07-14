@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 42e322d6-b979-4117-a6ab-c42417a3cc64
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: two-students-holding-books-in-the-library.jpg
+  uri:
+  - value: public://2026-06/two-students-holding-books-in-the-library.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 532467
+  status:
+  - value: true

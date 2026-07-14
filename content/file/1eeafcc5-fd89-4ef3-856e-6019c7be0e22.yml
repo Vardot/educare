@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 1eeafcc5-fd89-4ef3-856e-6019c7be0e22
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: students-high-fiving-in-the-library.png
+  uri:
+  - value: public://2026-07/students-high-fiving-in-the-library.png
+  filemime:
+  - value: image/png
+  filesize:
+  - value: 116142
+  status:
+  - value: true

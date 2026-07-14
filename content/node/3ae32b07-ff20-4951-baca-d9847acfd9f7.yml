@@ -1,0 +1,82 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3ae32b07-ff20-4951-baca-d9847acfd9f7
+  bundle: event
+  default_langcode: en
+  depends:
+    123d69ff-1621-4b9b-bc39-0262123c4dd5: taxonomy_term
+    14147722-2756-49c0-9c5e-890af1f4d2c2: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new Event'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Careers in Public Health Panel'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /events/careers-public-health-panel
+      langcode: en
+  body:
+    -
+      value: |-
+        <p>Practitioners from epidemiology, policy and health protection on what the work is really like.</p>
+
+        <p>An evening for the conversations that are hard to schedule and easy to underestimate.</p>
+
+        <p>Clinicians and researchers present together, which means the evidence and the practice are discussed in the same room, by people who do not always agree.</p>
+
+        <p>The morning opens with a short introduction to the programme, so that anyone arriving without context is not left behind. From there the day splits: sessions run in parallel, and you are free to move between them.</p>
+
+        <p>Faculty from across the department take part, alongside researchers and, where the subject calls for it, partners from outside the university. They are here to be asked difficult questions, and the good ones tend to come from the floor rather than the panel.</p>
+
+        <p>"The people who get the most out of a day like this are the ones who come with a question they actually care about," says one of the organisers. "The programme is a scaffold. The conversations are the thing."</p>
+
+        <p>Lunch and refreshments are provided, and the breaks are deliberately long: most of what people remember from these events happens between the sessions rather than during them.</p>
+
+        <p>The venue is <strong>The Engineering Building, Lab 3, South Campus</strong>. It is step-free throughout, a hearing loop is available, and if you have an access requirement we would rather hear about it in advance than improvise on the day.</p>
+
+        <p>Places are limited and they do go. If you would like to come, <a href="/contact-us">get in touch with the team</a> and we will hold you a place and send the joining details a week beforehand.</p>
+
+        <p>If you cannot make this one, the programme runs through the year, and the <a href="/events">events listing</a> carries everything that is coming up next.</p>
+      format: full_html
+      summary: ''
+  field_description:
+    -
+      value: 'Practitioners from epidemiology, policy and health protection on what the work is really like.'
+  field_event_categories:
+    -
+      entity: 123d69ff-1621-4b9b-bc39-0262123c4dd5
+  field_location:
+    -
+      value: 'The Engineering Building, Lab 3, South Campus'
+  field_tags:
+    -
+      entity: 14147722-2756-49c0-9c5e-890af1f4d2c2
+  field_when:
+    -
+      value: 1799132400
+      end_value: 1799139600
+      duration: 120
+      rrule: 0
+      rrule_index: 0
+      timezone: ''

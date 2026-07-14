@@ -1,0 +1,209 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_educare.button
+    - canvas.component.sdc.vartheme_bs5_educare.figure
+    - canvas.component.sdc.vartheme_bs5_educare.heading
+    - canvas.component.sdc.vartheme_bs5_educare.section
+    - canvas.component.sdc.vartheme_bs5_educare.spacer
+    - canvas.component.sdc.vartheme_bs5_educare.subtitle
+    - canvas.component.sdc.vartheme_bs5_educare.text
+    - filter.format.canvas_html_block
+  module:
+    - link
+    - options
+    - text
+id: ourachievements
+label: 'Our achievements'
+component_tree:
+  c2ab1b06-d97d-4fc6-a8af-8399f293b541:
+    uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
+    component_id: sdc.vartheme_bs5_educare.section
+    component_version: 9b679273be9319ad
+    inputs:
+      bg_edge2edge: true
+      container_type: container
+      background_color: bg-dark
+      text_color: auto
+      background_overlay: none
+      columns: 33-33-33
+      gutter: 'gx-4 gy-4'
+      padding_block_start: pt-5
+      padding_block_end: pb-5
+      padding_inline_start: ps-0
+      padding_inline_end: pe-0
+      margin_block_start: mt-5
+      margin_block_end: mb-5
+      margin_inline_start: ms-0
+      margin_inline_end: me-0
+      shadow: none
+      radius: none
+      border: none
+      border_color: none
+      border_width: none
+      vertical_alignment: align-items-start
+      horizontal_alignment: text-start
+      section_header: true
+      section_footer: true
+      aos_animation: none
+      aos_duration: default
+      aos_delay: '0'
+      aos_once: true
+  e85f1229-e862-40bf-9c80-24ec0d3f4d82:
+    parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
+    slot: header_slot
+    uuid: e85f1229-e862-40bf-9c80-24ec0d3f4d82
+    component_id: sdc.vartheme_bs5_educare.spacer
+    component_version: 80de1b3919d08f87
+    inputs:
+      size: py-4
+  e75a338a-a5ca-4c33-a89f-a8bddef2cc78:
+    parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
+    slot: header_slot
+    uuid: e75a338a-a5ca-4c33-a89f-a8bddef2cc78
+    component_id: sdc.vartheme_bs5_educare.section
+    component_version: 9b679273be9319ad
+    inputs:
+      bg_edge2edge: false
+      container_type: none
+      background_color: none
+      text_color: auto
+      background_overlay: none
+      columns: 75-25
+      gutter: 'gx-3 gy-3'
+      padding_block_start: pt-0
+      padding_block_end: pb-0
+      padding_inline_start: ps-0
+      padding_inline_end: pe-0
+      margin_block_start: mt-0
+      margin_block_end: mb-0
+      margin_inline_start: ms-0
+      margin_inline_end: me-0
+      shadow: none
+      radius: none
+      border: none
+      border_color: none
+      border_width: none
+      vertical_alignment: align-items-end
+      horizontal_alignment: text-start
+      section_header: false
+      section_footer: false
+      aos_animation: none
+      aos_duration: default
+      aos_delay: '0'
+      aos_once: true
+  6df944f4-56a9-4bab-8e03-8d13a5ea3809:
+    parent_uuid: e75a338a-a5ca-4c33-a89f-a8bddef2cc78
+    slot: col_1
+    uuid: 6df944f4-56a9-4bab-8e03-8d13a5ea3809
+    component_id: sdc.vartheme_bs5_educare.subtitle
+    component_version: b86e67a882361219
+    inputs:
+      subtitle_text: 'Our achievements'
+      font_size: small
+      font_weight: fw-semibold
+      text_transform: text-uppercase
+      line_position: start
+      line_size: sm
+  8068d097-40af-48af-b3f9-9d0b6385e586:
+    parent_uuid: e75a338a-a5ca-4c33-a89f-a8bddef2cc78
+    slot: col_1
+    uuid: 8068d097-40af-48af-b3f9-9d0b6385e586
+    component_id: sdc.vartheme_bs5_educare.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: 'A University Defined by Excellence'
+      level: 2
+      target: _self
+  b37add70-e30c-49af-8354-2b50cda0d6a1:
+    parent_uuid: e75a338a-a5ca-4c33-a89f-a8bddef2cc78
+    slot: col_1
+    uuid: b37add70-e30c-49af-8354-2b50cda0d6a1
+    component_id: sdc.vartheme_bs5_educare.text
+    component_version: c4ddb22de87220b3
+    inputs:
+      text:
+        value: '<p>Our achievements reflect the success of our students, faculty, and global community</p>'
+        format: canvas_html_block
+      text_size: fs-6
+      text_color: text-secondary
+  22422e17-595f-414d-ae16-4771ed933485:
+    parent_uuid: e75a338a-a5ca-4c33-a89f-a8bddef2cc78
+    slot: col_2
+    uuid: 22422e17-595f-414d-ae16-4771ed933485
+    component_id: sdc.vartheme_bs5_educare.button
+    component_version: a3bdd446d7020573
+    inputs:
+      variant: btn-primary
+      outline: false
+      size: btn-md
+      label: 'EXPLORE PROGRAMS'
+      href:
+        uri: 'internal:/programs/'
+        options: {  }
+      target: self
+      disabled: false
+      icon: chevron-right
+      icon_first: true
+      icon_circle: true
+      icon_circle_white_text: true
+      alignment: inline
+      full_width: false
+      radius: rounded-1
+  68902380-ff03-466c-8a48-3e0b91d30e38:
+    parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
+    slot: col_1
+    uuid: 68902380-ff03-466c-8a48-3e0b91d30e38
+    component_id: sdc.vartheme_bs5_educare.figure
+    component_version: ed6b9060b56a6c35
+    inputs:
+      number: 20k
+      suffix: +
+      description: 'Students from 80+ countries'
+      background_color: bg-dark
+      number_size: display-1
+      number_color: text-white
+      suffix_color: text-white-50
+      description_size: fs-6
+      description_color: text-white-50
+  5b5363bf-1acb-41bf-a811-3082a80cb916:
+    parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
+    slot: col_2
+    uuid: 5b5363bf-1acb-41bf-a811-3082a80cb916
+    component_id: sdc.vartheme_bs5_educare.figure
+    component_version: ed6b9060b56a6c35
+    inputs:
+      number: '120'
+      suffix: +
+      description: ' Expert Instructors'
+      background_color: bg-dark
+      number_size: display-1
+      number_color: text-white
+      suffix_color: text-white-50
+      description_size: fs-6
+      description_color: text-white-50
+  c9913686-38fb-43ed-83dd-80805a8abd9e:
+    parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
+    slot: col_3
+    uuid: c9913686-38fb-43ed-83dd-80805a8abd9e
+    component_id: sdc.vartheme_bs5_educare.figure
+    component_version: ed6b9060b56a6c35
+    inputs:
+      number: '95'
+      suffix: '%'
+      description: 'Graduate Employment Rate'
+      background_color: bg-dark
+      number_size: display-1
+      number_color: text-white
+      suffix_color: text-white-50
+      description_size: fs-6
+      description_color: text-white-50
+  a5ce27e6-1531-4a43-bdb2-90002e75b908:
+    parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
+    slot: footer_slot
+    uuid: a5ce27e6-1531-4a43-bdb2-90002e75b908
+    component_id: sdc.vartheme_bs5_educare.spacer
+    component_version: 80de1b3919d08f87
+    inputs:
+      size: py-3

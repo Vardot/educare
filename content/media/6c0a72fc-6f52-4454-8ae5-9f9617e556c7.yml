@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 6c0a72fc-6f52-4454-8ae5-9f9617e556c7
+  bundle: image
+  default_langcode: en
+  depends:
+    42e322d6-b979-4117-a6ab-c42417a3cc64: file
+default:
+  revision_user:
+  - target_id: 1
+  revision_log_message:
+  - value: Created new Image
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Two Students Holding Books in the Library
+  revision_translation_affected:
+  - value: true
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: Two students standing in front of library shelves holding a stack of textbooks
+    title: Two Students Holding Books in the Library
+    width: 652
+    height: 500
+    entity: 42e322d6-b979-4117-a6ab-c42417a3cc64

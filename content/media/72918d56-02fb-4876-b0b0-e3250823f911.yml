@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 72918d56-02fb-4876-b0b0-e3250823f911
+  bundle: image
+  default_langcode: en
+  depends:
+    808dc349-4f2a-4088-bc08-9b52ae02626a: file
+default:
+  revision_user:
+  - target_id: 1
+  revision_log_message:
+  - value: Created new Image
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Student Studying at a Computer
+  revision_translation_affected:
+  - value: true
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: A student working at a computer in a shared study space with classmates in the background
+    title: Student Studying at a Computer
+    width: 455
+    height: 238
+    entity: 808dc349-4f2a-4088-bc08-9b52ae02626a

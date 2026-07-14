@@ -1,0 +1,980 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 7b5612b2-528c-47d2-9057-468a63978281
+  default_langcode: en
+  depends:
+    6348a550-a830-4c67-9262-cb29df062872: file
+    960f66fb-613d-41bb-b2ec-201e888fd0b7: media
+    15f79701-5664-431f-b53a-1de467eac0a2: file
+    e243ed0a-1a7f-41dd-9cc0-0f3485b4d45f: media
+    1eeafcc5-fd89-4ef3-856e-6019c7be0e22: file
+    734ebd92-74a9-4e14-93a3-b428af41f89e: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Updated the Components field'
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Admissions
+  components:
+    -
+      uuid: 1a933d25-bb9b-410e-8a30-5ddf651b95f4
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: '100'
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 1a933d25-bb9b-410e-8a30-5ddf651b95f4
+      slot: header_slot
+      uuid: 5482cbdd-4e2c-4085-8113-8f7c16ec18c5
+      component_id: block.system_breadcrumb_block
+      inputs:
+        label: Breadcrumbs
+        label_display: '0'
+    -
+      parent_uuid: 1a933d25-bb9b-410e-8a30-5ddf651b95f4
+      slot: header_slot
+      uuid: 0b2f1e44-7091-47d8-8481-e0335e734f65
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: Admissions
+        level: 1
+        text_size: h2
+        target: _self
+    -
+      parent_uuid: 1a933d25-bb9b-410e-8a30-5ddf651b95f4
+      slot: col_1
+      uuid: e57b623a-027f-4d4b-af16-a2e52dcdab13
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 960f66fb-613d-41bb-b2ec-201e888fd0b7
+            target_type: media
+        target: self
+        ratio: ratio-auto
+        fit: object-fit-cover
+        align: me-auto
+        width: w-auto
+        rounded: none
+        loading: lazy
+    -
+      uuid: aa8a9447-efd6-439c-8666-8a74b3f3ce17
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 50-50
+        gutter: 'gx-4 gy-4'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_block_end: mb-5
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: aa8a9447-efd6-439c-8666-8a74b3f3ce17
+      slot: header_slot
+      uuid: b9eda1b8-f943-4fe4-b273-094f8e60eea8
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 60-40
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-end
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: b9eda1b8-f943-4fe4-b273-094f8e60eea8
+      slot: col_1
+      uuid: 40e46f5f-d884-48c6-94cc-071ca79941d3
+      component_id: sdc.vartheme_bs5_educare.subtitle
+      inputs:
+        subtitle_text: Stories
+        font_size: small
+        font_weight: fw-semibold
+        text_transform: text-uppercase
+        line_position: start
+        line_size: sm
+    -
+      parent_uuid: b9eda1b8-f943-4fe4-b273-094f8e60eea8
+      slot: col_1
+      uuid: 0e07e8d0-1907-4d61-8d27-bf8f38949db1
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'How Our Students Are Thriving'
+        level: 2
+        target: _self
+    -
+      parent_uuid: b9eda1b8-f943-4fe4-b273-094f8e60eea8
+      slot: col_1
+      uuid: 6bc5379a-6ee4-46f9-b3d7-f14b9b6ec095
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Preparing students to make meaningful contributions to society as engaged citizens and leaders in a complex world</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: b9eda1b8-f943-4fe4-b273-094f8e60eea8
+      slot: col_2
+      uuid: 4c858e19-10e4-4ad2-96d7-d74400d3ae65
+      component_id: sdc.vartheme_bs5_educare.button
+      inputs:
+        variant: btn-primary
+        outline: false
+        size: btn-md
+        label: 'SEE ALL STORIES'
+        href:
+          uri: 'internal:/events/'
+          options: {  }
+        target: self
+        disabled: false
+        icon: chevron-right
+        icon_first: true
+        icon_circle: true
+        icon_circle_white_text: false
+        alignment: inline
+        full_width: false
+        radius: rounded-1
+    -
+      parent_uuid: b9eda1b8-f943-4fe4-b273-094f8e60eea8
+      slot: col_2
+      uuid: 1a36c4cf-71c5-4946-8971-5be93d28ce45
+      component_id: sdc.vartheme_bs5_educare.button
+      inputs:
+        variant: btn-primary
+        outline: false
+        size: btn-md
+        label: 'VIEW ALL EVENTS'
+        href:
+          uri: 'internal:/events/'
+          options: {  }
+        target: self
+        disabled: false
+        icon: chevron-right
+        icon_first: true
+        icon_circle: true
+        icon_circle_white_text: false
+        alignment: inline
+        full_width: false
+        radius: rounded-1
+    -
+      parent_uuid: aa8a9447-efd6-439c-8666-8a74b3f3ce17
+      slot: col_1
+      uuid: 6419e1ff-a14a-4d31-ab9e-69e767a1a641
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-03'
+        title: 'Open Day. Meet faculty, tour campus'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: aa8a9447-efd6-439c-8666-8a74b3f3ce17
+      slot: col_1
+      uuid: da4068d5-6529-4295-bb6f-1dfc233e8fbc
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-3
+    -
+      parent_uuid: aa8a9447-efd6-439c-8666-8a74b3f3ce17
+      slot: col_1
+      uuid: 1c252639-0ce0-4e38-8ad1-7b7cb21b07ca
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-10'
+        title: 'University Launches New Artificial Intelligence Research Center'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: aa8a9447-efd6-439c-8666-8a74b3f3ce17
+      slot: col_1
+      uuid: fc8066a9-6588-43db-bef9-e932c3d5d397
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-3
+    -
+      parent_uuid: aa8a9447-efd6-439c-8666-8a74b3f3ce17
+      slot: col_1
+      uuid: 8783e84a-be11-46fd-ac9a-16fb2797cd9f
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-08'
+        title: 'University Launches New Artificial Intelligence Research Center'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: aa8a9447-efd6-439c-8666-8a74b3f3ce17
+      slot: col_1
+      uuid: be509618-93fc-4dee-9caa-f3fa8fd79daf
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-3
+    -
+      parent_uuid: aa8a9447-efd6-439c-8666-8a74b3f3ce17
+      slot: col_1
+      uuid: 0d2294e0-be7b-42bf-9e22-e13f58596b8e
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-07'
+        title: 'University Launches New Artificial Intelligence Research Center'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: aa8a9447-efd6-439c-8666-8a74b3f3ce17
+      slot: col_2
+      uuid: 504b70d4-9099-429c-aafc-40f5065ee2d5
+      component_id: sdc.vartheme_bs5_educare.card-featured
+      inputs:
+        media_position: start
+        media_image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e243ed0a-1a7f-41dd-9cc0-0f3485b4d45f
+            target_type: media
+        ratio: ratio-auto
+        fit: object-fit-cover
+        card_border: false
+        corner_style: rounded-0
+        show_action_icon: true
+        padded: false
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/african-and-african-american-studies/'
+          options: {  }
+        link_target: default
+        content_vertical_alignment: align-items-center
+        gutters_between: 'g-2 g-lg-3'
+        columns_xs_size: '06_06'
+        columns_sm_size: '06_06'
+        columns_md_size: '06_06'
+        columns_lg_size: '06_06'
+        columns_xl_size: '06_06'
+        columns_xxl_size: '06_06'
+    -
+      parent_uuid: 504b70d4-9099-429c-aafc-40f5065ee2d5
+      slot: content
+      uuid: 468c0085-e5df-4de9-bb33-d98dc8c0ee64
+      component_id: sdc.vartheme_bs5_educare.date
+      inputs:
+        text_color: text-body
+        size: fs-6
+    -
+      parent_uuid: 504b70d4-9099-429c-aafc-40f5065ee2d5
+      slot: content
+      uuid: 16a14cb0-1db8-492a-9758-8e18db8faaca
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'University Launches New Artificial Intelligence Research Center'
+        level: 5
+        target: _self
+    -
+      parent_uuid: aa8a9447-efd6-439c-8666-8a74b3f3ce17
+      slot: col_2
+      uuid: 6de8422c-7ae7-46ab-8fc9-fcfd0190cdcb
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-2
+    -
+      parent_uuid: aa8a9447-efd6-439c-8666-8a74b3f3ce17
+      slot: col_2
+      uuid: 25c262cc-19f0-4baf-841b-ff6078de79a5
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-1
+    -
+      parent_uuid: aa8a9447-efd6-439c-8666-8a74b3f3ce17
+      slot: col_2
+      uuid: 67b3dc15-35d8-4933-b497-85e087abe61e
+      component_id: sdc.vartheme_bs5_educare.card-featured
+      inputs:
+        media_position: start
+        media_image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 734ebd92-74a9-4e14-93a3-b428af41f89e
+            target_type: media
+        ratio: ratio-auto
+        fit: object-fit-cover
+        card_border: false
+        corner_style: rounded-0
+        show_action_icon: true
+        padded: false
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/african-and-african-american-studies/'
+          options: {  }
+        link_target: default
+        content_vertical_alignment: align-items-center
+        gutters_between: 'g-2 g-lg-3'
+        columns_xs_size: '06_06'
+        columns_sm_size: '06_06'
+        columns_md_size: '06_06'
+        columns_lg_size: '06_06'
+        columns_xl_size: '06_06'
+        columns_xxl_size: '06_06'
+    -
+      parent_uuid: 67b3dc15-35d8-4933-b497-85e087abe61e
+      slot: content
+      uuid: 352e2511-b639-4724-a8d8-6795a3e9ceea
+      component_id: sdc.vartheme_bs5_educare.date
+      inputs:
+        text_color: text-body
+        size: fs-6
+    -
+      parent_uuid: 67b3dc15-35d8-4933-b497-85e087abe61e
+      slot: content
+      uuid: b5f91f9b-210d-4fbe-a5db-863965735231
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'University Launches New Artificial Intelligence Research Center'
+        level: 5
+        target: _self
+    -
+      uuid: f171fae1-557e-47ad-a1f0-446e35b973e3
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: true
+        container_type: container
+        background_color: bg-dark
+        text_color: auto
+        background_overlay: none
+        columns: 33-33-33
+        gutter: 'gx-4 gy-4'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_block_end: mb-5
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: true
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: f171fae1-557e-47ad-a1f0-446e35b973e3
+      slot: header_slot
+      uuid: f75ee92f-2877-4428-a2ef-c7186fb5b1df
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-4
+    -
+      parent_uuid: f171fae1-557e-47ad-a1f0-446e35b973e3
+      slot: header_slot
+      uuid: d07ea575-46b4-470d-b8ff-f17f2afd7d87
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 75-25
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-end
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: d07ea575-46b4-470d-b8ff-f17f2afd7d87
+      slot: col_1
+      uuid: 2fec1cc8-d703-41a0-848d-3e9d2b014b3e
+      component_id: sdc.vartheme_bs5_educare.subtitle
+      inputs:
+        subtitle_text: 'Our achievements'
+        font_size: small
+        font_weight: fw-semibold
+        text_transform: text-uppercase
+        line_position: start
+        line_size: sm
+    -
+      parent_uuid: d07ea575-46b4-470d-b8ff-f17f2afd7d87
+      slot: col_1
+      uuid: 4aee3d98-a027-44f1-86d2-1adc2a1cb628
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'A University Defined by Excellence'
+        level: 2
+        target: _self
+    -
+      parent_uuid: d07ea575-46b4-470d-b8ff-f17f2afd7d87
+      slot: col_1
+      uuid: 6c14974f-bcb5-4df5-8c87-a80163727dae
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Our achievements reflect the success of our students, faculty, and global community</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-secondary
+    -
+      parent_uuid: d07ea575-46b4-470d-b8ff-f17f2afd7d87
+      slot: col_2
+      uuid: 387faac1-93cb-4b46-92e1-275c5d75a4f4
+      component_id: sdc.vartheme_bs5_educare.button
+      inputs:
+        variant: btn-primary
+        outline: false
+        size: btn-md
+        label: 'EXPLORE PROGRAMS'
+        target: self
+        disabled: false
+        icon: chevron-right
+        icon_first: true
+        icon_circle: true
+        icon_circle_white_text: true
+        alignment: inline
+        full_width: false
+        radius: rounded-1
+    -
+      parent_uuid: f171fae1-557e-47ad-a1f0-446e35b973e3
+      slot: col_1
+      uuid: b0303bbd-25af-4b18-a315-9521b66b87db
+      component_id: sdc.vartheme_bs5_educare.figure
+      inputs:
+        number: 20k
+        suffix: +
+        description: 'Students from 80+ countries'
+        background_color: bg-dark
+        number_size: display-1
+        number_color: text-white
+        suffix_color: text-white-50
+        description_size: fs-6
+        description_color: text-white-50
+    -
+      parent_uuid: f171fae1-557e-47ad-a1f0-446e35b973e3
+      slot: col_2
+      uuid: aea987dd-3b6d-4162-a20d-728b059d0586
+      component_id: sdc.vartheme_bs5_educare.figure
+      inputs:
+        number: '120'
+        suffix: +
+        description: ' Expert Instructors'
+        background_color: bg-dark
+        number_size: display-1
+        number_color: text-white
+        suffix_color: text-white-50
+        description_size: fs-6
+        description_color: text-white-50
+    -
+      parent_uuid: f171fae1-557e-47ad-a1f0-446e35b973e3
+      slot: col_3
+      uuid: 2df588de-7b9c-4b26-a15d-8e434f1c2682
+      component_id: sdc.vartheme_bs5_educare.figure
+      inputs:
+        number: '95'
+        suffix: '%'
+        description: 'Graduate Employment Rate'
+        background_color: bg-dark
+        number_size: display-1
+        number_color: text-white
+        suffix_color: text-white-50
+        description_size: fs-6
+        description_color: text-white-50
+    -
+      parent_uuid: f171fae1-557e-47ad-a1f0-446e35b973e3
+      slot: footer_slot
+      uuid: 1643d5c5-3ff8-4c63-860c-117ce92cae3e
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-3
+    -
+      uuid: b4dfef77-3a1e-4670-a50e-f2bfb95fdc9f
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 50-50
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_block_end: mb-5
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: b4dfef77-3a1e-4670-a50e-f2bfb95fdc9f
+      slot: col_1
+      uuid: 8bf8b425-b25b-49af-8aad-02c0c9c7756a
+      component_id: sdc.vartheme_bs5_educare.subtitle
+      inputs:
+        subtitle_text: FAQ
+        font_size: small
+        font_weight: fw-semibold
+        text_transform: text-uppercase
+        line_position: start
+        line_size: sm
+    -
+      parent_uuid: b4dfef77-3a1e-4670-a50e-f2bfb95fdc9f
+      slot: col_1
+      uuid: deee4d0f-8d49-4f45-800e-33f68c6e7f26
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Frequently Asked Questions'
+        level: 2
+        target: _self
+    -
+      parent_uuid: b4dfef77-3a1e-4670-a50e-f2bfb95fdc9f
+      slot: col_1
+      uuid: 55e1ca18-6a11-47a2-acb0-860a2e37bedf
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Preparing students to make meaningful contributions to society as engaged citizens and leaders in a complex world</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: b4dfef77-3a1e-4670-a50e-f2bfb95fdc9f
+      slot: col_1
+      uuid: f409c1a1-19f8-4b58-ad79-f6d1990ba647
+      component_id: sdc.vartheme_bs5_educare.button
+      inputs:
+        variant: btn-primary
+        outline: false
+        size: btn-md
+        label: 'CONTACT US'
+        href:
+          uri: 'internal:/contact-us/'
+          options: {  }
+        target: self
+        disabled: false
+        icon: chevron-right
+        icon_first: false
+        icon_circle: true
+        icon_circle_white_text: false
+        alignment: inline
+        full_width: false
+        radius: rounded-1
+    -
+      parent_uuid: b4dfef77-3a1e-4670-a50e-f2bfb95fdc9f
+      slot: col_2
+      uuid: 8b310281-9eb6-4b69-a8ab-aeffb8ca7d56
+      component_id: sdc.vartheme_bs5_educare.accordion-container
+      inputs:
+        flush: false
+        always_open: false
+    -
+      parent_uuid: 8b310281-9eb6-4b69-a8ab-aeffb8ca7d56
+      slot: accordion_content
+      uuid: b5e1b6e8-1d79-49cd-8263-26cb3b5f806c
+      component_id: sdc.vartheme_bs5_educare.accordion-block
+      inputs:
+        title: 'What programs do you offer?'
+        heading_level: 3
+        open_by_default: false
+        always_open: false
+        color: inherit
+        dash_indicator: never
+    -
+      parent_uuid: b5e1b6e8-1d79-49cd-8263-26cb3b5f806c
+      slot: accordion_content
+      uuid: 5c81eef2-7813-4e5a-b060-b56293459f4e
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Your heading goes here'
+        level: 5
+        target: _self
+    -
+      parent_uuid: b5e1b6e8-1d79-49cd-8263-26cb3b5f806c
+      slot: accordion_content
+      uuid: 4a960acd-892d-4e90-a173-62f86ebdd192
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 8b310281-9eb6-4b69-a8ab-aeffb8ca7d56
+      slot: accordion_content
+      uuid: 3ef99b6c-c7a0-43cb-bd27-ddfee005e8f4
+      component_id: sdc.vartheme_bs5_educare.divider
+      inputs:
+        border_width: border-1
+        border_color: border-black
+        opacity: opacity-25
+        margin_top: mt-3
+        margin_bottom: mb-3
+    -
+      parent_uuid: 8b310281-9eb6-4b69-a8ab-aeffb8ca7d56
+      slot: accordion_content
+      uuid: b195b16c-e398-4951-9c30-80f7f0b6ced6
+      component_id: sdc.vartheme_bs5_educare.accordion-block
+      inputs:
+        title: 'What are the admission requirements?'
+        heading_level: 3
+        open_by_default: false
+        always_open: false
+        color: inherit
+        dash_indicator: never
+    -
+      parent_uuid: b195b16c-e398-4951-9c30-80f7f0b6ced6
+      slot: accordion_content
+      uuid: f584d169-3d5e-4182-85eb-2760d239cb36
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Your heading goes here'
+        level: 5
+        target: _self
+    -
+      parent_uuid: b195b16c-e398-4951-9c30-80f7f0b6ced6
+      slot: accordion_content
+      uuid: 04ce4f71-df71-412b-91b4-19c72abc8593
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 8b310281-9eb6-4b69-a8ab-aeffb8ca7d56
+      slot: accordion_content
+      uuid: 9aabd896-2054-46ed-978e-7d45421d77a2
+      component_id: sdc.vartheme_bs5_educare.divider
+      inputs:
+        border_width: border-1
+        border_color: border-black
+        opacity: opacity-25
+        margin_top: mt-3
+        margin_bottom: mb-3
+    -
+      parent_uuid: 8b310281-9eb6-4b69-a8ab-aeffb8ca7d56
+      slot: accordion_content
+      uuid: 5bccb47d-182f-456c-bca4-fbdddc8ee69f
+      component_id: sdc.vartheme_bs5_educare.accordion-block
+      inputs:
+        title: 'Are scholarships available?'
+        heading_level: 3
+        open_by_default: false
+        always_open: false
+        color: inherit
+        dash_indicator: never
+    -
+      parent_uuid: 5bccb47d-182f-456c-bca4-fbdddc8ee69f
+      slot: accordion_content
+      uuid: ddb86230-bf65-4f42-accc-eeda8a3a1df0
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Your heading goes here'
+        level: 5
+        target: _self
+    -
+      parent_uuid: 5bccb47d-182f-456c-bca4-fbdddc8ee69f
+      slot: accordion_content
+      uuid: 6db39f7d-1ade-4921-b04c-8c125d65999b
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 8b310281-9eb6-4b69-a8ab-aeffb8ca7d56
+      slot: accordion_content
+      uuid: b0c5dd03-80f7-4bb8-ab00-a84be78209dd
+      component_id: sdc.vartheme_bs5_educare.divider
+      inputs:
+        border_width: border-1
+        border_color: border-black
+        opacity: opacity-25
+        margin_top: mt-3
+        margin_bottom: mb-3
+    -
+      parent_uuid: 8b310281-9eb6-4b69-a8ab-aeffb8ca7d56
+      slot: accordion_content
+      uuid: 24edd607-7238-4419-901c-171613b31c37
+      component_id: sdc.vartheme_bs5_educare.accordion-block
+      inputs:
+        title: 'Can international students apply?'
+        heading_level: 3
+        open_by_default: false
+        always_open: false
+        color: inherit
+        dash_indicator: never
+    -
+      parent_uuid: 24edd607-7238-4419-901c-171613b31c37
+      slot: accordion_content
+      uuid: 85b58f48-d496-4f17-8e90-d5e1784f7279
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Your heading goes here'
+        level: 5
+        target: _self
+    -
+      parent_uuid: 24edd607-7238-4419-901c-171613b31c37
+      slot: accordion_content
+      uuid: 2739e931-c55c-44ec-be3c-5d5c5da0d136
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 8b310281-9eb6-4b69-a8ab-aeffb8ca7d56
+      slot: accordion_content
+      uuid: 8260ccc0-7c04-4b99-9d9f-5e8b3bdd2387
+      component_id: sdc.vartheme_bs5_educare.divider
+      inputs:
+        border_width: border-1
+        border_color: border-black
+        opacity: opacity-25
+        margin_top: mt-3
+        margin_bottom: mb-3
+    -
+      parent_uuid: 8b310281-9eb6-4b69-a8ab-aeffb8ca7d56
+      slot: accordion_content
+      uuid: 3ba843c0-aa71-48e5-bd91-b35d47be669c
+      component_id: sdc.vartheme_bs5_educare.accordion-block
+      inputs:
+        title: 'What is the application deadline?'
+        heading_level: 3
+        open_by_default: false
+        always_open: false
+        color: inherit
+        dash_indicator: never
+    -
+      parent_uuid: 3ba843c0-aa71-48e5-bd91-b35d47be669c
+      slot: accordion_content
+      uuid: db0df881-f85d-4c3b-914d-c3001e514430
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Your heading goes here'
+        level: 5
+        target: _self
+    -
+      parent_uuid: 3ba843c0-aa71-48e5-bd91-b35d47be669c
+      slot: accordion_content
+      uuid: 5f0c8e95-04ad-476f-87c2-38a042da1268
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 8b310281-9eb6-4b69-a8ab-aeffb8ca7d56
+      slot: accordion_content
+      uuid: 86f063ac-8d2f-42b6-a931-bf75fe3df8a9
+      component_id: sdc.vartheme_bs5_educare.divider
+      inputs:
+        border_width: border-1
+        border_color: border-black
+        opacity: opacity-25
+        margin_top: mt-3
+        margin_bottom: mb-3
+    -
+      parent_uuid: 8b310281-9eb6-4b69-a8ab-aeffb8ca7d56
+      slot: accordion_content
+      uuid: 4f9cddfa-1b15-44aa-8764-a2d031580225
+      component_id: sdc.vartheme_bs5_educare.accordion-block
+      inputs:
+        title: 'How do I access course materials?'
+        heading_level: 3
+        open_by_default: false
+        always_open: false
+        color: inherit
+        dash_indicator: never
+    -
+      parent_uuid: 4f9cddfa-1b15-44aa-8764-a2d031580225
+      slot: accordion_content
+      uuid: ba00fdcc-b43b-4ef4-abdf-c736b967d1bb
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Your heading goes here'
+        level: 5
+        target: _self
+    -
+      parent_uuid: 4f9cddfa-1b15-44aa-8764-a2d031580225
+      slot: accordion_content
+      uuid: 9693ebef-4fbc-4157-8eeb-f53e992eb35c
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+  path:
+    -
+      alias: /admissions
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

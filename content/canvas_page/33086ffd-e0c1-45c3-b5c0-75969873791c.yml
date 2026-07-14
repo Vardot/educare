@@ -1,0 +1,147 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 33086ffd-e0c1-45c3-b5c0-75969873791c
+  default_langcode: en
+  depends:
+    6348a550-a830-4c67-9262-cb29df062872: file
+    960f66fb-613d-41bb-b2ec-201e888fd0b7: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Updated the Components field'
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: News
+  components:
+    -
+      uuid: ad35e58c-ebc4-4f82-853c-c687958cb577
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: '100'
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: ad35e58c-ebc4-4f82-853c-c687958cb577
+      slot: header_slot
+      uuid: 31755079-fb31-4740-8763-18f0a1431ace
+      component_id: block.system_breadcrumb_block
+      inputs:
+        label: Breadcrumbs
+        label_display: '0'
+    -
+      parent_uuid: ad35e58c-ebc4-4f82-853c-c687958cb577
+      slot: header_slot
+      uuid: 5e4bc5cf-2a79-4708-87f4-559c0f8af25a
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: News
+        level: 1
+        target: _self
+        text_size: h2
+    -
+      parent_uuid: ad35e58c-ebc4-4f82-853c-c687958cb577
+      slot: col_1
+      uuid: 66c4b881-9b11-4e8a-8ebe-cf83773c689c
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 960f66fb-613d-41bb-b2ec-201e888fd0b7
+            target_type: media
+        target: self
+        ratio: ratio-auto
+        fit: object-fit-cover
+        align: me-auto
+        width: w-auto
+        rounded: none
+        loading: lazy
+    -
+      uuid: d5fadb51-a3ec-4e7c-9f47-d2d37e6527b1
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      uuid: 3525871b-5b8c-42e4-84dd-df2ff8b9f1f6
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Latest Updates'
+        level: 2
+    -
+      uuid: e29550f9-ebe1-407f-86f6-6de7dbfdac9f
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs: {  }
+    -
+      uuid: 5a258afe-3992-4d6a-a556-502d052b81a5
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: true
+        container_type: container
+        section_header: false
+        section_footer: false
+        columns: '100'
+    -
+      parent_uuid: 5a258afe-3992-4d6a-a556-502d052b81a5
+      slot: col_1
+      uuid: 26b72b2d-fc7b-4d69-acd1-82da0d84787d
+      component_id: block.views_exposed_filter_block.news-all
+      inputs:
+        label: 'Filter news posts'
+        label_display: '0'
+        views_label: ''
+      label: 'News filters'
+    -
+      parent_uuid: 5a258afe-3992-4d6a-a556-502d052b81a5
+      slot: col_1
+      uuid: ef1a9ade-5633-4bb2-bef9-665d58878f9b
+      component_id: block.views_block.news-all
+      inputs:
+        label: 'News: All news posts'
+        label_display: '0'
+        views_label: ''
+        items_per_page: 12
+        exposed: {  }
+  path:
+    -
+      alias: /news
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

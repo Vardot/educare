@@ -1,0 +1,409 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_educare.button
+    - canvas.component.sdc.vartheme_bs5_educare.card-dated-vertical
+    - canvas.component.sdc.vartheme_bs5_educare.card-featured
+    - canvas.component.sdc.vartheme_bs5_educare.date
+    - canvas.component.sdc.vartheme_bs5_educare.heading
+    - canvas.component.sdc.vartheme_bs5_educare.section
+    - canvas.component.sdc.vartheme_bs5_educare.spacer
+    - canvas.component.sdc.vartheme_bs5_educare.subtitle
+    - canvas.component.sdc.vartheme_bs5_educare.text
+    - field.field.media.image.field_media_image
+    - field.field.media.svg_image.field_media_svg_image
+    - filter.format.canvas_html_block
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - media.type.svg_image
+  content:
+    - 'file:file:15f79701-5664-431f-b53a-1de467eac0a2'
+    - 'file:file:1eeafcc5-fd89-4ef3-856e-6019c7be0e22'
+    - 'media:image:734ebd92-74a9-4e14-93a3-b428af41f89e'
+    - 'media:image:e243ed0a-1a7f-41dd-9cc0-0f3485b4d45f'
+  module:
+    - datetime
+    - file
+    - link
+    - media
+    - options
+    - text
+id: stories
+label: Stories
+component_tree:
+  9829e07d-3ffa-43c1-83a7-f260a8025356:
+    uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
+    component_id: sdc.vartheme_bs5_educare.section
+    component_version: 9b679273be9319ad
+    inputs:
+      bg_edge2edge: false
+      container_type: none
+      background_color: none
+      text_color: auto
+      background_overlay: none
+      columns: 50-50
+      gutter: 'gx-4 gy-4'
+      padding_block_start: pt-5
+      padding_block_end: pb-5
+      padding_inline_start: ps-0
+      padding_inline_end: pe-0
+      margin_block_start: mt-5
+      margin_block_end: mb-5
+      margin_inline_start: ms-0
+      margin_inline_end: me-0
+      shadow: none
+      radius: none
+      border: none
+      border_color: none
+      border_width: none
+      vertical_alignment: align-items-start
+      horizontal_alignment: text-start
+      section_header: true
+      section_footer: false
+      aos_animation: none
+      aos_duration: default
+      aos_delay: '0'
+      aos_once: true
+  e8341ee0-a777-476d-b43e-71f05f070123:
+    parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
+    slot: header_slot
+    uuid: e8341ee0-a777-476d-b43e-71f05f070123
+    component_id: sdc.vartheme_bs5_educare.section
+    component_version: 9b679273be9319ad
+    inputs:
+      bg_edge2edge: false
+      container_type: none
+      background_color: none
+      text_color: auto
+      background_overlay: none
+      columns: 60-40
+      gutter: 'gx-3 gy-3'
+      padding_block_start: pt-0
+      padding_block_end: pb-0
+      padding_inline_start: ps-0
+      padding_inline_end: pe-0
+      margin_block_start: mt-0
+      margin_block_end: mb-0
+      margin_inline_start: ms-0
+      margin_inline_end: me-0
+      shadow: none
+      radius: none
+      border: none
+      border_color: none
+      border_width: none
+      vertical_alignment: align-items-end
+      horizontal_alignment: text-start
+      section_header: false
+      section_footer: false
+      aos_animation: none
+      aos_duration: default
+      aos_delay: '0'
+      aos_once: true
+  1236fd90-04b6-495f-a904-55d5b1e2f520:
+    parent_uuid: e8341ee0-a777-476d-b43e-71f05f070123
+    slot: col_1
+    uuid: 1236fd90-04b6-495f-a904-55d5b1e2f520
+    component_id: sdc.vartheme_bs5_educare.subtitle
+    component_version: b86e67a882361219
+    inputs:
+      subtitle_text: Stories
+      font_size: small
+      font_weight: fw-semibold
+      text_transform: text-uppercase
+      line_position: start
+      line_size: sm
+  dea28c43-fb8a-4320-ab18-ea7f4d0fb7aa:
+    parent_uuid: e8341ee0-a777-476d-b43e-71f05f070123
+    slot: col_1
+    uuid: dea28c43-fb8a-4320-ab18-ea7f4d0fb7aa
+    component_id: sdc.vartheme_bs5_educare.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: 'How Our Students Are Thriving'
+      level: 2
+      target: _self
+  5784095f-9d33-4469-b74d-89e63750eb8d:
+    parent_uuid: e8341ee0-a777-476d-b43e-71f05f070123
+    slot: col_1
+    uuid: 5784095f-9d33-4469-b74d-89e63750eb8d
+    component_id: sdc.vartheme_bs5_educare.text
+    component_version: c4ddb22de87220b3
+    inputs:
+      text:
+        value: '<p>Preparing students to make meaningful contributions to society as engaged citizens and leaders in a complex world</p>'
+        format: canvas_html_block
+      text_size: fs-6
+      text_color: text-muted
+  bb03abe1-238f-4a29-be51-0f25252c7eb5:
+    parent_uuid: e8341ee0-a777-476d-b43e-71f05f070123
+    slot: col_2
+    uuid: bb03abe1-238f-4a29-be51-0f25252c7eb5
+    component_id: sdc.vartheme_bs5_educare.button
+    component_version: a3bdd446d7020573
+    inputs:
+      variant: btn-primary
+      outline: false
+      size: btn-md
+      label: 'SEE ALL STORIES'
+      href:
+        uri: 'internal:/events/'
+        options: {  }
+      target: self
+      disabled: false
+      icon: chevron-right
+      icon_first: true
+      icon_circle: true
+      icon_circle_white_text: false
+      alignment: inline
+      full_width: false
+      radius: rounded-1
+  a9bb69ac-982a-4d1c-85e6-66c48142612e:
+    parent_uuid: e8341ee0-a777-476d-b43e-71f05f070123
+    slot: col_2
+    uuid: a9bb69ac-982a-4d1c-85e6-66c48142612e
+    component_id: sdc.vartheme_bs5_educare.button
+    component_version: a3bdd446d7020573
+    inputs:
+      variant: btn-primary
+      outline: false
+      size: btn-md
+      label: 'VIEW ALL EVENTS'
+      href:
+        uri: 'internal:/events/'
+        options: {  }
+      target: self
+      disabled: false
+      icon: chevron-right
+      icon_first: true
+      icon_circle: true
+      icon_circle_white_text: false
+      alignment: inline
+      full_width: false
+      radius: rounded-1
+  cc779bdb-7227-4981-9660-42afa96e6cf2:
+    parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
+    slot: col_1
+    uuid: cc779bdb-7227-4981-9660-42afa96e6cf2
+    component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+    component_version: 1b941df5cf10c438
+    inputs:
+      date: '2026-09-03'
+      title: 'Open Day. Meet faculty, tour campus'
+      heading_level: h5
+      show_action_icon: true
+      card_border: false
+      background_color: bg-secondary-subtle
+      padded: false
+      box_shadow: shadow-none
+      corner_style: rounded-0
+      equal_height: false
+      stretched_link: true
+      link_url:
+        uri: 'internal:/tech-ai-innovation-conference/'
+        options: {  }
+      link_target: default
+  414f699c-3068-43b5-b23f-df4dd4afb98f:
+    parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
+    slot: col_1
+    uuid: 414f699c-3068-43b5-b23f-df4dd4afb98f
+    component_id: sdc.vartheme_bs5_educare.spacer
+    component_version: 80de1b3919d08f87
+    inputs:
+      size: py-3
+  52248d91-bae0-4d79-98c5-073985246562:
+    parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
+    slot: col_1
+    uuid: 52248d91-bae0-4d79-98c5-073985246562
+    component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+    component_version: 1b941df5cf10c438
+    inputs:
+      date: '2026-09-10'
+      title: 'University Launches New Artificial Intelligence Research Center'
+      heading_level: h5
+      show_action_icon: true
+      card_border: false
+      background_color: bg-secondary-subtle
+      padded: false
+      box_shadow: shadow-none
+      corner_style: rounded-0
+      equal_height: false
+      stretched_link: true
+      link_url:
+        uri: 'internal:/tech-ai-innovation-conference/'
+        options: {  }
+      link_target: default
+  c3dbb1df-b73e-445d-afdb-f00ca08ef679:
+    parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
+    slot: col_1
+    uuid: c3dbb1df-b73e-445d-afdb-f00ca08ef679
+    component_id: sdc.vartheme_bs5_educare.spacer
+    component_version: 80de1b3919d08f87
+    inputs:
+      size: py-3
+  00515e8b-dc78-4220-b006-672d67af7bc4:
+    parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
+    slot: col_1
+    uuid: 00515e8b-dc78-4220-b006-672d67af7bc4
+    component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+    component_version: 1b941df5cf10c438
+    inputs:
+      date: '2026-09-08'
+      title: 'University Launches New Artificial Intelligence Research Center'
+      heading_level: h5
+      show_action_icon: true
+      card_border: false
+      background_color: bg-secondary-subtle
+      padded: false
+      box_shadow: shadow-none
+      corner_style: rounded-0
+      equal_height: false
+      stretched_link: true
+      link_url:
+        uri: 'internal:/tech-ai-innovation-conference/'
+        options: {  }
+      link_target: default
+  c162ddc3-26f2-4714-8bfd-040a0cbb3c29:
+    parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
+    slot: col_1
+    uuid: c162ddc3-26f2-4714-8bfd-040a0cbb3c29
+    component_id: sdc.vartheme_bs5_educare.spacer
+    component_version: 80de1b3919d08f87
+    inputs:
+      size: py-3
+  060ccfde-721b-4dd0-9cd2-b228c35aadc8:
+    parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
+    slot: col_1
+    uuid: 060ccfde-721b-4dd0-9cd2-b228c35aadc8
+    component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+    component_version: 1b941df5cf10c438
+    inputs:
+      date: '2026-09-07'
+      title: 'University Launches New Artificial Intelligence Research Center'
+      heading_level: h5
+      show_action_icon: true
+      card_border: false
+      background_color: bg-secondary-subtle
+      padded: false
+      box_shadow: shadow-none
+      corner_style: rounded-0
+      equal_height: false
+      stretched_link: true
+      link_url:
+        uri: 'internal:/tech-ai-innovation-conference/'
+        options: {  }
+      link_target: default
+  baebbe7d-5349-4a3b-9d19-844e640a2858:
+    parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
+    slot: col_2
+    uuid: baebbe7d-5349-4a3b-9d19-844e640a2858
+    component_id: sdc.vartheme_bs5_educare.card-featured
+    component_version: 237ffff7f07edb9f
+    inputs:
+      media_position: start
+      media_image:
+        target_id: '14'
+      ratio: ratio-auto
+      fit: object-fit-cover
+      card_border: false
+      corner_style: rounded-0
+      show_action_icon: true
+      padded: false
+      equal_height: false
+      stretched_link: true
+      link_url:
+        uri: 'internal:/african-and-african-american-studies/'
+        options: {  }
+      link_target: default
+      content_vertical_alignment: align-items-center
+      gutters_between: 'g-2 g-lg-3'
+      columns_xs_size: '06_06'
+      columns_sm_size: '06_06'
+      columns_md_size: '06_06'
+      columns_lg_size: '06_06'
+      columns_xl_size: '06_06'
+      columns_xxl_size: '06_06'
+  23db581a-99b6-4684-8172-7260e1bf1850:
+    parent_uuid: baebbe7d-5349-4a3b-9d19-844e640a2858
+    slot: content
+    uuid: 23db581a-99b6-4684-8172-7260e1bf1850
+    component_id: sdc.vartheme_bs5_educare.date
+    component_version: 3eae6f5d223f6bda
+    inputs:
+      text_color: text-body
+      size: fs-6
+  39a41e6c-2091-412c-aaa9-4071ad9f0800:
+    parent_uuid: baebbe7d-5349-4a3b-9d19-844e640a2858
+    slot: content
+    uuid: 39a41e6c-2091-412c-aaa9-4071ad9f0800
+    component_id: sdc.vartheme_bs5_educare.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: 'University Launches New Artificial Intelligence Research Center'
+      level: 5
+      target: _self
+  18eb61d6-52f9-42ca-b6f5-9beadb614a77:
+    parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
+    slot: col_2
+    uuid: 18eb61d6-52f9-42ca-b6f5-9beadb614a77
+    component_id: sdc.vartheme_bs5_educare.spacer
+    component_version: 80de1b3919d08f87
+    inputs:
+      size: py-2
+  0a01832d-9bfa-4ae1-99fd-fe1fbe42eac7:
+    parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
+    slot: col_2
+    uuid: 0a01832d-9bfa-4ae1-99fd-fe1fbe42eac7
+    component_id: sdc.vartheme_bs5_educare.spacer
+    component_version: 80de1b3919d08f87
+    inputs:
+      size: py-1
+  9a1fd507-a0d3-4027-820b-4bff687c93f2:
+    parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
+    slot: col_2
+    uuid: 9a1fd507-a0d3-4027-820b-4bff687c93f2
+    component_id: sdc.vartheme_bs5_educare.card-featured
+    component_version: 237ffff7f07edb9f
+    inputs:
+      media_position: start
+      media_image:
+        target_id: '12'
+      ratio: ratio-auto
+      fit: object-fit-cover
+      card_border: false
+      corner_style: rounded-0
+      show_action_icon: true
+      padded: false
+      equal_height: false
+      stretched_link: true
+      link_url:
+        uri: 'internal:/african-and-african-american-studies/'
+        options: {  }
+      link_target: default
+      content_vertical_alignment: align-items-center
+      gutters_between: 'g-2 g-lg-3'
+      columns_xs_size: '06_06'
+      columns_sm_size: '06_06'
+      columns_md_size: '06_06'
+      columns_lg_size: '06_06'
+      columns_xl_size: '06_06'
+      columns_xxl_size: '06_06'
+  6036877b-cbfa-4856-95ac-5383b2770da9:
+    parent_uuid: 9a1fd507-a0d3-4027-820b-4bff687c93f2
+    slot: content
+    uuid: 6036877b-cbfa-4856-95ac-5383b2770da9
+    component_id: sdc.vartheme_bs5_educare.date
+    component_version: 3eae6f5d223f6bda
+    inputs:
+      text_color: text-body
+      size: fs-6
+  d8c23a94-61de-41a2-9105-74c504d6c07a:
+    parent_uuid: 9a1fd507-a0d3-4027-820b-4bff687c93f2
+    slot: content
+    uuid: d8c23a94-61de-41a2-9105-74c504d6c07a
+    component_id: sdc.vartheme_bs5_educare.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: 'University Launches New Artificial Intelligence Research Center'
+      level: 5
+      target: _self

@@ -1,0 +1,89 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.system_breadcrumb_block
+    - canvas.component.sdc.vartheme_bs5_educare.heading
+    - canvas.component.sdc.vartheme_bs5_educare.image
+    - canvas.component.sdc.vartheme_bs5_educare.section
+    - field.field.media.image.field_media_image
+    - field.field.media.svg_image.field_media_svg_image
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - media.type.svg_image
+  module:
+    - file
+    - media
+    - options
+id: newsbanner
+label: 'News Banner'
+component_tree:
+  ad35e58c-ebc4-4f82-853c-c687958cb577:
+    uuid: ad35e58c-ebc4-4f82-853c-c687958cb577
+    component_id: sdc.vartheme_bs5_educare.section
+    component_version: 9b679273be9319ad
+    inputs:
+      bg_edge2edge: false
+      container_type: none
+      background_color: none
+      text_color: auto
+      background_overlay: none
+      columns: '100'
+      gutter: 'gx-3 gy-3'
+      padding_block_start: pt-0
+      padding_block_end: pb-0
+      padding_inline_start: ps-0
+      padding_inline_end: pe-0
+      margin_block_start: mt-0
+      margin_block_end: mb-0
+      margin_inline_start: ms-0
+      margin_inline_end: me-0
+      shadow: none
+      radius: none
+      border: none
+      border_color: none
+      border_width: none
+      vertical_alignment: align-items-start
+      horizontal_alignment: text-start
+      section_header: true
+      section_footer: false
+      aos_animation: none
+      aos_duration: default
+      aos_delay: '0'
+      aos_once: true
+  31755079-fb31-4740-8763-18f0a1431ace:
+    parent_uuid: ad35e58c-ebc4-4f82-853c-c687958cb577
+    slot: header_slot
+    uuid: 31755079-fb31-4740-8763-18f0a1431ace
+    component_id: block.system_breadcrumb_block
+    component_version: 0d7e961dd03aa710
+    inputs:
+      label: Breadcrumbs
+      label_display: '0'
+  5e4bc5cf-2a79-4708-87f4-559c0f8af25a:
+    parent_uuid: ad35e58c-ebc4-4f82-853c-c687958cb577
+    slot: header_slot
+    uuid: 5e4bc5cf-2a79-4708-87f4-559c0f8af25a
+    component_id: sdc.vartheme_bs5_educare.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: News
+      level: 1
+      text_size: h2
+      target: _self
+  66c4b881-9b11-4e8a-8ebe-cf83773c689c:
+    parent_uuid: ad35e58c-ebc4-4f82-853c-c687958cb577
+    slot: col_1
+    uuid: 66c4b881-9b11-4e8a-8ebe-cf83773c689c
+    component_id: sdc.vartheme_bs5_educare.image
+    component_version: 20b07c548b4cf729
+    inputs:
+      media:
+        target_id: '5'
+      target: self
+      ratio: ratio-auto
+      fit: object-fit-cover
+      align: me-auto
+      width: w-auto
+      rounded: none
+      loading: lazy

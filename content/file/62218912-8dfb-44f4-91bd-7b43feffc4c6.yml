@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 62218912-8dfb-44f4-91bd-7b43feffc4c6
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: student-reading-in-the-library.png
+  uri:
+  - value: public://2026-07/student-reading-in-the-library.png
+  filemime:
+  - value: image/png
+  filesize:
+  - value: 266231
+  status:
+  - value: true

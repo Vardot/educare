@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 3130ffd5-8609-494d-a071-9ca3442b46db
+  bundle: image
+  default_langcode: en
+  depends:
+    3eb8cd72-cdee-45b4-9728-b6f6509a27e6: file
+default:
+  revision_user:
+  - target_id: 1
+  revision_log_message:
+  - value: Created new Image
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Two Students Walking and Smiling
+  revision_translation_affected:
+  - value: true
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: Two students smiling and chatting as they walk across campus
+    title: Two Students Walking and Smiling
+    width: 359
+    height: 464
+    entity: 3eb8cd72-cdee-45b4-9728-b6f6509a27e6

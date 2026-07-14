@@ -1,0 +1,197 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_educare.card-action-text
+    - canvas.component.sdc.vartheme_bs5_educare.heading
+    - canvas.component.sdc.vartheme_bs5_educare.section
+    - canvas.component.sdc.vartheme_bs5_educare.spacer
+    - canvas.component.sdc.vartheme_bs5_educare.text
+    - filter.format.canvas_html_block
+  module:
+    - link
+    - options
+    - text
+id: threeactionscard
+label: 'Three actions card'
+component_tree:
+  4bc5314c-28f9-4a6b-bceb-4edf8b19a4fe:
+    uuid: 4bc5314c-28f9-4a6b-bceb-4edf8b19a4fe
+    component_id: sdc.vartheme_bs5_educare.section
+    component_version: 9b679273be9319ad
+    inputs:
+      bg_edge2edge: false
+      container_type: none
+      background_color: none
+      text_color: auto
+      background_overlay: none
+      columns: 33-33-33
+      gutter: 'gx-4 gy-4'
+      padding_block_start: pt-3
+      padding_block_end: pb-2
+      padding_inline_start: ps-0
+      padding_inline_end: pe-0
+      margin_block_start: mt-5
+      margin_inline_start: ms-0
+      margin_inline_end: me-0
+      shadow: none
+      radius: none
+      border: none
+      border_color: none
+      border_width: none
+      vertical_alignment: align-items-start
+      horizontal_alignment: text-start
+      section_header: false
+      section_footer: false
+      aos_animation: none
+      aos_duration: default
+      aos_delay: '0'
+      aos_once: true
+  8ada5a5a-7ea4-423d-8043-9a75014196c9:
+    parent_uuid: 4bc5314c-28f9-4a6b-bceb-4edf8b19a4fe
+    slot: col_1
+    uuid: 8ada5a5a-7ea4-423d-8043-9a75014196c9
+    component_id: sdc.vartheme_bs5_educare.card-action-text
+    component_version: b66d7dffa42a9998
+    inputs:
+      show_action_icon: true
+      card_border: false
+      background_color: bg-secondary-subtle
+      padded: true
+      box_shadow: shadow-none
+      corner_style: rounded-0
+      equal_height: false
+      stretched_link: true
+      link_url:
+        uri: 'internal:/admissions/'
+        options: {  }
+      link_target: default
+  eb6bd4ba-48cf-4f1c-a18b-fd6883d09817:
+    parent_uuid: 8ada5a5a-7ea4-423d-8043-9a75014196c9
+    slot: content
+    uuid: eb6bd4ba-48cf-4f1c-a18b-fd6883d09817
+    component_id: sdc.vartheme_bs5_educare.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: Admissions
+      level: 5
+      target: _self
+  08dbde59-dd0d-4114-9065-efd09c83bb78:
+    parent_uuid: 8ada5a5a-7ea4-423d-8043-9a75014196c9
+    slot: content
+    uuid: 08dbde59-dd0d-4114-9065-efd09c83bb78
+    component_id: sdc.vartheme_bs5_educare.spacer
+    component_version: 80de1b3919d08f87
+    inputs:
+      size: py-5
+  6dddc673-9967-42a2-b0ce-c0edcd6add62:
+    parent_uuid: 8ada5a5a-7ea4-423d-8043-9a75014196c9
+    slot: content
+    uuid: 6dddc673-9967-42a2-b0ce-c0edcd6add62
+    component_id: sdc.vartheme_bs5_educare.text
+    component_version: c4ddb22de87220b3
+    inputs:
+      text:
+        value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+        format: canvas_html_block
+      text_size: fs-6
+      text_color: text-muted
+  0332e3b4-71ee-4439-80a0-12223e16ea62:
+    parent_uuid: 4bc5314c-28f9-4a6b-bceb-4edf8b19a4fe
+    slot: col_2
+    uuid: 0332e3b4-71ee-4439-80a0-12223e16ea62
+    component_id: sdc.vartheme_bs5_educare.card-action-text
+    component_version: b66d7dffa42a9998
+    inputs:
+      show_action_icon: true
+      card_border: false
+      background_color: bg-secondary-subtle
+      padded: true
+      box_shadow: shadow-none
+      corner_style: rounded-0
+      equal_height: false
+      stretched_link: true
+      link_url:
+        uri: 'internal:/programs/'
+        options: {  }
+      link_target: default
+  62fc0f75-4d23-496d-9130-6ce35e477127:
+    parent_uuid: 0332e3b4-71ee-4439-80a0-12223e16ea62
+    slot: content
+    uuid: 62fc0f75-4d23-496d-9130-6ce35e477127
+    component_id: sdc.vartheme_bs5_educare.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: Programs
+      level: 5
+      target: _self
+  cfb1939e-1078-45cf-a057-99063d2c5119:
+    parent_uuid: 0332e3b4-71ee-4439-80a0-12223e16ea62
+    slot: content
+    uuid: cfb1939e-1078-45cf-a057-99063d2c5119
+    component_id: sdc.vartheme_bs5_educare.spacer
+    component_version: 80de1b3919d08f87
+    inputs:
+      size: py-5
+  7074d3d9-cd3c-4296-8ac1-669f2e23a17b:
+    parent_uuid: 0332e3b4-71ee-4439-80a0-12223e16ea62
+    slot: content
+    uuid: 7074d3d9-cd3c-4296-8ac1-669f2e23a17b
+    component_id: sdc.vartheme_bs5_educare.text
+    component_version: c4ddb22de87220b3
+    inputs:
+      text:
+        value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+        format: canvas_html_block
+      text_size: fs-6
+      text_color: text-muted
+  238da25a-a4d0-47f4-92dc-409309aed392:
+    parent_uuid: 4bc5314c-28f9-4a6b-bceb-4edf8b19a4fe
+    slot: col_3
+    uuid: 238da25a-a4d0-47f4-92dc-409309aed392
+    component_id: sdc.vartheme_bs5_educare.card-action-text
+    component_version: b66d7dffa42a9998
+    inputs:
+      show_action_icon: true
+      card_border: false
+      background_color: bg-dark
+      padded: true
+      box_shadow: shadow-none
+      corner_style: rounded-0
+      equal_height: false
+      stretched_link: true
+      link_url:
+        uri: 'internal:/contact-us'
+        options: {  }
+      link_target: default
+  1ef7d328-b0ff-4c10-9566-faf92ae6a836:
+    parent_uuid: 238da25a-a4d0-47f4-92dc-409309aed392
+    slot: content
+    uuid: 1ef7d328-b0ff-4c10-9566-faf92ae6a836
+    component_id: sdc.vartheme_bs5_educare.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: 'Contact Us'
+      level: 5
+      text_color: text-white
+      target: _self
+  7d8469c4-5aed-4394-922f-58a5fdd058f2:
+    parent_uuid: 238da25a-a4d0-47f4-92dc-409309aed392
+    slot: content
+    uuid: 7d8469c4-5aed-4394-922f-58a5fdd058f2
+    component_id: sdc.vartheme_bs5_educare.spacer
+    component_version: 80de1b3919d08f87
+    inputs:
+      size: py-5
+  6aa3d7d3-8569-4568-97eb-f9efc8330a69:
+    parent_uuid: 238da25a-a4d0-47f4-92dc-409309aed392
+    slot: content
+    uuid: 6aa3d7d3-8569-4568-97eb-f9efc8330a69
+    component_id: sdc.vartheme_bs5_educare.text
+    component_version: c4ddb22de87220b3
+    inputs:
+      text:
+        value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+        format: canvas_html_block
+      text_size: fs-6
+      text_color: text-white

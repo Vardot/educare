@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 476c2835-79f8-4064-9de9-d946e0178a3b
+  bundle: image
+  default_langcode: en
+  depends:
+    ebfecdc5-8300-413c-b437-fc7d9552e597: file
+default:
+  revision_user:
+  - target_id: 1
+  revision_log_message:
+  - value: Created new Image
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Quote Mark (Light)
+  revision_translation_affected:
+  - value: true
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: Decorative light quotation mark
+    title: Quote Mark (Light)
+    width: 21
+    height: 21
+    entity: ebfecdc5-8300-413c-b437-fc7d9552e597

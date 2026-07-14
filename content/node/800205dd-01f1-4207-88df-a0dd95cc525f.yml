@@ -1,0 +1,82 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 800205dd-01f1-4207-88df-a0dd95cc525f
+  bundle: event
+  default_langcode: en
+  depends:
+    a772120f-a5bb-4e82-b7c7-e819940baae1: taxonomy_term
+    3ab8a507-e00c-4f54-9e4d-5222387a0bda: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new Event'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Scholarship Information Session'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /events/scholarship-information-session
+      langcode: en
+  body:
+    -
+      value: |-
+        <p>An evening session covering scholarships, grants and student finance, with the admissions team on hand to answer questions.</p>
+
+        <p>An evening set aside for the practical questions: what is required, what it costs, and what happens next.</p>
+
+        <p>The sessions are grounded in cases rather than theory: what was decided, what it cost, and what the people who decided it would do differently.</p>
+
+        <p>The morning opens with a short introduction to the programme, so that anyone arriving without context is not left behind. From there the day splits: sessions run in parallel, and you are free to move between them.</p>
+
+        <p>Faculty from across the department take part, alongside researchers and, where the subject calls for it, partners from outside the university. They are here to be asked difficult questions, and the good ones tend to come from the floor rather than the panel.</p>
+
+        <p>"The people who get the most out of a day like this are the ones who come with a question they actually care about," says one of the organisers. "The programme is a scaffold. The conversations are the thing."</p>
+
+        <p>Lunch and refreshments are provided, and the breaks are deliberately long: most of what people remember from these events happens between the sessions rather than during them.</p>
+
+        <p>The venue is <strong>The Student Union, Great Hall, West Campus</strong>. It is step-free throughout, a hearing loop is available, and if you have an access requirement we would rather hear about it in advance than improvise on the day.</p>
+
+        <p>Places are limited and they do go. If you would like to come, <a href="/contact-us">get in touch with the team</a> and we will hold you a place and send the joining details a week beforehand.</p>
+
+        <p>If you cannot make this one, the programme runs through the year, and the <a href="/events">events listing</a> carries everything that is coming up next.</p>
+      format: full_html
+      summary: ''
+  field_description:
+    -
+      value: 'An evening session covering scholarships, grants and student finance, with the admissions team on hand to answer questions.'
+  field_event_categories:
+    -
+      entity: a772120f-a5bb-4e82-b7c7-e819940baae1
+  field_location:
+    -
+      value: 'The Student Union, Great Hall, West Campus'
+  field_tags:
+    -
+      entity: 3ab8a507-e00c-4f54-9e4d-5222387a0bda
+  field_when:
+    -
+      value: 1787900400
+      end_value: 1787914800
+      duration: 240
+      rrule: 0
+      rrule_index: 0
+      timezone: ''

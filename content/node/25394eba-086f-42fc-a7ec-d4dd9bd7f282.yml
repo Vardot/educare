@@ -1,0 +1,82 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 25394eba-086f-42fc-a7ec-d4dd9bd7f282
+  bundle: event
+  default_langcode: en
+  depends:
+    123d69ff-1621-4b9b-bc39-0262123c4dd5: taxonomy_term
+    3ab8a507-e00c-4f54-9e4d-5222387a0bda: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new Event'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Alumni Career Networking Night'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /events/alumni-career-networking-night
+      langcode: en
+  body:
+    -
+      value: |-
+        <p>Meet alumni working across technology, health care, business and the arts, and hear how they built their careers after graduation.</p>
+
+        <p>An evening for the conversations that are hard to schedule and easy to underestimate.</p>
+
+        <p>The sessions are grounded in cases rather than theory: what was decided, what it cost, and what the people who decided it would do differently.</p>
+
+        <p>The morning opens with a short introduction to the programme, so that anyone arriving without context is not left behind. From there the day splits: sessions run in parallel, and you are free to move between them.</p>
+
+        <p>Faculty from across the department take part, alongside researchers and, where the subject calls for it, partners from outside the university. They are here to be asked difficult questions, and the good ones tend to come from the floor rather than the panel.</p>
+
+        <p>"The people who get the most out of a day like this are the ones who come with a question they actually care about," says one of the organisers. "The programme is a scaffold. The conversations are the thing."</p>
+
+        <p>Lunch and refreshments are provided, and the breaks are deliberately long: most of what people remember from these events happens between the sessions rather than during them.</p>
+
+        <p>The venue is <strong>The Science Library, ground floor seminar rooms</strong>. It is step-free throughout, a hearing loop is available, and if you have an access requirement we would rather hear about it in advance than improvise on the day.</p>
+
+        <p>Places are limited and they do go. If you would like to come, <a href="/contact-us">get in touch with the team</a> and we will hold you a place and send the joining details a week beforehand.</p>
+
+        <p>If you cannot make this one, the programme runs through the year, and the <a href="/events">events listing</a> carries everything that is coming up next.</p>
+      format: full_html
+      summary: ''
+  field_description:
+    -
+      value: 'Meet alumni working across technology, health care, business and the arts, and hear how they built their careers after graduation.'
+  field_event_categories:
+    -
+      entity: 123d69ff-1621-4b9b-bc39-0262123c4dd5
+  field_location:
+    -
+      value: 'The Science Library, ground floor seminar rooms'
+  field_tags:
+    -
+      entity: 3ab8a507-e00c-4f54-9e4d-5222387a0bda
+  field_when:
+    -
+      value: 1791874800
+      end_value: 1791885600
+      duration: 180
+      rrule: 0
+      rrule_index: 0
+      timezone: ''

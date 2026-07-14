@@ -1,0 +1,82 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 1c56e6e8-436c-4127-9393-a3d38daf57cc
+  bundle: event
+  default_langcode: en
+  depends:
+    a772120f-a5bb-4e82-b7c7-e819940baae1: taxonomy_term
+    d022bed1-e3ad-43ab-89a0-c35c4e898359: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new Event'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Study Abroad Information Evening'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /events/study-abroad-information-evening
+      langcode: en
+  body:
+    -
+      value: |-
+        <p>Where you can go, what it costs, how the credits transfer, and how students found the year away.</p>
+
+        <p>An evening set aside for the practical questions: what is required, what it costs, and what happens next.</p>
+
+        <p>Current students run much of the day, so what you hear about the place comes from the people actually living in it.</p>
+
+        <p>The morning opens with a short introduction to the programme, so that anyone arriving without context is not left behind. From there the day splits: sessions run in parallel, and you are free to move between them.</p>
+
+        <p>Faculty from across the department take part, alongside researchers and, where the subject calls for it, partners from outside the university. They are here to be asked difficult questions, and the good ones tend to come from the floor rather than the panel.</p>
+
+        <p>"The people who get the most out of a day like this are the ones who come with a question they actually care about," says one of the organisers. "The programme is a scaffold. The conversations are the thing."</p>
+
+        <p>Lunch and refreshments are provided, and the breaks are deliberately long: most of what people remember from these events happens between the sessions rather than during them.</p>
+
+        <p>The venue is <strong>The Engineering Building, Lab 3, South Campus</strong>. It is step-free throughout, a hearing loop is available, and if you have an access requirement we would rather hear about it in advance than improvise on the day.</p>
+
+        <p>Places are limited and they do go. If you would like to come, <a href="/contact-us">get in touch with the team</a> and we will hold you a place and send the joining details a week beforehand.</p>
+
+        <p>If you cannot make this one, the programme runs through the year, and the <a href="/events">events listing</a> carries everything that is coming up next.</p>
+      format: full_html
+      summary: ''
+  field_description:
+    -
+      value: 'Where you can go, what it costs, how the credits transfer, and how students found the year away.'
+  field_event_categories:
+    -
+      entity: a772120f-a5bb-4e82-b7c7-e819940baae1
+  field_location:
+    -
+      value: 'The Engineering Building, Lab 3, South Campus'
+  field_tags:
+    -
+      entity: d022bed1-e3ad-43ab-89a0-c35c4e898359
+  field_when:
+    -
+      value: 1791615600
+      end_value: 1791622800
+      duration: 120
+      rrule: 0
+      rrule_index: 0
+      timezone: ''

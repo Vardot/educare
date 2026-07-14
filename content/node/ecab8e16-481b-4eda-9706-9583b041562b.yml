@@ -1,0 +1,82 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: ecab8e16-481b-4eda-9706-9583b041562b
+  bundle: event
+  default_langcode: en
+  depends:
+    e2dfa86d-4fbf-42f7-9889-14a9249b891e: taxonomy_term
+    0529025a-43bc-4493-8dfc-b56948031963: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new Event'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Humanities Graduate Conference'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /events/humanities-graduate-conference
+      langcode: en
+  body:
+    -
+      value: |-
+        <p>Graduate students from across the humanities present work in progress and take questions from their peers.</p>
+
+        <p>Research in progress, presented by the people who are still in the middle of it.</p>
+
+        <p>The discussion is close, specific and unhurried, and the disagreements are the point rather than an embarrassment.</p>
+
+        <p>The morning opens with a short introduction to the programme, so that anyone arriving without context is not left behind. From there the day splits: sessions run in parallel, and you are free to move between them.</p>
+
+        <p>Faculty from across the department take part, alongside researchers and, where the subject calls for it, partners from outside the university. They are here to be asked difficult questions, and the good ones tend to come from the floor rather than the panel.</p>
+
+        <p>"The people who get the most out of a day like this are the ones who come with a question they actually care about," says one of the organisers. "The programme is a scaffold. The conversations are the thing."</p>
+
+        <p>Lunch and refreshments are provided, and the breaks are deliberately long: most of what people remember from these events happens between the sessions rather than during them.</p>
+
+        <p>The venue is <strong>The Science Library, ground floor seminar rooms</strong>. It is step-free throughout, a hearing loop is available, and if you have an access requirement we would rather hear about it in advance than improvise on the day.</p>
+
+        <p>Places are limited and they do go. If you would like to come, <a href="/contact-us">get in touch with the team</a> and we will hold you a place and send the joining details a week beforehand.</p>
+
+        <p>If you cannot make this one, the programme runs through the year, and the <a href="/events">events listing</a> carries everything that is coming up next.</p>
+      format: full_html
+      summary: ''
+  field_description:
+    -
+      value: 'Graduate students from across the humanities present work in progress and take questions from their peers.'
+  field_event_categories:
+    -
+      entity: e2dfa86d-4fbf-42f7-9889-14a9249b891e
+  field_location:
+    -
+      value: 'The Science Library, ground floor seminar rooms'
+  field_tags:
+    -
+      entity: 0529025a-43bc-4493-8dfc-b56948031963
+  field_when:
+    -
+      value: 1797145200
+      end_value: 1797174000
+      duration: 480
+      rrule: 0
+      rrule_index: 0
+      timezone: ''

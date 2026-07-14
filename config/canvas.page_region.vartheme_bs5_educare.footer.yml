@@ -1,0 +1,195 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.system_menu_block.footer
+    - canvas.component.block.system_menu_block.secondary
+    - canvas.component.block.system_menu_block.social-media-menu
+    - canvas.component.sdc.vartheme_bs5_educare.button
+    - canvas.component.sdc.vartheme_bs5_educare.divider
+    - canvas.component.sdc.vartheme_bs5_educare.heading
+    - canvas.component.sdc.vartheme_bs5_educare.html-code
+    - canvas.component.sdc.vartheme_bs5_educare.section
+    - canvas.component.sdc.vartheme_bs5_educare.text
+    - filter.format.canvas_html_block
+  module:
+    - link
+    - options
+    - text
+  theme:
+    - vartheme_bs5_educare
+id: vartheme_bs5_educare.footer
+region: footer
+theme: vartheme_bs5_educare
+component_tree:
+  b6a309fb-cbd0-4601-918a-15294d8b1673:
+    uuid: b6a309fb-cbd0-4601-918a-15294d8b1673
+    component_id: sdc.vartheme_bs5_educare.section
+    component_version: 9b679273be9319ad
+    inputs:
+      bg_edge2edge: true
+      container_type: container
+      background_color: bg-secondary-subtle
+      text_color: text-dark
+      columns: 33-33-33
+      gutter: 'gx-3 gy-3'
+      padding_block_start: pt-5
+      padding_block_end: pb-0
+      section_header: false
+      section_footer: true
+      aos_once: false
+  638dc0f6-69ee-490f-a1a6-95b313ee2ae9:
+    parent_uuid: b6a309fb-cbd0-4601-918a-15294d8b1673
+    slot: col_1
+    uuid: 638dc0f6-69ee-490f-a1a6-95b313ee2ae9
+    component_id: sdc.vartheme_bs5_educare.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: 'Subscribe to Our Newsletters'
+      level: 4
+      target: _self
+  d8f3da75-9214-4786-967c-e538f1e4b7a9:
+    parent_uuid: b6a309fb-cbd0-4601-918a-15294d8b1673
+    slot: col_1
+    uuid: d8f3da75-9214-4786-967c-e538f1e4b7a9
+    component_id: sdc.vartheme_bs5_educare.text
+    component_version: c4ddb22de87220b3
+    inputs:
+      text:
+        value: '<p>Be the first to hear about university events, news, and updates</p>'
+        format: canvas_html_block
+      text_size: fs-6
+      text_color: text-muted
+  68119180-1574-4fd8-bc13-5649f4f7d458:
+    parent_uuid: b6a309fb-cbd0-4601-918a-15294d8b1673
+    slot: col_1
+    uuid: 68119180-1574-4fd8-bc13-5649f4f7d458
+    component_id: sdc.vartheme_bs5_educare.button
+    component_version: a3bdd446d7020573
+    inputs:
+      variant: btn-primary
+      outline: false
+      size: btn-md
+      label: SUBSCRIBE
+      href:
+        uri: 'internal:/contact-us/'
+        options: {  }
+      target: self
+      disabled: false
+      icon: chevron-right
+      icon_first: false
+      icon_circle: true
+      icon_circle_white_text: false
+      icon_circle_grow: true
+      alignment: inline
+      full_width: false
+      radius: rounded-1
+  1b8d6230-40b5-4224-b5c1-db5e805d31ac:
+    parent_uuid: b6a309fb-cbd0-4601-918a-15294d8b1673
+    slot: col_2
+    uuid: 1b8d6230-40b5-4224-b5c1-db5e805d31ac
+    component_id: block.system_menu_block.secondary
+    component_version: 7206ccf6a90c8941
+    inputs:
+      label: 'Footer sitemap menu'
+      label_display: '0'
+      level: 1
+      depth: 2
+      expand_all_items: true
+  47a3855c-bb0c-462d-bb6e-80f6f007d34e:
+    parent_uuid: b6a309fb-cbd0-4601-918a-15294d8b1673
+    slot: col_3
+    uuid: 47a3855c-bb0c-462d-bb6e-80f6f007d34e
+    component_id: sdc.vartheme_bs5_educare.text
+    component_version: c4ddb22de87220b3
+    inputs:
+      text:
+        value: '<p>+1 489 239 2389</p>'
+        format: canvas_html_block
+      text_size: none
+      text_color: text-body
+  a191e817-3906-4f78-9a36-88ae1797759f:
+    parent_uuid: b6a309fb-cbd0-4601-918a-15294d8b1673
+    slot: col_3
+    uuid: a191e817-3906-4f78-9a36-88ae1797759f
+    component_id: sdc.vartheme_bs5_educare.text
+    component_version: c4ddb22de87220b3
+    inputs:
+      text:
+        value: '<p>john.doe@gmail.com</p>'
+        format: canvas_html_block
+      text_size: none
+      text_color: text-body
+  d553396d-df6a-4f69-96c8-192a28c8b544:
+    parent_uuid: b6a309fb-cbd0-4601-918a-15294d8b1673
+    slot: col_3
+    uuid: d553396d-df6a-4f69-96c8-192a28c8b544
+    component_id: sdc.vartheme_bs5_educare.text
+    component_version: c4ddb22de87220b3
+    inputs:
+      text:
+        value: '<p>University 450 Jane Stanford Way, Stanford, CA 94305–2004</p>'
+        format: canvas_html_block
+      text_size: none
+      text_color: text-body
+  b8266143-2902-4a49-b3f2-b8e4b1b623ed:
+    parent_uuid: b6a309fb-cbd0-4601-918a-15294d8b1673
+    slot: col_3
+    uuid: b8266143-2902-4a49-b3f2-b8e4b1b623ed
+    component_id: block.system_menu_block.social-media-menu
+    component_version: 0fcdbc0a997e263a
+    inputs:
+      label: 'Social media menu'
+      label_display: '0'
+      level: 1
+      depth: null
+      expand_all_items: false
+  d3c1cd06-e9bc-4f2e-85fb-f0a3faa8dd1f:
+    parent_uuid: b6a309fb-cbd0-4601-918a-15294d8b1673
+    slot: footer_slot
+    uuid: d3c1cd06-e9bc-4f2e-85fb-f0a3faa8dd1f
+    component_id: sdc.vartheme_bs5_educare.divider
+    component_version: 62f9294bba931609
+    inputs:
+      border_width: border-1
+      border_color: border-light
+      opacity: opacity-50
+      margin_top: mt-0
+      margin_bottom: mb-0
+  0bf79239-de05-498c-b5f0-2c07794b9444:
+    uuid: 0bf79239-de05-498c-b5f0-2c07794b9444
+    component_id: sdc.vartheme_bs5_educare.section
+    component_version: 9b679273be9319ad
+    inputs:
+      bg_edge2edge: true
+      container_type: container
+      background_color: bg-secondary-subtle
+      text_color: text-dark
+      columns: 50-50
+      gutter: 'gx-3 gy-3'
+      padding_block_start: pt-3
+      padding_block_end: pb-4
+      vertical_alignment: align-items-center
+      section_header: false
+      section_footer: false
+      aos_once: false
+  8bea199b-c0d7-4dd3-9540-7be4f4017f47:
+    parent_uuid: 0bf79239-de05-498c-b5f0-2c07794b9444
+    slot: col_1
+    uuid: 8bea199b-c0d7-4dd3-9540-7be4f4017f47
+    component_id: block.system_menu_block.footer
+    component_version: 075503dbc228a45c
+    inputs:
+      label: 'Footer menu'
+      label_display: '0'
+      level: 1
+      depth: null
+      expand_all_items: true
+  6d18f41a-a332-42fa-b763-35cacb60adbd:
+    parent_uuid: 0bf79239-de05-498c-b5f0-2c07794b9444
+    slot: col_2
+    uuid: 6d18f41a-a332-42fa-b763-35cacb60adbd
+    component_id: sdc.vartheme_bs5_educare.html-code
+    component_version: 656471f14c4594ec
+    inputs:
+      code: '<div class="copyright-text mt-2 mb-0"><p class="mb-0 d-flex align-items-center gap-1 justify-content-start justify-content-md-end">Powered by <a class="d-inline-flex align-items-center" href="https://www.vardot.com/?utm_source=varbase&amp;utm_campaign=varbase%20default%20links" target="_blank" rel="noopener noreferrer" aria-label="Vardot"><img src="/themes/contrib/vartheme_bs5_educare/vardot-logo.svg" alt="Vardot" class="powered-by-vardot-logo"></a></p></div>'

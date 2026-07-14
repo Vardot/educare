@@ -2,16 +2,21 @@ langcode: en
 status: false
 dependencies:
   config:
-  - system.menu.secondary
+    - system.menu.secondary
   module:
-  - system
+    - system
+label: 'Secondary menu'
+id: block.system_menu_block.secondary
+source: block
+source_local_id: 'system_menu_block:secondary'
+provider: system
 active_version: 31ecc6cc06f17d4e
 versioned_properties:
   active:
     settings:
       default_settings:
-        id: system_menu_block:secondary
-        label: Secondary menu
+        id: 'system_menu_block:secondary'
+        label: 'Secondary menu'
         label_display: '0'
         provider: system
         level: 1
@@ -22,7 +27,7 @@ versioned_properties:
   dba0b5285997433e:
     settings:
       default_settings:
-        id: system_menu_block:secondary
+        id: 'system_menu_block:secondary'
         label: Secondary
         label_display: '0'
         provider: system
@@ -34,7 +39,7 @@ versioned_properties:
   8601a0c2eaaf3c94:
     settings:
       default_settings:
-        id: system_menu_block:secondary
+        id: 'system_menu_block:secondary'
         label: Secondary
         label_display: '0'
         provider: system
@@ -43,8 +48,3 @@ versioned_properties:
         expand_all_items: false
     fallback_metadata:
       slot_definitions: null
-label: Secondary menu
-id: block.system_menu_block.secondary
-provider: system
-source: block
-source_local_id: system_menu_block:secondary

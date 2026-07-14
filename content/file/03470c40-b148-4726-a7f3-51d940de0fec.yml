@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 03470c40-b148-4726-a7f3-51d940de0fec
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: students-talking-on-campus-steps.jpg
+  uri:
+  - value: public://2026-06/students-talking-on-campus-steps.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 352732
+  status:
+  - value: true

@@ -1,0 +1,200 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 0ac28534-833d-4fee-b4f8-0ea304c7b98f
+  default_langcode: en
+  depends:
+    6348a550-a830-4c67-9262-cb29df062872: file
+    960f66fb-613d-41bb-b2ec-201e888fd0b7: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Updated the Components field'
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Contact Us'
+  components:
+    -
+      uuid: b2cdb137-3390-482f-b25e-e46c355cd3c6
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: '100'
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: b2cdb137-3390-482f-b25e-e46c355cd3c6
+      slot: header_slot
+      uuid: 8ecf7144-b577-4671-bbb5-259d993edeb8
+      component_id: block.system_breadcrumb_block
+      inputs:
+        label: Breadcrumbs
+        label_display: '0'
+    -
+      parent_uuid: b2cdb137-3390-482f-b25e-e46c355cd3c6
+      slot: header_slot
+      uuid: 17663c2a-9af1-4dd6-8609-0412910a3850
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Contact Us'
+        level: 1
+        text_size: h2
+        target: _self
+    -
+      parent_uuid: b2cdb137-3390-482f-b25e-e46c355cd3c6
+      slot: col_1
+      uuid: 0a0d1e27-2a82-4884-9e9f-cca90f87df2e
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 960f66fb-613d-41bb-b2ec-201e888fd0b7
+            target_type: media
+        target: self
+        ratio: ratio-auto
+        fit: object-fit-cover
+        align: me-auto
+        width: w-auto
+        rounded: none
+        loading: lazy
+    -
+      uuid: 3fd9081e-64e2-4539-897b-8508995df18c
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      uuid: e35f7f76-b49e-4356-9bd3-46863e47d7ce
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: true
+        columns: 67-33
+        section_header: false
+        section_footer: false
+        gutter: 'gx-5 gy-5'
+        padding_block_end: pb-5
+        container_type: container
+        aos_once: false
+    -
+      parent_uuid: e35f7f76-b49e-4356-9bd3-46863e47d7ce
+      slot: col_1
+      uuid: a4ed961b-4066-499c-8391-e8ba3d7b693c
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Ask us about anything'
+        level: 2
+    -
+      parent_uuid: e35f7f76-b49e-4356-9bd3-46863e47d7ce
+      slot: col_1
+      uuid: 7e68a959-e42b-4ea5-b630-87d340fe0d37
+      component_id: block.webform_block
+      inputs:
+        label: Webform
+        label_display: '0'
+        webform_id: business_contact
+        default_data: ''
+        redirect: false
+        lazy: false
+    -
+      parent_uuid: e35f7f76-b49e-4356-9bd3-46863e47d7ce
+      slot: col_2
+      uuid: 073531b6-8ae0-4c15-99dc-60977c14325a
+      component_id: sdc.vartheme_bs5_educare.group
+      inputs:
+        background_color: bg-secondary-subtle
+        radius: rounded-2
+        aos_once: true
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-5
+        padding_inline_end: pe-5
+        direction: horizontal
+    -
+      parent_uuid: 073531b6-8ae0-4c15-99dc-60977c14325a
+      slot: content
+      uuid: 82ec0833-5594-40a2-8aa0-b1819be5f017
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Contact Information'
+        level: 3
+    -
+      parent_uuid: 073531b6-8ae0-4c15-99dc-60977c14325a
+      slot: content
+      uuid: cf9de012-e64b-4ce8-98d2-70dff3731c8e
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p><strong>US &amp; Canada</strong></p><p>Phone Number: (408) 329 9888<br>Address: 3080 Olcott St, Suite A115, Santa Clara, CA 95054</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 073531b6-8ae0-4c15-99dc-60977c14325a
+      slot: content
+      uuid: b55e5c26-727c-45ee-a85f-2c66d4ae357e
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs: {  }
+    -
+      parent_uuid: 073531b6-8ae0-4c15-99dc-60977c14325a
+      slot: content
+      uuid: 9006122b-fd72-4afd-8f1e-50c32930cce7
+      component_id: sdc.vartheme_bs5_educare.button
+      inputs:
+        variant: btn-primary
+        outline: false
+        size: btn-md
+        target: self
+        disabled: false
+        icon: chevron-right
+        icon_first: false
+        alignment: inline
+        full_width: false
+        radius: rounded
+        label: 'ALL PROGRAMS'
+        href:
+          uri: 'internal:/programs/'
+          options: {  }
+        icon_circle: true
+        icon_circle_white_text: false
+  path:
+    -
+      alias: /contact-us
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: e243ed0a-1a7f-41dd-9cc0-0f3485b4d45f
+  bundle: image
+  default_langcode: en
+  depends:
+    15f79701-5664-431f-b53a-1de467eac0a2: file
+default:
+  revision_user:
+  - target_id: 1
+  revision_log_message:
+  - value: Created new Image
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Students Writing in a Classroom
+  revision_translation_affected:
+  - value: true
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: Students working at their desks and taking notes in a bright classroom
+    title: Students Writing in a Classroom
+    width: 285
+    height: 184
+    entity: 15f79701-5664-431f-b53a-1de467eac0a2

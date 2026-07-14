@@ -1,0 +1,500 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 66003396-311f-4600-90ee-fcf28a766346
+  default_langcode: en
+  depends:
+    6348a550-a830-4c67-9262-cb29df062872: file
+    960f66fb-613d-41bb-b2ec-201e888fd0b7: media
+    42e322d6-b979-4117-a6ab-c42417a3cc64: file
+    6c0a72fc-6f52-4454-8ae5-9f9617e556c7: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Updated the Components field'
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Anthropology
+  components:
+    -
+      uuid: cf820eb2-13b4-4b58-960c-9e5c7961f759
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: '100'
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: cf820eb2-13b4-4b58-960c-9e5c7961f759
+      slot: header_slot
+      uuid: bc246d5f-f498-4316-b941-762b981fe8bc
+      component_id: block.system_breadcrumb_block
+      inputs:
+        label: Breadcrumbs
+        label_display: '0'
+    -
+      parent_uuid: cf820eb2-13b4-4b58-960c-9e5c7961f759
+      slot: header_slot
+      uuid: 9abac453-1ada-4255-a9d7-1ee885ca259a
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: Anthropology
+        level: 1
+        text_size: h2
+        target: _self
+    -
+      parent_uuid: cf820eb2-13b4-4b58-960c-9e5c7961f759
+      slot: col_1
+      uuid: 7ec8f8d0-f4ee-4a53-a6bf-34e88f5d9416
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 960f66fb-613d-41bb-b2ec-201e888fd0b7
+            target_type: media
+        target: self
+        ratio: ratio-auto
+        fit: object-fit-cover
+        align: me-auto
+        width: w-auto
+        rounded: none
+        loading: lazy
+    -
+      uuid: ea9b09a2-cd53-4616-b1b4-a757a459f763
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 67-33
+        gutter: 'gx-5 gy-5'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: ea9b09a2-cd53-4616-b1b4-a757a459f763
+      slot: col_1
+      uuid: a35453c0-6892-4c39-bf64-32b9ac5c8fe7
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 6c0a72fc-6f52-4454-8ae5-9f9617e556c7
+            target_type: media
+        target: self
+        ratio: ratio-auto
+        fit: object-fit-cover
+        align: me-auto
+        width: w-auto
+        rounded: none
+        loading: lazy
+    -
+      parent_uuid: ea9b09a2-cd53-4616-b1b4-a757a459f763
+      slot: col_2
+      uuid: 58b28c6b-ef33-4a8e-a121-86cde33cefca
+      component_id: sdc.vartheme_bs5_educare.subtitle
+      inputs:
+        subtitle_text: 'about us'
+        font_size: small
+        font_weight: fw-semibold
+        text_transform: text-uppercase
+        line_position: start
+        line_size: sm
+    -
+      parent_uuid: ea9b09a2-cd53-4616-b1b4-a757a459f763
+      slot: col_2
+      uuid: 151036f0-cd34-461f-8390-c16db395ac9e
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'When Dreams Align With the Right Chance, the Possibilities Become Endless'
+        level: 2
+        target: _self
+    -
+      parent_uuid: ea9b09a2-cd53-4616-b1b4-a757a459f763
+      slot: col_2
+      uuid: c88a88bb-8ff2-4659-aad0-017c6bfc5a7c
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Founded in 1850, Eduzin is a community-driven institution renowned for its unique contributions.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      uuid: 583a706b-2d14-4077-b9ac-3205c72bceb0
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: true
+        container_type: container
+        background_color: bg-dark
+        text_color: auto
+        background_overlay: none
+        columns: 33-33-33
+        gutter: 'gx-4 gy-4'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_block_end: mb-5
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: true
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 583a706b-2d14-4077-b9ac-3205c72bceb0
+      slot: header_slot
+      uuid: c2a1a2a7-70f3-4d4c-99b0-6433aaeba506
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-4
+    -
+      parent_uuid: 583a706b-2d14-4077-b9ac-3205c72bceb0
+      slot: header_slot
+      uuid: 7ed7a2ee-4dd3-45be-af6a-cdeb0f887586
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 75-25
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-end
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 7ed7a2ee-4dd3-45be-af6a-cdeb0f887586
+      slot: col_1
+      uuid: dca40ee5-d335-4429-aa89-d861faedf69f
+      component_id: sdc.vartheme_bs5_educare.subtitle
+      inputs:
+        subtitle_text: 'Our achievements'
+        font_size: small
+        font_weight: fw-semibold
+        text_transform: text-uppercase
+        line_position: start
+        line_size: sm
+    -
+      parent_uuid: 7ed7a2ee-4dd3-45be-af6a-cdeb0f887586
+      slot: col_1
+      uuid: 3f71b49d-0b64-4a0e-827f-6a84190485df
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'A University Defined by Excellence'
+        level: 2
+        target: _self
+    -
+      parent_uuid: 7ed7a2ee-4dd3-45be-af6a-cdeb0f887586
+      slot: col_1
+      uuid: 1a3d7d4e-cc14-4166-9134-d61b97d0ffd9
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Our achievements reflect the success of our students, faculty, and global community</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-secondary
+    -
+      parent_uuid: 7ed7a2ee-4dd3-45be-af6a-cdeb0f887586
+      slot: col_2
+      uuid: 951b24bc-ca43-48cd-91ef-d515855e97a1
+      component_id: sdc.vartheme_bs5_educare.button
+      inputs:
+        variant: btn-primary
+        outline: false
+        size: btn-md
+        label: 'EXPLORE PROGRAMS'
+        target: self
+        disabled: false
+        icon: chevron-right
+        icon_first: true
+        icon_circle: true
+        icon_circle_white_text: true
+        alignment: inline
+        full_width: false
+        radius: rounded-1
+    -
+      parent_uuid: 583a706b-2d14-4077-b9ac-3205c72bceb0
+      slot: col_1
+      uuid: ff473c39-8ecb-4561-9bcb-9420687a783d
+      component_id: sdc.vartheme_bs5_educare.figure
+      inputs:
+        number: 20k
+        suffix: +
+        description: 'Students from 80+ countries'
+        background_color: bg-dark
+        number_size: display-1
+        number_color: text-white
+        suffix_color: text-white-50
+        description_size: fs-6
+        description_color: text-white-50
+    -
+      parent_uuid: 583a706b-2d14-4077-b9ac-3205c72bceb0
+      slot: col_2
+      uuid: 898331a2-b74b-4395-9dab-14e1b101c564
+      component_id: sdc.vartheme_bs5_educare.figure
+      inputs:
+        number: '120'
+        suffix: +
+        description: ' Expert Instructors'
+        background_color: bg-dark
+        number_size: display-1
+        number_color: text-white
+        suffix_color: text-white-50
+        description_size: fs-6
+        description_color: text-white-50
+    -
+      parent_uuid: 583a706b-2d14-4077-b9ac-3205c72bceb0
+      slot: col_3
+      uuid: f665cef1-b972-423b-9117-3249fff6ee02
+      component_id: sdc.vartheme_bs5_educare.figure
+      inputs:
+        number: '95'
+        suffix: '%'
+        description: 'Graduate Employment Rate'
+        background_color: bg-dark
+        number_size: display-1
+        number_color: text-white
+        suffix_color: text-white-50
+        description_size: fs-6
+        description_color: text-white-50
+    -
+      parent_uuid: 583a706b-2d14-4077-b9ac-3205c72bceb0
+      slot: footer_slot
+      uuid: 4d8fe446-7000-4429-a9e2-71b9ed5309e7
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-3
+    -
+      uuid: 382c783a-faa4-4025-b573-ceca36e88a5f
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 50-50
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 382c783a-faa4-4025-b573-ceca36e88a5f
+      slot: header_slot
+      uuid: 71434e85-5df7-4f47-a267-b2ccfc4c7a63
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 75-25
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-end
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 71434e85-5df7-4f47-a267-b2ccfc4c7a63
+      slot: col_1
+      uuid: d7bafe32-5b12-4e6d-9a5c-d681f0fb385b
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Events you may also like'
+        level: 2
+        target: _self
+    -
+      parent_uuid: 71434e85-5df7-4f47-a267-b2ccfc4c7a63
+      slot: col_2
+      uuid: ef37ea15-e180-4e11-8bfd-3e29b611a52f
+      component_id: sdc.vartheme_bs5_educare.button
+      inputs:
+        variant: btn-primary
+        outline: false
+        size: btn-md
+        label: 'EXPLORE MORE EVENTS'
+        href:
+          uri: 'internal:/events/'
+          options: {  }
+        target: self
+        disabled: false
+        icon: chevron-right
+        icon_first: true
+        icon_circle: true
+        icon_circle_white_text: false
+        alignment: inline
+        full_width: false
+        radius: rounded-1
+    -
+      parent_uuid: 382c783a-faa4-4025-b573-ceca36e88a5f
+      slot: col_1
+      uuid: 29741a5e-d531-4ab8-8503-9fbec5687e40
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-03'
+        title: 'Tech & AI Innovation Conference'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/african-and-african-american-studies/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 382c783a-faa4-4025-b573-ceca36e88a5f
+      slot: col_2
+      uuid: 3c31d31a-76ec-4276-9e3f-8502deefbce1
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-10'
+        title: 'Open Day. Meet faculty, tour campus, and learn about admissions'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/african-and-african-american-studies'
+          options: {  }
+        link_target: default
+  path:
+    -
+      alias: /anthropology
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

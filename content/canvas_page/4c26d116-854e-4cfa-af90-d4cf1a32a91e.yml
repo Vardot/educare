@@ -1,0 +1,1237 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 4c26d116-854e-4cfa-af90-d4cf1a32a91e
+  default_langcode: en
+  depends:
+    16853bfb-dbf6-4528-a5cd-55cd5c8cfa0b: file
+    79303768-f991-47dc-9a03-5e7954054b89: media
+    8e0a2c5b-5bae-4107-bb59-5a66888a630e: file
+    c0303f91-df00-4417-b84f-54b5500b48e1: media
+    2f307bec-ea29-49fd-8249-0232432a7215: file
+    eb37099b-60de-4254-8d4d-ea1e74414299: media
+    62218912-8dfb-44f4-91bd-7b43feffc4c6: file
+    10e02268-e3b3-4592-98f4-8dfa65f688dd: media
+    cc4df35e-bc14-47c3-b4e9-cf91fbc5906c: file
+    f96f1202-5f84-4af9-a7b2-92deb2865790: media
+    4b0a3f62-d4d7-4794-91c9-6181ee1c546b: file
+    8be9994c-4648-4db1-97b0-f6e959ed19ae: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Updated the Components field'
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: About
+  components:
+    -
+      uuid: b635ea89-79bf-40a1-8b0f-c0139f017c70
+      component_id: block.system_breadcrumb_block
+      inputs:
+        label: Breadcrumbs
+        label_display: '0'
+    -
+      uuid: d78f56e3-64a9-4220-a1f2-40d225defff0
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 60-40
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: d78f56e3-64a9-4220-a1f2-40d225defff0
+      slot: header_slot
+      uuid: 7cb869fa-bb76-47ae-b8b8-af1a2537e76b
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'We are here to guide you to the bright future'
+        level: 1
+        target: _self
+        text_size: h2
+    -
+      parent_uuid: d78f56e3-64a9-4220-a1f2-40d225defff0
+      slot: col_1
+      uuid: bccf72b8-e36e-4100-81e3-c0e55d5fa7d1
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 79303768-f991-47dc-9a03-5e7954054b89
+            target_type: media
+        target: self
+        ratio: ratio-auto
+        fit: object-fit-cover
+        align: me-auto
+        width: w-auto
+        rounded: none
+        loading: lazy
+    -
+      parent_uuid: d78f56e3-64a9-4220-a1f2-40d225defff0
+      slot: col_2
+      uuid: a2d0b418-5452-4079-a9e7-8c96e90c0529
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: c0303f91-df00-4417-b84f-54b5500b48e1
+            target_type: media
+        target: self
+        ratio: ratio-auto
+        fit: object-fit-cover
+        align: me-auto
+        width: w-auto
+        rounded: none
+        loading: lazy
+    -
+      parent_uuid: d78f56e3-64a9-4220-a1f2-40d225defff0
+      slot: col_2
+      uuid: 17d5127f-daec-41d5-ad58-241e1dc71b10
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-2
+    -
+      parent_uuid: d78f56e3-64a9-4220-a1f2-40d225defff0
+      slot: col_2
+      uuid: 92b39f74-b38c-462c-bd23-1cf312db46fa
+      component_id: sdc.vartheme_bs5_educare.card-text
+      inputs:
+        card_border: false
+        background_color: bg-dark
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: false
+        link_target: default
+        icon_image: null
+        icon_alignment: start
+    -
+      parent_uuid: 92b39f74-b38c-462c-bd23-1cf312db46fa
+      slot: content
+      uuid: a96a3c55-1738-443f-a4e5-96461b17b1f9
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 92b39f74-b38c-462c-bd23-1cf312db46fa
+      slot: content
+      uuid: 7e2bba1e-33ad-4983-8093-e474f2059fa2
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-2
+    -
+      parent_uuid: 92b39f74-b38c-462c-bd23-1cf312db46fa
+      slot: content
+      uuid: 2c1fce13-dd3f-4739-ab2a-82dcc70a5527
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-1
+    -
+      parent_uuid: 92b39f74-b38c-462c-bd23-1cf312db46fa
+      slot: content
+      uuid: 7425b169-9630-436c-800f-a755630dae48
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>For generations, we have nurtured curious minds, challenged conventional thinking, and empowered individuals to create meaningful change</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-white
+    -
+      uuid: d269f636-1277-4888-85f3-69ba02173f16
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 60-40
+        gutter: 'gx-5 gy-5'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_block_end: mb-5
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-end
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: d269f636-1277-4888-85f3-69ba02173f16
+      slot: col_1
+      uuid: 98d0c75a-c497-4e1b-99d9-064a37f84f64
+      component_id: sdc.vartheme_bs5_educare.subtitle
+      inputs:
+        subtitle_text: ABOUT
+        font_size: small
+        font_weight: fw-semibold
+        text_transform: text-uppercase
+        line_position: start
+        line_size: sm
+    -
+      parent_uuid: d269f636-1277-4888-85f3-69ba02173f16
+      slot: col_1
+      uuid: ce09a1d3-eb80-4a15-b2e9-fb3ade3c60aa
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Excellence in Education, Research, and Impact'
+        level: 2
+        target: _self
+    -
+      parent_uuid: d269f636-1277-4888-85f3-69ba02173f16
+      slot: col_1
+      uuid: dea0466a-e975-4f63-b8d5-b5fab3b5850f
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-3
+    -
+      parent_uuid: d269f636-1277-4888-85f3-69ba02173f16
+      slot: col_1
+      uuid: f214d010-f502-4563-8676-4faec1e40598
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>We believe education has the power to transform lives, strengthen communities, and shape the future. Through academic excellence, innovation, and inclusivity, we empower students to become confident leaders in a rapidly changing world</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: d269f636-1277-4888-85f3-69ba02173f16
+      slot: col_2
+      uuid: 0106c48f-b553-440b-b8dd-411e82a6a2bc
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>01. OUR VALUES</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: d269f636-1277-4888-85f3-69ba02173f16
+      slot: col_2
+      uuid: 9e3bf548-553c-4123-a0d0-e4fe12c13c42
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>02. MISSION STSTEMENT</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      uuid: 9627abd3-d8d9-40a7-802c-7727305e927d
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 67-33
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 9627abd3-d8d9-40a7-802c-7727305e927d
+      slot: col_1
+      uuid: bd00d8db-aea1-4369-869b-33e61113fa6c
+      component_id: sdc.vartheme_bs5_educare.card-text
+      inputs:
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: false
+        link_target: default
+        icon_image: null
+        icon_alignment: start
+    -
+      parent_uuid: bd00d8db-aea1-4369-869b-33e61113fa6c
+      slot: content
+      uuid: b0428b08-e1b2-47d1-bd73-d1dd781df8df
+      component_id: sdc.vartheme_bs5_educare.card-logo
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: eb37099b-60de-4254-8d4d-ea1e74414299
+            target_type: media
+        shadow: shadow-none
+        alignment: left
+    -
+      parent_uuid: bd00d8db-aea1-4369-869b-33e61113fa6c
+      slot: content
+      uuid: 5e5af57f-e818-4fdb-8a18-6ed465e9c6e4
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: bd00d8db-aea1-4369-869b-33e61113fa6c
+      slot: content
+      uuid: 3ecdeada-0647-4da5-8127-fcb10e99acd0
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: bd00d8db-aea1-4369-869b-33e61113fa6c
+      slot: content
+      uuid: cf177987-c887-47d0-bc2f-1907b47dced0
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-4
+    -
+      parent_uuid: bd00d8db-aea1-4369-869b-33e61113fa6c
+      slot: content
+      uuid: fc31262d-c286-4886-adb2-c264f0733b99
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-2
+    -
+      parent_uuid: bd00d8db-aea1-4369-869b-33e61113fa6c
+      slot: content
+      uuid: 8429ec5f-362f-4c51-9b66-c0ce5357d4bd
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>We empower students to think critically, act boldly, and shape a better future for their communities and the world.</p>'
+          format: canvas_html_block
+        text_size: fs-3
+        text_color: text-body
+    -
+      parent_uuid: bd00d8db-aea1-4369-869b-33e61113fa6c
+      slot: content
+      uuid: fc599e44-f219-429e-bb75-aa54a6e89686
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>John Doe, &nbsp;Master’s in Economics</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: 9627abd3-d8d9-40a7-802c-7727305e927d
+      slot: col_2
+      uuid: d6aaf836-92f8-4d00-95fb-7c864fa7a0f6
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 10e02268-e3b3-4592-98f4-8dfa65f688dd
+            target_type: media
+        target: self
+        ratio: ratio-auto
+        fit: object-fit-cover
+        align: me-auto
+        width: w-auto
+        rounded: none
+        loading: lazy
+    -
+      uuid: cae0530f-0e6a-4b00-9e67-772437b3ecf1
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 60-40
+        gutter: 'gx-5 gy-5'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_block_end: mb-5
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-end
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: cae0530f-0e6a-4b00-9e67-772437b3ecf1
+      slot: col_1
+      uuid: 567e6e4f-23d1-4191-8b41-5601b66f5510
+      component_id: sdc.vartheme_bs5_educare.subtitle
+      inputs:
+        subtitle_text: LEADERSHIP
+        font_size: small
+        font_weight: fw-semibold
+        text_transform: text-uppercase
+        line_position: start
+        line_size: sm
+    -
+      parent_uuid: cae0530f-0e6a-4b00-9e67-772437b3ecf1
+      slot: col_1
+      uuid: b255c831-11c7-4bff-8790-eb55d0e19db6
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Marvin McKinney'
+        level: 2
+        target: _self
+    -
+      parent_uuid: cae0530f-0e6a-4b00-9e67-772437b3ecf1
+      slot: col_1
+      uuid: 6c6bc533-a928-4cff-ba36-604f4917a6e6
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: f96f1202-5f84-4af9-a7b2-92deb2865790
+            target_type: media
+        target: self
+        ratio: ratio-auto
+        fit: object-fit-cover
+        align: me-auto
+        width: w-auto
+        rounded: none
+        loading: lazy
+    -
+      parent_uuid: cae0530f-0e6a-4b00-9e67-772437b3ecf1
+      slot: col_2
+      uuid: 38211804-e2ef-4d3b-9705-6fef931c385c
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>The Institute’s board of trustees, known as “the Corporation,” includes 79 distinguished leaders in engineering, science, industry, education, and other professions.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: cae0530f-0e6a-4b00-9e67-772437b3ecf1
+      slot: col_2
+      uuid: 46434efa-150d-4786-b2b0-67333b7d3b41
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-4
+    -
+      parent_uuid: cae0530f-0e6a-4b00-9e67-772437b3ecf1
+      slot: col_2
+      uuid: 806af7bb-5e25-489d-89d8-a69fc3480d47
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: cae0530f-0e6a-4b00-9e67-772437b3ecf1
+      slot: col_2
+      uuid: ffe35c74-452a-492d-b838-8e194cac9556
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: cae0530f-0e6a-4b00-9e67-772437b3ecf1
+      slot: col_2
+      uuid: 036553e4-048c-4e03-af66-c6151fbbbb90
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: cae0530f-0e6a-4b00-9e67-772437b3ecf1
+      slot: col_2
+      uuid: e39c47b9-6536-4108-838e-63bed7352850
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>01. Office of the President</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: cae0530f-0e6a-4b00-9e67-772437b3ecf1
+      slot: col_2
+      uuid: 99a97b8b-b1f6-4122-9faa-d73f50318243
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>02. Senior Leadership</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: cae0530f-0e6a-4b00-9e67-772437b3ecf1
+      slot: col_2
+      uuid: 9694a995-a7e2-4113-b8b7-d54e9ca9ef92
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>03. Corporations</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      uuid: 50a90f81-e65f-4f99-b9fc-6f5b89476431
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: true
+        container_type: container
+        background_color: bg-dark
+        text_color: auto
+        background_overlay: none
+        columns: 33-33-33
+        gutter: 'gx-4 gy-4'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_block_end: mb-5
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: true
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 50a90f81-e65f-4f99-b9fc-6f5b89476431
+      slot: header_slot
+      uuid: 8f1a27d7-5b87-4da3-9c91-d71a8234db1b
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-4
+    -
+      parent_uuid: 50a90f81-e65f-4f99-b9fc-6f5b89476431
+      slot: header_slot
+      uuid: 0f17bceb-4a10-4e07-9cfc-caa7439aee44
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 75-25
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-end
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 0f17bceb-4a10-4e07-9cfc-caa7439aee44
+      slot: col_1
+      uuid: cdefbf29-2113-49eb-a88a-39392f47cbb9
+      component_id: sdc.vartheme_bs5_educare.subtitle
+      inputs:
+        subtitle_text: Research
+        font_size: small
+        font_weight: fw-semibold
+        text_transform: text-uppercase
+        line_position: start
+        line_size: sm
+    -
+      parent_uuid: 0f17bceb-4a10-4e07-9cfc-caa7439aee44
+      slot: col_1
+      uuid: 3bfd4885-9de5-433a-8e19-525a96c93484
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Advancing Knowledge Through Research and Innovation'
+        level: 2
+        target: _self
+    -
+      parent_uuid: 0f17bceb-4a10-4e07-9cfc-caa7439aee44
+      slot: col_1
+      uuid: 00048739-df7d-465f-a682-06d8afa11917
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Our researchers, faculty, and students work together to tackle global challenges, advance scientific discovery, and develop solutions that shape the future across industries and communities.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-secondary
+    -
+      parent_uuid: 0f17bceb-4a10-4e07-9cfc-caa7439aee44
+      slot: col_2
+      uuid: d4053e88-ff59-49a8-8770-bf5f14112c94
+      component_id: sdc.vartheme_bs5_educare.button
+      inputs:
+        variant: btn-primary
+        outline: false
+        size: btn-md
+        label: 'MORE ABOUT RESEARCH'
+        target: self
+        disabled: false
+        icon: chevron-right
+        icon_first: true
+        icon_circle: true
+        icon_circle_white_text: true
+        alignment: inline
+        full_width: false
+        radius: rounded-1
+        href:
+          uri: 'internal:/research/'
+          options: {  }
+        icon_circle_grow: true
+    -
+      parent_uuid: 50a90f81-e65f-4f99-b9fc-6f5b89476431
+      slot: col_1
+      uuid: 875ee44c-219e-494a-8462-c1dbc3c59a8c
+      component_id: sdc.vartheme_bs5_educare.figure
+      inputs:
+        number: '250'
+        suffix: +
+        description: 'Active Research Projects driving innovation across science, technology, health, business, and the humanitie'
+        background_color: bg-dark
+        number_size: display-1
+        number_color: text-white
+        suffix_color: text-white-50
+        description_size: fs-6
+        description_color: text-white-50
+    -
+      parent_uuid: 50a90f81-e65f-4f99-b9fc-6f5b89476431
+      slot: col_2
+      uuid: d9cfb605-9f42-4fd5-98cf-6fea93bd560d
+      component_id: sdc.vartheme_bs5_educare.figure
+      inputs:
+        number: $75M
+        suffix: +
+        description: 'Active Research Projects driving innovation across science, technology, health, business, and the humanitie'
+        background_color: bg-dark
+        number_size: display-1
+        number_color: text-white
+        suffix_color: text-white-50
+        description_size: fs-6
+        description_color: text-white-50
+    -
+      parent_uuid: 50a90f81-e65f-4f99-b9fc-6f5b89476431
+      slot: col_3
+      uuid: 4b7c091d-1a10-4103-9a3a-11870f4f5d7e
+      component_id: sdc.vartheme_bs5_educare.figure
+      inputs:
+        number: '1,200'
+        suffix: +
+        description: 'Active Research Projects driving innovation across science, technology, health, business, and the humanitie'
+        background_color: bg-dark
+        number_size: display-1
+        number_color: text-white
+        suffix_color: text-white-50
+        description_size: fs-6
+        description_color: text-white-50
+    -
+      parent_uuid: 50a90f81-e65f-4f99-b9fc-6f5b89476431
+      slot: footer_slot
+      uuid: 2c396ef2-88fb-471e-a2c9-d0988ad2e4a0
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 33-33-33
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 2c396ef2-88fb-471e-a2c9-d0988ad2e4a0
+      slot: col_1
+      uuid: e0ced1f1-59b7-4181-bbce-588f4b179415
+      component_id: sdc.vartheme_bs5_educare.figure
+      inputs:
+        number: '80'
+        suffix: +
+        description: 'Active Research Projects driving innovation across science, technology, health, business, and the humanitie'
+        background_color: bg-dark
+        number_size: display-1
+        number_color: text-white
+        suffix_color: text-white-50
+        description_size: fs-6
+        description_color: text-white-50
+    -
+      parent_uuid: 2c396ef2-88fb-471e-a2c9-d0988ad2e4a0
+      slot: col_2
+      uuid: e20969d0-0afe-4a05-bcf8-202e8de05b7e
+      component_id: sdc.vartheme_bs5_educare.figure
+      inputs:
+        number: '35'
+        suffix: +
+        description: 'Active Research Projects driving innovation across science, technology, health, business, and the humanitie'
+        background_color: bg-dark
+        number_size: display-1
+        number_color: text-white
+        suffix_color: text-white-50
+        description_size: fs-6
+        description_color: text-white-50
+    -
+      parent_uuid: 2c396ef2-88fb-471e-a2c9-d0988ad2e4a0
+      slot: col_3
+      uuid: a78f19a1-b215-4d46-9ea5-84e6e5865422
+      component_id: sdc.vartheme_bs5_educare.figure
+      inputs:
+        number: '150'
+        suffix: +
+        description: 'Active Research Projects driving innovation across science, technology, health, business, and the humanitie'
+        background_color: bg-dark
+        number_size: display-1
+        number_color: text-white
+        suffix_color: text-white-50
+        description_size: fs-6
+        description_color: text-white-50
+    -
+      parent_uuid: 50a90f81-e65f-4f99-b9fc-6f5b89476431
+      slot: footer_slot
+      uuid: 7ee29097-1b3f-4567-bd25-4bfcdcb714d8
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-3
+    -
+      uuid: 66759240-4e12-41b5-bfff-0fb91990fb75
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 60-40
+        gutter: 'gx-5 gy-5'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_block_end: mb-5
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-end
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 66759240-4e12-41b5-bfff-0fb91990fb75
+      slot: col_1
+      uuid: ce9ffa53-2cea-4090-b013-623d15e85730
+      component_id: sdc.vartheme_bs5_educare.subtitle
+      inputs:
+        subtitle_text: 'Our mission'
+        font_size: small
+        font_weight: fw-semibold
+        text_transform: text-uppercase
+        line_position: start
+        line_size: sm
+    -
+      parent_uuid: 66759240-4e12-41b5-bfff-0fb91990fb75
+      slot: col_1
+      uuid: 8aec9ab9-c7d9-46ab-9b61-9ab9476f5ba3
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Empowering Minds to Change the World'
+        level: 2
+        target: _self
+    -
+      parent_uuid: 66759240-4e12-41b5-bfff-0fb91990fb75
+      slot: col_1
+      uuid: 1bd9239e-013b-4bb4-b9ca-d22f1d45c4fa
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 8be9994c-4648-4db1-97b0-f6e959ed19ae
+            target_type: media
+        target: self
+        ratio: ratio-auto
+        fit: object-fit-cover
+        align: me-auto
+        width: w-auto
+        rounded: none
+        loading: lazy
+    -
+      parent_uuid: 66759240-4e12-41b5-bfff-0fb91990fb75
+      slot: col_2
+      uuid: ca084ec7-55c1-4a54-873c-fdf1e92bc1c4
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Founded to accelerate the nation’s industrial revolution, MIT is profoundly American. With ingenuity and drive, our graduates have invented fundamental technologies, launched new industries, and created millions of American jobs. At the same time, and without the slightest sense of contradiction, MIT is profoundly global. Our community gains tremendous strength as a magnet for talent from around the world. Through teaching, research, and innovation, MIT’s exceptional community pursues its mission of service to the nation and the world.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: 66759240-4e12-41b5-bfff-0fb91990fb75
+      slot: col_2
+      uuid: 953f8dcb-914c-420c-9b62-c0d90ee48c2c
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 66759240-4e12-41b5-bfff-0fb91990fb75
+      slot: col_2
+      uuid: db60b4dd-dd02-416f-8191-711d6f4400e8
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-4
+    -
+      parent_uuid: 66759240-4e12-41b5-bfff-0fb91990fb75
+      slot: col_2
+      uuid: 57d9b342-309b-448f-943a-c948176380d0
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-3
+    -
+      parent_uuid: 66759240-4e12-41b5-bfff-0fb91990fb75
+      slot: col_2
+      uuid: d80cacfd-54a5-4709-bcb6-7f599ee2ac3d
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>01. Students Programs</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 66759240-4e12-41b5-bfff-0fb91990fb75
+      slot: col_2
+      uuid: 67c5f4d1-2054-4302-8e44-785c9fc74d7a
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>02. Senior Leadership</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 66759240-4e12-41b5-bfff-0fb91990fb75
+      slot: col_2
+      uuid: 8e8c4312-a99e-454b-897d-703c54bf130a
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>03. Corporations</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      uuid: 7e7ec5f1-3a3b-4129-9f71-28b96fd80d56
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: '100'
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 7e7ec5f1-3a3b-4129-9f71-28b96fd80d56
+      slot: header_slot
+      uuid: d981a54d-90e7-49a3-a0a7-6c978e26f6a2
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 75-25
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-end
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: d981a54d-90e7-49a3-a0a7-6c978e26f6a2
+      slot: col_1
+      uuid: b7583a14-7003-45f8-989f-396c391eb3dc
+      component_id: sdc.vartheme_bs5_educare.subtitle
+      inputs:
+        subtitle_text: Stories
+        font_size: small
+        font_weight: fw-semibold
+        text_transform: text-uppercase
+        line_position: start
+        line_size: sm
+    -
+      parent_uuid: d981a54d-90e7-49a3-a0a7-6c978e26f6a2
+      slot: col_1
+      uuid: e40edbab-6833-4cd1-9296-82b86ef3fc58
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'How Our Students Are Thriving'
+        level: 2
+        target: _self
+    -
+      parent_uuid: d981a54d-90e7-49a3-a0a7-6c978e26f6a2
+      slot: col_1
+      uuid: 0797332e-c473-4ed5-a504-fec8b885c570
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Preparing students to make meaningful contributions to society as engaged citizens and leaders in a complex world</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: d981a54d-90e7-49a3-a0a7-6c978e26f6a2
+      slot: col_2
+      uuid: 3a2a3fb1-636f-4621-a5bc-aaf98bf19f18
+      component_id: sdc.vartheme_bs5_educare.button
+      inputs:
+        variant: btn-primary
+        outline: false
+        size: btn-md
+        label: 'VIEW ALL STORIES'
+        target: self
+        disabled: false
+        icon: chevron-right
+        icon_first: true
+        icon_circle: true
+        alignment: inline
+        full_width: false
+        radius: rounded-1
+        icon_circle_white_text: false
+        href:
+          uri: 'internal:/events/'
+          options: {  }
+        icon_circle_grow: true
+    -
+      parent_uuid: 7e7ec5f1-3a3b-4129-9f71-28b96fd80d56
+      slot: col_1
+      uuid: 8e5d31f3-5556-49bc-80b3-96c8c3f5747d
+      component_id: block.views_block.news-latest
+      inputs:
+        label: 'News: Latest news posts'
+        label_display: '0'
+        views_label: ''
+        items_per_page: 3
+        exposed: {  }
+    -
+      uuid: 4bc5314c-28f9-4a6b-bceb-4edf8b19a4fe
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 33-33-33
+        gutter: 'gx-4 gy-4'
+        padding_block_start: pt-3
+        padding_block_end: pb-2
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+        margin_block_start: mt-5
+    -
+      parent_uuid: 4bc5314c-28f9-4a6b-bceb-4edf8b19a4fe
+      slot: col_1
+      uuid: 8ada5a5a-7ea4-423d-8043-9a75014196c9
+      component_id: sdc.vartheme_bs5_educare.card-action-text
+      inputs:
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/admissions/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 8ada5a5a-7ea4-423d-8043-9a75014196c9
+      slot: content
+      uuid: eb6bd4ba-48cf-4f1c-a18b-fd6883d09817
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: Admissions
+        level: 5
+        target: _self
+    -
+      parent_uuid: 8ada5a5a-7ea4-423d-8043-9a75014196c9
+      slot: content
+      uuid: 08dbde59-dd0d-4114-9065-efd09c83bb78
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 8ada5a5a-7ea4-423d-8043-9a75014196c9
+      slot: content
+      uuid: 6dddc673-9967-42a2-b0ce-c0edcd6add62
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: 4bc5314c-28f9-4a6b-bceb-4edf8b19a4fe
+      slot: col_2
+      uuid: 0332e3b4-71ee-4439-80a0-12223e16ea62
+      component_id: sdc.vartheme_bs5_educare.card-action-text
+      inputs:
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/programs/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 0332e3b4-71ee-4439-80a0-12223e16ea62
+      slot: content
+      uuid: 62fc0f75-4d23-496d-9130-6ce35e477127
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: Programs
+        level: 5
+        target: _self
+    -
+      parent_uuid: 0332e3b4-71ee-4439-80a0-12223e16ea62
+      slot: content
+      uuid: cfb1939e-1078-45cf-a057-99063d2c5119
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 0332e3b4-71ee-4439-80a0-12223e16ea62
+      slot: content
+      uuid: 7074d3d9-cd3c-4296-8ac1-669f2e23a17b
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: 4bc5314c-28f9-4a6b-bceb-4edf8b19a4fe
+      slot: col_3
+      uuid: 238da25a-a4d0-47f4-92dc-409309aed392
+      component_id: sdc.vartheme_bs5_educare.card-action-text
+      inputs:
+        show_action_icon: true
+        card_border: false
+        background_color: bg-dark
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/contact-us'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 238da25a-a4d0-47f4-92dc-409309aed392
+      slot: content
+      uuid: 1ef7d328-b0ff-4c10-9566-faf92ae6a836
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Contact Us'
+        level: 5
+        text_color: text-white
+        target: _self
+    -
+      parent_uuid: 238da25a-a4d0-47f4-92dc-409309aed392
+      slot: content
+      uuid: 7d8469c4-5aed-4394-922f-58a5fdd058f2
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 238da25a-a4d0-47f4-92dc-409309aed392
+      slot: content
+      uuid: 6aa3d7d3-8569-4568-97eb-f9efc8330a69
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-white
+  path:
+    -
+      alias: /about
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

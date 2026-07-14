@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 4e8f687c-e959-4b42-96e7-3fe46ecb0b5f
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: two-students-walking-with-notes.jpg
+  uri:
+  - value: public://2026-06/two-students-walking-with-notes.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 99395
+  status:
+  - value: true

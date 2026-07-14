@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 6348a550-a830-4c67-9262-cb29df062872
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: students-walking-outside-the-science-building.png
+  uri:
+  - value: public://2026-07/students-walking-outside-the-science-building.png
+  filemime:
+  - value: image/png
+  filesize:
+  - value: 1125651
+  status:
+  - value: true

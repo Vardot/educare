@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 79303768-f991-47dc-9a03-5e7954054b89
+  bundle: image
+  default_langcode: en
+  depends:
+    16853bfb-dbf6-4528-a5cd-55cd5c8cfa0b: file
+default:
+  revision_user:
+  - target_id: 1
+  revision_log_message:
+  - value: Created new Image
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Three Students With Textbooks
+  revision_translation_affected:
+  - value: true
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: Three smiling students resting on a stack of language textbooks in the library
+    title: Three Students With Textbooks
+    width: 669
+    height: 492
+    entity: 16853bfb-dbf6-4528-a5cd-55cd5c8cfa0b

@@ -1,0 +1,103 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_educare.button
+    - canvas.component.sdc.vartheme_bs5_educare.heading
+    - canvas.component.sdc.vartheme_bs5_educare.section
+    - canvas.component.sdc.vartheme_bs5_educare.subtitle
+    - canvas.component.sdc.vartheme_bs5_educare.text
+    - filter.format.canvas_html_block
+  module:
+    - options
+    - text
+id: headingwithsubtitlebutt
+label: 'Heading with subtitle, button'
+component_tree:
+  599bd409-5de5-43a5-9119-c05a5c1c237f:
+    uuid: 599bd409-5de5-43a5-9119-c05a5c1c237f
+    component_id: sdc.vartheme_bs5_educare.section
+    component_version: 9b679273be9319ad
+    inputs:
+      bg_edge2edge: false
+      container_type: none
+      background_color: none
+      text_color: auto
+      background_overlay: none
+      columns: 75-25
+      gutter: 'gx-3 gy-3'
+      padding_block_start: pt-0
+      padding_block_end: pb-0
+      padding_inline_start: ps-0
+      padding_inline_end: pe-0
+      margin_block_start: mt-0
+      margin_block_end: mb-0
+      margin_inline_start: ms-0
+      margin_inline_end: me-0
+      shadow: none
+      radius: none
+      border: none
+      border_color: none
+      border_width: none
+      vertical_alignment: align-items-end
+      horizontal_alignment: text-start
+      section_header: false
+      section_footer: false
+      aos_animation: none
+      aos_duration: default
+      aos_delay: '0'
+      aos_once: true
+  549fce2d-565d-4372-83c0-4a50f2c3b112:
+    parent_uuid: 599bd409-5de5-43a5-9119-c05a5c1c237f
+    slot: col_1
+    uuid: 549fce2d-565d-4372-83c0-4a50f2c3b112
+    component_id: sdc.vartheme_bs5_educare.subtitle
+    component_version: b86e67a882361219
+    inputs:
+      subtitle_text: Programs
+      font_size: small
+      font_weight: fw-semibold
+      text_transform: text-uppercase
+      line_position: start
+      line_size: sm
+  9d83f972-ac46-489a-abaf-2bb112bf90bf:
+    parent_uuid: 599bd409-5de5-43a5-9119-c05a5c1c237f
+    slot: col_1
+    uuid: 9d83f972-ac46-489a-abaf-2bb112bf90bf
+    component_id: sdc.vartheme_bs5_educare.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: 'Find the Program That Matches Your Ambition'
+      level: 2
+      target: _self
+  0ea5a563-554a-4ced-8b71-281c9f7d452e:
+    parent_uuid: 599bd409-5de5-43a5-9119-c05a5c1c237f
+    slot: col_1
+    uuid: 0ea5a563-554a-4ced-8b71-281c9f7d452e
+    component_id: sdc.vartheme_bs5_educare.text
+    component_version: c4ddb22de87220b3
+    inputs:
+      text:
+        value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+        format: canvas_html_block
+      text_size: fs-6
+      text_color: text-muted
+  fd44a1c0-6af9-4989-a902-876387767d9d:
+    parent_uuid: 599bd409-5de5-43a5-9119-c05a5c1c237f
+    slot: col_2
+    uuid: fd44a1c0-6af9-4989-a902-876387767d9d
+    component_id: sdc.vartheme_bs5_educare.button
+    component_version: a3bdd446d7020573
+    inputs:
+      variant: btn-primary
+      outline: false
+      size: btn-md
+      label: 'EXPLORE PROGRAMS'
+      target: self
+      disabled: false
+      icon: chevron-right
+      icon_first: true
+      icon_circle: true
+      alignment: inline
+      full_width: false
+      radius: rounded-1

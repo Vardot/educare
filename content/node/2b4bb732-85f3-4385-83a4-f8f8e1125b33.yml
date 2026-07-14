@@ -1,0 +1,82 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 2b4bb732-85f3-4385-83a4-f8f8e1125b33
+  bundle: event
+  default_langcode: en
+  depends:
+    a071170e-0d41-4eeb-8381-34ea1df984e8: taxonomy_term
+    d45b0c6e-46f6-4c23-b387-393c195b7c14: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new Event'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Robotics Lab Open Evening'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /events/robotics-lab-open-evening
+      langcode: en
+  body:
+    -
+      value: |-
+        <p>See the robotics lab at work, meet the research team, and try the teleoperation rigs the group uses for its field studies.</p>
+
+        <p>The doors are open, and the day is built for you to ask the questions a prospectus cannot answer.</p>
+
+        <p>The work on show is physical and testable. Where a prototype failed, the team will tell you how, because that is usually the more useful half of the story.</p>
+
+        <p>The morning opens with a short introduction to the programme, so that anyone arriving without context is not left behind. From there the day splits: sessions run in parallel, and you are free to move between them.</p>
+
+        <p>Faculty from across the department take part, alongside researchers and, where the subject calls for it, partners from outside the university. They are here to be asked difficult questions, and the good ones tend to come from the floor rather than the panel.</p>
+
+        <p>"The people who get the most out of a day like this are the ones who come with a question they actually care about," says one of the organisers. "The programme is a scaffold. The conversations are the thing."</p>
+
+        <p>Lunch and refreshments are provided, and the breaks are deliberately long: most of what people remember from these events happens between the sessions rather than during them.</p>
+
+        <p>The venue is <strong>The Student Union, Great Hall, West Campus</strong>. It is step-free throughout, a hearing loop is available, and if you have an access requirement we would rather hear about it in advance than improvise on the day.</p>
+
+        <p>Places are limited and they do go. If you would like to come, <a href="/contact-us">get in touch with the team</a> and we will hold you a place and send the joining details a week beforehand.</p>
+
+        <p>If you cannot make this one, the programme runs through the year, and the <a href="/events">events listing</a> carries everything that is coming up next.</p>
+      format: full_html
+      summary: ''
+  field_description:
+    -
+      value: 'See the robotics lab at work, meet the research team, and try the teleoperation rigs the group uses for its field studies.'
+  field_event_categories:
+    -
+      entity: a071170e-0d41-4eeb-8381-34ea1df984e8
+  field_location:
+    -
+      value: 'The Student Union, Great Hall, West Campus'
+  field_tags:
+    -
+      entity: d45b0c6e-46f6-4c23-b387-393c195b7c14
+  field_when:
+    -
+      value: 1793689200
+      end_value: 1793700000
+      duration: 180
+      rrule: 0
+      rrule_index: 0
+      timezone: ''

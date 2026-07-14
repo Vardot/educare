@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 4b0a3f62-d4d7-4794-91c9-6181ee1c546b
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: two-students-studying-in-the-library.png
+  uri:
+  - value: public://2026-07/two-students-studying-in-the-library.png
+  filemime:
+  - value: image/png
+  filesize:
+  - value: 711370
+  status:
+  - value: true

@@ -1,0 +1,424 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 683c9181-64f9-4a13-8ad9-59cd5d4eb89a
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Updated the Title, Components, and Metatags (Hidden field for JSON support) fields'
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'African and American Studies'
+  components:
+    -
+      uuid: 391f6dcd-a218-471f-94ee-37b62584460e
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 75-25
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 391f6dcd-a218-471f-94ee-37b62584460e
+      slot: header_slot
+      uuid: fd6253bc-3f4e-4f49-ab28-8aa4f55fdba5
+      component_id: block.system_breadcrumb_block
+      inputs:
+        label: Breadcrumbs
+        label_display: '0'
+    -
+      parent_uuid: 391f6dcd-a218-471f-94ee-37b62584460e
+      slot: col_1
+      uuid: a4de21d9-3fc3-40c8-ac11-7185ffcd266c
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'University Launches New Artificial Intelligence Research Center'
+        level: 1
+        text_size: h2
+        target: _self
+    -
+      parent_uuid: 391f6dcd-a218-471f-94ee-37b62584460e
+      slot: col_2
+      uuid: 22d29cb0-99bb-443e-9e40-fae740a79b54
+      component_id: block.share
+      inputs:
+        label: Share
+        label_display: '0'
+        heading: Share
+        display_title: true
+        alignment: end
+        orientation: vertical
+        mobile_visibility: all
+        native_share: false
+        placement: rail-end
+    -
+      uuid: 0be9328f-df28-4a04-9710-2d7d066263b7
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 75-25
+        gutter: 'gx-5 gy-5'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 0be9328f-df28-4a04-9710-2d7d066263b7
+      slot: col_1
+      uuid: bf602a60-5415-46a2-b5aa-ab276afd2f9e
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: "<p>It's something many of us have experienced: You go on your phone to check something and - in the blink of an eye - you've been scrolling for an hour.</p>"
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 0be9328f-df28-4a04-9710-2d7d066263b7
+      slot: col_1
+      uuid: 84abd2e1-44e5-4568-85dd-a455681f2aee
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>People estimate more than a third of time on their phones is spent without a clear purpose, according to a new report.</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 0be9328f-df28-4a04-9710-2d7d066263b7
+      slot: col_1
+      uuid: 09a83447-b326-4f3a-9705-02d81098627c
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Dr Eleanor Drage of Cambridge University said "this isn''t just a question of people making unwise choices," but that we are "undermined by the immersive nature of the technology".</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 0be9328f-df28-4a04-9710-2d7d066263b7
+      slot: col_1
+      uuid: c8a3f919-45b1-4596-87a4-8fd6861e0236
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>And while asking people to self-report their phone use can be unreliable, recognising our own habits is a "really important first step" to managing them, said Prof Pete Etchells of Bath Spa University.</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 0be9328f-df28-4a04-9710-2d7d066263b7
+      slot: col_1
+      uuid: 892551a2-e6b0-4751-9623-4c6a7346b117
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Surveys commissioned by Virgin Media O2 found UK adults on average spent four hours per day on their phone, with 36% of this taking place unintentionally.</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 0be9328f-df28-4a04-9710-2d7d066263b7
+      slot: col_1
+      uuid: 3feb9439-4131-42e1-ad20-7601a3dabd9c
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>The report also revealed many people are aware of tools to control their screen time, but struggle to find the will to use them.</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 0be9328f-df28-4a04-9710-2d7d066263b7
+      slot: col_1
+      uuid: ecfdac81-e06d-4403-b899-ae33c3a66e21
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>"Despite growing awareness of the downsides of habitual and excessive device use, people struggle to successfully manage their time online," said Drage, a senior research fellow at the University of Cambridge.</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 0be9328f-df28-4a04-9710-2d7d066263b7
+      slot: col_1
+      uuid: f75445ef-f4a0-4ec6-a344-2a9460eb7944
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Those surveyed reported their smartphone use was mostly intentional - comprising actions such as sending messages, using maps or checking the weather.</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 0be9328f-df28-4a04-9710-2d7d066263b7
+      slot: col_1
+      uuid: 38613108-0f71-4548-b2f8-600dec4ed892
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>But participants said they also spent time mindlessly scrolling or flicking through apps.</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 0be9328f-df28-4a04-9710-2d7d066263b7
+      slot: col_1
+      uuid: 46e3787a-701b-407e-91dc-d9796d3a6ad0
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>The survey suggested those who said they spend more time using their phone without a clear reason were also were more likely to report negative experiences - including feeling worse afterwards or seeing harmful or unpleasant content.</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-body
+    -
+      parent_uuid: 0be9328f-df28-4a04-9710-2d7d066263b7
+      slot: col_2
+      uuid: 5bc8796a-d460-4210-a82e-b930d84b0fd0
+      component_id: sdc.vartheme_bs5_educare.card-text
+      inputs:
+        card_border: false
+        background_color: bg-dark
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: false
+        link_target: default
+        icon_image: null
+        icon_alignment: start
+    -
+      parent_uuid: 5bc8796a-d460-4210-a82e-b930d84b0fd0
+      slot: content
+      uuid: 1d86987a-b11e-426c-836f-e3d85a019447
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p><strong>5 September,&nbsp;</strong><br><strong>9:00 PM</strong></p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-white
+    -
+      parent_uuid: 5bc8796a-d460-4210-a82e-b930d84b0fd0
+      slot: content
+      uuid: 542d1a12-1d03-40f5-b4bc-4b080c0bcef4
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-4
+    -
+      parent_uuid: 5bc8796a-d460-4210-a82e-b930d84b0fd0
+      slot: content
+      uuid: c8d19003-8afd-467e-b68b-c00c170121e0
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: "<p>Location: \LUniversity 10 Jane Street, New York, NA 23367–2478, the main University hall</p>"
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-secondary
+    -
+      uuid: 7f1747d3-dd5c-4c38-b93f-31a5514a1d0d
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 50-50
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 7f1747d3-dd5c-4c38-b93f-31a5514a1d0d
+      slot: header_slot
+      uuid: 98e23de5-b386-41c4-8d43-03c564c8f20e
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 75-25
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-end
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 98e23de5-b386-41c4-8d43-03c564c8f20e
+      slot: col_1
+      uuid: 45f74777-018b-4190-a3ea-9abcb8c1a4db
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Events you may also like'
+        level: 2
+        target: _self
+    -
+      parent_uuid: 98e23de5-b386-41c4-8d43-03c564c8f20e
+      slot: col_2
+      uuid: 7bdabad3-8845-4da4-9bfb-e7e935ce7629
+      component_id: sdc.vartheme_bs5_educare.button
+      inputs:
+        variant: btn-primary
+        outline: false
+        size: btn-md
+        label: 'EXPLORE MORE EVENTS'
+        target: self
+        disabled: false
+        icon: chevron-right
+        icon_first: true
+        icon_circle: true
+        alignment: inline
+        full_width: false
+        radius: rounded-1
+        icon_circle_white_text: false
+        href:
+          uri: 'internal:/events/'
+          options: {  }
+        icon_circle_grow: true
+    -
+      parent_uuid: 7f1747d3-dd5c-4c38-b93f-31a5514a1d0d
+      slot: col_1
+      uuid: 02701262-ea3c-43ba-a299-93f9d0b6821a
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-03'
+        title: 'Tech & AI Innovation Conference'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_target: default
+        link_url:
+          uri: 'internal:/african-and-african-american-studies/'
+          options: {  }
+    -
+      parent_uuid: 7f1747d3-dd5c-4c38-b93f-31a5514a1d0d
+      slot: col_2
+      uuid: 126bf760-8cbb-4195-af82-9196115a6a57
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-10'
+        title: 'Open Day. Meet faculty, tour campus, and learn about admissions'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_target: default
+        link_url:
+          uri: 'internal:/african-and-african-american-studies'
+          options: {  }
+  path:
+    -
+      alias: /african-and-african-american-studies
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

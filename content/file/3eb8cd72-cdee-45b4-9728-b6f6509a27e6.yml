@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 3eb8cd72-cdee-45b4-9728-b6f6509a27e6
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: two-students-walking-and-smiling.png
+  uri:
+  - value: public://2026-06/two-students-walking-and-smiling.png
+  filemime:
+  - value: image/png
+  filesize:
+  - value: 354251
+  status:
+  - value: true

@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 8e0a2c5b-5bae-4107-bb59-5a66888a630e
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: two-students-talking-on-a-campus-path.png
+  uri:
+  - value: public://2026-07/two-students-talking-on-a-campus-path.png
+  filemime:
+  - value: image/png
+  filesize:
+  - value: 190848
+  status:
+  - value: true

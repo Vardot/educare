@@ -19,6 +19,17 @@ versioned_properties:
         exposed: {  }
     fallback_metadata:
       slot_definitions: null
+  beffb56d6897e496:
+    settings:
+      default_settings:
+        id: 'views_block:a11y_tools_editoria11y_results-block_a11y_alerts'
+        label: 'A11y Tools - Pages with accessibility alerts'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
 label: 'A11y Tools - Pages with accessibility alerts'
 id: block.views_block.a11y_tools_editoria11y_results-block_a11y_alerts
 provider: views

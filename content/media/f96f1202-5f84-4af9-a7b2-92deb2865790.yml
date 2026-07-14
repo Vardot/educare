@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: f96f1202-5f84-4af9-a7b2-92deb2865790
+  bundle: image
+  default_langcode: en
+  depends:
+    cc4df35e-bc14-47c3-b4e9-cf91fbc5906c: file
+default:
+  revision_user:
+  - target_id: 1
+  revision_log_message:
+  - value: Created new Image
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Faculty Member in His Office
+  revision_translation_affected:
+  - value: true
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: A smiling faculty member sitting at his desk reviewing charts and reports
+    title: Faculty Member in His Office
+    width: 652
+    height: 500
+    entity: cc4df35e-bc14-47c3-b4e9-cf91fbc5906c

@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 4fce34b9-33b9-4b98-b95b-60258b1c77d5
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+  - target_id: 1
+  revision_log:
+  - value: Created new Utility page
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Privacy policy
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  revision_translation_affected:
+  - value: true
+  moderation_state:
+  - value: published
+  path:
+  - alias: /privacy
+    langcode: en
+    pathauto: 0
+  field_description:
+  - value: How this site collects, uses and protects your personal data.

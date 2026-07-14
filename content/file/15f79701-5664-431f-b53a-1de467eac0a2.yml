@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 15f79701-5664-431f-b53a-1de467eac0a2
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: students-writing-in-a-classroom.png
+  uri:
+  - value: public://2026-07/students-writing-in-a-classroom.png
+  filemime:
+  - value: image/png
+  filesize:
+  - value: 100555
+  status:
+  - value: true

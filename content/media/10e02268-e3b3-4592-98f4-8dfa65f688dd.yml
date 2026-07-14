@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 10e02268-e3b3-4592-98f4-8dfa65f688dd
+  bundle: image
+  default_langcode: en
+  depends:
+    62218912-8dfb-44f4-91bd-7b43feffc4c6: file
+default:
+  revision_user:
+  - target_id: 1
+  revision_log_message:
+  - value: Created new Image
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Student Reading in the Library
+  revision_translation_affected:
+  - value: true
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: A student standing between library shelves, reading an open book
+    title: Student Reading in the Library
+    width: 359
+    height: 464
+    entity: 62218912-8dfb-44f4-91bd-7b43feffc4c6

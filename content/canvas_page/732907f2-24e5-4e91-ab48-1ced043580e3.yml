@@ -1,0 +1,693 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 732907f2-24e5-4e91-ab48-1ced043580e3
+  default_langcode: en
+  depends:
+    fadb9d4a-9ccc-4c53-8a25-40ef2ef1acbe: file
+    dc941b51-6a0c-4a40-a259-38073dc09be2: media
+    808dc349-4f2a-4088-bc08-9b52ae02626a: file
+    72918d56-02fb-4876-b0b0-e3250823f911: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Updated the Components field'
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Programs
+  components:
+    -
+      uuid: 010036be-9f34-4911-ab06-3f6e0aed09a5
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 60-40
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 010036be-9f34-4911-ab06-3f6e0aed09a5
+      slot: header_slot
+      uuid: e625cb27-4876-416e-aa7f-1a6b6dd71723
+      component_id: block.system_breadcrumb_block
+      inputs:
+        label: Breadcrumbs
+        label_display: '0'
+    -
+      parent_uuid: 010036be-9f34-4911-ab06-3f6e0aed09a5
+      slot: header_slot
+      uuid: 23dfcc39-b373-4dc3-b288-5877eb71d2bf
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Explore programs'
+        level: 1
+        target: _self
+        text_size: h2
+    -
+      parent_uuid: 010036be-9f34-4911-ab06-3f6e0aed09a5
+      slot: col_1
+      uuid: 0f05980e-a6c3-4e4e-95d1-0834633c5996
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: dc941b51-6a0c-4a40-a259-38073dc09be2
+            target_type: media
+        target: self
+        ratio: ratio-auto
+        fit: object-fit-cover
+        align: me-auto
+        width: w-auto
+        rounded: none
+        loading: lazy
+    -
+      parent_uuid: 010036be-9f34-4911-ab06-3f6e0aed09a5
+      slot: col_2
+      uuid: 40ff1bb9-c19f-431e-9e01-409eab243478
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 72918d56-02fb-4876-b0b0-e3250823f911
+            target_type: media
+        target: self
+        ratio: ratio-auto
+        fit: object-fit-cover
+        align: me-auto
+        width: w-auto
+        rounded: none
+        loading: lazy
+    -
+      parent_uuid: 010036be-9f34-4911-ab06-3f6e0aed09a5
+      slot: col_2
+      uuid: 1b09f8f4-46c0-4e4d-843e-498cc9ff13dd
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-2
+    -
+      parent_uuid: 010036be-9f34-4911-ab06-3f6e0aed09a5
+      slot: col_2
+      uuid: 1a6fbe15-0487-4e48-8ab1-2bbf03989ae0
+      component_id: sdc.vartheme_bs5_educare.card-text
+      inputs:
+        card_border: false
+        background_color: bg-dark
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: false
+        link_target: default
+        icon_image: null
+        icon_alignment: start
+    -
+      parent_uuid: 1a6fbe15-0487-4e48-8ab1-2bbf03989ae0
+      slot: content
+      uuid: a86beaf2-1a68-4b77-b1f9-efece5ee752b
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 1a6fbe15-0487-4e48-8ab1-2bbf03989ae0
+      slot: content
+      uuid: e425fcff-1d08-4ae0-820d-39d6a47f0778
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-2
+    -
+      parent_uuid: 1a6fbe15-0487-4e48-8ab1-2bbf03989ae0
+      slot: content
+      uuid: 79482049-6132-46b5-a32d-73e0e37231d2
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-1
+    -
+      parent_uuid: 1a6fbe15-0487-4e48-8ab1-2bbf03989ae0
+      slot: content
+      uuid: 019d79fd-0e26-421f-8c53-82663eb8d7f5
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>For generations, we have nurtured curious minds, challenged conventional thinking, and empowered individuals to create meaningful change</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-white
+    -
+      uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: '100'
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_block_end: mb-5
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      slot: header_slot
+      uuid: 9fe57a02-f4b0-4968-9cbb-d24f58f0ca30
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'All programs'
+        level: 2
+        target: _self
+    -
+      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      slot: col_1
+      uuid: e5340ce0-ce90-417d-a730-2ad1461549c1
+      component_id: block.views_exposed_filter_block.news-all
+      inputs:
+        label: 'Exposed form: news-all'
+        label_display: '0'
+        views_label: ''
+    -
+      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      slot: col_1
+      uuid: ab49bcd5-d9bf-4a75-8a0c-6984be1ddef6
+      component_id: sdc.vartheme_bs5_educare.card-program
+      inputs:
+        title: 'African and African American Studies'
+        heading_level: h5
+        indented: false
+        col_1: M.A.
+        col_2: A.L.M.
+        separator: true
+        card_border: false
+        background_color: none
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_target: default
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+    -
+      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      slot: col_1
+      uuid: ad060010-41f5-40e1-842c-9fc483f58fc8
+      component_id: sdc.vartheme_bs5_educare.card-program
+      inputs:
+        title: Anthropology
+        heading_level: h5
+        indented: false
+        col_1: M.A.
+        col_2: A.L.M.
+        separator: true
+        card_border: false
+        background_color: none
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_target: default
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+    -
+      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      slot: col_1
+      uuid: b20f4ce9-a64f-4496-a232-f3332c3d5a9c
+      component_id: sdc.vartheme_bs5_educare.card-program
+      inputs:
+        title: 'Applied Mathematics'
+        heading_level: h5
+        indented: false
+        col_1: M.A.
+        separator: true
+        card_border: false
+        background_color: none
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_target: default
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+    -
+      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      slot: col_1
+      uuid: c3ac5269-3d69-4f24-8c6a-7c71ca986878
+      component_id: sdc.vartheme_bs5_educare.card-program
+      inputs:
+        title: 'Art, Film, and Visual Studies'
+        heading_level: h5
+        indented: false
+        col_1: M.A.
+        col_2: A.L.M.
+        separator: true
+        card_border: false
+        background_color: none
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_target: default
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+    -
+      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      slot: col_1
+      uuid: 2f63f5a8-6cef-4ca7-bea0-2a085a4fb2ea
+      component_id: sdc.vartheme_bs5_educare.card-program
+      inputs:
+        title: Bioengineering
+        heading_level: h5
+        indented: false
+        col_1: M.A.
+        separator: true
+        card_border: false
+        background_color: none
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_target: default
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+    -
+      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      slot: col_1
+      uuid: 84372174-69cc-435b-8f53-86be6fdf13d8
+      component_id: sdc.vartheme_bs5_educare.card-program
+      inputs:
+        title: Biology
+        heading_level: h5
+        indented: false
+        col_1: M.A.
+        col_2: A.L.M.
+        separator: true
+        card_border: false
+        background_color: none
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_target: default
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+    -
+      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      slot: col_1
+      uuid: ee0d8d1c-266c-4279-a1cf-decf453c9143
+      component_id: sdc.vartheme_bs5_educare.card-program
+      inputs:
+        title: 'Biomedical Engineering'
+        heading_level: h5
+        indented: false
+        col_1: M.A.
+        col_2: A.L.M.
+        separator: true
+        card_border: false
+        background_color: none
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_target: default
+        col_3: A.L.B.
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+    -
+      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      slot: col_1
+      uuid: 3d9fc793-bae7-4901-85e5-87ce4dfba21b
+      component_id: sdc.vartheme_bs5_educare.card-program
+      inputs:
+        title: 'Business Administration and Management'
+        heading_level: h5
+        indented: false
+        col_1: M.A.
+        col_2: A.L.M.
+        separator: true
+        card_border: false
+        background_color: none
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_target: default
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+    -
+      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      slot: col_1
+      uuid: e6bd058b-d6de-46e8-a020-793f1d4d2210
+      component_id: sdc.vartheme_bs5_educare.card-program
+      inputs:
+        title: 'Chemical and Physical Biology'
+        heading_level: h5
+        indented: false
+        col_1: M.A.
+        col_2: A.L.M.
+        separator: true
+        card_border: false
+        background_color: none
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_target: default
+        col_3: A.L.B.
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+    -
+      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      slot: col_1
+      uuid: d2ec54bd-97ea-4588-a7e6-5dc1f8d02114
+      component_id: sdc.vartheme_bs5_educare.card-program
+      inputs:
+        title: Chemistry
+        heading_level: h5
+        indented: false
+        col_1: M.A.
+        col_2: A.L.M.
+        separator: true
+        card_border: false
+        background_color: none
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_target: default
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+    -
+      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      slot: col_1
+      uuid: b53d9dab-6c62-4e5e-8010-4b7a9b1398da
+      component_id: sdc.vartheme_bs5_educare.card-program
+      inputs:
+        title: 'Chemistry and Physics'
+        heading_level: h5
+        indented: false
+        col_1: M.A.
+        col_2: A.L.M.
+        separator: true
+        card_border: false
+        background_color: none
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_target: default
+        col_3: A.L.B.
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+    -
+      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      slot: col_1
+      uuid: 08f88ebd-e900-4e9c-a5e4-d3b8b7e09108
+      component_id: sdc.vartheme_bs5_educare.card-program
+      inputs:
+        title: 'Comparative Literature'
+        heading_level: h5
+        indented: false
+        col_1: M.A.
+        col_2: A.L.M.
+        separator: true
+        card_border: false
+        background_color: none
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_target: default
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+    -
+      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
+      slot: col_1
+      uuid: 8cb5e0ee-59ba-4629-b35e-285cc89144fb
+      component_id: sdc.vartheme_bs5_educare.card-program
+      inputs:
+        title: 'Comparative Study of Religion'
+        heading_level: h5
+        indented: false
+        col_1: M.A.
+        col_2: A.L.M.
+        separator: false
+        card_border: false
+        background_color: none
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_target: default
+        col_3: A.L.B.
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+    -
+      uuid: 5da5e111-c20d-4e75-9be1-94e6d09e4c2a
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 33-33-33
+        gutter: 'gx-4 gy-4'
+        padding_block_start: pt-3
+        padding_block_end: pb-2
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 5da5e111-c20d-4e75-9be1-94e6d09e4c2a
+      slot: col_1
+      uuid: 056bd524-4002-4af9-b9f7-2859085fe405
+      component_id: sdc.vartheme_bs5_educare.card-action-text
+      inputs:
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/admissions/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 056bd524-4002-4af9-b9f7-2859085fe405
+      slot: content
+      uuid: 25d5ec6d-353f-4038-9714-735e4d044d8b
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: Admissions
+        level: 5
+        target: _self
+    -
+      parent_uuid: 056bd524-4002-4af9-b9f7-2859085fe405
+      slot: content
+      uuid: a4d45c56-6cc4-4e20-beaa-7863f5c63802
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 056bd524-4002-4af9-b9f7-2859085fe405
+      slot: content
+      uuid: bffde398-b998-45a2-8c1a-7e8b0e86274c
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: 5da5e111-c20d-4e75-9be1-94e6d09e4c2a
+      slot: col_2
+      uuid: 48e5f77b-8a37-4f17-8c81-a8eb5b52ba99
+      component_id: sdc.vartheme_bs5_educare.card-action-text
+      inputs:
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/programs/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 48e5f77b-8a37-4f17-8c81-a8eb5b52ba99
+      slot: content
+      uuid: c1ebcf64-beaa-4a07-abd2-94c9a08c42e7
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: Programs
+        level: 5
+        target: _self
+    -
+      parent_uuid: 48e5f77b-8a37-4f17-8c81-a8eb5b52ba99
+      slot: content
+      uuid: 8765c8c2-74ec-4c82-a98b-b0a2db7bd29c
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 48e5f77b-8a37-4f17-8c81-a8eb5b52ba99
+      slot: content
+      uuid: 38577b40-d5c0-4615-ac4b-24fae8d900a0
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: 5da5e111-c20d-4e75-9be1-94e6d09e4c2a
+      slot: col_3
+      uuid: 9cb4b885-ce12-4c62-a5c1-ff34655039b0
+      component_id: sdc.vartheme_bs5_educare.card-action-text
+      inputs:
+        show_action_icon: true
+        card_border: false
+        background_color: bg-dark
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/contact-us/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 9cb4b885-ce12-4c62-a5c1-ff34655039b0
+      slot: content
+      uuid: 51e6ff33-18d0-4685-8c58-fceb93061fb0
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Contact Us'
+        level: 5
+        text_color: text-white
+        target: _self
+    -
+      parent_uuid: 9cb4b885-ce12-4c62-a5c1-ff34655039b0
+      slot: content
+      uuid: 4a434552-204b-4e10-94d9-5ef5f8ecc37d
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 9cb4b885-ce12-4c62-a5c1-ff34655039b0
+      slot: content
+      uuid: dfcdc5be-db24-469f-95e7-c49f855f027c
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-white
+  path:
+    -
+      alias: /programs
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

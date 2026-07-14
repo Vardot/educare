@@ -1,0 +1,82 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: da1172df-9f41-4313-b19c-9f8f304c7783
+  bundle: event
+  default_langcode: en
+  depends:
+    e2dfa86d-4fbf-42f7-9889-14a9249b891e: taxonomy_term
+    d45b0c6e-46f6-4c23-b387-393c195b7c14: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new Event'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Renewable Energy Research Day'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /events/renewable-energy-research-day
+      langcode: en
+  body:
+    -
+      value: |-
+        <p>The energy group presents its current work on storage and grid integration, with posters from the doctoral cohort.</p>
+
+        <p>Research in progress, presented by the people who are still in the middle of it.</p>
+
+        <p>The work on show is physical and testable. Where a prototype failed, the team will tell you how, because that is usually the more useful half of the story.</p>
+
+        <p>The morning opens with a short introduction to the programme, so that anyone arriving without context is not left behind. From there the day splits: sessions run in parallel, and you are free to move between them.</p>
+
+        <p>Faculty from across the department take part, alongside researchers and, where the subject calls for it, partners from outside the university. They are here to be asked difficult questions, and the good ones tend to come from the floor rather than the panel.</p>
+
+        <p>"The people who get the most out of a day like this are the ones who come with a question they actually care about," says one of the organisers. "The programme is a scaffold. The conversations are the thing."</p>
+
+        <p>Lunch and refreshments are provided, and the breaks are deliberately long: most of what people remember from these events happens between the sessions rather than during them.</p>
+
+        <p>The venue is <strong>University 10 Jane Street, New York, NA 23367-2478, the main University hall</strong>. It is step-free throughout, a hearing loop is available, and if you have an access requirement we would rather hear about it in advance than improvise on the day.</p>
+
+        <p>Places are limited and they do go. If you would like to come, <a href="/contact-us">get in touch with the team</a> and we will hold you a place and send the joining details a week beforehand.</p>
+
+        <p>If you cannot make this one, the programme runs through the year, and the <a href="/events">events listing</a> carries everything that is coming up next.</p>
+      format: full_html
+      summary: ''
+  field_description:
+    -
+      value: 'The energy group presents its current work on storage and grid integration, with posters from the doctoral cohort.'
+  field_event_categories:
+    -
+      entity: e2dfa86d-4fbf-42f7-9889-14a9249b891e
+  field_location:
+    -
+      value: 'University 10 Jane Street, New York, NA 23367-2478, the main University hall'
+  field_tags:
+    -
+      entity: d45b0c6e-46f6-4c23-b387-393c195b7c14
+  field_when:
+    -
+      value: 1790233200
+      end_value: 1790258400
+      duration: 420
+      rrule: 0
+      rrule_index: 0
+      timezone: ''

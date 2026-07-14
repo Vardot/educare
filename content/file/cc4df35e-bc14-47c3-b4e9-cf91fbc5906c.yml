@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: cc4df35e-bc14-47c3-b4e9-cf91fbc5906c
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: faculty-member-in-his-office.png
+  uri:
+  - value: public://2026-07/faculty-member-in-his-office.png
+  filemime:
+  - value: image/png
+  filesize:
+  - value: 589068
+  status:
+  - value: true

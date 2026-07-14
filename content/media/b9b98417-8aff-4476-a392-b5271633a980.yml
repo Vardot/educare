@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: b9b98417-8aff-4476-a392-b5271633a980
+  bundle: image
+  default_langcode: en
+  depends:
+    03470c40-b148-4726-a7f3-51d940de0fec: file
+default:
+  revision_user:
+  - target_id: 1
+  revision_log_message:
+  - value: Updated the Image field
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Students Talking on Campus Steps
+  revision_translation_affected:
+  - value: true
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: Three students sitting and talking together on campus steps under blossoming trees
+    title: Students Talking on Campus Steps
+    width: 339
+    height: 600
+    entity: 03470c40-b148-4726-a7f3-51d940de0fec

@@ -1,0 +1,160 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_educare.button
+    - canvas.component.sdc.vartheme_bs5_educare.card-dated-vertical
+    - canvas.component.sdc.vartheme_bs5_educare.heading
+    - canvas.component.sdc.vartheme_bs5_educare.section
+  module:
+    - datetime
+    - link
+    - options
+id: eventlastrow
+label: 'Event last row'
+component_tree:
+  7f1747d3-dd5c-4c38-b93f-31a5514a1d0d:
+    uuid: 7f1747d3-dd5c-4c38-b93f-31a5514a1d0d
+    component_id: sdc.vartheme_bs5_educare.section
+    component_version: 9b679273be9319ad
+    inputs:
+      bg_edge2edge: false
+      container_type: none
+      background_color: none
+      text_color: auto
+      background_overlay: none
+      columns: 50-50
+      gutter: 'gx-3 gy-3'
+      padding_block_start: pt-5
+      padding_block_end: pb-5
+      padding_inline_start: ps-0
+      padding_inline_end: pe-0
+      margin_block_start: mt-0
+      margin_block_end: mb-0
+      margin_inline_start: ms-0
+      margin_inline_end: me-0
+      shadow: none
+      radius: none
+      border: none
+      border_color: none
+      border_width: none
+      vertical_alignment: align-items-start
+      horizontal_alignment: text-start
+      section_header: true
+      section_footer: false
+      aos_animation: none
+      aos_duration: default
+      aos_delay: '0'
+      aos_once: true
+  98e23de5-b386-41c4-8d43-03c564c8f20e:
+    parent_uuid: 7f1747d3-dd5c-4c38-b93f-31a5514a1d0d
+    slot: header_slot
+    uuid: 98e23de5-b386-41c4-8d43-03c564c8f20e
+    component_id: sdc.vartheme_bs5_educare.section
+    component_version: 9b679273be9319ad
+    inputs:
+      bg_edge2edge: false
+      container_type: none
+      background_color: none
+      text_color: auto
+      background_overlay: none
+      columns: 75-25
+      gutter: 'gx-3 gy-3'
+      padding_block_start: pt-0
+      padding_block_end: pb-0
+      padding_inline_start: ps-0
+      padding_inline_end: pe-0
+      margin_block_start: mt-0
+      margin_block_end: mb-0
+      margin_inline_start: ms-0
+      margin_inline_end: me-0
+      shadow: none
+      radius: none
+      border: none
+      border_color: none
+      border_width: none
+      vertical_alignment: align-items-end
+      horizontal_alignment: text-start
+      section_header: false
+      section_footer: false
+      aos_animation: none
+      aos_duration: default
+      aos_delay: '0'
+      aos_once: true
+  45f74777-018b-4190-a3ea-9abcb8c1a4db:
+    parent_uuid: 98e23de5-b386-41c4-8d43-03c564c8f20e
+    slot: col_1
+    uuid: 45f74777-018b-4190-a3ea-9abcb8c1a4db
+    component_id: sdc.vartheme_bs5_educare.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: 'Events you may also like'
+      level: 2
+      target: _self
+  7bdabad3-8845-4da4-9bfb-e7e935ce7629:
+    parent_uuid: 98e23de5-b386-41c4-8d43-03c564c8f20e
+    slot: col_2
+    uuid: 7bdabad3-8845-4da4-9bfb-e7e935ce7629
+    component_id: sdc.vartheme_bs5_educare.button
+    component_version: a3bdd446d7020573
+    inputs:
+      variant: btn-primary
+      outline: false
+      size: btn-md
+      label: 'EXPLORE MORE EVENTS'
+      href:
+        uri: 'internal:/events/'
+        options: {  }
+      target: self
+      disabled: false
+      icon: chevron-right
+      icon_first: true
+      icon_circle: true
+      icon_circle_white_text: false
+      alignment: inline
+      full_width: false
+      radius: rounded-1
+  02701262-ea3c-43ba-a299-93f9d0b6821a:
+    parent_uuid: 7f1747d3-dd5c-4c38-b93f-31a5514a1d0d
+    slot: col_1
+    uuid: 02701262-ea3c-43ba-a299-93f9d0b6821a
+    component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+    component_version: 1b941df5cf10c438
+    inputs:
+      date: '2026-09-03'
+      title: 'Tech & AI Innovation Conference'
+      heading_level: h5
+      show_action_icon: true
+      card_border: false
+      background_color: bg-secondary-subtle
+      padded: false
+      box_shadow: shadow-none
+      corner_style: rounded-0
+      equal_height: false
+      stretched_link: true
+      link_url:
+        uri: 'internal:/african-and-african-american-studies/'
+        options: {  }
+      link_target: default
+  126bf760-8cbb-4195-af82-9196115a6a57:
+    parent_uuid: 7f1747d3-dd5c-4c38-b93f-31a5514a1d0d
+    slot: col_2
+    uuid: 126bf760-8cbb-4195-af82-9196115a6a57
+    component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+    component_version: 1b941df5cf10c438
+    inputs:
+      date: '2026-09-10'
+      title: 'Open Day. Meet faculty, tour campus, and learn about admissions'
+      heading_level: h5
+      show_action_icon: true
+      card_border: false
+      background_color: bg-secondary-subtle
+      padded: false
+      box_shadow: shadow-none
+      corner_style: rounded-0
+      equal_height: false
+      stretched_link: true
+      link_url:
+        uri: 'internal:/african-and-african-american-studies'
+        options: {  }
+      link_target: default

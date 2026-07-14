@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 16853bfb-dbf6-4528-a5cd-55cd5c8cfa0b
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: three-students-with-textbooks.jpg
+  uri:
+  - value: public://2026-07/three-students-with-textbooks.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 506582
+  status:
+  - value: true

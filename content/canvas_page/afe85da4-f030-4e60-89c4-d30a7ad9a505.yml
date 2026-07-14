@@ -1,0 +1,715 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: afe85da4-f030-4e60-89c4-d30a7ad9a505
+  default_langcode: en
+  depends:
+    6348a550-a830-4c67-9262-cb29df062872: file
+    960f66fb-613d-41bb-b2ec-201e888fd0b7: media
+    42e322d6-b979-4117-a6ab-c42417a3cc64: file
+    6c0a72fc-6f52-4454-8ae5-9f9617e556c7: media
+    15f79701-5664-431f-b53a-1de467eac0a2: file
+    e243ed0a-1a7f-41dd-9cc0-0f3485b4d45f: media
+    1eeafcc5-fd89-4ef3-856e-6019c7be0e22: file
+    734ebd92-74a9-4e14-93a3-b428af41f89e: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Updated the Components field'
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Student Life'
+  components:
+    -
+      uuid: c83c4f92-f549-4b46-82a5-1e4f8a996fcc
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: '100'
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: c83c4f92-f549-4b46-82a5-1e4f8a996fcc
+      slot: header_slot
+      uuid: 70eb687d-fa5f-458e-8ffb-e693cba11012
+      component_id: block.system_breadcrumb_block
+      inputs:
+        label: Breadcrumbs
+        label_display: '0'
+    -
+      parent_uuid: c83c4f92-f549-4b46-82a5-1e4f8a996fcc
+      slot: header_slot
+      uuid: 2dce6c25-4b49-44bd-81a7-775b980c4615
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Student Life'
+        level: 1
+        text_size: h2
+        target: _self
+    -
+      parent_uuid: c83c4f92-f549-4b46-82a5-1e4f8a996fcc
+      slot: col_1
+      uuid: b4a1253d-bb7e-4c3d-bdb2-98cc07f29bec
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 960f66fb-613d-41bb-b2ec-201e888fd0b7
+            target_type: media
+        target: self
+        ratio: ratio-auto
+        fit: object-fit-cover
+        align: me-auto
+        width: w-auto
+        rounded: none
+        loading: lazy
+    -
+      uuid: a8224f14-eed9-4da4-aa9d-033307ea647f
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 67-33
+        gutter: 'gx-5 gy-5'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: a8224f14-eed9-4da4-aa9d-033307ea647f
+      slot: col_1
+      uuid: 6ad0bbb0-7640-4c85-a3f6-79f650858cc0
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 6c0a72fc-6f52-4454-8ae5-9f9617e556c7
+            target_type: media
+        target: self
+        ratio: ratio-auto
+        fit: object-fit-cover
+        align: me-auto
+        width: w-auto
+        rounded: none
+        loading: lazy
+    -
+      parent_uuid: a8224f14-eed9-4da4-aa9d-033307ea647f
+      slot: col_2
+      uuid: b09857ee-3ed2-45a6-8ecc-c5c30ad3d020
+      component_id: sdc.vartheme_bs5_educare.subtitle
+      inputs:
+        subtitle_text: 'about us'
+        font_size: small
+        font_weight: fw-semibold
+        text_transform: text-uppercase
+        line_position: start
+        line_size: sm
+    -
+      parent_uuid: a8224f14-eed9-4da4-aa9d-033307ea647f
+      slot: col_2
+      uuid: 83f3dedf-1f93-4d0d-b92b-8fbae8a461e7
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'When Dreams Align With the Right Chance, the Possibilities Become Endless'
+        level: 2
+        target: _self
+    -
+      parent_uuid: a8224f14-eed9-4da4-aa9d-033307ea647f
+      slot: col_2
+      uuid: e98dcceb-f4ed-4176-ba34-d24cc092c7fe
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Founded in 1850, Eduzin is a community-driven institution renowned for its unique contributions.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      uuid: a1b85817-fe67-44e3-815f-870eac3a42da
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 50-50
+        gutter: 'gx-4 gy-4'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_block_end: mb-5
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: a1b85817-fe67-44e3-815f-870eac3a42da
+      slot: header_slot
+      uuid: 2ca25468-b59a-4644-8a18-ea7c129b6d5a
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 60-40
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-end
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 2ca25468-b59a-4644-8a18-ea7c129b6d5a
+      slot: col_1
+      uuid: c6ad1ba0-5b37-41bc-ae5b-d41a1d16665b
+      component_id: sdc.vartheme_bs5_educare.subtitle
+      inputs:
+        subtitle_text: Stories
+        font_size: small
+        font_weight: fw-semibold
+        text_transform: text-uppercase
+        line_position: start
+        line_size: sm
+    -
+      parent_uuid: 2ca25468-b59a-4644-8a18-ea7c129b6d5a
+      slot: col_1
+      uuid: b7e88c36-8d18-4909-b740-1c269f4cc7f9
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'How Our Students Are Thriving'
+        level: 2
+        target: _self
+    -
+      parent_uuid: 2ca25468-b59a-4644-8a18-ea7c129b6d5a
+      slot: col_1
+      uuid: 78ea5475-bf09-4051-9f65-6ccba193af11
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Preparing students to make meaningful contributions to society as engaged citizens and leaders in a complex world</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: 2ca25468-b59a-4644-8a18-ea7c129b6d5a
+      slot: col_2
+      uuid: 25349e82-5e56-4b5c-9550-0fb28646fca5
+      component_id: sdc.vartheme_bs5_educare.button
+      inputs:
+        variant: btn-primary
+        outline: false
+        size: btn-md
+        label: 'SEE ALL STORIES'
+        href:
+          uri: 'internal:/events/'
+          options: {  }
+        target: self
+        disabled: false
+        icon: chevron-right
+        icon_first: true
+        icon_circle: true
+        icon_circle_white_text: false
+        alignment: inline
+        full_width: false
+        radius: rounded-1
+        icon_circle_grow: true
+    -
+      parent_uuid: 2ca25468-b59a-4644-8a18-ea7c129b6d5a
+      slot: col_2
+      uuid: e5d7bac0-1df5-465b-aaf3-50f239c041b2
+      component_id: sdc.vartheme_bs5_educare.button
+      inputs:
+        variant: btn-primary
+        outline: false
+        size: btn-md
+        label: 'VIEW ALL EVENTS'
+        href:
+          uri: 'internal:/events/'
+          options: {  }
+        target: self
+        disabled: false
+        icon: chevron-right
+        icon_first: true
+        icon_circle: true
+        icon_circle_white_text: false
+        alignment: inline
+        full_width: false
+        radius: rounded-1
+        icon_circle_grow: true
+    -
+      parent_uuid: a1b85817-fe67-44e3-815f-870eac3a42da
+      slot: col_1
+      uuid: 6dce8f55-9af7-4cce-80d1-91f56f90864c
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-03'
+        title: 'Open Day. Meet faculty, tour campus'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: a1b85817-fe67-44e3-815f-870eac3a42da
+      slot: col_1
+      uuid: f873cf2b-11eb-4a19-b655-acc39b1c13db
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-3
+    -
+      parent_uuid: a1b85817-fe67-44e3-815f-870eac3a42da
+      slot: col_1
+      uuid: 5ad21cce-2384-4b5f-acf8-6c15e0f4e17c
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-10'
+        title: 'University Launches New Artificial Intelligence Research Center'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: a1b85817-fe67-44e3-815f-870eac3a42da
+      slot: col_1
+      uuid: d0759086-7b04-4581-94de-495743824888
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-3
+    -
+      parent_uuid: a1b85817-fe67-44e3-815f-870eac3a42da
+      slot: col_1
+      uuid: ae8c7c42-1968-4140-b3b3-9316d6672f03
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-08'
+        title: 'University Launches New Artificial Intelligence Research Center'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: a1b85817-fe67-44e3-815f-870eac3a42da
+      slot: col_1
+      uuid: 35fd2958-7da2-4203-8e35-ee6428425565
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-3
+    -
+      parent_uuid: a1b85817-fe67-44e3-815f-870eac3a42da
+      slot: col_1
+      uuid: 84f884db-8450-48b4-9bac-85fa918f4832
+      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
+      inputs:
+        date: '2026-09-07'
+        title: 'University Launches New Artificial Intelligence Research Center'
+        heading_level: h5
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: false
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/tech-ai-innovation-conference/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: a1b85817-fe67-44e3-815f-870eac3a42da
+      slot: col_2
+      uuid: 5ea9e295-fad4-466f-92d1-7b47f71b01ad
+      component_id: sdc.vartheme_bs5_educare.card-featured
+      inputs:
+        media_position: start
+        media_image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e243ed0a-1a7f-41dd-9cc0-0f3485b4d45f
+            target_type: media
+        ratio: ratio-auto
+        fit: object-fit-cover
+        card_border: false
+        corner_style: rounded-0
+        show_action_icon: true
+        padded: false
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/african-and-african-american-studies/'
+          options: {  }
+        link_target: default
+        content_vertical_alignment: align-items-center
+        gutters_between: 'g-2 g-lg-3'
+        columns_xs_size: '06_06'
+        columns_sm_size: '06_06'
+        columns_md_size: '06_06'
+        columns_lg_size: '06_06'
+        columns_xl_size: '06_06'
+        columns_xxl_size: '06_06'
+    -
+      parent_uuid: 5ea9e295-fad4-466f-92d1-7b47f71b01ad
+      slot: content
+      uuid: 0d73e6b8-9429-4751-914c-9474ea726c94
+      component_id: sdc.vartheme_bs5_educare.date
+      inputs:
+        text_color: text-body
+        size: fs-6
+    -
+      parent_uuid: 5ea9e295-fad4-466f-92d1-7b47f71b01ad
+      slot: content
+      uuid: 8572e6d1-d6d2-4168-b06e-c64f8dbe8760
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'University Launches New Artificial Intelligence Research Center'
+        level: 5
+        target: _self
+    -
+      parent_uuid: a1b85817-fe67-44e3-815f-870eac3a42da
+      slot: col_2
+      uuid: 61b793b7-4ac9-4bc6-b47e-a1c92b0e3832
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-2
+    -
+      parent_uuid: a1b85817-fe67-44e3-815f-870eac3a42da
+      slot: col_2
+      uuid: ff54838d-10ca-4a11-97aa-b01be3edb05d
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-1
+    -
+      parent_uuid: a1b85817-fe67-44e3-815f-870eac3a42da
+      slot: col_2
+      uuid: 27b2f993-06ec-4126-88a5-20674348be73
+      component_id: sdc.vartheme_bs5_educare.card-featured
+      inputs:
+        media_position: start
+        media_image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 734ebd92-74a9-4e14-93a3-b428af41f89e
+            target_type: media
+        ratio: ratio-auto
+        fit: object-fit-cover
+        card_border: false
+        corner_style: rounded-0
+        show_action_icon: true
+        padded: false
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/african-and-african-american-studies/'
+          options: {  }
+        link_target: default
+        content_vertical_alignment: align-items-center
+        gutters_between: 'g-2 g-lg-3'
+        columns_xs_size: '06_06'
+        columns_sm_size: '06_06'
+        columns_md_size: '06_06'
+        columns_lg_size: '06_06'
+        columns_xl_size: '06_06'
+        columns_xxl_size: '06_06'
+    -
+      parent_uuid: 27b2f993-06ec-4126-88a5-20674348be73
+      slot: content
+      uuid: 0759ff3b-35c0-420f-a518-b569171859fb
+      component_id: sdc.vartheme_bs5_educare.date
+      inputs:
+        text_color: text-body
+        size: fs-6
+    -
+      parent_uuid: 27b2f993-06ec-4126-88a5-20674348be73
+      slot: content
+      uuid: a0d1693b-18d7-4df9-bf97-62c10001efa1
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'University Launches New Artificial Intelligence Research Center'
+        level: 5
+        target: _self
+    -
+      uuid: 57f55928-a6ac-4e0a-8a88-102325b7a893
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 33-33-33
+        gutter: 'gx-4 gy-4'
+        padding_block_start: pt-3
+        padding_block_end: pb-2
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 57f55928-a6ac-4e0a-8a88-102325b7a893
+      slot: col_1
+      uuid: 27083047-9e5c-442a-9766-f17e6be65b6b
+      component_id: sdc.vartheme_bs5_educare.card-action-text
+      inputs:
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/admissions/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 27083047-9e5c-442a-9766-f17e6be65b6b
+      slot: content
+      uuid: 4428f36f-e68e-4171-beb1-0502de592813
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: Admissions
+        level: 5
+        target: _self
+    -
+      parent_uuid: 27083047-9e5c-442a-9766-f17e6be65b6b
+      slot: content
+      uuid: c5e49437-2482-4108-b3fd-8c2b8c1217a7
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 27083047-9e5c-442a-9766-f17e6be65b6b
+      slot: content
+      uuid: 0b9d3192-dc44-4714-b618-086a6bb899f1
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: 57f55928-a6ac-4e0a-8a88-102325b7a893
+      slot: col_2
+      uuid: 7a8e6f00-dece-4fc5-9dfc-4370c05bc860
+      component_id: sdc.vartheme_bs5_educare.card-action-text
+      inputs:
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/programs/'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 7a8e6f00-dece-4fc5-9dfc-4370c05bc860
+      slot: content
+      uuid: d8339711-9b92-43c4-bdc3-e8b639658eea
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: Programs
+        level: 5
+        target: _self
+    -
+      parent_uuid: 7a8e6f00-dece-4fc5-9dfc-4370c05bc860
+      slot: content
+      uuid: ec853da2-8122-4bf6-8a98-72186d830693
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 7a8e6f00-dece-4fc5-9dfc-4370c05bc860
+      slot: content
+      uuid: 5b6d1f0d-d585-4e53-9b7b-7a39270c88f1
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: 57f55928-a6ac-4e0a-8a88-102325b7a893
+      slot: col_3
+      uuid: 29d35e0d-71d0-42fc-ad0e-78ddeb1383a6
+      component_id: sdc.vartheme_bs5_educare.card-action-text
+      inputs:
+        show_action_icon: true
+        card_border: false
+        background_color: bg-dark
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: true
+        link_url:
+          uri: 'internal:/contact-us'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 29d35e0d-71d0-42fc-ad0e-78ddeb1383a6
+      slot: content
+      uuid: aa2c0b4f-bfd7-4d02-8430-8604f6fb9f97
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Contact Us'
+        level: 5
+        text_color: text-white
+        target: _self
+    -
+      parent_uuid: 29d35e0d-71d0-42fc-ad0e-78ddeb1383a6
+      slot: content
+      uuid: ca636dff-6e31-4c6a-b25e-8ec2f59282d2
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 29d35e0d-71d0-42fc-ad0e-78ddeb1383a6
+      slot: content
+      uuid: 7473d1d2-1147-4f37-8953-8f0b2105e659
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-white
+  path:
+    -
+      alias: /student-life
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: dc941b51-6a0c-4a40-a259-38073dc09be2
+  bundle: image
+  default_langcode: en
+  depends:
+    fadb9d4a-9ccc-4c53-8a25-40ef2ef1acbe: file
+default:
+  revision_user:
+  - target_id: 1
+  revision_log_message:
+  - value: Created new Image
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Two Students Talking on a Campus Path
+  revision_translation_affected:
+  - value: true
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: Two students standing on a campus path outside a brick building, going over their notes
+    title: Two Students Talking on a Campus Path
+    width: 669
+    height: 492
+    entity: fadb9d4a-9ccc-4c53-8a25-40ef2ef1acbe

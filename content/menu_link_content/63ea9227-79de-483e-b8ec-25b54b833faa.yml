@@ -1,0 +1,48 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 63ea9227-79de-483e-b8ec-25b54b833faa
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    1aa8d5f9-e603-4690-874a-6b5b8125b534: menu_link_content
+    683c9181-64f9-4a13-8ad9-59cd5d4eb89a: canvas_page
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log_message:
+    -
+      value: 'Created new Custom menu link'
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'African and American Studies'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: 683c9181-64f9-4a13-8ad9-59cd5d4eb89a
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -49
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:1aa8d5f9-e603-4690-874a-6b5b8125b534'
+  revision_translation_affected:
+    -
+      value: true

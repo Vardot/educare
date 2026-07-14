@@ -1,0 +1,146 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 51d9e852-ea0c-42a6-800a-3e14f0c501a1
+  default_langcode: en
+  depends:
+    213d105b-3742-46a5-b682-2337a2cc7298: file
+    ab4da061-71b8-4888-8905-7cf8a065efa4: media
+default:
+  revision_user:
+  - target_id: 1
+  revision_log:
+  - value: Updated the Components field
+  status:
+  - value: true
+  owner:
+  - target_id: 1
+  title:
+  - value: Events
+  components:
+  - uuid: 2d4873cd-e74f-43ff-8270-aa97f8b53778
+    component_id: sdc.vartheme_bs5_educare.section
+    inputs:
+      bg_edge2edge: false
+      container_type: none
+      background_color: none
+      text_color: auto
+      background_overlay: none
+      columns: '100'
+      gutter: gx-3 gy-3
+      padding_block_start: pt-0
+      padding_block_end: pb-0
+      padding_inline_start: ps-0
+      padding_inline_end: pe-0
+      margin_block_start: mt-0
+      margin_block_end: mb-0
+      margin_inline_start: ms-0
+      margin_inline_end: me-0
+      shadow: none
+      radius: none
+      border: none
+      border_color: none
+      border_width: none
+      vertical_alignment: align-items-start
+      horizontal_alignment: text-start
+      section_header: true
+      section_footer: false
+      aos_animation: none
+      aos_duration: default
+      aos_delay: '0'
+      aos_once: true
+  - parent_uuid: 2d4873cd-e74f-43ff-8270-aa97f8b53778
+    slot: header_slot
+    uuid: f1d18dd2-80c3-4966-b4cc-9b7c875eaa26
+    component_id: block.system_breadcrumb_block
+    inputs:
+      label: Breadcrumbs
+      label_display: '0'
+  - parent_uuid: 2d4873cd-e74f-43ff-8270-aa97f8b53778
+    slot: header_slot
+    uuid: 49f658ac-701b-495d-ba96-873aaa097203
+    component_id: sdc.vartheme_bs5_educare.heading
+    inputs:
+      heading_text: Events
+      level: 1
+      text_size: h2
+      target: _self
+  - parent_uuid: 2d4873cd-e74f-43ff-8270-aa97f8b53778
+    slot: col_1
+    uuid: f2e68db7-0e68-411c-a1c0-3d1458907729
+    component_id: sdc.vartheme_bs5_educare.image
+    inputs:
+      media:
+        CANVAS_ENTITY_REFERENCE:
+          target_uuid: ab4da061-71b8-4888-8905-7cf8a065efa4
+          target_type: media
+      target: self
+      ratio: ratio-auto
+      fit: object-fit-cover
+      align: me-auto
+      width: w-auto
+      rounded: none
+      loading: lazy
+  - uuid: b4ffbe66-3f02-46b2-9632-b957aece47af
+    component_id: sdc.vartheme_bs5_educare.section
+    inputs:
+      bg_edge2edge: false
+      container_type: none
+      background_color: none
+      text_color: auto
+      background_overlay: none
+      columns: '100'
+      gutter: gx-3 gy-3
+      padding_block_start: pt-5
+      padding_inline_start: ps-0
+      padding_inline_end: pe-0
+      margin_block_start: mt-5
+      margin_inline_start: ms-0
+      margin_inline_end: me-0
+      shadow: none
+      radius: none
+      border: none
+      border_color: none
+      border_width: none
+      vertical_alignment: align-items-start
+      horizontal_alignment: text-start
+      section_header: true
+      section_footer: false
+      aos_animation: none
+      aos_duration: default
+      aos_delay: '0'
+      aos_once: true
+  - parent_uuid: b4ffbe66-3f02-46b2-9632-b957aece47af
+    slot: header_slot
+    uuid: b1e32492-174b-4e4f-91a2-26d7281952c1
+    component_id: sdc.vartheme_bs5_educare.heading
+    inputs:
+      heading_text: Upcoming Events
+      level: 3
+      target: _self
+  - parent_uuid: b4ffbe66-3f02-46b2-9632-b957aece47af
+    slot: col_1
+    uuid: c7e1d2b3-4a5f-4c6d-8e9f-0a1b2c3d4e5f
+    component_id: block.views_exposed_filter_block.events-block_1
+    inputs:
+      label: Event filters
+      label_display: '0'
+    component_version: fc733bd7999dda1d
+  - parent_uuid: b4ffbe66-3f02-46b2-9632-b957aece47af
+    slot: col_1
+    uuid: b6f0f1a4-3d55-4c2e-9f6f-5c3b7a0e9d21
+    component_id: block.views_block.events-block_1
+    component_version: 9e5fa8961a428d5e
+    inputs:
+      label: Upcoming events
+      label_display: '0'
+      views_label: ''
+      items_per_page: 12
+      exposed: {}
+  path:
+  - alias: /events
+    langcode: en
+  revision_translation_affected:
+  - value: true
+  metatags:
+  - value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

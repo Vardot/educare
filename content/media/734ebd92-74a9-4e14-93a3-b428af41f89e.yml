@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 734ebd92-74a9-4e14-93a3-b428af41f89e
+  bundle: image
+  default_langcode: en
+  depends:
+    1eeafcc5-fd89-4ef3-856e-6019c7be0e22: file
+default:
+  revision_user:
+  - target_id: 1
+  revision_log_message:
+  - value: Created new Image
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Students High-Fiving in the Library
+  revision_translation_affected:
+  - value: true
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: A group of students celebrating with a high five while studying together in the library
+    title: Students High-Fiving in the Library
+    width: 285
+    height: 184
+    entity: 1eeafcc5-fd89-4ef3-856e-6019c7be0e22

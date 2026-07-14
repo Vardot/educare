@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 8be9994c-4648-4db1-97b0-f6e959ed19ae
+  bundle: image
+  default_langcode: en
+  depends:
+    4b0a3f62-d4d7-4794-91c9-6181ee1c546b: file
+default:
+  revision_user:
+  - target_id: 1
+  revision_log_message:
+  - value: Created new Image
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Two Students Studying in the Library
+  revision_translation_affected:
+  - value: true
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: Two students sitting on the library floor reading books together
+    title: Two Students Studying in the Library
+    width: 652
+    height: 500
+    entity: 4b0a3f62-d4d7-4794-91c9-6181ee1c546b
