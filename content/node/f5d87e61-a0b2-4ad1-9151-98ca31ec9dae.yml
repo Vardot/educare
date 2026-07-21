@@ -1,0 +1,61 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: f5d87e61-a0b2-4ad1-9151-98ca31ec9dae
+  bundle: news
+  default_langcode: en
+  depends:
+    72918d56-02fb-4876-b0b0-e3250823f911: media
+    0d3f91f5-6423-4846-85fa-fc9d008e1d53: taxonomy_term
+    14147722-2756-49c0-9c5e-890af1f4d2c2: taxonomy_term
+    d022bed1-e3ad-43ab-89a0-c35c4e898359: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new News post'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Faculty-Led Study Finds Link Between Sleep Patterns and Exam Performance'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/faculty-led-study-finds-link-between-sleep-patterns-and-exam-performance
+      langcode: en
+  field_content:
+    -
+      value: "<p>A study led by faculty in the Department of Public Health has found that consistency of sleep schedule, rather than total hours slept, was the stronger predictor of exam performance among first-year students.</p><p>Students who kept roughly the same bedtime and wake time through exam period, even a modest one, outperformed students with the same average sleep duration but a more irregular pattern.</p><p>The study used anonymised data from a sleep-tracking app that student volunteers opted into for one term, matched against final grades with student consent. Participation was voluntary and results were only ever seen in aggregate.</p><p>The department plans to share the findings with student support services ahead of next year's exam period, alongside practical guidance rather than a change to any policy.</p>"
+      format: full_html
+  field_description:
+    -
+      value: 'A faculty-led study of first-year students found that consistent sleep schedules were a stronger predictor of exam performance than total hours slept.'
+  field_featured_image:
+    -
+      entity: 72918d56-02fb-4876-b0b0-e3250823f911
+  field_news_categories:
+    -
+      entity: 0d3f91f5-6423-4846-85fa-fc9d008e1d53
+  field_tags:
+    -
+      entity: 14147722-2756-49c0-9c5e-890af1f4d2c2
+    -
+      entity: d022bed1-e3ad-43ab-89a0-c35c4e898359

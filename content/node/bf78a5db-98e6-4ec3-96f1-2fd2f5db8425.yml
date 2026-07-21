@@ -1,0 +1,58 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: bf78a5db-98e6-4ec3-96f1-2fd2f5db8425
+  bundle: news
+  default_langcode: en
+  depends:
+    8be9994c-4648-4db1-97b0-f6e959ed19ae: media
+    4fd5f018-8a76-44a0-9f2e-0df56776cd72: taxonomy_term
+    14147722-2756-49c0-9c5e-890af1f4d2c2: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new News post'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Global Health Symposium Brings Together Researchers From 20 Countries'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/global-health-symposium-brings-together-researchers-20-countries
+      langcode: en
+  field_content:
+    -
+      value: '<p>The annual Global Health Symposium drew researchers, clinicians and policy specialists from twenty countries to campus for two days of talks focused on health systems in low-resource settings.</p><p>Sessions ranged from vaccine cold-chain logistics to community health worker training, with a deliberate mix of academic papers and practitioner case studies. Organisers said the format is designed to keep the conversation grounded in what is actually deployable, not just what is publishable.</p><p>A recurring theme this year was data: several speakers argued that better use of the health data systems already in place would do more good, faster, than most new interventions.</p><p>Recordings of the keynote sessions will be made available to students and staff through the library shortly.</p>'
+      format: full_html
+  field_description:
+    -
+      value: 'The annual Global Health Symposium drew researchers, clinicians and policy specialists from twenty countries for two days of talks on health systems in low-resource settings.'
+  field_featured_image:
+    -
+      entity: 8be9994c-4648-4db1-97b0-f6e959ed19ae
+  field_news_categories:
+    -
+      entity: 4fd5f018-8a76-44a0-9f2e-0df56776cd72
+  field_tags:
+    -
+      entity: 14147722-2756-49c0-9c5e-890af1f4d2c2

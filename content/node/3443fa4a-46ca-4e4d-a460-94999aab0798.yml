@@ -1,0 +1,58 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3443fa4a-46ca-4e4d-a460-94999aab0798
+  bundle: news
+  default_langcode: en
+  depends:
+    b9b98417-8aff-4476-a392-b5271633a980: media
+    4fd5f018-8a76-44a0-9f2e-0df56776cd72: taxonomy_term
+    3ab8a507-e00c-4f54-9e4d-5222387a0bda: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new News post'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'University Signs Exchange Partnership With Three New International Campuses'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/university-signs-exchange-partnership-three-new-international-campuses
+      langcode: en
+  field_content:
+    -
+      value: '<p>The university has signed exchange agreements with three international partner campuses, opening new study-abroad routes for undergraduates from next academic year.</p><p>The new partnerships extend an existing exchange network and were negotiated over the past eighteen months by the International Office, with input from department heads on which courses would transfer cleanly.</p><p>"A signed agreement is only the start," said the Director of International Partnerships. "The real work is making sure a semester away counts properly toward a student''s degree, and that took most of the eighteen months."</p><p>Applications for exchange places at the new campuses open in the spring term, with information sessions to follow.</p>'
+      format: full_html
+  field_description:
+    -
+      value: 'The university has signed exchange agreements with three international partner campuses, opening new study-abroad routes for undergraduates from next academic year.'
+  field_featured_image:
+    -
+      entity: b9b98417-8aff-4476-a392-b5271633a980
+  field_news_categories:
+    -
+      entity: 4fd5f018-8a76-44a0-9f2e-0df56776cd72
+  field_tags:
+    -
+      entity: 3ab8a507-e00c-4f54-9e4d-5222387a0bda

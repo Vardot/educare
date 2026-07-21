@@ -208,15 +208,6 @@ default:
     -
       parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
       slot: col_1
-      uuid: e5340ce0-ce90-417d-a730-2ad1461549c1
-      component_id: block.views_exposed_filter_block.news-all
-      inputs:
-        label: 'Exposed form: news-all'
-        label_display: '0'
-        views_label: ''
-    -
-      parent_uuid: c6613f84-6f52-4219-ac3d-6f58cafa66fd
-      slot: col_1
       uuid: ab49bcd5-d9bf-4a75-8a0c-6984be1ddef6
       component_id: sdc.vartheme_bs5_educare.card-program
       inputs:

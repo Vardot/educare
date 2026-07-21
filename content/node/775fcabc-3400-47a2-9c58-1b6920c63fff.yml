@@ -1,0 +1,58 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 775fcabc-3400-47a2-9c58-1b6920c63fff
+  bundle: news
+  default_langcode: en
+  depends:
+    5c4d6984-487f-4d0f-9cd0-fcbdd09d07f4: media
+    2bdfaecd-7abe-480e-84ff-d16a649d1265: taxonomy_term
+    d022bed1-e3ad-43ab-89a0-c35c4e898359: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new News post'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'First-Year Students Reflect on Their First Semester on Campus'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/first-year-students-reflect-their-first-semester-campus
+      langcode: en
+  field_content:
+    -
+      value: '<p>As the first semester draws to a close, new students shared what surprised them most about university life, from the freedom of an unstructured timetable to the work of making friends outside their own course.</p><p>Several students said the academic adjustment was smaller than they expected, and the social one was larger. "Nobody really tells you that most of your week isn''t in a lecture hall," one student said. "Figuring out what to do with that time was the actual first assignment."</p><p>Student Support Services runs regular drop-in sessions through the first semester specifically for this adjustment period, and staff say attendance tends to rise sharply in the weeks before exams.</p><p>A second cohort of first-year students will begin the same series of check-ins next term.</p>'
+      format: full_html
+  field_description:
+    -
+      value: 'As the first semester draws to a close, new students shared what surprised them most about university life, from timetabling freedom to making friends outside their course.'
+  field_featured_image:
+    -
+      entity: 5c4d6984-487f-4d0f-9cd0-fcbdd09d07f4
+  field_news_categories:
+    -
+      entity: 2bdfaecd-7abe-480e-84ff-d16a649d1265
+  field_tags:
+    -
+      entity: d022bed1-e3ad-43ab-89a0-c35c4e898359

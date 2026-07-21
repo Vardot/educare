@@ -29,3 +29,18 @@ default:
     pathauto: 0
   field_description:
   - value: How this site collects, uses and protects your personal data.
+  field_content:
+  - value: |
+      <h2>What information we collect</h2>
+      <p>We collect information you give us directly, such as your name, email address and phone number when you fill in an admissions, enrolment or newsletter form. We also collect basic usage data (pages visited, browser type, approximate location) through cookies and similar technologies, described in our cookie settings.</p>
+      <h2>How we use your information</h2>
+      <p>We use the information we collect to respond to enquiries, process applications, send the newsletters and updates you asked for, and improve the site. We do not sell your personal data.</p>
+      <h2>Sharing your information</h2>
+      <p>We share information only with the university departments and service providers who need it to deliver the service you requested (for example, an admissions office or an email delivery provider), and only where required by law.</p>
+      <h2>Cookies</h2>
+      <p>We use cookies to run the site and, with your consent, to measure usage and personalise content. You can review and change your choices at any time from the cookie settings link in the site footer.</p>
+      <h2>Your rights</h2>
+      <p>You can ask to see, correct or delete the personal data we hold about you, or withdraw a consent you previously gave, by contacting us using the details on our Contact page.</p>
+      <h2>Contact</h2>
+      <p>Questions about this policy can be sent to the address listed in the site footer.</p>
+    format: content_format

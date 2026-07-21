@@ -1,0 +1,61 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: c88fa894-2ec5-427f-b844-abc643b15f6d
+  bundle: news
+  default_langcode: en
+  depends:
+    960f66fb-613d-41bb-b2ec-201e888fd0b7: media
+    0d3f91f5-6423-4846-85fa-fc9d008e1d53: taxonomy_term
+    b13690bf-8393-48a3-9ffd-ff26b4061f79: taxonomy_term
+    8f744460-317f-4a18-b211-ee775dc49fa3: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new News post'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Chemistry Department Publishes Breakthrough Study on Clean Water Filtration'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/chemistry-department-publishes-breakthrough-study-clean-water-filtration
+      langcode: en
+  field_content:
+    -
+      value: '<p>A team from the Chemistry Department has published a five-year study describing a low-cost filtration membrane capable of removing heavy metals from drinking water using materials that can be sourced locally rather than imported.</p><p>The membrane began as a final-year project before the department secured funding to take it from a bench prototype to a field trial. Three community water points now run the filter under normal conditions, with results logged monthly by a rotating team of postgraduate researchers.</p><p>"The materials science was the easy part," the lead researcher said. "Making something that a small water authority could actually maintain without a chemistry degree took the other four years."</p><p>The department is now in discussion with two regional water boards about a larger pilot, and the full dataset has been submitted for peer review.</p>'
+      format: full_html
+  field_description:
+    -
+      value: 'A five-year study from the Chemistry Department describes a low-cost filtration membrane that removes heavy metals from drinking water using materials sourced locally.'
+  field_featured_image:
+    -
+      entity: 960f66fb-613d-41bb-b2ec-201e888fd0b7
+  field_news_categories:
+    -
+      entity: 0d3f91f5-6423-4846-85fa-fc9d008e1d53
+  field_tags:
+    -
+      entity: b13690bf-8393-48a3-9ffd-ff26b4061f79
+    -
+      entity: 8f744460-317f-4a18-b211-ee775dc49fa3

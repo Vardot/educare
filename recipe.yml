@@ -38,6 +38,14 @@ config:
     system.theme:
       simpleConfigUpdate:
         default: vartheme_bs5_educare
+    user.role.anonymous:
+      grantPermissions:
+        - 'view terms in news_categories'
+        - 'view term names in news_categories'
+    user.role.authenticated:
+      grantPermissions:
+        - 'view terms in news_categories'
+        - 'view term names in news_categories'
     gin.settings:
       simpleConfigUpdate:
         logo:
@@ -617,8 +625,203 @@ config:
                 absolute: false
               link_target: default
     canvas.content_template.node.news.full:
-      repointComponentTreeToTheme:
-        theme: default
+      simpleConfigUpdate:
+        component_tree:
+          0f26dedc-d75e-4fc9-b942-726ad8431e86:
+            uuid: 0f26dedc-d75e-4fc9-b942-726ad8431e86
+            component_id: block.system_breadcrumb_block
+            component_version: 0d7e961dd03aa710
+            inputs:
+              label: Breadcrumbs
+              label_display: '0'
+          ebb5dca6-e2d9-4220-b19c-e0505d445e34:
+            uuid: ebb5dca6-e2d9-4220-b19c-e0505d445e34
+            component_id: sdc.vartheme_bs5_educare.section
+            component_version: 9b679273be9319ad
+            inputs:
+              bg_edge2edge: false
+              container_type: container
+              columns: 67-33
+              vertical_alignment: align-items-end
+              padding_block_start: pt-2
+              padding_block_end: pb-2
+              section_header: false
+              section_footer: false
+              aos_once: true
+          12f585e3-f476-48b1-a7d2-16614ec08489:
+            parent_uuid: ebb5dca6-e2d9-4220-b19c-e0505d445e34
+            slot: col_1
+            uuid: 12f585e3-f476-48b1-a7d2-16614ec08489
+            component_id: sdc.vartheme_bs5_educare.heading
+            component_version: 0889e2ce906c3164
+            inputs:
+              heading_text:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:news␝title␞␟value
+              level: 1
+          61ee420f-a3c5-47da-87d1-8821baf57d7b:
+            parent_uuid: ebb5dca6-e2d9-4220-b19c-e0505d445e34
+            slot: col_1
+            uuid: 61ee420f-a3c5-47da-87d1-8821baf57d7b
+            component_id: sdc.vartheme_bs5_educare.spacer
+            component_version: 80de1b3919d08f87
+            inputs:
+              size: py-1
+          1a87765a-fb43-4623-b661-2c93b0a6d05d:
+            parent_uuid: ebb5dca6-e2d9-4220-b19c-e0505d445e34
+            slot: col_1
+            uuid: 1a87765a-fb43-4623-b661-2c93b0a6d05d
+            component_id: sdc.vartheme_bs5_educare.date
+            component_version: 3eae6f5d223f6bda
+            inputs:
+              date:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:news␝created␞␟value
+                adapter: unix_to_date
+          7dff0181-d5ea-417e-a49d-9f4a2faa29b6:
+            parent_uuid: ebb5dca6-e2d9-4220-b19c-e0505d445e34
+            slot: col_2
+            uuid: 7dff0181-d5ea-417e-a49d-9f4a2faa29b6
+            component_id: sdc.vartheme_bs5_educare.share
+            component_version: 64add9738be2892f
+            inputs:
+              heading: Share
+              display_title: true
+              alignment: end
+              orientation: horizontal
+              native_share: false
+              placement: inline
+              url:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:news␝menu_link␞␟entity␜␜entity:menu_link_content␝link␞␟title
+              share_title:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:news␝title␞␟value
+          774714fd-ddd4-410f-9047-134d0ba86823:
+            uuid: 774714fd-ddd4-410f-9047-134d0ba86823
+            component_id: sdc.vartheme_bs5_educare.spacer
+            component_version: 80de1b3919d08f87
+            inputs:
+              size: py-2
+          02a93dcf-d3fa-4718-b7ef-5a019d0a66b9:
+            uuid: 02a93dcf-d3fa-4718-b7ef-5a019d0a66b9
+            component_id: sdc.vartheme_bs5_educare.image
+            component_version: 20b07c548b4cf729
+            inputs:
+              media:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:news␝field_featured_image␞␟entity␜␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}
+              target: self
+              ratio: ratio-16x9
+              width: w-100
+              rounded: rounded-3
+              loading: lazy
+          14cca4e1-08cd-455d-abfb-2f398e14a6a1:
+            uuid: 14cca4e1-08cd-455d-abfb-2f398e14a6a1
+            component_id: sdc.vartheme_bs5_educare.spacer
+            component_version: 80de1b3919d08f87
+            inputs:
+              size: py-4
+          cf1edb93-6c5a-4233-ba1a-a6f7ca0558dc:
+            uuid: cf1edb93-6c5a-4233-ba1a-a6f7ca0558dc
+            component_id: sdc.vartheme_bs5_educare.section
+            component_version: 9b679273be9319ad
+            inputs:
+              bg_edge2edge: false
+              columns: '100'
+              padding_inline_start: ps-5
+              padding_inline_end: pe-5
+              margin_inline_start: ms-5
+              margin_inline_end: me-5
+              radius: none
+              section_header: false
+              section_footer: false
+              aos_once: true
+          3cd84d95-0b0c-4fa1-bc29-a1a5a941f076:
+            parent_uuid: cf1edb93-6c5a-4233-ba1a-a6f7ca0558dc
+            slot: col_1
+            uuid: 3cd84d95-0b0c-4fa1-bc29-a1a5a941f076
+            component_id: sdc.vartheme_bs5_educare.spacer
+            component_version: 80de1b3919d08f87
+            inputs:
+              size: py-4
+          eb3e968b-08ca-456a-853f-7a62ca1abee3:
+            parent_uuid: cf1edb93-6c5a-4233-ba1a-a6f7ca0558dc
+            slot: col_1
+            uuid: eb3e968b-08ca-456a-853f-7a62ca1abee3
+            component_id: sdc.vartheme_bs5_educare.rich-text
+            component_version: 82cd1f087fd469f4
+            inputs:
+              text:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:news␝field_content␞␟processed
+              trim: false
+          4fea5db6-4bbf-452e-8ae5-39942420afa0:
+            uuid: 4fea5db6-4bbf-452e-8ae5-39942420afa0
+            component_id: sdc.vartheme_bs5_educare.section
+            component_version: 9b679273be9319ad
+            inputs:
+              bg_edge2edge: false
+              container_type: container
+              columns: 75-25
+              padding_block_start: pt-5
+              padding_block_end: pb-4
+              section_header: false
+              section_footer: false
+              aos_once: true
+          6cb8c52d-5d82-49eb-92ed-0e8539ac1a3f:
+            parent_uuid: 4fea5db6-4bbf-452e-8ae5-39942420afa0
+            slot: col_1
+            uuid: 6cb8c52d-5d82-49eb-92ed-0e8539ac1a3f
+            component_id: sdc.vartheme_bs5_educare.heading
+            component_version: 0889e2ce906c3164
+            inputs:
+              heading_text: Stories you may also like
+              level: 2
+          c766a642-27d4-4c08-a60d-d8eb4cb0a09e:
+            parent_uuid: 4fea5db6-4bbf-452e-8ae5-39942420afa0
+            slot: col_2
+            uuid: c766a642-27d4-4c08-a60d-d8eb4cb0a09e
+            component_id: sdc.vartheme_bs5_educare.button
+            component_version: a3bdd446d7020573
+            inputs:
+              variant: btn-link
+              outline: false
+              size: btn-md
+              label: Explore more stories
+              href:
+                uri: internal:/news
+                options: {}
+              disabled: false
+              icon: arrow-right
+              icon_first: true
+              alignment: right
+              full_width: false
+              radius: rounded-pill
+          a5374df5-e01b-4b12-81e5-3162d0e41a8c:
+            uuid: a5374df5-e01b-4b12-81e5-3162d0e41a8c
+            component_id: sdc.vartheme_bs5_educare.section
+            component_version: 9b679273be9319ad
+            inputs:
+              bg_edge2edge: false
+              container_type: container
+              columns: '100'
+              padding_block_start: pt-0
+              padding_block_end: pb-5
+              section_header: false
+              section_footer: false
+              aos_once: true
+          e2f2eaca-3425-4e5e-8e2f-2eaca3425e5e:
+            parent_uuid: a5374df5-e01b-4b12-81e5-3162d0e41a8c
+            slot: col_1
+            uuid: e2f2eaca-3425-4e5e-8e2f-2eaca3425e5e
+            component_id: block.views_block.news-related
+            component_version: 0df8d2ae212054db
+            inputs:
+              label: Stories you may also like
+              label_display: '0'
+              views_label: ''
+              items_per_page: 3
     canvas.content_template.node.news.card:
       repointComponentTreeToTheme:
         theme: default
@@ -656,8 +859,68 @@ config:
       repointComponentTreeToTheme:
         theme: default
     canvas.content_template.node.news.impressed_card_medium:
-      repointComponentTreeToTheme:
-        theme: default
+      simpleConfigUpdate:
+        component_tree:
+          89b58bd7-8727-4b98-b2d7-8726085c7951:
+            uuid: 89b58bd7-8727-4b98-b2d7-8726085c7951
+            component_id: sdc.vartheme_bs5_educare.card-impressed
+            component_version: d4ef0abda2d86155
+            inputs:
+              media_position: top
+              media_image:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:news␝field_featured_image␞␟entity␜␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}
+              ratio: ratio-4x3
+              fit: object-fit-cover
+              card_border: false
+              padded: false
+              box_shadow: shadow-none
+              corner_style: rounded-3
+              equal_height: true
+              stretched_link: true
+              link_url:
+                sourceType: host-entity-url
+                absolute: false
+          10923ba4-b5af-4fa1-918e-143feb8ca8c4:
+            parent_uuid: 89b58bd7-8727-4b98-b2d7-8726085c7951
+            slot: content
+            uuid: 10923ba4-b5af-4fa1-918e-143feb8ca8c4
+            component_id: sdc.vartheme_bs5_educare.heading
+            component_version: 0889e2ce906c3164
+            inputs:
+              heading_text:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:news␝title␞␟value
+              level: 3
+          3efbb442-1e3d-4085-be67-3a0894eb5a1b:
+            parent_uuid: 89b58bd7-8727-4b98-b2d7-8726085c7951
+            slot: content
+            uuid: 3efbb442-1e3d-4085-be67-3a0894eb5a1b
+            component_id: sdc.vartheme_bs5_educare.date
+            component_version: 3eae6f5d223f6bda
+            inputs:
+              date:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:news␝created␞␟value
+                adapter: unix_to_date
+          f3a1c9d2-6b4e-4a1b-9c3d-8e2f5a7b6c9d:
+            parent_uuid: 89b58bd7-8727-4b98-b2d7-8726085c7951
+            slot: overlay
+            uuid: f3a1c9d2-6b4e-4a1b-9c3d-8e2f5a7b6c9d
+            component_id: sdc.vartheme_bs5_educare.badge
+            component_version: 13d91759ac4fcdfe
+            inputs:
+              label:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:news␝field_news_categories␞0␟entity␜␜entity:taxonomy_term:news_categories␝name␞␟value
+              variant: text-bg-dark
+              size: fs-6 px-2 py-1
+              icon: none
+              icon_first: true
+              radius: rounded-1
+              indicator: none
+              indicator_text: 99+
+              url: ''
     canvas.content_template.node.news.impressed_card_large:
       repointComponentTreeToTheme:
         theme: default

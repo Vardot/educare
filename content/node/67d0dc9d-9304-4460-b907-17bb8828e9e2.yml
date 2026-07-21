@@ -1,0 +1,58 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 67d0dc9d-9304-4460-b907-17bb8828e9e2
+  bundle: news
+  default_langcode: en
+  depends:
+    f96f1202-5f84-4af9-a7b2-92deb2865790: media
+    0d3f91f5-6423-4846-85fa-fc9d008e1d53: taxonomy_term
+    14147722-2756-49c0-9c5e-890af1f4d2c2: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new News post'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'New Research Grant Funds Study Into Adolescent Learning and Memory'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/new-research-grant-funds-study-adolescent-learning-and-memory
+      langcode: en
+  field_content:
+    -
+      value: '<p>The School of Psychology has been awarded a three-year grant to study how sleep, screen time and classroom structure affect memory formation in secondary school students.</p><p>The study will follow roughly 400 students across six partner schools, combining short cognitive tasks with the kind of data schools already collect — attendance, timetabling, and assessment results — rather than asking teachers to run anything extra.</p><p>"We are not trying to add work for teachers," the principal investigator explained. "We are trying to answer a question a lot of them already ask us informally: does the timetable itself help or hurt."</p><p>Early findings are expected in the second year of the grant, with a full report due at its close.</p>'
+      format: full_html
+  field_description:
+    -
+      value: 'A three-year grant will fund a longitudinal study tracking how sleep, screen time and classroom structure affect memory formation in secondary school students.'
+  field_featured_image:
+    -
+      entity: f96f1202-5f84-4af9-a7b2-92deb2865790
+  field_news_categories:
+    -
+      entity: 0d3f91f5-6423-4846-85fa-fc9d008e1d53
+  field_tags:
+    -
+      entity: 14147722-2756-49c0-9c5e-890af1f4d2c2

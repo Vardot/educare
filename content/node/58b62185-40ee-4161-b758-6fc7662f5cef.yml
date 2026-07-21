@@ -1,0 +1,61 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 58b62185-40ee-4161-b758-6fc7662f5cef
+  bundle: news
+  default_langcode: en
+  depends:
+    dc941b51-6a0c-4a40-a259-38073dc09be2: media
+    4fd5f018-8a76-44a0-9f2e-0df56776cd72: taxonomy_term
+    d022bed1-e3ad-43ab-89a0-c35c4e898359: taxonomy_term
+    0529025a-43bc-4493-8dfc-b56948031963: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new News post'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Students Return From Semester Abroad With Stories From Four Continents'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/students-return-semester-abroad-stories-four-continents
+      langcode: en
+  field_content:
+    -
+      value: '<p>Students who spent the past semester on exchange returned this month with placements spanning four continents, from language immersion programmes in South America to laboratory placements in East Asia.</p><p>At a welcome-back session organised by the International Office, returning students described the adjustment as harder than expected in the first few weeks and worth it by the end. Several are already mentoring students preparing to leave next term.</p><p>"Nobody tells you how much of it is just logistics — a bank account, a phone plan, finding the right bus," one returning student said. "After that it gets easier, and then it gets good."</p><p>The International Office is compiling a short guide from this year''s cohort for next year''s outgoing students.</p>'
+      format: full_html
+  field_description:
+    -
+      value: 'Students who spent a semester on exchange this year shared what they learned, from language immersion in South America to lab placements in East Asia.'
+  field_featured_image:
+    -
+      entity: dc941b51-6a0c-4a40-a259-38073dc09be2
+  field_news_categories:
+    -
+      entity: 4fd5f018-8a76-44a0-9f2e-0df56776cd72
+  field_tags:
+    -
+      entity: d022bed1-e3ad-43ab-89a0-c35c4e898359
+    -
+      entity: 0529025a-43bc-4493-8dfc-b56948031963

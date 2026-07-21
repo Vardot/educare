@@ -1,0 +1,58 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: ed494393-84fd-4d4f-8fd8-627fd12f6eb5
+  bundle: news
+  default_langcode: en
+  depends:
+    c0303f91-df00-4417-b84f-54b5500b48e1: media
+    4fd5f018-8a76-44a0-9f2e-0df56776cd72: taxonomy_term
+    d022bed1-e3ad-43ab-89a0-c35c4e898359: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new News post'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'International Student Enrolment Reaches a Record High This Year'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/international-student-enrolment-reaches-record-high-year
+      langcode: en
+  field_content:
+    -
+      value: '<p>International student enrolment has reached a record high this academic year, with the largest increases coming from applicants in South and Southeast Asia.</p><p>The Admissions Office credits the growth to a combination of expanded scholarship funding, new articulation agreements with partner colleges, and a redesigned application process that cut the average decision time significantly.</p><p>"We didn''t change who we admit," the Director of Admissions said. "We changed how long it took a good applicant to hear back from us, and that mattered more than we expected."</p><p>The university has added additional orientation sessions and peer-mentor places to support the larger incoming cohort.</p>'
+      format: full_html
+  field_description:
+    -
+      value: 'International student enrolment has reached a record high this academic year, with the largest increases coming from applicants in South and Southeast Asia.'
+  field_featured_image:
+    -
+      entity: c0303f91-df00-4417-b84f-54b5500b48e1
+  field_news_categories:
+    -
+      entity: 4fd5f018-8a76-44a0-9f2e-0df56776cd72
+  field_tags:
+    -
+      entity: d022bed1-e3ad-43ab-89a0-c35c4e898359

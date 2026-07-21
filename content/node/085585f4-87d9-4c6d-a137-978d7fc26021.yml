@@ -1,0 +1,61 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 085585f4-87d9-4c6d-a137-978d7fc26021
+  bundle: news
+  default_langcode: en
+  depends:
+    734ebd92-74a9-4e14-93a3-b428af41f89e: media
+    2bdfaecd-7abe-480e-84ff-d16a649d1265: taxonomy_term
+    d022bed1-e3ad-43ab-89a0-c35c4e898359: taxonomy_term
+    8f744460-317f-4a18-b211-ee775dc49fa3: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new News post'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Student-Run Food Bank Marks Its Fifth Year Serving Campus'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/student-run-food-bank-marks-its-fifth-year-serving-campus
+      langcode: en
+  field_content:
+    -
+      value: '<p>The student-run food bank marked its fifth anniversary this month, having grown from a single shelf in the union building to a weekly service supporting hundreds of students.</p><p>What began as an informal response to a handful of students struggling between loan payments is now run by a rotating team of volunteers, with donations coming from staff, local businesses, and a standing arrangement with the university''s catering service.</p><p>"We don''t ask why anyone is here," said one of the current volunteer coordinators. "You just come in, you take what you need, and that''s the whole system."</p><p>The team is currently recruiting volunteers for the coming term and welcomes both regular and one-off donations.</p>'
+      format: full_html
+  field_description:
+    -
+      value: 'The student-run food bank marked its fifth anniversary this month, having grown from a single shelf in the union building to a weekly service supporting hundreds of students.'
+  field_featured_image:
+    -
+      entity: 734ebd92-74a9-4e14-93a3-b428af41f89e
+  field_news_categories:
+    -
+      entity: 2bdfaecd-7abe-480e-84ff-d16a649d1265
+  field_tags:
+    -
+      entity: d022bed1-e3ad-43ab-89a0-c35c4e898359
+    -
+      entity: 8f744460-317f-4a18-b211-ee775dc49fa3

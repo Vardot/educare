@@ -1,0 +1,61 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 29d87294-0668-4967-9d98-97a659347edf
+  bundle: news
+  default_langcode: en
+  depends:
+    e243ed0a-1a7f-41dd-9cc0-0f3485b4d45f: media
+    2bdfaecd-7abe-480e-84ff-d16a649d1265: taxonomy_term
+    d45b0c6e-46f6-4c23-b387-393c195b7c14: taxonomy_term
+    b13690bf-8393-48a3-9ffd-ff26b4061f79: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new News post'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Undergraduate Robotics Team Wins Regional Championship'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/undergraduate-robotics-team-wins-regional-championship
+      langcode: en
+  field_content:
+    -
+      value: '<p>The undergraduate robotics team took first place at this year''s regional championship, beating fourteen other university teams with an autonomous sorting robot built almost entirely outside of scheduled coursework.</p><p>The team, made up mostly of second and third-year engineering and computer science students, spent most of the term meeting in the evenings in a borrowed workshop space, iterating on a design that failed its first two qualifying runs before the final version clicked into place.</p><p>"We rebuilt the gripper four times," the team captain said. "The version that won isn''t that different from the one that failed in week two — we just finally got the timing right."</p><p>The team will represent the university at the national championship later this year.</p>'
+      format: full_html
+  field_description:
+    -
+      value: 'The undergraduate robotics team took first place at this year’s regional championship, beating out fourteen other university teams with an autonomous sorting robot.'
+  field_featured_image:
+    -
+      entity: e243ed0a-1a7f-41dd-9cc0-0f3485b4d45f
+  field_news_categories:
+    -
+      entity: 2bdfaecd-7abe-480e-84ff-d16a649d1265
+  field_tags:
+    -
+      entity: d45b0c6e-46f6-4c23-b387-393c195b7c14
+    -
+      entity: b13690bf-8393-48a3-9ffd-ff26b4061f79

@@ -1,0 +1,58 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: d43d1bd4-7d68-4a9a-96c2-d80f78c96a16
+  bundle: news
+  default_langcode: en
+  depends:
+    3130ffd5-8609-494d-a071-9ca3442b46db: media
+    2bdfaecd-7abe-480e-84ff-d16a649d1265: taxonomy_term
+    d022bed1-e3ad-43ab-89a0-c35c4e898359: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new News post'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Class of Graduates Celebrates Commencement in Record Numbers'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/class-graduates-celebrates-commencement-record-numbers
+      langcode: en
+  field_content:
+    -
+      value: '<p>This year''s commencement ceremony was the largest in the university''s history, with graduates crossing the stage across three back-to-back sessions over a single weekend.</p><p>Family and friends filled the grounds for each session, and a livestream let those who could not travel watch from home. Several graduates were the first in their family to complete a degree, a milestone the vice-chancellor singled out in her address.</p><p>"You will remember today less for what was said from this stage," she told graduates, "and more for who was sitting in the audience watching you hear it."</p><p>Degree certificates will be posted to graduates over the coming weeks, with digital copies available immediately through the student portal.</p>'
+      format: full_html
+  field_description:
+    -
+      value: 'This year’s commencement ceremony was the largest in the university’s history, with graduates crossing the stage across three back-to-back sessions.'
+  field_featured_image:
+    -
+      entity: 3130ffd5-8609-494d-a071-9ca3442b46db
+  field_news_categories:
+    -
+      entity: 2bdfaecd-7abe-480e-84ff-d16a649d1265
+  field_tags:
+    -
+      entity: d022bed1-e3ad-43ab-89a0-c35c4e898359

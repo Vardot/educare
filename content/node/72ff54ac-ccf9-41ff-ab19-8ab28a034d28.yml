@@ -1,0 +1,61 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 72ff54ac-ccf9-41ff-ab19-8ab28a034d28
+  bundle: news
+  default_langcode: en
+  depends:
+    6c0a72fc-6f52-4454-8ae5-9f9617e556c7: media
+    e4aabb18-cc02-4d47-b766-b58f5cdae9fc: taxonomy_term
+    d022bed1-e3ad-43ab-89a0-c35c4e898359: taxonomy_term
+    0529025a-43bc-4493-8dfc-b56948031963: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new News post'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Local Schools Partner With University for Weekend Tutoring Programme'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/local-schools-partner-university-weekend-tutoring-programme
+      langcode: en
+  field_content:
+    -
+      value: '<p>A new weekend tutoring programme is pairing university students with local secondary school pupils preparing for exams, run out of the library on Saturday mornings.</p><p>The programme grew out of a conversation between the Widening Participation team and two local headteachers who were looking for free, low-pressure academic support for pupils who might not otherwise have access to tutoring.</p><p>University student volunteers, most of them former pupils of the partner schools, run small-group sessions in maths, English and science. "It''s strange being back on the other side of a desk," said one volunteer, a second-year student who attended one of the partner schools herself. "But it''s a good kind of strange."</p><p>The programme runs weekly through the school term and is open to any of the four partner schools.</p>'
+      format: full_html
+  field_description:
+    -
+      value: 'A new weekend tutoring programme pairs university students with local secondary school pupils preparing for exams, run out of the library on Saturday mornings.'
+  field_featured_image:
+    -
+      entity: 6c0a72fc-6f52-4454-8ae5-9f9617e556c7
+  field_news_categories:
+    -
+      entity: e4aabb18-cc02-4d47-b766-b58f5cdae9fc
+  field_tags:
+    -
+      entity: d022bed1-e3ad-43ab-89a0-c35c4e898359
+    -
+      entity: 0529025a-43bc-4493-8dfc-b56948031963

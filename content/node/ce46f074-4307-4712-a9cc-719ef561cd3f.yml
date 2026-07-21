@@ -1,0 +1,61 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: ce46f074-4307-4712-a9cc-719ef561cd3f
+  bundle: news
+  default_langcode: en
+  depends:
+    ab4da061-71b8-4888-8905-7cf8a065efa4: media
+    0d3f91f5-6423-4846-85fa-fc9d008e1d53: taxonomy_term
+    d45b0c6e-46f6-4c23-b387-393c195b7c14: taxonomy_term
+    8f744460-317f-4a18-b211-ee775dc49fa3: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new News post'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Engineering Researchers Unveil Low-Cost Solar Desalination Prototype'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/engineering-researchers-unveil-low-cost-solar-desalination-prototype
+      langcode: en
+  field_content:
+    -
+      value: '<p>Researchers in the School of Engineering have unveiled a small-scale solar desalination unit designed to run entirely without an external power supply, aimed at coastal communities without reliable grid access.</p><p>The prototype, built largely from off-the-shelf parts, uses a stepped solar still to produce a modest but steady output of fresh water through daylight hours. It is not intended to replace municipal infrastructure, the team is careful to note, but to bridge the gap where none currently exists.</p><p>"We wanted something a two-person crew could assemble on site with hand tools," said one of the postgraduate engineers on the project, "not something that needs a shipping container and a specialist to install."</p><p>A field version is being built for testing with a partner community later this year.</p>'
+      format: full_html
+  field_description:
+    -
+      value: 'Engineering researchers have unveiled a small-scale solar desalination unit designed to run without an external power supply, aimed at coastal communities without reliable grid access.'
+  field_featured_image:
+    -
+      entity: ab4da061-71b8-4888-8905-7cf8a065efa4
+  field_news_categories:
+    -
+      entity: 0d3f91f5-6423-4846-85fa-fc9d008e1d53
+  field_tags:
+    -
+      entity: d45b0c6e-46f6-4c23-b387-393c195b7c14
+    -
+      entity: 8f744460-317f-4a18-b211-ee775dc49fa3

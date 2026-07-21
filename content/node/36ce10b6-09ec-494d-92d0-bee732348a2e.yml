@@ -1,0 +1,58 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 36ce10b6-09ec-494d-92d0-bee732348a2e
+  bundle: news
+  default_langcode: en
+  depends:
+    79303768-f991-47dc-9a03-5e7954054b89: media
+    e4aabb18-cc02-4d47-b766-b58f5cdae9fc: taxonomy_term
+    8f744460-317f-4a18-b211-ee775dc49fa3: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new News post'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Community Clean-Up Day Draws Record Volunteer Turnout'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/community-clean-day-draws-record-volunteer-turnout
+      langcode: en
+  field_content:
+    -
+      value: "<p>This year's community clean-up day drew a record number of student and staff volunteers, who spent the morning clearing litter and replanting native species along the river path that runs behind campus.</p><p>The event, now in its eighth year, is organised jointly by the Students' Union and the campus sustainability office, with support from the local council. This year's turnout was large enough that organisers ran out of gloves twice and had to send someone to the nearest hardware shop.</p><p>\"It's one of the only events where you'll see a professor and a first-year student both up to their elbows in the same stretch of riverbank,\" one of the organisers said.</p><p>Planning for next year's clean-up, and a proposed second event in spring, is already underway.</p>"
+      format: full_html
+  field_description:
+    -
+      value: 'This year’s community clean-up day drew a record number of student and staff volunteers, clearing litter and replanting native species along the river path.'
+  field_featured_image:
+    -
+      entity: 79303768-f991-47dc-9a03-5e7954054b89
+  field_news_categories:
+    -
+      entity: e4aabb18-cc02-4d47-b766-b58f5cdae9fc
+  field_tags:
+    -
+      entity: 8f744460-317f-4a18-b211-ee775dc49fa3

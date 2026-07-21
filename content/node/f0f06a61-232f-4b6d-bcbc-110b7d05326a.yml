@@ -1,0 +1,61 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: f0f06a61-232f-4b6d-bcbc-110b7d05326a
+  bundle: news
+  default_langcode: en
+  depends:
+    10e02268-e3b3-4592-98f4-8dfa65f688dd: media
+    e4aabb18-cc02-4d47-b766-b58f5cdae9fc: taxonomy_term
+    3ab8a507-e00c-4f54-9e4d-5222387a0bda: taxonomy_term
+    d022bed1-e3ad-43ab-89a0-c35c4e898359: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new News post'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Alumni Mentorship Programme Pairs Students With Industry Professionals'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/alumni-mentorship-programme-pairs-students-industry-professionals
+      langcode: en
+  field_content:
+    -
+      value: '<p>A newly expanded alumni mentorship programme has paired more than two hundred students with graduates now working across a range of industries, offering a term of one-to-one career guidance outside the usual careers-service channels.</p><p>Matches are made on a mix of course background and stated interest, and pairs are encouraged to meet informally rather than follow a fixed curriculum. The alumni office says the informality is deliberate. "The best mentoring conversations are the ones that wander," the programme coordinator said. "We just make the introduction and get out of the way."</p><p>Several students from last year''s cohort have gone on to secure internships directly through their mentor''s network, though the programme is explicit that this is a welcome side effect rather than the goal.</p><p>Applications for next term''s cohort open shortly, on both the student and alumni side.</p>'
+      format: full_html
+  field_description:
+    -
+      value: 'A newly expanded alumni mentorship programme has paired more than two hundred students with graduates working across a range of industries for a term of one-to-one guidance.'
+  field_featured_image:
+    -
+      entity: 10e02268-e3b3-4592-98f4-8dfa65f688dd
+  field_news_categories:
+    -
+      entity: e4aabb18-cc02-4d47-b766-b58f5cdae9fc
+  field_tags:
+    -
+      entity: 3ab8a507-e00c-4f54-9e4d-5222387a0bda
+    -
+      entity: d022bed1-e3ad-43ab-89a0-c35c4e898359
