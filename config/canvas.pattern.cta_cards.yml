@@ -51,7 +51,7 @@ component_tree:
       card_border: false
       background_color: bg-secondary-subtle
       padded: true
-      corner_style: rounded-3
+      corner_style: rounded-0
       equal_height: true
       stretched_link: false
     label: null
@@ -118,7 +118,7 @@ component_tree:
       card_border: false
       background_color: bg-secondary-subtle
       padded: true
-      corner_style: rounded-3
+      corner_style: rounded-0
       equal_height: true
       stretched_link: false
     label: null

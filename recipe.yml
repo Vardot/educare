@@ -714,7 +714,7 @@ config:
               target: self
               ratio: ratio-16x9
               width: w-100
-              rounded: rounded-3
+              rounded: none
               loading: lazy
           14cca4e1-08cd-455d-abfb-2f398e14a6a1:
             uuid: 14cca4e1-08cd-455d-abfb-2f398e14a6a1
@@ -875,7 +875,7 @@ config:
               card_border: false
               padded: false
               box_shadow: shadow-none
-              corner_style: rounded-3
+              corner_style: rounded-0
               equal_height: true
               stretched_link: true
               link_url:
