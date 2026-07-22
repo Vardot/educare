@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_educare.card-program
+    - core.entity_view_mode.node.text_card_medium
+    - field.field.node.program.field_degrees
+    - node.type.program
+  module:
+    - node
+    - taxonomy
+id: node.program.text_card_medium
+content_entity_type_id: node
+content_entity_type_bundle: program
+content_entity_type_view_mode: text_card_medium
+component_tree:
+  b7c1a2d3-0001-4a01-9a01-0000000000c1:
+    uuid: b7c1a2d3-0001-4a01-9a01-0000000000c1
+    component_id: sdc.vartheme_bs5_educare.card-program
+    component_version: 08fa4d3de5e8376e
+    inputs:
+      title:
+        sourceType: entity-field
+        expression: ℹ︎␜entity:node:program␝title␞␟value
+      heading_level: h3
+      indented: false
+      degrees:
+        sourceType: entity-field
+        expression: ℹ︎␜entity:node:program␝field_degrees␞␟entity␜␜entity:taxonomy_term:degrees␝name␞␟value
+      separator: true
+      card_border: false
+      background_color: none
+      padded: false
+      box_shadow: shadow-none
+      corner_style: rounded-0
+      equal_height: false
+      stretched_link: true
+      link_url:
+        sourceType: host-entity-url
+        absolute: false
+      link_target: default
+exposed_slots: {}

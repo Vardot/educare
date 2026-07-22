@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Program type'
+vid: program_type
+description: 'The academic field a program belongs to (for example Arts & Humanities, Sciences, Engineering).'
+weight: 0
+new_revision: false

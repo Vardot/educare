@@ -1,0 +1,61 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 90000000-0000-4000-8000-000000000007
+  bundle: program
+  default_langcode: en
+  depends:
+    d0000000-0000-4000-8000-000000000001: taxonomy_term
+    d0000000-0000-4000-8000-000000000003: taxonomy_term
+    b7000000-0000-4000-8000-000000000002: taxonomy_term
+    51000000-0000-4000-8000-000000000001: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new Program'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: Biology
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /biology
+      langcode: en
+  field_content:
+    -
+      value: '<p>The Biology program is a undergraduate program in Sciences. Students explore the field through coursework, research, and mentorship, and graduate ready to make a meaningful contribution in their discipline.</p>'
+      format: full_html
+  field_degrees:
+    -
+      entity: d0000000-0000-4000-8000-000000000001
+    -
+      entity: d0000000-0000-4000-8000-000000000003
+  field_description:
+    -
+      value: 'Explore the Biology program and the degrees it awards.'
+  field_program_type:
+    -
+      entity: b7000000-0000-4000-8000-000000000002
+  field_study_level:
+    -
+      entity: 51000000-0000-4000-8000-000000000001

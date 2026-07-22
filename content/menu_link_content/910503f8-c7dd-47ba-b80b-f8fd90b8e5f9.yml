@@ -6,7 +6,6 @@ _meta:
   default_langcode: en
   depends:
     d6d4c475-2a54-4c8c-bf68-ae0e40ccb63d: menu_link_content
-    732907f2-24e5-4e91-ab48-1ced043580e3: canvas_page
 default:
   revision_user:
     -
@@ -25,9 +24,9 @@ default:
       value: secondary
   link:
     -
+      uri: 'internal:/programs'
       title: ''
       options: {  }
-      target_uuid: 732907f2-24e5-4e91-ab48-1ced043580e3
   external:
     -
       value: false

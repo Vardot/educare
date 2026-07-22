@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Study level'
+vid: study_level
+description: 'The level of study a program belongs to (Undergraduate or Graduate).'
+weight: 0
+new_revision: false

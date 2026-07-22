@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_degrees
+    - node.type.program
+    - taxonomy.vocabulary.degrees
+id: node.program.field_degrees
+field_name: field_degrees
+entity_type: node
+bundle: program
+label: Degrees
+description: 'The degrees this program awards. Shown in the right column of the programs catalog.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      degrees: degrees
+    sort:
+      field: weight
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

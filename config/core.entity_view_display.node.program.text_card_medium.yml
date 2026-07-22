@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.text_card_medium
+    - field.field.node.program.field_content
+    - field.field.node.program.field_degrees
+    - field.field.node.program.field_description
+    - field.field.node.program.field_program_type
+    - field.field.node.program.field_study_level
+    - node.type.program
+id: node.program.text_card_medium
+targetEntityType: node
+bundle: program
+mode: text_card_medium
+content:
+  field_degrees:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_content: true
+  field_description: true
+  field_program_type: true
+  field_study_level: true
+  links: true

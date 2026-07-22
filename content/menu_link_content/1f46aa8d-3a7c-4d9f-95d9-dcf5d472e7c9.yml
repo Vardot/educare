@@ -4,8 +4,6 @@ _meta:
   uuid: 1f46aa8d-3a7c-4d9f-95d9-dcf5d472e7c9
   bundle: menu_link_content
   default_langcode: en
-  depends:
-    732907f2-24e5-4e91-ab48-1ced043580e3: canvas_page
 default:
   revision_user:
     -
@@ -24,9 +22,9 @@ default:
       value: main
   link:
     -
+      uri: 'internal:/programs'
       title: ''
       options: {  }
-      target_uuid: 732907f2-24e5-4e91-ab48-1ced043580e3
   external:
     -
       value: false

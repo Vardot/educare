@@ -42,10 +42,53 @@ config:
       grantPermissions:
         - 'view terms in news_categories'
         - 'view term names in news_categories'
+        - 'view terms in degrees'
+        - 'view term names in degrees'
+        - 'view terms in study_level'
+        - 'view term names in study_level'
+        - 'view terms in program_type'
+        - 'view term names in program_type'
     user.role.authenticated:
       grantPermissions:
         - 'view terms in news_categories'
         - 'view term names in news_categories'
+        - 'view terms in degrees'
+        - 'view term names in degrees'
+        - 'view terms in study_level'
+        - 'view term names in study_level'
+        - 'view terms in program_type'
+        - 'view term names in program_type'
+    user.role.content_editor:
+      grantPermissions:
+        - 'create program content'
+        - 'delete any program content'
+        - 'delete own program content'
+        - 'edit any program content'
+        - 'edit own program content'
+        - 'view program revisions'
+        - 'create terms in degrees'
+        - 'create terms in program_type'
+        - 'select terms in degrees'
+        - 'select terms in program_type'
+        - 'select terms in study_level'
+    user.role.content_admin:
+      grantPermissions:
+        - 'create program content'
+        - 'delete any program content'
+        - 'delete own program content'
+        - 'edit any program content'
+        - 'edit own program content'
+        - 'view program revisions'
+        - 'create terms in degrees'
+        - 'create terms in program_type'
+        - 'edit terms in degrees'
+        - 'edit terms in program_type'
+        - 'select terms in degrees'
+        - 'select terms in program_type'
+        - 'select terms in study_level'
+    workflows.workflow.varbase_editorial_workflow:
+      addNodeTypes:
+        - program
     gin.settings:
       simpleConfigUpdate:
         logo:

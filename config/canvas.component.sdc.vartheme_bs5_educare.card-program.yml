@@ -6,7 +6,7 @@ dependencies:
     - options
   theme:
     - vartheme_bs5_educare
-active_version: c389576ae9efa917
+active_version: 08fa4d3de5e8376e
 versioned_properties:
   active:
     settings:
@@ -21,6 +21,8 @@ versioned_properties:
             -
               value: 'Lorem Ipsum Dolor Sit Amet'
           expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
         heading_level:
           required: false
           field_type: list_string
@@ -32,6 +34,7 @@ versioned_properties:
             -
               value: h5
           expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
         indented:
           required: false
           field_type: boolean
@@ -42,6 +45,24 @@ versioned_properties:
             -
               value: false
           expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        degrees:
+          required: false
+          field_type: string
+          cardinality: -1
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: A.B.
+            -
+              value: A.L.B.
+            -
+              value: M.A.
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
         col_1:
           required: false
           field_type: string
@@ -52,6 +73,8 @@ versioned_properties:
             -
               value: A.A
           expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
         col_2:
           required: false
           field_type: string
@@ -62,6 +85,8 @@ versioned_properties:
             -
               value: A.A
           expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
         col_3:
           required: false
           field_type: string
@@ -72,6 +97,8 @@ versioned_properties:
             -
               value: A.A
           expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
         col_4:
           required: false
           field_type: string
@@ -82,6 +109,8 @@ versioned_properties:
             -
               value: A.A
           expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
         separator:
           required: false
           field_type: boolean
@@ -92,6 +121,7 @@ versioned_properties:
             -
               value: false
           expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
         card_border:
           required: false
           field_type: boolean
@@ -102,6 +132,7 @@ versioned_properties:
             -
               value: false
           expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
         background_color:
           required: false
           field_type: list_string
@@ -113,6 +144,7 @@ versioned_properties:
             -
               value: none
           expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
         padded:
           required: false
           field_type: boolean
@@ -123,6 +155,7 @@ versioned_properties:
             -
               value: false
           expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
         box_shadow:
           required: false
           field_type: list_string
@@ -134,6 +167,7 @@ versioned_properties:
             -
               value: shadow-none
           expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
         corner_style:
           required: false
           field_type: list_string
@@ -145,6 +179,7 @@ versioned_properties:
             -
               value: rounded-0
           expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
         equal_height:
           required: false
           field_type: boolean
@@ -155,6 +190,7 @@ versioned_properties:
             -
               value: false
           expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
         stretched_link:
           required: false
           field_type: boolean
@@ -165,6 +201,7 @@ versioned_properties:
             -
               value: false
           expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
         link_url:
           required: false
           field_type: link
@@ -175,6 +212,9 @@ versioned_properties:
           field_widget: link_default
           default_value: null
           expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
         link_target:
           required: false
           field_type: list_string
@@ -186,6 +226,211 @@ versioned_properties:
             -
               value: default
           expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+  c389576ae9efa917:
+    settings:
+      prop_field_definitions:
+        title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Lorem Ipsum Dolor Sit Amet'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        heading_level:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: h5
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        indented:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        col_1:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: A.A
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        col_2:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: A.A
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        col_3:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: A.A
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        col_4:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: A.A
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        separator:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        card_border:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        background_color:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: none
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        padded:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        box_shadow:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: shadow-none
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        corner_style:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: rounded-0
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        equal_height:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        stretched_link:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        link_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+        link_target:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: default
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
     fallback_metadata:
       slot_definitions: {  }
 label: 'Program Card'
