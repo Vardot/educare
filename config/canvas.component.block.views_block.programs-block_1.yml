@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.programs
+  module:
+    - views
+active_version: 29df317c273d3c10
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:programs-block_1'
+        label: 'Programs listing'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Programs listing'
+id: block.views_block.programs-block_1
+provider: views
+source: block
+source_local_id: 'views_block:programs-block_1'

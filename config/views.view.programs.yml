@@ -459,7 +459,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: '<h1 class="h2 programs-listing__title">All programs</h1>'
+            value: '<h2 class="programs-listing__title">All programs</h2>'
             format: code_html
           tokenize: false
         result:
@@ -484,13 +484,15 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  page_1:
-    id: page_1
-    display_title: 'All programs'
-    display_plugin: page
+  block_1:
+    id: block_1
+    display_title: 'Programs listing'
+    display_plugin: block
     position: 1
     display_options:
-      path: programs
+      display_description: 'Filterable listing of academic programs, embedded on the Explore programs landing page.'
+      block_description: 'Programs listing'
+      block_category: 'Lists (Views)'
       display_extenders: {  }
     cache_metadata:
       max-age: -1

@@ -1,0 +1,404 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 76379ec1-503e-4982-a73a-096f3b62dc4e
+  default_langcode: en
+  depends:
+    03470c40-b148-4726-a7f3-51d940de0fec: file
+    b9b98417-8aff-4476-a392-b5271633a980: media
+    808dc349-4f2a-4088-bc08-9b52ae02626a: file
+    72918d56-02fb-4876-b0b0-e3250823f911: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created the Explore programs landing page'
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Explore programs'
+  components:
+    -
+      uuid: 60cd52e6-12cb-4579-a9c7-7ca02443f8d6
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: '100'
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-0
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: true
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 60cd52e6-12cb-4579-a9c7-7ca02443f8d6
+      slot: header_slot
+      uuid: cdb06de0-df4e-4f6e-80c2-e1331b35994b
+      component_id: block.system_breadcrumb_block
+      inputs:
+        label: Breadcrumbs
+        label_display: '0'
+    -
+      parent_uuid: 60cd52e6-12cb-4579-a9c7-7ca02443f8d6
+      slot: header_slot
+      uuid: 9db8eac3-9129-474d-82b2-d3ee65945a00
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Explore programs'
+        level: 1
+        target: _self
+    -
+      uuid: ad0c228d-b08b-4a20-ac61-67d93dc8faa5
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 60-40
+        gutter: 'gx-4 gy-4'
+        padding_block_start: pt-4
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-0
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-stretch
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: ad0c228d-b08b-4a20-ac61-67d93dc8faa5
+      slot: col_1
+      uuid: 8a3e1db9-e8fc-4742-b79b-8c256fcde939
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: b9b98417-8aff-4476-a392-b5271633a980
+            target_type: media
+        target: self
+        ratio: ratio-4x3
+        fit: object-fit-cover
+        align: me-auto
+        width: w-100
+        rounded: none
+        loading: eager
+    -
+      parent_uuid: ad0c228d-b08b-4a20-ac61-67d93dc8faa5
+      slot: col_2
+      uuid: b2132a4b-4129-4134-bdc4-d47c4a7deca3
+      component_id: sdc.vartheme_bs5_educare.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 72918d56-02fb-4876-b0b0-e3250823f911
+            target_type: media
+        target: self
+        ratio: ratio-16x9
+        fit: object-fit-cover
+        align: me-auto
+        width: w-100
+        rounded: none
+        loading: eager
+    -
+      parent_uuid: ad0c228d-b08b-4a20-ac61-67d93dc8faa5
+      slot: col_2
+      uuid: fdbb60bf-ead8-43de-b226-502dae972b87
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-2
+    -
+      parent_uuid: ad0c228d-b08b-4a20-ac61-67d93dc8faa5
+      slot: col_2
+      uuid: e1580d7a-f6fb-412e-bb22-ea38f7fb5af9
+      component_id: sdc.vartheme_bs5_educare.card-text
+      inputs:
+        card_border: false
+        background_color: bg-dark
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: false
+        stretched_link: false
+        link_target: default
+        icon_image: null
+        icon_alignment: start
+    -
+      parent_uuid: e1580d7a-f6fb-412e-bb22-ea38f7fb5af9
+      slot: content
+      uuid: f9fded59-66a5-4000-87d4-a3af4e202d2a
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>For generations, we have nurtured curious minds, challenged conventional thinking, and empowered individuals to create meaningful change.</p>'
+          format: canvas_html_block
+        text_size: none
+        text_color: text-white
+    -
+      parent_uuid: e1580d7a-f6fb-412e-bb22-ea38f7fb5af9
+      slot: content
+      uuid: 987c7228-ba1d-4b85-a1b7-58b31aa44bdc
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      uuid: 279713d3-b330-41ae-9f33-7817487731c4
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: '100'
+        gutter: 'gx-3 gy-3'
+        padding_block_start: pt-5
+        padding_block_end: pb-0
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-4
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-start
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: 279713d3-b330-41ae-9f33-7817487731c4
+      slot: col_1
+      uuid: 44032458-5841-44b4-8e3e-d95d0089498f
+      component_id: block.views_block.programs-block_1
+      inputs:
+        label: 'All programs'
+        label_display: '0'
+        views_label: ''
+        items_per_page: 12
+        exposed: {  }
+    -
+      uuid: bd365c62-3446-4314-b104-453fb5b44dfd
+      component_id: sdc.vartheme_bs5_educare.section
+      inputs:
+        bg_edge2edge: false
+        container_type: none
+        background_color: none
+        text_color: auto
+        background_overlay: none
+        columns: 33-33-33
+        gutter: 'gx-4 gy-4'
+        padding_block_start: pt-5
+        padding_block_end: pb-5
+        padding_inline_start: ps-0
+        padding_inline_end: pe-0
+        margin_block_start: mt-5
+        margin_block_end: mb-0
+        margin_inline_start: ms-0
+        margin_inline_end: me-0
+        shadow: none
+        radius: none
+        border: none
+        border_color: none
+        border_width: none
+        vertical_alignment: align-items-stretch
+        horizontal_alignment: text-start
+        section_header: false
+        section_footer: false
+        aos_animation: none
+        aos_duration: default
+        aos_delay: '0'
+        aos_once: true
+    -
+      parent_uuid: bd365c62-3446-4314-b104-453fb5b44dfd
+      slot: col_1
+      uuid: 810cd26b-5844-4cbb-8c15-2ed33d8bf0c8
+      component_id: sdc.vartheme_bs5_educare.card-action-text
+      inputs:
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: true
+        stretched_link: true
+        link_url:
+          uri: 'internal:/admissions'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 810cd26b-5844-4cbb-8c15-2ed33d8bf0c8
+      slot: content
+      uuid: 6defa83a-efd0-4de2-b62f-52fae9ef693c
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: Admissions
+        level: 5
+        target: _self
+    -
+      parent_uuid: 810cd26b-5844-4cbb-8c15-2ed33d8bf0c8
+      slot: content
+      uuid: 0f832b34-3e05-4090-bf4e-bc7eb8c3800d
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 810cd26b-5844-4cbb-8c15-2ed33d8bf0c8
+      slot: content
+      uuid: 44cab309-6858-4db2-9099-abf4eb5d3466
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: bd365c62-3446-4314-b104-453fb5b44dfd
+      slot: col_2
+      uuid: a10c34dd-db3b-4c02-8f7c-7cb86ecf65f2
+      component_id: sdc.vartheme_bs5_educare.card-action-text
+      inputs:
+        show_action_icon: true
+        card_border: false
+        background_color: bg-secondary-subtle
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: true
+        stretched_link: true
+        link_url:
+          uri: 'internal:/programs'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: a10c34dd-db3b-4c02-8f7c-7cb86ecf65f2
+      slot: content
+      uuid: a1fa612c-b632-4567-8597-9fe45a7bc830
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: Programs
+        level: 5
+        target: _self
+    -
+      parent_uuid: a10c34dd-db3b-4c02-8f7c-7cb86ecf65f2
+      slot: content
+      uuid: a5f689b2-fa6d-4e00-9c06-404c3f00dc6d
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: a10c34dd-db3b-4c02-8f7c-7cb86ecf65f2
+      slot: content
+      uuid: ad9a0a6a-5bcf-43c4-98c0-fdd9cc4db45c
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-muted
+    -
+      parent_uuid: bd365c62-3446-4314-b104-453fb5b44dfd
+      slot: col_3
+      uuid: 1861e64e-9469-4563-a210-12b9a29a43ba
+      component_id: sdc.vartheme_bs5_educare.card-action-text
+      inputs:
+        show_action_icon: true
+        card_border: false
+        background_color: bg-dark
+        padded: true
+        box_shadow: shadow-none
+        corner_style: rounded-0
+        equal_height: true
+        stretched_link: true
+        link_url:
+          uri: 'internal:/contact-us'
+          options: {  }
+        link_target: default
+    -
+      parent_uuid: 1861e64e-9469-4563-a210-12b9a29a43ba
+      slot: content
+      uuid: 815cc058-efa8-4295-9073-7779ecde9852
+      component_id: sdc.vartheme_bs5_educare.heading
+      inputs:
+        heading_text: 'Contact Us'
+        level: 5
+        text_color: text-white
+        target: _self
+    -
+      parent_uuid: 1861e64e-9469-4563-a210-12b9a29a43ba
+      slot: content
+      uuid: b0ee6494-60a5-41b3-9032-c24eaf9143cb
+      component_id: sdc.vartheme_bs5_educare.spacer
+      inputs:
+        size: py-5
+    -
+      parent_uuid: 1861e64e-9469-4563-a210-12b9a29a43ba
+      slot: content
+      uuid: 17cd49ee-0711-4de2-9568-4af1dca1206a
+      component_id: sdc.vartheme_bs5_educare.text
+      inputs:
+        text:
+          value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
+          format: canvas_html_block
+        text_size: fs-6
+        text_color: text-white
+  path:
+    -
+      alias: /programs
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'
