@@ -16,15 +16,15 @@ default:
   uid:
   - target_id: 1
   name:
-  - value: Students Outside the Science Building
+  - value: Speaker Presenting at a Campus Event
   revision_translation_affected:
   - value: true
   path:
   - langcode: en
     alias: null
   field_media_image:
-  - alt: Three students walking and laughing outside the university science building in spring
-    title: Students Outside the Science Building
+  - alt: A speaker holds a microphone and addresses a seated audience at a campus event
+    title: Speaker Presenting at a Campus Event
     width: 1140
     height: 492
     entity: 213d105b-3742-46a5-b682-2337a2cc7298

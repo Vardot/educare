@@ -7,9 +7,9 @@ default:
   uid:
   - target_id: 1
   filename:
-  - value: two-students-talking-on-a-campus-path.png
+  - value: student-studying-at-a-library-computer.png
   uri:
-  - value: public://2026-07/two-students-talking-on-a-campus-path.png
+  - value: public://2026-07/student-studying-at-a-library-computer.png
   filemime:
   - value: image/png
   filesize:

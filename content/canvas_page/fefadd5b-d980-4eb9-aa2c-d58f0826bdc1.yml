@@ -473,7 +473,7 @@ default:
         stretched_link: true
         link_target: default
         link_url:
-          uri: 'internal:/about-varbase'
+          uri: 'internal:/about'
           options: {  }
     -
       parent_uuid: 6aaeb660-3ecd-4bb9-822b-1da1219df33f
@@ -593,7 +593,7 @@ default:
         stretched_link: true
         link_target: default
         link_url:
-          uri: 'internal:/about-varbase'
+          uri: 'internal:/about'
           options: {  }
     -
       parent_uuid: d68e188c-d882-46a5-a77c-be9adbd4073e
@@ -638,7 +638,7 @@ default:
         stretched_link: true
         link_target: default
         link_url:
-          uri: 'internal:/about-varbase'
+          uri: 'internal:/about'
           options: {  }
     -
       parent_uuid: c48859ee-e28f-4092-b9eb-2ad756e08dbf
@@ -1435,7 +1435,7 @@ default:
         stretched_link: true
         link_target: default
         link_url:
-          uri: 'internal:/tech-ai-innovation-conference/'
+          uri: 'internal:/events'
           options: {  }
     -
       parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
@@ -1463,7 +1463,7 @@ default:
         stretched_link: true
         link_target: default
         link_url:
-          uri: 'internal:/tech-ai-innovation-conference/'
+          uri: 'internal:/news'
           options: {  }
     -
       parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
@@ -1491,7 +1491,7 @@ default:
         stretched_link: true
         link_target: default
         link_url:
-          uri: 'internal:/tech-ai-innovation-conference/'
+          uri: 'internal:/news'
           options: {  }
     -
       parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
@@ -1519,7 +1519,7 @@ default:
         stretched_link: true
         link_target: default
         link_url:
-          uri: 'internal:/tech-ai-innovation-conference/'
+          uri: 'internal:/news'
           options: {  }
     -
       parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
@@ -1550,7 +1550,7 @@ default:
         columns_xl_size: '06_06'
         columns_xxl_size: '06_06'
         link_url:
-          uri: 'internal:/african-and-african-american-studies/'
+          uri: 'internal:/news'
           options: {  }
     -
       parent_uuid: baebbe7d-5349-4a3b-9d19-844e640a2858
@@ -1612,7 +1612,7 @@ default:
         columns_xl_size: '06_06'
         columns_xxl_size: '06_06'
         link_url:
-          uri: 'internal:/african-and-african-american-studies/'
+          uri: 'internal:/news'
           options: {  }
     -
       parent_uuid: 9a1fd507-a0d3-4027-820b-4bff687c93f2

@@ -200,7 +200,7 @@ component_tree:
       equal_height: false
       stretched_link: true
       link_url:
-        uri: 'internal:/tech-ai-innovation-conference/'
+        uri: 'internal:/events'
         options: {  }
       link_target: default
   414f699c-3068-43b5-b23f-df4dd4afb98f:
@@ -230,7 +230,7 @@ component_tree:
       equal_height: false
       stretched_link: true
       link_url:
-        uri: 'internal:/tech-ai-innovation-conference/'
+        uri: 'internal:/news'
         options: {  }
       link_target: default
   c3dbb1df-b73e-445d-afdb-f00ca08ef679:
@@ -260,7 +260,7 @@ component_tree:
       equal_height: false
       stretched_link: true
       link_url:
-        uri: 'internal:/tech-ai-innovation-conference/'
+        uri: 'internal:/news'
         options: {  }
       link_target: default
   c162ddc3-26f2-4714-8bfd-040a0cbb3c29:
@@ -290,7 +290,7 @@ component_tree:
       equal_height: false
       stretched_link: true
       link_url:
-        uri: 'internal:/tech-ai-innovation-conference/'
+        uri: 'internal:/news'
         options: {  }
       link_target: default
   baebbe7d-5349-4a3b-9d19-844e640a2858:
@@ -312,7 +312,7 @@ component_tree:
       equal_height: false
       stretched_link: true
       link_url:
-        uri: 'internal:/african-and-african-american-studies/'
+        uri: 'internal:/news'
         options: {  }
       link_target: default
       content_vertical_alignment: align-items-center
@@ -377,7 +377,7 @@ component_tree:
       equal_height: false
       stretched_link: true
       link_url:
-        uri: 'internal:/african-and-african-american-studies/'
+        uri: 'internal:/news'
         options: {  }
       link_target: default
       content_vertical_alignment: align-items-center

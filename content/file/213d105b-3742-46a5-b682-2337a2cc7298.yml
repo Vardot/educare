@@ -7,9 +7,9 @@ default:
   uid:
   - target_id: 1
   filename:
-  - value: students-walking-outside-the-science-building.png
+  - value: speaker-presenting-at-a-campus-event.png
   uri:
-  - value: public://2026-07/students-walking-outside-the-science-building.png
+  - value: public://2026-07/speaker-presenting-at-a-campus-event.png
   filemime:
   - value: image/png
   filesize:

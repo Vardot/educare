@@ -16,15 +16,15 @@ default:
   uid:
   - target_id: 1
   name:
-  - value: Two Students Talking on a Campus Path
+  - value: Student Studying at a Library Computer
   revision_translation_affected:
   - value: true
   path:
   - langcode: en
     alias: null
   field_media_image:
-  - alt: Two students standing on a campus path outside a brick building, going over their notes
-    title: Two Students Talking on a Campus Path
+  - alt: A student sits at a computer in the library, focused on the screen
+    title: Student Studying at a Library Computer
     width: 455
     height: 238
     entity: 8e0a2c5b-5bae-4107-bb59-5a66888a630e
