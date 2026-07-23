@@ -149,6 +149,8 @@ config:
         theme: default
     views.view.events:
       simpleConfigUpdate:
+        display.default.display_options.exposed_form.options.component_id: vartheme_bs5_educare:views-exposed-filters
+        display.block_1.display_options.exposed_form.options.component_id: vartheme_bs5_educare:views-exposed-filters
         display.default.display_options.title: Upcoming Events
         display.block_1.display_options.title: Upcoming Events
         display.block_1.display_options.link_display: custom_url
