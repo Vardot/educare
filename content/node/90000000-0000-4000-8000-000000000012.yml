@@ -37,13 +37,9 @@ default:
   moderation_state:
     -
       value: published
-  path:
-    -
-      alias: /chemistry-and-physics
-      langcode: en
   field_content:
     -
-      value: '<p>The Chemistry and Physics program is a undergraduate program in Sciences. Students explore the field through coursework, research, and mentorship, and graduate ready to make a meaningful contribution in their discipline.</p>'
+      value: '<p>This dual-discipline program builds a strong foundation in both chemistry and physics, preparing students for careers or graduate study that bridge the physical sciences.</p><p>As an undergraduate program in Sciences, Chemistry and Physics prepares students through a blend of core theory, hands-on coursework, and applied or research projects, guided by faculty active in the field.</p><h3>What You&#39;ll Learn</h3><ul><li>Classical and quantum mechanics</li><li>Organic and physical chemistry</li><li>Laboratory instrumentation and methods</li><li>Mathematical methods for the physical sciences</li></ul><h3>Sample Courses</h3><ul><li>Quantum Mechanics</li><li>Physical Chemistry</li><li>Instrumental Analysis Laboratory</li><li>Mathematical Methods for Scientists</li></ul><h3>Learning Outcomes</h3><p>Graduates of this program will be able to:</p><ul><li>Apply quantum mechanical principles to chemical and physical systems</li><li>Design and execute laboratory experiments using modern instrumentation</li><li>Analyze experimental data using appropriate statistical methods</li></ul><h3>Career Paths</h3><p>Graduates go on to roles such as Laboratory scientist, Materials researcher, and Science educator. Many also pursue further graduate or professional study.</p><h3>Admission Notes</h3><p>Applicants should have completed relevant secondary-level coursework and demonstrate strong written communication and analytical skills; no prior specialization in the field is required.</p>'
       format: full_html
   field_degrees:
     -

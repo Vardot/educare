@@ -178,6 +178,287 @@ config:
           context: '0'
       setViewsComponentStyleTheme:
         theme: default
+    canvas.content_template.node.program.full:
+      simpleConfigUpdate:
+        status: true
+        component_tree:
+          c8d2b3e4-0002-4a02-9a02-0000000000f1:
+            uuid: c8d2b3e4-0002-4a02-9a02-0000000000f1
+            component_id: block.system_breadcrumb_block
+            component_version: 0d7e961dd03aa710
+            inputs:
+              label: Breadcrumbs
+              label_display: '0'
+          c8d2b3e4-0003-4a03-9a03-000000000101:
+            uuid: c8d2b3e4-0003-4a03-9a03-000000000101
+            component_id: sdc.vartheme_bs5_educare.section
+            component_version: 9b679273be9319ad
+            inputs:
+              bg_edge2edge: false
+              container_type: container
+              columns: 67-33
+              vertical_alignment: align-items-end
+              padding_block_start: pt-4
+              padding_block_end: pb-2
+              section_header: false
+              section_footer: false
+              aos_once: true
+          c8d2b3e4-0003-4a03-9a03-000000000102:
+            parent_uuid: c8d2b3e4-0003-4a03-9a03-000000000101
+            slot: col_1
+            uuid: c8d2b3e4-0003-4a03-9a03-000000000102
+            component_id: sdc.vartheme_bs5_educare.heading
+            component_version: 0889e2ce906c3164
+            inputs:
+              heading_text:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:program␝title␞␟value
+              level: 1
+          c8d2b3e4-0003-4a03-9a03-000000000103:
+            parent_uuid: c8d2b3e4-0003-4a03-9a03-000000000101
+            slot: col_1
+            uuid: c8d2b3e4-0003-4a03-9a03-000000000103
+            component_id: sdc.vartheme_bs5_educare.spacer
+            component_version: 80de1b3919d08f87
+            inputs:
+              size: py-1
+          c8d2b3e4-0003-4a03-9a03-000000000104:
+            parent_uuid: c8d2b3e4-0003-4a03-9a03-000000000101
+            slot: col_1
+            uuid: c8d2b3e4-0003-4a03-9a03-000000000104
+            component_id: sdc.vartheme_bs5_educare.text
+            component_version: c4ddb22de87220b3
+            inputs:
+              text:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:program␝field_description␞␟value
+              text_size: fs-5
+              text_color: text-muted
+          c8d2b3e4-0003-4a03-9a03-000000000105:
+            parent_uuid: c8d2b3e4-0003-4a03-9a03-000000000101
+            slot: col_2
+            uuid: c8d2b3e4-0003-4a03-9a03-000000000105
+            component_id: sdc.vartheme_bs5_educare.share
+            component_version: 64add9738be2892f
+            inputs:
+              heading: Share
+              display_title: true
+              alignment: end
+              orientation: horizontal
+              native_share: false
+              placement: inline
+              share_title:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:program␝title␞␟value
+          c8d2b3e4-0003-4a03-9a03-000000000106:
+            uuid: c8d2b3e4-0003-4a03-9a03-000000000106
+            component_id: sdc.vartheme_bs5_educare.spacer
+            component_version: 80de1b3919d08f87
+            inputs:
+              size: py-2
+          c8d2b3e4-0003-4a03-9a03-000000000107:
+            uuid: c8d2b3e4-0003-4a03-9a03-000000000107
+            component_id: sdc.vartheme_bs5_educare.section
+            component_version: 9b679273be9319ad
+            inputs:
+              bg_edge2edge: false
+              container_type: container
+              columns: '100'
+              padding_block_start: pt-0
+              padding_block_end: pb-3
+              section_header: false
+              section_footer: false
+              aos_once: true
+          c8d2b3e4-0003-4a03-9a03-000000000108:
+            parent_uuid: c8d2b3e4-0003-4a03-9a03-000000000107
+            slot: col_1
+            uuid: c8d2b3e4-0003-4a03-9a03-000000000108
+            component_id: sdc.vartheme_bs5_educare.group
+            component_version: aef7f7b22127c944
+            inputs:
+              background_color: none
+              direction: horizontal
+              gap: gap-3
+              wrap: wrap
+              align_items: align-items-center
+              justify_content: justify-content-start
+              padding_block_start: pt-0
+              padding_block_end: pb-0
+              padding_inline_start: ps-0
+              padding_inline_end: pe-0
+              margin_block_start: mt-0
+              margin_block_end: mb-0
+              margin_inline_start: ms-0
+              margin_inline_end: me-0
+              radius: none
+              border: none
+              border_color: none
+              border_width: none
+              aos_once: true
+          c8d2b3e4-0003-4a03-9a03-000000000109:
+            parent_uuid: c8d2b3e4-0003-4a03-9a03-000000000108
+            slot: content
+            uuid: c8d2b3e4-0003-4a03-9a03-000000000109
+            component_id: sdc.vartheme_bs5_educare.badge
+            component_version: 13d91759ac4fcdfe
+            inputs:
+              label:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:program␝field_program_type␞0␟entity␜␜entity:taxonomy_term:program_type␝name␞␟value
+              variant: text-bg-dark
+              size: fs-6 px-3 py-2
+              icon: none
+              icon_first: true
+              radius: rounded-pill
+              indicator: none
+              indicator_text: 99+
+              url: ''
+          c8d2b3e4-0003-4a03-9a03-00000000010a:
+            parent_uuid: c8d2b3e4-0003-4a03-9a03-000000000108
+            slot: content
+            uuid: c8d2b3e4-0003-4a03-9a03-00000000010a
+            component_id: sdc.vartheme_bs5_educare.badge
+            component_version: 13d91759ac4fcdfe
+            inputs:
+              label:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:program␝field_study_level␞0␟entity␜␜entity:taxonomy_term:study_level␝name␞␟value
+              variant: text-bg-secondary
+              size: fs-6 px-3 py-2
+              icon: none
+              icon_first: true
+              radius: rounded-pill
+              indicator: none
+              indicator_text: 99+
+              url: ''
+          c8d2b3e4-0003-4a03-9a03-00000000010b:
+            parent_uuid: c8d2b3e4-0003-4a03-9a03-000000000107
+            slot: col_1
+            uuid: c8d2b3e4-0003-4a03-9a03-00000000010b
+            component_id: sdc.vartheme_bs5_educare.spacer
+            component_version: 80de1b3919d08f87
+            inputs:
+              size: py-2
+          c8d2b3e4-0003-4a03-9a03-00000000010c:
+            parent_uuid: c8d2b3e4-0003-4a03-9a03-000000000107
+            slot: col_1
+            uuid: c8d2b3e4-0003-4a03-9a03-00000000010c
+            component_id: sdc.vartheme_bs5_educare.card-program
+            component_version: 08fa4d3de5e8376e
+            inputs:
+              title: Degrees
+              heading_level: h6
+              indented: false
+              degrees:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:program␝field_degrees␞␟entity␜␜entity:taxonomy_term:degrees␝name␞␟value
+              separator: false
+              card_border: false
+              background_color: none
+              padded: false
+              box_shadow: shadow-none
+              corner_style: rounded-0
+              equal_height: false
+              stretched_link: false
+              link_target: default
+          c8d2b3e4-0003-4a03-9a03-00000000010d:
+            uuid: c8d2b3e4-0003-4a03-9a03-00000000010d
+            component_id: sdc.vartheme_bs5_educare.section
+            component_version: 9b679273be9319ad
+            inputs:
+              bg_edge2edge: false
+              container_type: container
+              columns: '100'
+              padding_block_start: pt-0
+              padding_block_end: pb-5
+              section_header: false
+              section_footer: false
+              aos_once: true
+          c8d2b3e4-0003-4a03-9a03-00000000010e:
+            parent_uuid: c8d2b3e4-0003-4a03-9a03-00000000010d
+            slot: col_1
+            uuid: c8d2b3e4-0003-4a03-9a03-00000000010e
+            component_id: sdc.vartheme_bs5_educare.rich-text
+            component_version: 82cd1f087fd469f4
+            inputs:
+              text:
+                sourceType: entity-field
+                expression: ℹ︎␜entity:node:program␝field_content␞␟processed
+              trim: false
+          c8d2b3e4-0003-4a03-9a03-00000000010f:
+            uuid: c8d2b3e4-0003-4a03-9a03-00000000010f
+            component_id: sdc.vartheme_bs5_educare.section
+            component_version: 9b679273be9319ad
+            inputs:
+              bg_edge2edge: false
+              container_type: container
+              columns: 75-25
+              padding_block_start: pt-3
+              padding_block_end: pb-4
+              section_header: false
+              section_footer: false
+              aos_once: true
+          c8d2b3e4-0003-4a03-9a03-000000000110:
+            parent_uuid: c8d2b3e4-0003-4a03-9a03-00000000010f
+            slot: col_1
+            uuid: c8d2b3e4-0003-4a03-9a03-000000000110
+            component_id: sdc.vartheme_bs5_educare.heading
+            component_version: 0889e2ce906c3164
+            inputs:
+              heading_text: Explore other programs
+              level: 2
+          c8d2b3e4-0003-4a03-9a03-000000000111:
+            parent_uuid: c8d2b3e4-0003-4a03-9a03-00000000010f
+            slot: col_2
+            uuid: c8d2b3e4-0003-4a03-9a03-000000000111
+            component_id: sdc.vartheme_bs5_educare.button
+            component_version: a3bdd446d7020573
+            inputs:
+              variant: btn-link
+              outline: false
+              size: btn-md
+              label: View all programs
+              href:
+                uri: internal:/programs
+                options: {}
+              disabled: false
+              icon: arrow-right
+              icon_first: true
+              alignment: right
+              full_width: false
+              radius: rounded-pill
+          c8d2b3e4-0003-4a03-9a03-000000000112:
+            uuid: c8d2b3e4-0003-4a03-9a03-000000000112
+            component_id: sdc.vartheme_bs5_educare.section
+            component_version: 9b679273be9319ad
+            inputs:
+              bg_edge2edge: false
+              container_type: container
+              columns: '100'
+              padding_block_start: pt-0
+              padding_block_end: pb-5
+              section_header: false
+              section_footer: false
+              aos_once: true
+          c8d2b3e4-0003-4a03-9a03-000000000113:
+            parent_uuid: c8d2b3e4-0003-4a03-9a03-000000000112
+            slot: col_1
+            uuid: c8d2b3e4-0003-4a03-9a03-000000000113
+            component_id: sdc.vartheme_bs5_educare.cta
+            component_version: 5e15d2b8bbbe566b
+            inputs:
+              bg_edge2edge: false
+              heading_text: Ready to take the next step?
+              level: 2
+              text: Talk to our admissions team about requirements, financial aid, and how to apply to this program.
+              heading_size: h2
+              overlay_opacity: '40%'
+              background_color: bg-dark text-white
+              content_color: auto
+              text_align: text-center
+              button_text: Contact Us
+              button_url: /contact-us
+              button_variant: btn-light
     canvas.content_template.node.event.full:
       simpleConfigUpdate:
         status: true

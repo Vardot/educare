@@ -37,13 +37,9 @@ default:
   moderation_state:
     -
       value: published
-  path:
-    -
-      alias: /psychology
-      langcode: en
   field_content:
     -
-      value: '<p>The Psychology program is a undergraduate program in Social Sciences. Students explore the field through coursework, research, and mentorship, and graduate ready to make a meaningful contribution in their discipline.</p>'
+      value: '<p>The Psychology program surveys the scientific study of mind and behavior, combining coursework in cognitive, developmental, social, and clinical psychology with hands-on research training.</p><p>As an undergraduate program in Social Sciences, Psychology prepares students through a blend of core theory, hands-on coursework, and applied or research projects, guided by faculty active in the field.</p><h3>What You&#39;ll Learn</h3><ul><li>Cognitive and behavioral neuroscience</li><li>Developmental and social psychology</li><li>Research methods and statistics</li><li>Abnormal and clinical psychology</li></ul><h3>Sample Courses</h3><ul><li>Research Methods in Psychology</li><li>Cognitive Psychology</li><li>Developmental Psychology</li><li>Statistics for Behavioral Science</li><li>Research Practicum</li></ul><h3>Learning Outcomes</h3><p>Graduates of this program will be able to:</p><ul><li>Design and conduct a psychological research study, including data analysis</li><li>Apply psychological theory to explain and predict human behavior</li><li>Evaluate research critically for validity, ethics, and rigor</li></ul><h3>Career Paths</h3><p>Graduates go on to roles such as Research assistant, Human resources specialist, and Counselor (with further training). Many also pursue further graduate or professional study.</p><h3>Admission Notes</h3><p>Applicants should have completed relevant secondary-level coursework and demonstrate strong written communication and analytical skills; no prior specialization in the field is required.</p>'
       format: full_html
   field_degrees:
     -

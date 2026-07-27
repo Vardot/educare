@@ -13,6 +13,6 @@ default:
   filemime:
   - value: image/png
   filesize:
-  - value: 1125651
+  - value: 5423898
   status:
   - value: true

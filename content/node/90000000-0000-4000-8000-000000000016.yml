@@ -37,13 +37,9 @@ default:
   moderation_state:
     -
       value: published
-  path:
-    -
-      alias: /computer-science
-      langcode: en
   field_content:
     -
-      value: '<p>The Computer Science program is a undergraduate program in Engineering & Applied Sciences. Students explore the field through coursework, research, and mentorship, and graduate ready to make a meaningful contribution in their discipline.</p>'
+      value: '<p>The Computer Science program covers the theoretical foundations and practical skills of computing, from algorithms and systems to artificial intelligence and software engineering.</p><p>As an undergraduate program in Engineering & Applied Sciences, Computer Science prepares students through a blend of core theory, hands-on coursework, and applied or research projects, guided by faculty active in the field.</p><h3>What You&#39;ll Learn</h3><ul><li>Data structures and algorithms</li><li>Computer systems and architecture</li><li>Artificial intelligence and machine learning</li><li>Software engineering and design</li></ul><h3>Sample Courses</h3><ul><li>Data Structures and Algorithms</li><li>Computer Systems</li><li>Artificial Intelligence</li><li>Software Engineering</li><li>Senior Capstone Project</li></ul><h3>Learning Outcomes</h3><p>Graduates of this program will be able to:</p><ul><li>Design and analyze efficient algorithms and data structures</li><li>Build and evaluate software systems using sound engineering practices</li><li>Apply machine learning techniques to real-world problems</li></ul><h3>Career Paths</h3><p>Graduates go on to roles such as Software engineer, Data scientist, Machine learning engineer, and Systems architect. Many also pursue further graduate or professional study.</p><h3>Admission Notes</h3><p>Applicants should have completed relevant secondary-level coursework and demonstrate strong written communication and analytical skills; no prior specialization in the field is required.</p>'
       format: full_html
   field_degrees:
     -

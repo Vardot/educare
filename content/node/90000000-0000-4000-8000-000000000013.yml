@@ -37,13 +37,9 @@ default:
   moderation_state:
     -
       value: published
-  path:
-    -
-      alias: /classics
-      langcode: en
   field_content:
     -
-      value: '<p>The Classics program is a undergraduate program in Arts & Humanities. Students explore the field through coursework, research, and mentorship, and graduate ready to make a meaningful contribution in their discipline.</p>'
+      value: '<p>The Classics program explores the languages, literature, history, and philosophy of ancient Greece and Rome, building strong skills in textual analysis and historical interpretation.</p><p>As an undergraduate program in Arts & Humanities, Classics prepares students through a blend of core theory, hands-on coursework, and applied or research projects, guided by faculty active in the field.</p><h3>What You&#39;ll Learn</h3><ul><li>Greek and Latin language and literature</li><li>Ancient history and historiography</li><li>Classical philosophy</li><li>Reception of classical antiquity in later eras</li></ul><h3>Sample Courses</h3><ul><li>Intermediate Greek</li><li>Intermediate Latin</li><li>Ancient Historiography</li><li>Classical Philosophy Seminar</li></ul><h3>Learning Outcomes</h3><p>Graduates of this program will be able to:</p><ul><li>Translate and interpret primary texts in Greek and/or Latin</li><li>Analyze ancient sources within their historical and cultural context</li><li>Produce a research essay engaging with classical scholarship</li></ul><h3>Career Paths</h3><p>Graduates go on to roles such as Museum and heritage careers, Law, and Education. Many also pursue further graduate or professional study.</p><h3>Admission Notes</h3><p>Applicants should have completed relevant secondary-level coursework and demonstrate strong written communication and analytical skills; no prior specialization in the field is required.</p>'
       format: full_html
   field_degrees:
     -

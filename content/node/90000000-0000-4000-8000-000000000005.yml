@@ -37,13 +37,9 @@ default:
   moderation_state:
     -
       value: published
-  path:
-    -
-      alias: /astrophysics
-      langcode: en
   field_content:
     -
-      value: '<p>The Astrophysics program is a graduate program in Sciences. Students explore the field through coursework, research, and mentorship, and graduate ready to make a meaningful contribution in their discipline.</p>'
+      value: '<p>The Astrophysics program trains students to investigate the physics of stars, galaxies, and the universe as a whole, combining rigorous coursework in physics and mathematics with hands-on observational and computational research.</p><p>As a graduate program in Sciences, Astrophysics prepares students through a blend of core theory, hands-on coursework, and applied or research projects, guided by faculty active in the field.</p><h3>What You&#39;ll Learn</h3><ul><li>Stellar structure and evolution</li><li>Observational and radio astronomy</li><li>Cosmology and the early universe</li><li>Computational and statistical methods for large datasets</li></ul><h3>Sample Courses</h3><ul><li>Stellar Astrophysics</li><li>Galactic and Extragalactic Astronomy</li><li>General Relativity</li><li>Observational Techniques</li><li>Scientific Computing</li></ul><h3>Learning Outcomes</h3><p>Graduates of this program will be able to:</p><ul><li>Design and carry out an original research project using telescope or archival data</li><li>Apply statistical and computational methods to large astronomical datasets</li><li>Communicate research findings in written and oral form to a scientific audience</li></ul><h3>Career Paths</h3><p>Graduates go on to roles such as Research astronomer, Data scientist, Science communicator, and Postdoctoral researcher.</p><h3>Admission Notes</h3><p>Applicants typically hold a bachelor''s degree in a related field and are asked to submit a statement of purpose, academic transcripts, and letters of recommendation; standardized test requirements vary by department.</p>'
       format: full_html
   field_degrees:
     -

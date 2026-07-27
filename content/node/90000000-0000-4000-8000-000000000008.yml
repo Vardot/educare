@@ -37,13 +37,9 @@ default:
   moderation_state:
     -
       value: published
-  path:
-    -
-      alias: /biomedical-engineering
-      langcode: en
   field_content:
     -
-      value: '<p>The Biomedical Engineering program is a undergraduate program in Engineering & Applied Sciences. Students explore the field through coursework, research, and mentorship, and graduate ready to make a meaningful contribution in their discipline.</p>'
+      value: '<p>The Biomedical Engineering program applies engineering principles to healthcare and the life sciences, preparing students to design medical devices, diagnostic tools, and biological systems.</p><p>As an undergraduate program in Engineering & Applied Sciences, Biomedical Engineering prepares students through a blend of core theory, hands-on coursework, and applied or research projects, guided by faculty active in the field.</p><h3>What You&#39;ll Learn</h3><ul><li>Biomechanics and human physiology</li><li>Medical imaging and diagnostics</li><li>Biomaterials and tissue engineering</li><li>Signal processing for biomedical applications</li></ul><h3>Sample Courses</h3><ul><li>Human Physiology for Engineers</li><li>Biomaterials</li><li>Medical Imaging Systems</li><li>Biomedical Signal Processing</li><li>Senior Design Project</li></ul><h3>Learning Outcomes</h3><p>Graduates of this program will be able to:</p><ul><li>Design a biomedical device or system that meets defined clinical needs</li><li>Apply engineering analysis to physiological and biological systems</li><li>Work effectively in interdisciplinary teams with clinicians and scientists</li></ul><h3>Career Paths</h3><p>Graduates go on to roles such as Biomedical engineer, Medical device design engineer, and Clinical engineer. Many also pursue further graduate or professional study.</p><h3>Admission Notes</h3><p>Applicants should have completed relevant secondary-level coursework and demonstrate strong written communication and analytical skills; no prior specialization in the field is required.</p>'
       format: full_html
   field_degrees:
     -

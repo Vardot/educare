@@ -36,13 +36,9 @@ default:
   moderation_state:
     -
       value: published
-  path:
-    -
-      alias: /economics
-      langcode: en
   field_content:
     -
-      value: '<p>The Economics program is a undergraduate program in Social Sciences. Students explore the field through coursework, research, and mentorship, and graduate ready to make a meaningful contribution in their discipline.</p>'
+      value: '<p>The Economics program develops rigorous analytical skills for understanding markets, policy, and decision-making, combining economic theory with quantitative and statistical methods.</p><p>As an undergraduate program in Social Sciences, Economics prepares students through a blend of core theory, hands-on coursework, and applied or research projects, guided by faculty active in the field.</p><h3>What You&#39;ll Learn</h3><ul><li>Microeconomic and macroeconomic theory</li><li>Econometrics and statistical inference</li><li>Public policy analysis</li><li>International trade and finance</li></ul><h3>Sample Courses</h3><ul><li>Intermediate Microeconomics</li><li>Intermediate Macroeconomics</li><li>Econometrics</li><li>Public Policy Analysis</li></ul><h3>Learning Outcomes</h3><p>Graduates of this program will be able to:</p><ul><li>Apply economic theory to analyze markets, firms, and policy questions</li><li>Use econometric methods to test hypotheses with real-world data</li><li>Communicate economic analysis clearly to non-specialist audiences</li></ul><h3>Career Paths</h3><p>Graduates go on to roles such as Economic analyst, Policy researcher, Financial services professional, and Data analyst. Many also pursue further graduate or professional study.</p><h3>Admission Notes</h3><p>Applicants should have completed relevant secondary-level coursework and demonstrate strong written communication and analytical skills; no prior specialization in the field is required.</p>'
       format: full_html
   field_degrees:
     -
