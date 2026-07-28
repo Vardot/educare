@@ -25,6 +25,6 @@ default:
   field_media_image:
   - alt: A speaker holds a microphone and addresses a seated audience at a campus event
     title: Speaker Presenting at a Campus Event
-    width: 1140
-    height: 492
+    width: 2640
+    height: 1140
     entity: 213d105b-3742-46a5-b682-2337a2cc7298

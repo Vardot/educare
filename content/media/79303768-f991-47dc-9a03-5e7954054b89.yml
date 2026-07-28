@@ -25,6 +25,6 @@ default:
   field_media_image:
   - alt: Three smiling students resting on a stack of language textbooks in the library
     title: Three Students With Textbooks
-    width: 669
-    height: 492
+    width: 1500
+    height: 1103
     entity: 16853bfb-dbf6-4528-a5cd-55cd5c8cfa0b

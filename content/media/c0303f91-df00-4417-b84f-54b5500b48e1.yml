@@ -25,6 +25,6 @@ default:
   field_media_image:
   - alt: A student sits at a computer in the library, focused on the screen
     title: Student Studying at a Library Computer
-    width: 455
-    height: 238
+    width: 2640
+    height: 1381
     entity: 8e0a2c5b-5bae-4107-bb59-5a66888a630e

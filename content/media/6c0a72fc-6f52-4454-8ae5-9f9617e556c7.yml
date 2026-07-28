@@ -25,6 +25,6 @@ default:
   field_media_image:
   - alt: Two students standing in front of library shelves holding a stack of textbooks
     title: Two Students Holding Books in the Library
-    width: 652
-    height: 500
+    width: 1700
+    height: 1304
     entity: 42e322d6-b979-4117-a6ab-c42417a3cc64

@@ -7,12 +7,12 @@ default:
   uid:
   - target_id: 1
   filename:
-  - value: speaker-presenting-at-a-campus-event.png
+  - value: speaker-presenting-at-a-campus-event.jpg
   uri:
-  - value: public://2026-07/speaker-presenting-at-a-campus-event.png
+  - value: public://2026-07/speaker-presenting-at-a-campus-event.jpg
   filemime:
-  - value: image/png
+  - value: image/jpeg
   filesize:
-  - value: 644323
+  - value: 318462
   status:
   - value: true

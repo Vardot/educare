@@ -25,6 +25,6 @@ default:
   field_media_image:
   - alt: Two students standing on a campus path outside a brick building, going over their notes
     title: Two Students Talking on a Campus Path
-    width: 669
-    height: 492
+    width: 1600
+    height: 1177
     entity: fadb9d4a-9ccc-4c53-8a25-40ef2ef1acbe

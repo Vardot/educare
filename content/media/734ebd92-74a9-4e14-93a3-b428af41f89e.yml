@@ -25,6 +25,6 @@ default:
   field_media_image:
   - alt: A group of students celebrating with a high five while studying together in the library
     title: Students High-Fiving in the Library
-    width: 285
-    height: 184
+    width: 1125
+    height: 726
     entity: 1eeafcc5-fd89-4ef3-856e-6019c7be0e22

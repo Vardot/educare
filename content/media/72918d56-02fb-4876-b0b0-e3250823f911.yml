@@ -25,6 +25,6 @@ default:
   field_media_image:
   - alt: A student working at a computer in a shared study space with classmates in the background
     title: Student Studying at a Computer
-    width: 455
-    height: 238
+    width: 2640
+    height: 1381
     entity: 808dc349-4f2a-4088-bc08-9b52ae02626a
