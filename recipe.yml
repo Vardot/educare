@@ -239,7 +239,7 @@ config:
             slot: col_2
             uuid: c8d2b3e4-0003-4a03-9a03-000000000105
             component_id: sdc.vartheme_bs5_educare.share
-            component_version: 64add9738be2892f
+            component_version: 24d3cc5800d6bb4f
             inputs:
               heading: Share
               display_title: true
@@ -347,7 +347,7 @@ config:
             component_version: 08fa4d3de5e8376e
             inputs:
               title: Degrees
-              heading_level: h6
+              heading_level: h3
               indented: false
               degrees:
                 sourceType: entity-field
@@ -499,7 +499,7 @@ config:
             slot: col_2
             uuid: ea11f0a1-4444-4a44-9444-e0e1e2e3f404
             component_id: sdc.vartheme_bs5_educare.share
-            component_version: 64add9738be2892f
+            component_version: 24d3cc5800d6bb4f
             inputs:
               heading: Share
               display_title: true
@@ -1009,7 +1009,7 @@ config:
             slot: col_2
             uuid: 7dff0181-d5ea-417e-a49d-9f4a2faa29b6
             component_id: sdc.vartheme_bs5_educare.share
-            component_version: 64add9738be2892f
+            component_version: 24d3cc5800d6bb4f
             inputs:
               heading: Share
               display_title: true

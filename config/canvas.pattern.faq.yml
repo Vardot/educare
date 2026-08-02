@@ -131,16 +131,6 @@ component_tree:
       always_open: false
       color: inherit
       dash_indicator: never
-  381f3567-148a-4109-971f-143079488656:
-    parent_uuid: 26489441-26cc-4e2b-976f-31ea10b59ee8
-    slot: accordion_content
-    uuid: 381f3567-148a-4109-971f-143079488656
-    component_id: sdc.vartheme_bs5_educare.heading
-    component_version: 0889e2ce906c3164
-    inputs:
-      heading_text: 'Your heading goes here'
-      level: 5
-      target: _self
   3488f022-08d1-4bee-b8b3-b41c5a9faad7:
     parent_uuid: 26489441-26cc-4e2b-976f-31ea10b59ee8
     slot: accordion_content
@@ -178,16 +168,6 @@ component_tree:
       always_open: false
       color: inherit
       dash_indicator: never
-  84e6e9e5-1be6-4518-bb1e-3c4a0fc95444:
-    parent_uuid: 74d72c9d-fc2c-4080-8c99-8c6b40f22b75
-    slot: accordion_content
-    uuid: 84e6e9e5-1be6-4518-bb1e-3c4a0fc95444
-    component_id: sdc.vartheme_bs5_educare.heading
-    component_version: 0889e2ce906c3164
-    inputs:
-      heading_text: 'Your heading goes here'
-      level: 5
-      target: _self
   93ca0407-58d3-4744-a742-ce7d8c9496ab:
     parent_uuid: 74d72c9d-fc2c-4080-8c99-8c6b40f22b75
     slot: accordion_content
@@ -225,16 +205,6 @@ component_tree:
       always_open: false
       color: inherit
       dash_indicator: never
-  f1fa3f24-471a-4d54-929e-0e007b0af7d7:
-    parent_uuid: 673e597f-39e0-4ce1-8617-6fb23fd009de
-    slot: accordion_content
-    uuid: f1fa3f24-471a-4d54-929e-0e007b0af7d7
-    component_id: sdc.vartheme_bs5_educare.heading
-    component_version: 0889e2ce906c3164
-    inputs:
-      heading_text: 'Your heading goes here'
-      level: 5
-      target: _self
   5f96cabf-fb16-46ad-af8a-28705e33898c:
     parent_uuid: 673e597f-39e0-4ce1-8617-6fb23fd009de
     slot: accordion_content
@@ -272,16 +242,6 @@ component_tree:
       always_open: false
       color: inherit
       dash_indicator: never
-  00ee219e-4ec6-497c-98f8-c900b518d3f1:
-    parent_uuid: 68a494c2-9bfa-4d6a-9c2c-126a5250f532
-    slot: accordion_content
-    uuid: 00ee219e-4ec6-497c-98f8-c900b518d3f1
-    component_id: sdc.vartheme_bs5_educare.heading
-    component_version: 0889e2ce906c3164
-    inputs:
-      heading_text: 'Your heading goes here'
-      level: 5
-      target: _self
   8ea03019-01b4-4edc-a9ec-c9eab3d753f0:
     parent_uuid: 68a494c2-9bfa-4d6a-9c2c-126a5250f532
     slot: accordion_content
@@ -319,16 +279,6 @@ component_tree:
       always_open: false
       color: inherit
       dash_indicator: never
-  fb1c0b65-55ca-49e1-9c98-9e0a34dde377:
-    parent_uuid: 71320361-1c09-43ee-adec-06a470e09574
-    slot: accordion_content
-    uuid: fb1c0b65-55ca-49e1-9c98-9e0a34dde377
-    component_id: sdc.vartheme_bs5_educare.heading
-    component_version: 0889e2ce906c3164
-    inputs:
-      heading_text: 'Your heading goes here'
-      level: 5
-      target: _self
   a3188508-4ccd-4cb0-bd16-c585162cb099:
     parent_uuid: 71320361-1c09-43ee-adec-06a470e09574
     slot: accordion_content
@@ -366,16 +316,6 @@ component_tree:
       always_open: false
       color: inherit
       dash_indicator: never
-  93c6132d-232d-41e0-8ae2-5339d6155398:
-    parent_uuid: c99a9da1-b8b0-49c7-90e6-9033c2cec34c
-    slot: accordion_content
-    uuid: 93c6132d-232d-41e0-8ae2-5339d6155398
-    component_id: sdc.vartheme_bs5_educare.heading
-    component_version: 0889e2ce906c3164
-    inputs:
-      heading_text: 'Your heading goes here'
-      level: 5
-      target: _self
   d9e78039-a7ad-4c3d-a13a-0c775d920f6c:
     parent_uuid: c99a9da1-b8b0-49c7-90e6-9033c2cec34c
     slot: accordion_content

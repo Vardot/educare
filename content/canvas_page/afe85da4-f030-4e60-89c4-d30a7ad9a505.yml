@@ -329,7 +329,7 @@ default:
       inputs:
         date: '2026-09-03'
         title: 'Open Day. Meet faculty, tour campus'
-        heading_level: h5
+        heading_level: h3
         show_action_icon: true
         card_border: false
         background_color: bg-secondary-subtle
@@ -357,7 +357,7 @@ default:
       inputs:
         date: '2026-09-10'
         title: 'University Launches New Artificial Intelligence Research Center'
-        heading_level: h5
+        heading_level: h3
         show_action_icon: true
         card_border: false
         background_color: bg-secondary-subtle
@@ -385,7 +385,7 @@ default:
       inputs:
         date: '2026-09-08'
         title: 'University Launches New Artificial Intelligence Research Center'
-        heading_level: h5
+        heading_level: h3
         show_action_icon: true
         card_border: false
         background_color: bg-secondary-subtle
@@ -413,7 +413,7 @@ default:
       inputs:
         date: '2026-09-07'
         title: 'University Launches New Artificial Intelligence Research Center'
-        heading_level: h5
+        heading_level: h3
         show_action_icon: true
         card_border: false
         background_color: bg-secondary-subtle
@@ -472,7 +472,8 @@ default:
       component_id: sdc.vartheme_bs5_educare.heading
       inputs:
         heading_text: 'University Launches New Artificial Intelligence Research Center'
-        level: 5
+        level: 3
+        text_size: h5
         target: _self
     -
       parent_uuid: a1b85817-fe67-44e3-815f-870eac3a42da
@@ -534,7 +535,8 @@ default:
       component_id: sdc.vartheme_bs5_educare.heading
       inputs:
         heading_text: 'University Launches New Artificial Intelligence Research Center'
-        level: 5
+        level: 3
+        text_size: h5
         target: _self
     -
       uuid: 57f55928-a6ac-4e0a-8a88-102325b7a893
@@ -592,7 +594,8 @@ default:
       component_id: sdc.vartheme_bs5_educare.heading
       inputs:
         heading_text: Admissions
-        level: 5
+        level: 3
+        text_size: h5
         target: _self
     -
       parent_uuid: 27083047-9e5c-442a-9766-f17e6be65b6b
@@ -637,7 +640,8 @@ default:
       component_id: sdc.vartheme_bs5_educare.heading
       inputs:
         heading_text: Programs
-        level: 5
+        level: 3
+        text_size: h5
         target: _self
     -
       parent_uuid: 7a8e6f00-dece-4fc5-9dfc-4370c05bc860
@@ -682,7 +686,8 @@ default:
       component_id: sdc.vartheme_bs5_educare.heading
       inputs:
         heading_text: 'Contact Us'
-        level: 5
+        level: 3
+        text_size: h5
         text_color: text-white
         target: _self
     -

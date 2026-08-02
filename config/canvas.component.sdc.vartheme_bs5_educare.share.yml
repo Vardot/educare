@@ -5,7 +5,7 @@ dependencies:
     - options
   theme:
     - vartheme_bs5_educare
-active_version: 64add9738be2892f
+active_version: 24d3cc5800d6bb4f
 versioned_properties:
   active:
     settings:
@@ -30,6 +30,17 @@ versioned_properties:
             -
               value: true
           expression: ℹ︎boolean␟value
+        heading_level:
+          required: false
+          field_type: list_integer
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: 2
+          expression: ℹ︎list_integer␟value
         alignment:
           required: false
           field_type: list_string

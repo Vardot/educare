@@ -378,7 +378,7 @@ default:
       inputs:
         date: '2026-09-03'
         title: 'Tech & AI Innovation Conference'
-        heading_level: h5
+        heading_level: h3
         show_action_icon: true
         card_border: false
         background_color: bg-secondary-subtle
@@ -399,7 +399,7 @@ default:
       inputs:
         date: '2026-09-10'
         title: 'Open Day. Meet faculty, tour campus, and learn about admissions'
-        heading_level: h5
+        heading_level: h3
         show_action_icon: true
         card_border: false
         background_color: bg-secondary-subtle

@@ -74,7 +74,8 @@ component_tree:
     component_version: 0889e2ce906c3164
     inputs:
       heading_text: Admissions
-      level: 5
+      level: 3
+      text_size: h5
       target: _self
   08dbde59-dd0d-4114-9065-efd09c83bb78:
     parent_uuid: 8ada5a5a-7ea4-423d-8043-9a75014196c9
@@ -123,7 +124,8 @@ component_tree:
     component_version: 0889e2ce906c3164
     inputs:
       heading_text: Programs
-      level: 5
+      level: 3
+      text_size: h5
       target: _self
   cfb1939e-1078-45cf-a057-99063d2c5119:
     parent_uuid: 0332e3b4-71ee-4439-80a0-12223e16ea62
@@ -172,7 +174,8 @@ component_tree:
     component_version: 0889e2ce906c3164
     inputs:
       heading_text: 'Contact Us'
-      level: 5
+      level: 3
+      text_size: h5
       text_color: text-white
       target: _self
   7d8469c4-5aed-4394-922f-58a5fdd058f2:

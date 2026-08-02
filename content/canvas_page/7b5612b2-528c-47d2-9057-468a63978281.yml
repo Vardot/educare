@@ -244,7 +244,7 @@ default:
       inputs:
         date: '2026-09-03'
         title: 'Open Day. Meet faculty, tour campus'
-        heading_level: h5
+        heading_level: h3
         show_action_icon: true
         card_border: false
         background_color: bg-secondary-subtle
@@ -272,7 +272,7 @@ default:
       inputs:
         date: '2026-09-10'
         title: 'University Launches New Artificial Intelligence Research Center'
-        heading_level: h5
+        heading_level: h3
         show_action_icon: true
         card_border: false
         background_color: bg-secondary-subtle
@@ -300,7 +300,7 @@ default:
       inputs:
         date: '2026-09-08'
         title: 'University Launches New Artificial Intelligence Research Center'
-        heading_level: h5
+        heading_level: h3
         show_action_icon: true
         card_border: false
         background_color: bg-secondary-subtle
@@ -328,7 +328,7 @@ default:
       inputs:
         date: '2026-09-07'
         title: 'University Launches New Artificial Intelligence Research Center'
-        heading_level: h5
+        heading_level: h3
         show_action_icon: true
         card_border: false
         background_color: bg-secondary-subtle
@@ -387,7 +387,8 @@ default:
       component_id: sdc.vartheme_bs5_educare.heading
       inputs:
         heading_text: 'University Launches New Artificial Intelligence Research Center'
-        level: 5
+        level: 3
+        text_size: h5
         target: _self
     -
       parent_uuid: aa8a9447-efd6-439c-8666-8a74b3f3ce17
@@ -449,7 +450,8 @@ default:
       component_id: sdc.vartheme_bs5_educare.heading
       inputs:
         heading_text: 'University Launches New Artificial Intelligence Research Center'
-        level: 5
+        level: 3
+        text_size: h5
         target: _self
     -
       uuid: f171fae1-557e-47ad-a1f0-446e35b973e3
@@ -736,15 +738,6 @@ default:
     -
       parent_uuid: b5e1b6e8-1d79-49cd-8263-26cb3b5f806c
       slot: accordion_content
-      uuid: 5c81eef2-7813-4e5a-b060-b56293459f4e
-      component_id: sdc.vartheme_bs5_educare.heading
-      inputs:
-        heading_text: 'Your heading goes here'
-        level: 5
-        target: _self
-    -
-      parent_uuid: b5e1b6e8-1d79-49cd-8263-26cb3b5f806c
-      slot: accordion_content
       uuid: 4a960acd-892d-4e90-a173-62f86ebdd192
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
@@ -776,15 +769,6 @@ default:
         always_open: false
         color: inherit
         dash_indicator: never
-    -
-      parent_uuid: b195b16c-e398-4951-9c30-80f7f0b6ced6
-      slot: accordion_content
-      uuid: f584d169-3d5e-4182-85eb-2760d239cb36
-      component_id: sdc.vartheme_bs5_educare.heading
-      inputs:
-        heading_text: 'Your heading goes here'
-        level: 5
-        target: _self
     -
       parent_uuid: b195b16c-e398-4951-9c30-80f7f0b6ced6
       slot: accordion_content
@@ -822,15 +806,6 @@ default:
     -
       parent_uuid: 5bccb47d-182f-456c-bca4-fbdddc8ee69f
       slot: accordion_content
-      uuid: ddb86230-bf65-4f42-accc-eeda8a3a1df0
-      component_id: sdc.vartheme_bs5_educare.heading
-      inputs:
-        heading_text: 'Your heading goes here'
-        level: 5
-        target: _self
-    -
-      parent_uuid: 5bccb47d-182f-456c-bca4-fbdddc8ee69f
-      slot: accordion_content
       uuid: 6db39f7d-1ade-4921-b04c-8c125d65999b
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
@@ -862,15 +837,6 @@ default:
         always_open: false
         color: inherit
         dash_indicator: never
-    -
-      parent_uuid: 24edd607-7238-4419-901c-171613b31c37
-      slot: accordion_content
-      uuid: 85b58f48-d496-4f17-8e90-d5e1784f7279
-      component_id: sdc.vartheme_bs5_educare.heading
-      inputs:
-        heading_text: 'Your heading goes here'
-        level: 5
-        target: _self
     -
       parent_uuid: 24edd607-7238-4419-901c-171613b31c37
       slot: accordion_content
@@ -908,15 +874,6 @@ default:
     -
       parent_uuid: 3ba843c0-aa71-48e5-bd91-b35d47be669c
       slot: accordion_content
-      uuid: db0df881-f85d-4c3b-914d-c3001e514430
-      component_id: sdc.vartheme_bs5_educare.heading
-      inputs:
-        heading_text: 'Your heading goes here'
-        level: 5
-        target: _self
-    -
-      parent_uuid: 3ba843c0-aa71-48e5-bd91-b35d47be669c
-      slot: accordion_content
       uuid: 5f0c8e95-04ad-476f-87c2-38a042da1268
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
@@ -948,15 +905,6 @@ default:
         always_open: false
         color: inherit
         dash_indicator: never
-    -
-      parent_uuid: 4f9cddfa-1b15-44aa-8764-a2d031580225
-      slot: accordion_content
-      uuid: ba00fdcc-b43b-4ef4-abdf-c736b967d1bb
-      component_id: sdc.vartheme_bs5_educare.heading
-      inputs:
-        heading_text: 'Your heading goes here'
-        level: 5
-        target: _self
     -
       parent_uuid: 4f9cddfa-1b15-44aa-8764-a2d031580225
       slot: accordion_content

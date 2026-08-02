@@ -116,7 +116,8 @@ default:
     component_id: sdc.vartheme_bs5_educare.heading
     inputs:
       heading_text: Upcoming Events
-      level: 3
+      level: 2
+      text_size: h3
       target: _self
   - parent_uuid: b4ffbe66-3f02-46b2-9632-b957aece47af
     slot: col_1

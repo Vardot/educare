@@ -46,7 +46,8 @@ component_tree:
     component_version: 0889e2ce906c3164
     inputs:
       heading_text: 'Subscribe to Our Newsletters'
-      level: 4
+      level: 2
+      text_size: h4
       target: _self
   d8f3da75-9214-4786-967c-e538f1e4b7a9:
     parent_uuid: b6a309fb-cbd0-4601-918a-15294d8b1673

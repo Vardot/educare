@@ -1114,7 +1114,8 @@ default:
       component_id: sdc.vartheme_bs5_educare.heading
       inputs:
         heading_text: Admissions
-        level: 5
+        level: 3
+        text_size: h5
         target: _self
     -
       parent_uuid: 8ada5a5a-7ea4-423d-8043-9a75014196c9
@@ -1159,7 +1160,8 @@ default:
       component_id: sdc.vartheme_bs5_educare.heading
       inputs:
         heading_text: Programs
-        level: 5
+        level: 3
+        text_size: h5
         target: _self
     -
       parent_uuid: 0332e3b4-71ee-4439-80a0-12223e16ea62
@@ -1204,7 +1206,8 @@ default:
       component_id: sdc.vartheme_bs5_educare.heading
       inputs:
         heading_text: 'Contact Us'
-        level: 5
+        level: 3
+        text_size: h5
         text_color: text-white
         target: _self
     -

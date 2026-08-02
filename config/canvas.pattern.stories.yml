@@ -190,7 +190,7 @@ component_tree:
     inputs:
       date: '2026-09-03'
       title: 'Open Day. Meet faculty, tour campus'
-      heading_level: h5
+      heading_level: h3
       show_action_icon: true
       card_border: false
       background_color: bg-secondary-subtle
@@ -220,7 +220,7 @@ component_tree:
     inputs:
       date: '2026-09-10'
       title: 'University Launches New Artificial Intelligence Research Center'
-      heading_level: h5
+      heading_level: h3
       show_action_icon: true
       card_border: false
       background_color: bg-secondary-subtle
@@ -250,7 +250,7 @@ component_tree:
     inputs:
       date: '2026-09-08'
       title: 'University Launches New Artificial Intelligence Research Center'
-      heading_level: h5
+      heading_level: h3
       show_action_icon: true
       card_border: false
       background_color: bg-secondary-subtle
@@ -280,7 +280,7 @@ component_tree:
     inputs:
       date: '2026-09-07'
       title: 'University Launches New Artificial Intelligence Research Center'
-      heading_level: h5
+      heading_level: h3
       show_action_icon: true
       card_border: false
       background_color: bg-secondary-subtle
@@ -340,7 +340,8 @@ component_tree:
     component_version: 0889e2ce906c3164
     inputs:
       heading_text: 'University Launches New Artificial Intelligence Research Center'
-      level: 5
+      level: 3
+      text_size: h5
       target: _self
   18eb61d6-52f9-42ca-b6f5-9beadb614a77:
     parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
@@ -405,5 +406,6 @@ component_tree:
     component_version: 0889e2ce906c3164
     inputs:
       heading_text: 'University Launches New Artificial Intelligence Research Center'
-      level: 5
+      level: 3
+      text_size: h5
       target: _self
