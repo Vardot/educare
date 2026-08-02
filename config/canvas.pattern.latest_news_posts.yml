@@ -50,7 +50,7 @@ component_tree:
     slot: col_1
     uuid: c307f64f-945b-4165-ba99-bada62bb5016
     component_id: block.views_block.news-latest
-    component_version: c336f6157683ac13
+    component_version: 6815ab2dcfe29656
     inputs:
       label: 'News: Latest news posts'
       label_display: '0'

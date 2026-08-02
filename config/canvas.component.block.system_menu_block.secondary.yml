@@ -10,7 +10,7 @@ id: block.system_menu_block.secondary
 source: block
 source_local_id: 'system_menu_block:secondary'
 provider: system
-active_version: 31ecc6cc06f17d4e
+active_version: 7206ccf6a90c8941
 versioned_properties:
   active:
     settings:

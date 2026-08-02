@@ -5,7 +5,7 @@ dependencies:
     - views.view.news
   module:
     - views
-active_version: 4323a6a9e7c31f97
+active_version: 6815ab2dcfe29656
 versioned_properties:
   active:
     settings:
