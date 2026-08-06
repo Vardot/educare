@@ -1,0 +1,2 @@
+Educare functional testing suite fixture document.
+Uploaded by a media CRUD scenario and deleted again.

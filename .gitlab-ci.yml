@@ -9,9 +9,18 @@
 #            install it with `drush site:install recipes/educare`, serve it and
 #            drive the whole site through the browser with the Varbase functional
 #            testing suite (webship-js / Playwright / Cucumber-js), then build the
-#            HTML + PDF report. Self-contained: one job, no oversized artifacts
-#            passed between jobs, so it runs the same locally (gitlab-ci-local)
-#            and on git.drupalcode.org.
+#            HTML + PDF report. Self-contained: no oversized artifacts passed
+#            between jobs, so it runs the same locally (gitlab-ci-local) and on
+#            git.drupalcode.org.
+#
+#            The test stage fans out over `parallel: matrix` with one job per
+#            tests/features/NN-* folder. The whole suite in a single job exceeds
+#            the runner's 30-minute script limit, and grouping folders into fewer
+#            buckets still did: a heavy React editor (Canvas) sharing a bucket
+#            with page-load-heavy scans (quality/SEO) blew the cap under CI
+#            load even when each scenario passed on its own. One job per folder
+#            also names the failing area in the job list directly. Each job
+#            builds its own site and writes its own report, keyed by $SUITE.
 ################################################################################
 
 stages:
@@ -119,6 +128,62 @@ workflow:
   image: mcr.microsoft.com/playwright:v1.56.0-noble
   needs: ["📦 Composer validate"]
   timeout: 3h
+  # composer pulls dists from github.com unauthenticated; a rate limit there is
+  # transient, so let the runner re-attempt before the pipeline goes red.
+  retry:
+    max: 2
+    when:
+      - script_failure
+      - runner_system_failure
+      - stuck_or_timeout_failure
+  parallel:
+    matrix:
+      # One bucket per feature folder. Grouping folders (three buckets: public /
+      # quality / editorial) previously exhausted the unauthenticated GitHub
+      # rate limit at four-at-once ("Could not authenticate against github.com",
+      # exit 100) and still blew the runner's 30-minute script limit once a
+      # heavy React editor (Canvas) shared a bucket with page-load-heavy scans
+      # (quality/SEO) under CI load. Splitting all the way to one folder per job
+      # gives every folder the full time budget and isolates its own browser
+      # session's cumulative load; if the GitHub rate limit resurfaces at this
+      # count, the fix is composer auth (a CI variable), not re-grouping.
+      - SUITE: "01-website-base-requirements"
+        FEATURES_GLOB: "tests/features/01-website-base-requirements/**/*.feature"
+      - SUITE: "02-news"
+        FEATURES_GLOB: "tests/features/02-news/**/*.feature"
+      - SUITE: "03-events"
+        FEATURES_GLOB: "tests/features/03-events/**/*.feature"
+      - SUITE: "04-programs"
+        FEATURES_GLOB: "tests/features/04-programs/**/*.feature"
+      - SUITE: "05-exposed-filters"
+        FEATURES_GLOB: "tests/features/05-exposed-filters/**/*.feature"
+      - SUITE: "06-contact"
+        FEATURES_GLOB: "tests/features/06-contact/**/*.feature"
+      - SUITE: "07-quality"
+        FEATURES_GLOB: "tests/features/07-quality/**/*.feature"
+      - SUITE: "08-seo"
+        FEATURES_GLOB: "tests/features/08-seo/**/*.feature"
+      - SUITE: "09-editorial"
+        FEATURES_GLOB: "tests/features/09-editorial/**/*.feature"
+      # 10-drupal-canvas gets one bucket per page group, not one for the whole
+      # folder: opening the Canvas editor is a heavy React SPA mount, and even
+      # fully isolated from every other folder the full 9-scenario file still
+      # hit the 30-minute cap on a slow runner-day (Home/About/Admissions
+      # opening in 8s locally, every time, but not reliably in 30 min on a
+      # loaded shared runner). Splitting the page groups across buckets bounds
+      # each job to at most two of those mounts instead of nine.
+      - SUITE: "10-01-canvas-pages-listed"
+        FEATURES_GLOB: "tests/features/10-drupal-canvas/10-01-canvas-pages-listed.feature"
+      - SUITE: "10-02-canvas-home-about"
+        FEATURES_GLOB: "tests/features/10-drupal-canvas/10-02-canvas-editor-home-about.feature"
+      - SUITE: "10-03-canvas-admissions-studentlife"
+        FEATURES_GLOB: "tests/features/10-drupal-canvas/10-03-canvas-editor-admissions-studentlife.feature"
+      - SUITE: "10-04-canvas-research-contact"
+        FEATURES_GLOB: "tests/features/10-drupal-canvas/10-04-canvas-editor-research-contact.feature"
+      - SUITE: "10-05-canvas-programs"
+        FEATURES_GLOB: "tests/features/10-drupal-canvas/10-05-canvas-editor-programs.feature"
+      - SUITE: "11-permissions"
+        FEATURES_GLOB: "tests/features/11-permissions/**/*.feature"
   services:
     - name: mariadb:10.11
       alias: database
@@ -189,13 +254,15 @@ workflow:
     # webship-js's Playwright version may differ from the image's preinstalled
     # browser, so install the matching Chromium (system deps already present).
     - ./node_modules/.bin/playwright install chromium
-    - WEBSHIP_REPORT_DISABLE=1 ./node_modules/.bin/cucumber-js --config cucumber.js --tags "not @wip"
+    # One feature folder per matrix job. cucumber.js reads FEATURES.
+    - FEATURES="${FEATURES_GLOB}" WEBSHIP_REPORT_DISABLE=1 CUCUMBER_JSON="cucumber_report--${SUITE}" ./node_modules/.bin/cucumber-js --config cucumber.js --tags "not @wip"
   after_script:
     # Build the HTML + PDF report from the run's JSON (best-effort).
     - cd "$CI_PROJECT_DIR"
-    - export REPORT="educare--${CI_COMMIT_REF_SLUG:-local}--automated-functional-testing-report--$(date +%Y-%m-%d)--$(date +%H-%M)"
+    # ${SUITE} keeps each matrix job's report and JSON distinct in the artifacts.
+    - export REPORT="educare--${CI_COMMIT_REF_SLUG:-local}--${SUITE}--automated-functional-testing-report--$(date +%Y-%m-%d)--$(date +%H-%M)"
     - node ./node_modules/webship-js/bin/generate-reports.js
-        --json tests/reports/cucumber_report.json
+        --json "tests/reports/cucumber_report--${SUITE}.json"
         --out  "tests/reports/${REPORT}.html"
         --format all
         --pdf-out "tests/reports/${REPORT}.pdf" || true

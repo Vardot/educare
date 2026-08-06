@@ -24,6 +24,21 @@ module.exports = [
         console: 'readonly',
         Promise: 'readonly',
         setTimeout: 'readonly',
+        // Step definitions pass callbacks to Playwright's page.evaluate(), whose
+        // body executes in the browser. The code is authored here but never runs
+        // in node, so these have to be declared or every DOM reference is
+        // reported as no-undef.
+        document: 'readonly',
+        window: 'readonly',
+        location: 'readonly',
+        performance: 'readonly',
+        fetch: 'readonly',
+        Event: 'readonly',
+        URL: 'readonly',
+        DataTransfer: 'readonly',
+        File: 'readonly',
+        getComputedStyle: 'readonly',
+        crypto: 'readonly',
       },
     },
     rules: {

@@ -11,7 +11,15 @@
     "events view": ".view-events",
     "programs view": ".view-programs",
     "exposed filters form": "form.views-exposed-form",
-    "share heading": ".webshare__heading"
+    "share heading": ".webshare__heading",
+    "nav toggle": "header[role=\"banner\"] button.navbar-toggler",
+    "pagination": "nav[aria-label=\"Pagination\"]",
+    "news cards": ".view-news [data-component-id=\"vartheme_bs5_educare:card-impressed\"]",
+    "events cards": ".view-events [data-component-id=\"vartheme_bs5_educare:card-dated-vertical\"]",
+    "programs cards": ".view-programs [data-component-id=\"vartheme_bs5_educare:card-program\"]",
+    "study level filter": "form.views-exposed-form .bef-links",
+    "contact form": "form.webform-submission-form",
+    "main nav menu": "header[role=\"banner\"] .navbar-collapse"
   },
   "xpath": {}
 }
