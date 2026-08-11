@@ -1,6 +1,6 @@
 .DS_Store
 
-# Node / webship-js functional testing suite
+# Node / varbase-e2e functional testing suite
 /node_modules
 /.yarn
 /.yarnrc.yml

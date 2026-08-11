@@ -1,7 +1,7 @@
 # Educare — Varbase functional testing suite
 
 Browser-driven BDD tests for the Educare site template, built with
-[webship-js](https://webship.co/docs/webship-js) (Playwright + Cucumber-js).
+[varbase-e2e](https://varbase-e2e.co/docs/varbase-e2e) (Playwright + Cucumber-js).
 
 The suite ships inside the recipe so any Educare install can be verified the
 same way, and so Educare's GitLab CI can build a Varbase 11 site, apply the
@@ -14,7 +14,7 @@ Educare recipe and drive the whole site through the browser.
 | `cucumber.js` | World parameters: `launchUrl`, the test-user registry, breakpoints, screenshot/video/JS-error policy. |
 | `playwright.config.ts` | Browser/launch/context options (env-driven headless / slowMo). |
 | `tests/features/NN-*/` | BDD `.feature` files, one folder per area (one CI job per folder). |
-| `tests/step-definitions/` | Educare custom step definitions, layered on the webship-js core steps. |
+| `tests/step-definitions/` | Educare custom step definitions, layered on the varbase-e2e core steps. |
 | `tests/selectors/educare-theme.json` | Named CSS selectors for the Educare theme. |
 | `tests/reports/` `tests/screenshots/` `tests/videos/` | Generated run artifacts (git-ignored). |
 

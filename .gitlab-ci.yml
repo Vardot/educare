@@ -8,7 +8,7 @@
 # test     - build a Varbase 11 project, require the checked-out Educare recipe,
 #            install it with `drush site:install recipes/educare`, serve it and
 #            drive the whole site through the browser with the Varbase functional
-#            testing suite (webship-js / Playwright / Cucumber-js), then build the
+#            testing suite (varbase-e2e / Playwright / Cucumber-js), then build the
 #            HTML + PDF report. Self-contained: no oversized artifacts passed
 #            between jobs, so it runs the same locally (gitlab-ci-local) and on
 #            git.drupalcode.org.
@@ -109,7 +109,7 @@ workflow:
 
 # = Cucumber dry-run =
 #
-# Loads the webship-js core + Educare step definitions and matches every step in
+# Loads the varbase-e2e core + Educare step definitions and matches every step in
 # every .feature against them WITHOUT a browser or a running site. Fails on any
 # undefined or ambiguous step. Fully reproducible in gitlab-ci-local.
 "🧩 Cucumber dry-run":
@@ -119,7 +119,7 @@ workflow:
   before_script:
     - npm install --no-audit --no-fund
   script:
-    - WEBSHIP_REPORT_DISABLE=1 ./node_modules/.bin/cucumber-js --config cucumber.js --dry-run
+    - VARBASE_E2E_REPORT_DISABLE=1 ./node_modules/.bin/cucumber-js --config cucumber.js --dry-run
   allow_failure: false
 
 # = Automated Functional Testing - build, install, drive the browser, report =
@@ -198,7 +198,7 @@ workflow:
     WEB_ROOT: "$CI_PROJECT_DIR/testsite/web"
     LAUNCH_URL: "http://127.0.0.1:8888"
     FORCE_COLOR: "1"
-    WEBSHIP_REPORT_DISABLE: "1"
+    VARBASE_E2E_REPORT_DISABLE: "1"
   artifacts:
     when: always
     paths:
@@ -251,17 +251,17 @@ workflow:
     # = Run the whole suite from the recipe root =
     - cd "$CI_PROJECT_DIR"
     - npm install --no-audit --no-fund
-    # webship-js's Playwright version may differ from the image's preinstalled
+    # varbase-e2e's Playwright version may differ from the image's preinstalled
     # browser, so install the matching Chromium (system deps already present).
     - ./node_modules/.bin/playwright install chromium
     # One feature folder per matrix job. cucumber.js reads FEATURES.
-    - FEATURES="${FEATURES_GLOB}" WEBSHIP_REPORT_DISABLE=1 CUCUMBER_JSON="cucumber_report--${SUITE}" ./node_modules/.bin/cucumber-js --config cucumber.js --tags "not @wip"
+    - FEATURES="${FEATURES_GLOB}" VARBASE_E2E_REPORT_DISABLE=1 CUCUMBER_JSON="cucumber_report--${SUITE}" ./node_modules/.bin/cucumber-js --config cucumber.js --tags "not @wip"
   after_script:
     # Build the HTML + PDF report from the run's JSON (best-effort).
     - cd "$CI_PROJECT_DIR"
     # ${SUITE} keeps each matrix job's report and JSON distinct in the artifacts.
     - export REPORT="educare--${CI_COMMIT_REF_SLUG:-local}--${SUITE}--automated-functional-testing-report--$(date +%Y-%m-%d)--$(date +%H-%M)"
-    - node ./node_modules/webship-js/bin/generate-reports.js
+    - node ./node_modules/@vardot/varbase-e2e/bin/generate-reports.js
         --json "tests/reports/cucumber_report--${SUITE}.json"
         --out  "tests/reports/${REPORT}.html"
         --format all

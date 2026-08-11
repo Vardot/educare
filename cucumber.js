@@ -1,6 +1,6 @@
 // cucumber-js configuration for the Educare Varbase functional testing suite.
 //
-// Drives the whole Educare site through the browser with webship-js (>= 2.0.4).
+// Drives the whole Educare site through the browser with @vardot/varbase-e2e (>= 2.0.1).
 //   yarn test                # all features (tests/features/**)
 //   yarn test:chromium       # force chromium
 //   yarn test:headed         # headed debug run
@@ -9,7 +9,7 @@
 //   LAUNCH_URL=https://my-educare.ddev.site yarn test:chromium
 //
 // Reports land in tests/reports/. Disable the auto HTML hook with
-// WEBSHIP_REPORT_DISABLE=1 and run `yarn generate-reports` in CI instead.
+// VARBASE_E2E_REPORT_DISABLE=1 and run `yarn generate-reports` in CI instead.
 
 module.exports = {
   default: {
@@ -24,7 +24,7 @@ module.exports = {
     // and `.ts` step files with no build step.
     requireModule: ['tsx/cjs'],
     require: [
-      'node_modules/webship-js/tests/step-definitions/**/*.js',          // Webship-js core step definitions.
+      'node_modules/@vardot/varbase-e2e/tests/step-definitions/**/*.js',          // Varbase E2E core step definitions.
       'tests/step-definitions/**/*.js',                                  // Educare custom step definitions.
     ],
     // FEATURES lets CI run one feature folder per job (e.g.
@@ -121,16 +121,16 @@ module.exports = {
         infoTypes: '',
       },
       video: {
-        mode: process.env.WEBSHIP_VIDEO || 'on-failure',
+        mode: process.env.VARBASE_E2E_VIDEO || 'on-failure',
         dir: './tests/videos',
         size: { width: 1920, height: 1080 },
         filenamePattern: '{datetime}.{feature_file}.{scenario}.{status}.{ext}',
       },
       javascript: {
         // Report collected JavaScript console/page errors at scenario end.
-        // Do NOT tag scenarios @javascript — in webship-js that tag forces
+        // Do NOT tag scenarios @javascript — in varbase-e2e that tag forces
         // 'fail' mode.
-        mode: process.env.WEBSHIP_JS_ERROR_MODE || 'warn',
+        mode: process.env.VARBASE_E2E_JS_ERROR_MODE || 'warn',
         levels: ['error'],
         ignore: '',
         beforeScenario: false,

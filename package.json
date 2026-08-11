@@ -1,6 +1,6 @@
 {
   "name": "educare",
-  "description": "Varbase functional testing suite (webship-js) for the Educare site template recipe.",
+  "description": "Varbase functional testing suite (varbase-e2e) for the Educare site template recipe.",
   "license": "GPL-2.0-or-later",
   "private": true,
   "scripts": {
@@ -10,10 +10,10 @@
     "test:webkit": "BROWSER=webkit cucumber-js --config cucumber.js",
     "test:headed": "HEADLESS=false cucumber-js --config cucumber.js",
     "test:fast": "SLOW_MO=0 cucumber-js --config cucumber.js",
-    "generate-reports": "node ./node_modules/webship-js/bin/generate-reports.js"
+    "generate-reports": "node ./node_modules/@vardot/varbase-e2e/bin/generate-reports.js"
   },
   "devDependencies": {
     "eslint": "^9.0.0",
-    "webship-js": "^2.0.4"
+    "@vardot/varbase-e2e": "^2.0.1"
   }
 }

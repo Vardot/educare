@@ -1,22 +1,15 @@
 'use strict';
 
-// Educare custom step definitions, layered on the webship-js core steps.
-//
-// Only steps that a core webship-js step cannot express live here:
-//   - authenticating a user from the cucumber.js users registry;
-//   - selecting an exposed-filter option by its visible label (the core
-//     `select ... from` step routes single-word targets to [name]/#id and
-//     never reaches the label);
-//   - reading a listing card, whose link is an empty stretched-link carrying
-//     only an aria-label, so it has no text to match and no clickable box.
-//
-// Each step reuses webship-js's own helpers so it behaves like a core step:
-//   smartSettle — the smart "wait for a quiet edge" every navigation step uses.
-//   friendly    — tester-friendly error formatting.
+const { Before, AfterStep, When, Then, setDefaultTimeout } = require('@cucumber/cucumber');
 
-const { Before, AfterStep, When, Then } = require('@cucumber/cucumber');
+// The harness sets a 45s default step timeout. The breakpoint warm-up pass
+// visits one page at seven breakpoints in a single step, which legitimately
+// exceeds that on a loaded shared runner - give every step more headroom.
+setDefaultTimeout(90 * 1000);
+
 const assert = require('assert');
-const { smartSettle, friendly } = require('webship-js/tests/step-definitions/webship');
+
+const { smartSettle, friendly } = require('@vardot/varbase-e2e/tests/step-definitions/varbase-e2e');
 
 /** Settle budget shared by every step here. */
 function budget(world) {
@@ -28,10 +21,6 @@ function absolute(world, path) {
   if (path.startsWith('http')) return path;
   return world.launchUrl.replace(/\/$/, '') + (path.startsWith('/') ? path : '/' + path);
 }
-
-// -----------------------------------------------------------------------------
-// Exposed filters
-// -----------------------------------------------------------------------------
 
 /**
  * Choose an option in an exposed filter, addressing the filter by the label the
@@ -61,10 +50,6 @@ When(/^(?:I |we )*select "([^"]*)" from the "([^"]*)" filter$/, async function (
   }
   await smartSettle(this.page, budget(this));
 });
-
-// -----------------------------------------------------------------------------
-// Listing cards
-// -----------------------------------------------------------------------------
 
 /**
  * Resolve a listing card's link by its accessible name.
@@ -138,10 +123,6 @@ When(/^(?:I |we )*open the "([^"]*)" card$/, async function (name) {
   await smartSettle(this.page, budget(this));
 });
 
-// -----------------------------------------------------------------------------
-// Metatags
-// -----------------------------------------------------------------------------
-
 /**
  * Assert a meta tag's content, addressed by `name` or `property`.
  *
@@ -192,10 +173,6 @@ Then(/^the canonical url should end with "([^"]*)"$/, async function (path) {
   assert.ok(href.endsWith(path), `The canonical url is "${href}", which does not end with "${path}".`);
 });
 
-// -----------------------------------------------------------------------------
-// Access boundaries
-// -----------------------------------------------------------------------------
-
 /**
  * Assert the current user is refused a path — the site answers "403 Forbidden"
  * or "404 Not Found" and does not render the requested administrative screen.
@@ -239,12 +216,8 @@ Then(/^(?:I |we )*should be allowed "([^"]*)"$/, async function (path) {
   await smartSettle(this.page, budget(this));
 });
 
-// -----------------------------------------------------------------------------
-// Page title
-// -----------------------------------------------------------------------------
-
 /**
- * Assert the document title. webship-js only ships `the page should have a
+ * Assert the document title. varbase-e2e only ships `the page should have a
  * title` (non-empty) and a `wait until the page title contains` wait, so there
  * is no way to state the SEO contract as an assertion.
  *
@@ -261,14 +234,6 @@ Then(/^the page title should contain "([^"]*)"$/, async function (expected) {
     `The page title is "${title}", which does not contain "${expected}".`
   );
 });
-
-// -----------------------------------------------------------------------------
-// Listing result totals
-//
-// Educare's Events listing filters on the event end date, so its totals shrink
-// as demo events pass. Nothing may assert an absolute total. These steps prove
-// a filter filters by comparing the listing against its own earlier state.
-// -----------------------------------------------------------------------------
 
 /** Read the "Showing 1-12 of 38" / "Shown articles: 1-12 of 15" total. */
 async function resultTotal(page) {
@@ -411,17 +376,13 @@ Then(/^(?:I |we )*should( not)? see the remembered card title$/, async function 
   }
 });
 
-// -----------------------------------------------------------------------------
-// Event date range (smartdate)
-// -----------------------------------------------------------------------------
-
 /**
  * Fill an Event's "When" smartdate range.
  *
  * The widget renders four inputs (start date, start time, end date, end time)
  * whose visible labels are all just "Date" and "Time", repeated again by the
  * authored-on and scheduler fields, so no label-based step can address them.
- * Accepts webship-js relative-date tokens, e.g. "[relative:+7 days#YYYY-MM-DD]".
+ * Accepts varbase-e2e relative-date tokens, e.g. "[relative:+7 days#YYYY-MM-DD]".
  *
  * Example #1: When I schedule the event from "2027-03-01" "09:00" to "2027-03-01" "17:00"
  * Example #2: When I schedule the event from "2027-06-15" "10:30" to "2027-06-16" "16:00"
@@ -465,75 +426,6 @@ When(/^(?:I |we )*schedule the event from "([^"]*)" "([^"]*)" to "([^"]*)" "([^"
     }
     await smartSettle(this.page, budget(this));
   });
-
-// -----------------------------------------------------------------------------
-// Header / footer integrity
-//
-// Same phrasing as the Varbase suite's custom.steps.js, with the Educare menus.
-// -----------------------------------------------------------------------------
-
-/**
- * Verify the Educare header is "working": the main navigation menu, rendered
- * through the Canvas global Header region, carries every primary section.
- *
- * Example #1: Then the page should have a working header
- * Example #2: And the page should have a working header
- * Example #3: Then I should have a working header
- * Example #4: And we should have a working header
- * Example #5: Then the page should have a working header
- */
-Then(/^(?:the page should have|(?:I |we )*should have) a working header$/, async function () {
-  await smartSettle(this.page, budget(this));
-  const header = this.page.getByRole('banner').first();
-  const text = (await header.textContent().catch(() => '')) || '';
-  const expected = ['About', 'Programs', 'Research', 'Admissions', 'Student Life', 'Events', 'News', 'Contact Us'];
-  for (const item of expected) {
-    if (!text.includes(item)) {
-      throw friendly(`Header is missing the "${item}" link.`, 'Check the Main navigation menu in the Canvas Header region.');
-    }
-  }
-});
-
-/**
- * Verify the Educare footer is "working": the quicklinks, the institution's
- * contact details and the social profiles are all rendered.
- *
- * Example #1: Then the page should have a working footer
- * Example #2: And the page should have a working footer
- * Example #3: Then I should have a working footer
- * Example #4: And we should have a working footer
- * Example #5: Then the page should have a working footer
- */
-Then(/^(?:the page should have|(?:I |we )*should have) a working footer$/, async function () {
-  await smartSettle(this.page, budget(this));
-  const footer = this.page.getByRole('contentinfo').first();
-  const text = (await footer.textContent().catch(() => '')) || '';
-  const expected = [
-    'Subscribe to Our Newsletters', 'Quicklinks',
-    'About', 'Programs', 'Admissions', 'Research', 'Student Life', 'News',
-  ];
-  for (const item of expected) {
-    if (!text.includes(item)) {
-      throw friendly(`Footer is missing "${item}".`, 'Check the Canvas Footer region and the Secondary menu.');
-    }
-  }
-  for (const network of ['Linkedin', 'Facebook', 'Instagram', 'X-Twitter']) {
-    if ((await footer.getByRole('link', { name: network }).count()) === 0) {
-      throw friendly(`Footer is missing the ${network} profile link.`, 'Check the Social media menu in the Canvas Footer region.');
-    }
-  }
-});
-
-// -----------------------------------------------------------------------------
-// Named-selector aware assertions
-//
-// The core web-first and element steps take a raw CSS selector: they do NOT
-// consult the named-selector registry, so a feature has to spell out
-// ".view-events [data-component-id='vartheme_bs5_educare:card-dated-vertical']"
-// inline. These four steps resolve a registered name from
-// tests/selectors/educare-theme.json first and fall back to a raw selector, so
-// feature files name what they mean and one rename fixes every scenario.
-// -----------------------------------------------------------------------------
 
 /** Registered CSS/XPath selector for a name, else the name as a raw selector. */
 function named(world, name) {
@@ -658,16 +550,6 @@ When(/^(?:I |we )*open the first card$/, async function () {
   await smartSettle(this.page, budget(this));
 });
 
-// -----------------------------------------------------------------------------
-// Upload fixtures
-//
-// webship-js resolves `I attach the file "X" to "Y"` against `this.assetsFolder`,
-// which defaults to the package's own assets directory inside node_modules. The
-// media scenarios upload Educare's own fixtures, so point it at the suite's
-// tests/assets/ instead.
-// -----------------------------------------------------------------------------
-
-
 Before(function () {
   this.assetsFolder = './tests/assets/';
 });
@@ -695,7 +577,7 @@ AfterStep(async function () {
 /**
  * Assert a control identified by its accessible name and role is NOT visible.
  *
- * webship-js ships the positive `the "X" <role> should be visible` but no
+ * varbase-e2e ships the positive `the "X" <role> should be visible` but no
  * negative, so there is no way to state that a collapsed menu is closed - the
  * half of a responsive-navigation scenario that proves the collapse works.
  *
@@ -757,4 +639,56 @@ When(/^(?:I |we )*expand the "([^"]*)" details$/, async function (selector) {
     `The "${selector}" details would not stay open.`,
     'Something re-closes it after load; open it immediately before using its fields.'
   );
+});
+
+/**
+ * Verify the Educare header is "working": the main navigation menu, rendered
+ * through the Canvas global Header region, carries every primary section.
+ *
+ * Example #1: Then the page should have a working header
+ * Example #2: And the page should have a working header
+ * Example #3: Then I should have a working header
+ * Example #4: And we should have a working header
+ * Example #5: Then the page should have a working header
+ */
+Then(/^(?:the page should have|(?:I |we )*should have) a working header$/, async function () {
+  await smartSettle(this.page, budget(this));
+  const header = this.page.getByRole('banner').first();
+  const text = (await header.textContent().catch(() => '')) || '';
+  const expected = ['About', 'Programs', 'Research', 'Admissions', 'Student Life', 'Events', 'News', 'Contact Us'];
+  for (const item of expected) {
+    if (!text.includes(item)) {
+      throw friendly(`Header is missing the "${item}" link.`, 'Check the Main navigation menu in the Canvas Header region.');
+    }
+  }
+});
+
+/**
+ * Verify the Educare footer is "working": the quicklinks, the institution's
+ * contact details and the social profiles are all rendered.
+ *
+ * Example #1: Then the page should have a working footer
+ * Example #2: And the page should have a working footer
+ * Example #3: Then I should have a working footer
+ * Example #4: And we should have a working footer
+ * Example #5: Then the page should have a working footer
+ */
+Then(/^(?:the page should have|(?:I |we )*should have) a working footer$/, async function () {
+  await smartSettle(this.page, budget(this));
+  const footer = this.page.getByRole('contentinfo').first();
+  const text = (await footer.textContent().catch(() => '')) || '';
+  const expected = [
+    'Subscribe to Our Newsletters', 'Quicklinks',
+    'About', 'Programs', 'Admissions', 'Research', 'Student Life', 'News',
+  ];
+  for (const item of expected) {
+    if (!text.includes(item)) {
+      throw friendly(`Footer is missing "${item}".`, 'Check the Canvas Footer region and the Secondary menu.');
+    }
+  }
+  for (const network of ['Linkedin', 'Facebook', 'Instagram', 'X-Twitter']) {
+    if ((await footer.getByRole('link', { name: network }).count()) === 0) {
+      throw friendly(`Footer is missing the ${network} profile link.`, 'Check the Social media menu in the Canvas Footer region.');
+    }
+  }
 });
