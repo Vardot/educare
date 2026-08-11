@@ -27,6 +27,7 @@ stages:
   - build
   - validate
   - test
+  - report
 
 variables:
   COMPOSER_ALLOW_SUPERUSER: "1"
@@ -246,7 +247,10 @@ workflow:
     - ./bin/drush config:set system.logging error_level all -y
     - ./bin/drush cache:rebuild
     # = Serve the site with PHP's built-in server =
-    - ./bin/drush runserver 127.0.0.1:8888 > $CI_PROJECT_DIR/runserver.log 2>&1 &
+    # The Canvas editor pulls dozens of assets per mount; PHP's built-in server
+    # is single-worker by default and serializes them, which times the second
+    # editor mount out on a loaded runner. Give it parallel workers.
+    - PHP_CLI_SERVER_WORKERS=8 ./bin/drush runserver 127.0.0.1:8888 > $CI_PROJECT_DIR/runserver.log 2>&1 &
     - sleep 8
     # = Run the whole suite from the recipe root =
     - cd "$CI_PROJECT_DIR"
@@ -266,4 +270,40 @@ workflow:
         --out  "tests/reports/${REPORT}.html"
         --format all
         --pdf-out "tests/reports/${REPORT}.pdf" || true
+  allow_failure: false
+
+
+# = report = merge every matrix job's cucumber JSON into one combined report.
+#
+# Mirrors the Varbase Project "Create reports" job: `dependencies` (not
+# `needs`) pulls the artifacts from ALL matrix jobs of the test stage without
+# gating on their success, so failures are captured in the report too.
+"📊 Create reports":
+  stage: report
+  image: node:20
+  rules:
+    - when: always
+  dependencies:
+    - "🧪 Automated Functional Testing"
+  before_script:
+    - apt-get update -y && apt-get install -y jq
+    - npm install --no-save --no-audit --no-fund @vardot/varbase-e2e
+    # --with-deps installs Chromium's system libraries which the plain node
+    # image lacks - needed for the PDF report's headless Chromium.
+    - ./node_modules/.bin/playwright install --with-deps chromium
+  script:
+    # Merge every suite's cucumber JSON array into one combined report.
+    - jq -s 'add' tests/reports/cucumber_report--*.json > tests/reports/cucumber_report.json
+    - export REPORT="educare--${CI_COMMIT_REF_SLUG}--automated-functional-testing-report--$(date +%Y-%m-%d)--$(date +%H-%M)"
+    - node ./node_modules/@vardot/varbase-e2e/bin/generate-reports.js
+        --json tests/reports/cucumber_report.json
+        --out  "tests/reports/${REPORT}.html"
+        --format all
+        --pdf-out "tests/reports/${REPORT}.pdf"
+  artifacts:
+    when: always
+    paths:
+      - tests/reports/
+      - tests/screenshots/
+    expire_in: 30 days
   allow_failure: false
