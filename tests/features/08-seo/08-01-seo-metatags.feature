@@ -1,3 +1,4 @@
+@any @regression @seo
 Feature: SEO - Metatags and sharing previews
       As a marketing team
       I want every page to declare its own title, description and share preview

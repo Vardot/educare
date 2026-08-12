@@ -1,3 +1,4 @@
+@any @regression @content @programs
 Feature: Programs - Study levels and program filtering
       As a prospective student
       I want the Programs listing to switch between Undergraduate and Graduate

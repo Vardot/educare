@@ -5,27 +5,25 @@
 # validate - lint YAML, spell-check + ESLint the suite, and a Cucumber dry-run
 #            that proves every step phrasing in the Varbase functional testing
 #            suite resolves (all reproducible offline in gitlab-ci-local).
-# test     - build a Varbase 11 project, require the checked-out Educare recipe,
-#            install it with `drush site:install recipes/educare`, serve it and
-#            drive the whole site through the browser with the Varbase functional
-#            testing suite (varbase-e2e / Playwright / Cucumber-js), then build the
-#            HTML + PDF report. Self-contained: no oversized artifacts passed
-#            between jobs, so it runs the same locally (gitlab-ci-local) and on
-#            git.drupalcode.org.
+# pre-test - 📦 Install Varbase: build a Varbase 11 host project, require the
+#            checked-out Educare recipe, install it with
+#            `drush site:install recipes/educare`, prepare it for deterministic
+#            testing, then DUMP the DB (gzip). The built site (testsite/), the
+#            varbase-e2e node_modules and the Playwright browser are cached so
+#            the test jobs reuse them instead of rebuilding per job.
+# test     - one parallel varbase-e2e job per feature bucket: pull the build
+#            cache, restore the DB dump (seconds), serve the site and drive it
+#            through the browser. No composer create-project / require /
+#            site:install / npm install per job.
+# report   - merge every bucket's cucumber JSON into one HTML + PDF report.
 #
-#            The test stage fans out over `parallel: matrix` with one job per
-#            tests/features/NN-* folder. The whole suite in a single job exceeds
-#            the runner's 30-minute script limit, and grouping folders into fewer
-#            buckets still did: a heavy React editor (Canvas) sharing a bucket
-#            with page-load-heavy scans (quality/SEO) blew the cap under CI
-#            load even when each scenario passed on its own. One job per folder
-#            also names the failing area in the job list directly. Each job
-#            builds its own site and writes its own report, keyed by $SUITE.
+# = Automated Functional Acceptance Testing (varbase-e2e) =
 ################################################################################
 
 stages:
   - build
   - validate
+  - pre-test
   - test
   - report
 
@@ -36,6 +34,17 @@ variables:
   VARBASE_PROJECT: "drupal/varbase_project:11.0.x-dev"
   DRUPAL_ADMIN_USERNAME: "webmaster"
   DRUPAL_ADMIN_PASSWORD: "dD.123123ddd"
+  # Host site is built under testsite/ (this repo is a recipe, not a docroot).
+  SITE_DIR: "$CI_PROJECT_DIR/testsite"
+  WEB_ROOT: "$CI_PROJECT_DIR/testsite/web"
+  DB_URL: "mysql://drupal:drupal@database/drupal"
+  LAUNCH_URL: "http://127.0.0.1:8888"
+  FORCE_COLOR: "1"
+  VARBASE_E2E_REPORT_DISABLE: "1"
+  # Cache locations: composer downloads + the Playwright browser go inside the
+  # project dir so the Install job can cache them for the pull-only test jobs.
+  COMPOSER_CACHE_DIR: "${CI_PROJECT_DIR}/.cache/composer"
+  PLAYWRIGHT_BROWSERS_PATH: "${CI_PROJECT_DIR}/.cache/ms-playwright"
 
 workflow:
   rules:
@@ -43,9 +52,84 @@ workflow:
     - if: $CI_COMMIT_BRANCH
     - if: $CI_COMMIT_TAG
 
+# = Path-based job gating (Reduce CI usage) ===================================
+# Skip a job when the files it cares about did not change, but ALWAYS run the
+# full pipeline on the default branch, release branches and tags. A job whose
+# files did not change stays LISTED as a non-optional manual (allow_failure:
+# false), never dropped.
+.run_on_release_refs: &run_on_release_refs
+  if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+  when: on_success
+
+# What a recipe developer edits: the recipe itself (recipe.yml / recommended.yml
+# / config / content / scripts) and the functional testing suite + its config.
+.recipe_app_changes: &recipe_app_changes
+  - "composer.json"
+  - ".gitlab-ci.yml"
+  - ".gitlab-ci/**/*"
+  - "recipe.yml"
+  - "recommended.yml"
+  - "config/**/*"
+  - "content/**/*"
+  - "scripts/**/*"
+  - "tests/**/*"
+  - "package.json"
+  - "package-lock.json"
+  - "cucumber.js"
+  - "eslint.config.js"
+  - "playwright.config.ts"
+
+# Build cache populated by 📦 Install Varbase: the built host site (testsite/),
+# the varbase-e2e node_modules and the composer + Playwright download caches.
+# The test jobs pull this (see .test_cache) so they skip the whole host build
+# and only restore the DB dump.
+.varbase_cache: &varbase_cache
+  key: "educare-build-$CI_COMMIT_REF_SLUG"
+  paths:
+    - .cache/composer
+    - .cache/ms-playwright
+    - testsite
+    - node_modules
+
+.test_cache: &test_cache
+  key: "educare-build-$CI_COMMIT_REF_SLUG"
+  policy: pull
+  paths:
+    - .cache/composer
+    - .cache/ms-playwright
+    - testsite
+    - node_modules
+
+# = Reusable before_script fragments =
+.fragments:
+  # The Playwright image is Ubuntu noble (PHP 8.3 default); add ondrej/php for
+  # PHP 8.4, then PHP + Composer + ImageMagick/WebP + a MySQL client. Needed by
+  # the Install job (build + drush) and by every test job (drush restore/serve).
+  host_php_setup:
+    - export DEBIAN_FRONTEND=noninteractive
+    - apt-get update -y
+    - apt-get install -y --no-install-recommends software-properties-common ca-certificates curl gnupg lsb-release
+    - add-apt-repository -y ppa:ondrej/php
+    - apt-get update -y
+    - apt-get install -y --no-install-recommends php8.4-cli php8.4-mysql php8.4-gd php8.4-curl php8.4-xml php8.4-mbstring php8.4-zip php8.4-intl unzip git default-mysql-client webp imagemagick libmagickcore-6.q16-6-extra
+    - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+    - corepack enable || true
+    - composer --version && php --version
+    - sed -i 's/rights="none"\s*pattern="WEBP"/rights="read|write" pattern="WEBP"/I' /etc/ImageMagick-*/policy.xml 2>/dev/null || true
+
 # = build = validate the recipe's composer.json (schema + metadata, offline).
 "📦 Composer validate":
   stage: build
+  rules:
+    - <<: *run_on_release_refs
+    - changes:
+        - "composer.json"
+      when: on_success
+    # Its files did not change: keep the job LISTED as a manual (play button)
+    # so it never auto-runs on unrelated changes but stays visible. allow_failure
+    # stays false so that when it IS run it must pass.
+    - when: manual
+      allow_failure: false
   image: composer:2
   script:
     - composer --version
@@ -54,6 +138,14 @@ workflow:
 # = validate = lint every YAML file (recipe.yml + config/*) for syntax errors.
 "📐 YAML lint":
   stage: validate
+  rules:
+    - <<: *run_on_release_refs
+    - changes:
+        - "**/*.yml"
+        - "**/*.yaml"
+      when: on_success
+    - when: manual
+      allow_failure: false
   image: python:3.12-slim
   needs: []
   before_script:
@@ -66,7 +158,7 @@ workflow:
       class Loader(yaml.SafeLoader):
           pass
       Loader.add_multi_constructor('', lambda loader, suffix, node: None)
-      SKIP = ('node_modules/', '.cache/', 'tests/reports/')
+      SKIP = ('node_modules/', '.cache/', 'tests/reports/', 'testsite/')
       errors = count = 0
       for path in sorted(Path('.').rglob('*.y*ml')):
           rel = str(path)
@@ -86,19 +178,36 @@ workflow:
 
 "🔤 Cspell":
   stage: validate
+  rules:
+    - <<: *run_on_release_refs
+    - changes:
+        - "tests/**/*.feature"
+        - "tests/README.md"
+        - "cucumber.js"
+        - "eslint.config.js"
+        - ".cspell.json"
+      when: on_success
+    - when: manual
+      allow_failure: false
   image: node:20
   needs: []
   before_script:
     - npm install -g cspell
   script:
-    # Spell-check the suite's own prose + features + JS config (the recipe's
-    # config/content machine names are out of scope). Config in .cspell.json.
     - cspell "tests/**/*.feature" "tests/README.md" "cucumber.js" "eslint.config.js" --no-progress
   allow_failure: false
 
-# Lint the suite's JS step definitions and config with ESLint (flat config).
 "🟨 ESLint":
   stage: validate
+  rules:
+    - <<: *run_on_release_refs
+    - changes:
+        - "**/*.js"
+        - "eslint.config.js"
+        - "package.json"
+      when: on_success
+    - when: manual
+      allow_failure: false
   image: node:20
   needs: []
   before_script:
@@ -106,29 +215,39 @@ workflow:
   script:
     - node --version
     - ./node_modules/.bin/eslint .
-  allow_failure: false
 
-# = Cucumber dry-run =
-#
-# Loads the varbase-e2e core + Educare step definitions and matches every step in
-# every .feature against them WITHOUT a browser or a running site. Fails on any
-# undefined or ambiguous step. Fully reproducible in gitlab-ci-local.
+# = Cucumber dry-run = every step phrasing resolves, no browser, no site.
 "🧩 Cucumber dry-run":
   stage: validate
+  rules:
+    - <<: *run_on_release_refs
+    - changes:
+        - "tests/**/*"
+        - "cucumber.js"
+        - "package.json"
+      when: on_success
+    - when: manual
+      allow_failure: false
   image: node:20
   needs: []
   before_script:
     - npm install --no-audit --no-fund
   script:
     - VARBASE_E2E_REPORT_DISABLE=1 ./node_modules/.bin/cucumber-js --config cucumber.js --dry-run
-  allow_failure: false
 
-# = Automated Functional Testing - build, install, drive the browser, report =
-"🧪 Automated Functional Testing":
-  stage: test
+# = pre-test = build the host Varbase site, apply the Educare recipe, seed the
+# site, dump the DB, and cache the built site + node_modules + browser.
+"📦 Install Varbase":
+  stage: pre-test
+  rules:
+    - <<: *run_on_release_refs
+    - changes: *recipe_app_changes
+      when: on_success
+    - when: manual
+      allow_failure: false
   image: mcr.microsoft.com/playwright:v1.56.0-noble
-  needs: ["📦 Composer validate"]
-  timeout: 3h
+  needs: []
+  timeout: 2h
   # composer pulls dists from github.com unauthenticated; a rate limit there is
   # transient, so let the runner re-attempt before the pipeline goes red.
   retry:
@@ -137,17 +256,69 @@ workflow:
       - script_failure
       - runner_system_failure
       - stuck_or_timeout_failure
+  cache: *varbase_cache
+  services:
+    - name: mariadb:10.11
+      alias: database
+      variables:
+        MARIADB_DATABASE: drupal
+        MARIADB_USER: drupal
+        MARIADB_PASSWORD: drupal
+        MARIADB_ROOT_PASSWORD: root
+  artifacts:
+    when: on_success
+    expire_in: 1 day
+    paths:
+      - educare-db.sql.gz
+  before_script:
+    - !reference [.fragments, host_php_setup]
+  script:
+    # = Build a Varbase 11 project, then require the checked-out recipe =
+    - composer create-project $VARBASE_PROJECT "$SITE_DIR" --no-interaction --no-install --no-scripts
+    - cd "$SITE_DIR"
+    - composer config minimum-stability dev
+    - composer config repositories.educare path "$CI_PROJECT_DIR"
+    - composer require drupal/educare:@dev --no-interaction --no-progress --prefer-dist --with-all-dependencies
+    # = Install the site from the Educare recipe =
+    - ./bin/drush site:install recipes/educare --db-url=$DB_URL
+        --account-name=$DRUPAL_ADMIN_USERNAME --account-pass=$DRUPAL_ADMIN_PASSWORD
+        --account-mail=webmaster@vardot.com --site-name="Educare" --locale=en -y
+    # = Prepare for deterministic testing =
+    - ./bin/drush pm:uninstall antibot -y || true
+    - ./bin/drush config:set user.flood ip_limit 1000000 -y
+    - ./bin/drush config:set user.flood user_limit 1000000 -y
+    - ./bin/drush config:set system.logging error_level all -y
+    - ./bin/drush cache:rebuild
+    # = Install the varbase-e2e suite + the matching Chromium (cached) =
+    - cd "$CI_PROJECT_DIR"
+    - npm install --no-audit --no-fund
+    - ./node_modules/.bin/playwright install chromium
+    # = Dump the prepared DB for the parallel test jobs =
+    - $SITE_DIR/bin/drush --root=$WEB_ROOT sql:dump --gzip --result-file=$CI_PROJECT_DIR/educare-db.sql
+  allow_failure: false
+
+# = Automated Functional Acceptance Testing (varbase-e2e) - one parallel job per
+# feature bucket. Restores the built site + DB dump from 📦 Install Varbase.
+"🧪 varbase-e2e":
+  stage: test
+  rules:
+    - <<: *run_on_release_refs
+    - changes: *recipe_app_changes
+      when: on_success
+    - when: manual
+      allow_failure: false
+  image: mcr.microsoft.com/playwright:v1.56.0-noble
+  needs: ["📦 Install Varbase"]
+  timeout: 2h
+  retry:
+    max: 2
+    when:
+      - script_failure
+      - runner_system_failure
+      - stuck_or_timeout_failure
+  cache: *test_cache
   parallel:
     matrix:
-      # One bucket per feature folder. Grouping folders (three buckets: public /
-      # quality / editorial) previously exhausted the unauthenticated GitHub
-      # rate limit at four-at-once ("Could not authenticate against github.com",
-      # exit 100) and still blew the runner's 30-minute script limit once a
-      # heavy React editor (Canvas) shared a bucket with page-load-heavy scans
-      # (quality/SEO) under CI load. Splitting all the way to one folder per job
-      # gives every folder the full time budget and isolates its own browser
-      # session's cumulative load; if the GitHub rate limit resurfaces at this
-      # count, the fix is composer auth (a CI variable), not re-grouping.
       - SUITE: "01-website-base-requirements"
         FEATURES_GLOB: "tests/features/01-website-base-requirements/**/*.feature"
       - SUITE: "02-news"
@@ -166,13 +337,6 @@ workflow:
         FEATURES_GLOB: "tests/features/08-seo/**/*.feature"
       - SUITE: "09-editorial"
         FEATURES_GLOB: "tests/features/09-editorial/**/*.feature"
-      # 10-drupal-canvas gets one bucket per page group, not one for the whole
-      # folder: opening the Canvas editor is a heavy React SPA mount, and even
-      # fully isolated from every other folder the full 9-scenario file still
-      # hit the 30-minute cap on a slow runner-day (Home/About/Admissions
-      # opening in 8s locally, every time, but not reliably in 30 min on a
-      # loaded shared runner). Splitting the page groups across buckets bounds
-      # each job to at most two of those mounts instead of nine.
       - SUITE: "10-01-canvas-pages-listed"
         FEATURES_GLOB: "tests/features/10-drupal-canvas/10-01-canvas-pages-listed.feature"
       - SUITE: "10-02-canvas-home-about"
@@ -194,12 +358,7 @@ workflow:
         MARIADB_PASSWORD: drupal
         MARIADB_ROOT_PASSWORD: root
   variables:
-    DB_URL: "mysql://drupal:drupal@database/drupal"
-    SITE_DIR: "$CI_PROJECT_DIR/testsite"
-    WEB_ROOT: "$CI_PROJECT_DIR/testsite/web"
-    LAUNCH_URL: "http://127.0.0.1:8888"
-    FORCE_COLOR: "1"
-    VARBASE_E2E_REPORT_DISABLE: "1"
+    CUCUMBER_JSON: "cucumber_report--${SUITE}"
   artifacts:
     when: always
     paths:
@@ -208,62 +367,20 @@ workflow:
       - tests/videos/
     expire_in: 30 days
   before_script:
-    # The Playwright image is Ubuntu noble (PHP 8.3 default); add the ondrej/php
-    # PPA for PHP 8.4, then install PHP + Composer + ImageMagick/WebP (drimage
-    # derivatives) + a MySQL client.
-    - export DEBIAN_FRONTEND=noninteractive
-    - apt-get update -y
-    - apt-get install -y --no-install-recommends software-properties-common ca-certificates curl gnupg lsb-release
-    - add-apt-repository -y ppa:ondrej/php
-    - apt-get update -y
-    # --no-install-recommends keeps the layer small (skips ImageMagick's heavy
-    # Ghostscript/fonts recommends); the WebP delegate lib is added explicitly.
-    - apt-get install -y --no-install-recommends php8.4-cli php8.4-mysql php8.4-gd php8.4-curl php8.4-xml php8.4-mbstring php8.4-zip php8.4-intl unzip git default-mysql-client webp imagemagick libmagickcore-6.q16-6-extra
-    - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-    # Varbase's composer scripts run Yarn (drupal-libraries-sync); the image
-    # ships an old Yarn, so activate Yarn 4 via corepack before create-project.
-    - corepack enable || true
-    - composer --version && php --version
-    # Allow ImageMagick to read/write WebP so drimage derivatives generate.
-    - sed -i 's/rights="none"\s*pattern="WEBP"/rights="read|write" pattern="WEBP"/I' /etc/ImageMagick-*/policy.xml 2>/dev/null || true
+    # testsite/ + node_modules + the browser arrive from the pull-only cache;
+    # only PHP (for drush) is added, then the seeded DB dump is restored.
+    - !reference [.fragments, host_php_setup]
+    - gunzip -c $CI_PROJECT_DIR/educare-db.sql.gz | $SITE_DIR/bin/drush --root=$WEB_ROOT sql:cli
+    - $SITE_DIR/bin/drush --root=$WEB_ROOT cache:rebuild
   script:
-    # = Build a Varbase 11 project, then require the checked-out recipe =
-    # --no-scripts too: with --no-install the varbase_starter recipe isn't on disk
-    # yet, so the post-create-project yarn sync (which reads a script from that
-    # recipe) would fail; the sync runs later, after `composer require` installs.
-    - composer create-project $VARBASE_PROJECT "$SITE_DIR" --no-interaction --no-install --no-scripts
-    - cd "$SITE_DIR"
-    - composer config minimum-stability dev
-    - composer config repositories.educare path "$CI_PROJECT_DIR"
-    - composer require drupal/educare:@dev --no-interaction --no-progress --prefer-dist --with-all-dependencies
-    # = Install the site from the Educare recipe =
-    - ./bin/drush site:install recipes/educare --db-url=$DB_URL
-        --account-name=$DRUPAL_ADMIN_USERNAME --account-pass=$DRUPAL_ADMIN_PASSWORD
-        --account-mail=webmaster@vardot.com --site-name="Educare" --locale=en -y
-    # = Prepare for deterministic testing =
-    - ./bin/drush pm:uninstall antibot -y || true
-    - ./bin/drush config:set user.flood ip_limit 1000000 -y
-    - ./bin/drush config:set user.flood user_limit 1000000 -y
-    - ./bin/drush config:set system.logging error_level all -y
-    - ./bin/drush cache:rebuild
-    # = Serve the site with PHP's built-in server =
-    # The Canvas editor pulls dozens of assets per mount; PHP's built-in server
-    # is single-worker by default and serializes them, which times the second
-    # editor mount out on a loaded runner. Give it parallel workers.
-    - PHP_CLI_SERVER_WORKERS=8 ./bin/drush runserver 127.0.0.1:8888 > $CI_PROJECT_DIR/runserver.log 2>&1 &
+    # Serve the restored site (parallel workers for the Canvas editor mounts).
+    - PHP_CLI_SERVER_WORKERS=8 $SITE_DIR/bin/drush --root=$WEB_ROOT runserver 127.0.0.1:8888 > $CI_PROJECT_DIR/runserver.log 2>&1 &
     - sleep 8
-    # = Run the whole suite from the recipe root =
     - cd "$CI_PROJECT_DIR"
-    - npm install --no-audit --no-fund
-    # varbase-e2e's Playwright version may differ from the image's preinstalled
-    # browser, so install the matching Chromium (system deps already present).
-    - ./node_modules/.bin/playwright install chromium
-    # One feature folder per matrix job. cucumber.js reads FEATURES.
+    # One feature bucket per matrix job. cucumber.js reads FEATURES.
     - FEATURES="${FEATURES_GLOB}" VARBASE_E2E_REPORT_DISABLE=1 CUCUMBER_JSON="cucumber_report--${SUITE}" ./node_modules/.bin/cucumber-js --config cucumber.js --tags "not @wip"
   after_script:
-    # Build the HTML + PDF report from the run's JSON (best-effort).
     - cd "$CI_PROJECT_DIR"
-    # ${SUITE} keeps each matrix job's report and JSON distinct in the artifacts.
     - export REPORT="educare--${CI_COMMIT_REF_SLUG:-local}--${SUITE}--automated-functional-testing-report--$(date +%Y-%m-%d)--$(date +%H-%M)"
     - node ./node_modules/@vardot/varbase-e2e/bin/generate-reports.js
         --json "tests/reports/cucumber_report--${SUITE}.json"
@@ -272,27 +389,27 @@ workflow:
         --pdf-out "tests/reports/${REPORT}.pdf" || true
   allow_failure: false
 
-
 # = report = merge every matrix job's cucumber JSON into one combined report.
-#
-# Mirrors the Varbase Project "Create reports" job: `dependencies` (not
-# `needs`) pulls the artifacts from ALL matrix jobs of the test stage without
-# gating on their success, so failures are captured in the report too.
 "📊 Create reports":
   stage: report
-  image: node:20
   rules:
-    - when: always
+    # Auto-run whenever the test chain ran (release refs or the app changed),
+    # even if a test failed, so the full report is published. DAG-scheduled via
+    # needs so it is not held behind an un-played blocking-manual validate job.
+    - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+      when: always
+    - changes: *recipe_app_changes
+      when: always
+    - when: never
+  image: node:20
+  needs: ["🧪 varbase-e2e"]
   dependencies:
-    - "🧪 Automated Functional Testing"
+    - "🧪 varbase-e2e"
   before_script:
     - apt-get update -y && apt-get install -y jq
     - npm install --no-save --no-audit --no-fund @vardot/varbase-e2e
-    # --with-deps installs Chromium's system libraries which the plain node
-    # image lacks - needed for the PDF report's headless Chromium.
     - ./node_modules/.bin/playwright install --with-deps chromium
   script:
-    # Merge every suite's cucumber JSON array into one combined report.
     - jq -s 'add' tests/reports/cucumber_report--*.json > tests/reports/cucumber_report.json
     - export REPORT="educare--${CI_COMMIT_REF_SLUG}--automated-functional-testing-report--$(date +%Y-%m-%d)--$(date +%H-%M)"
     - node ./node_modules/@vardot/varbase-e2e/bin/generate-reports.js

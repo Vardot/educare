@@ -1,3 +1,4 @@
+@any @regression @content @search
 Feature: Exposed filters - Form-scoped listing filters
       As a site visitor
       I want the exposed filter form on the News, Events and Programs listings

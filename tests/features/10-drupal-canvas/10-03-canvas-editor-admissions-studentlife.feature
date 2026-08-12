@@ -1,3 +1,4 @@
+@any @regression @canvas @slow @flaky
 Feature: Drupal Canvas - Admissions and Student Life open in the Canvas editor
       As a site builder taking over an Educare site
       I want the Admissions and Student Life Canvas pages to open in the Canvas editor

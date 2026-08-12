@@ -1,3 +1,4 @@
+@any @regression @content @events
 Feature: Events - Event page
       As a site visitor
       I want an Event page with its title, details and related events

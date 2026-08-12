@@ -1,3 +1,4 @@
+@any @regression @auth @acceptance
 Feature: Permissions - The editorial back end is closed to visitors
       As the owner of an Educare site
       I want no part of the editorial back end reachable by an anonymous visitor

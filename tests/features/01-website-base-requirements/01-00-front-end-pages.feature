@@ -1,3 +1,4 @@
+@any @regression @smoke @content
 Feature: Website Base Requirements - Front-end pages
       As a site visitor
       I want every Educare front-end page to be healthy

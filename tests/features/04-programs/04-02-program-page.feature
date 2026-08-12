@@ -1,3 +1,4 @@
+@any @regression @content @programs
 Feature: Programs - Program page
       As a prospective student
       I want a Program page with its degrees, sections and a call to action

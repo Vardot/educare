@@ -1,3 +1,4 @@
+@any @regression @content @news
 Feature: News - News article
       As a site visitor
       I want a News article page with its title, body and related stories

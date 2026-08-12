@@ -1,3 +1,4 @@
+@any @regression @content @programs
 Feature: Programs - Programs listing
       As a prospective student
       I want a Programs listing at /programs with an Undergraduate / Graduate

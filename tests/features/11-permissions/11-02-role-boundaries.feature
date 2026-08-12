@@ -1,3 +1,4 @@
+@any @regression @auth @acceptance
 Feature: Permissions - What each Educare role may and may not do
       As the owner of an Educare site
       I want each Educare role held to the permissions the recipe grants it

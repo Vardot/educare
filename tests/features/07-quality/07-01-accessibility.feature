@@ -1,3 +1,4 @@
+@any @regression @a11y
 Feature: Accessibility - Every shipped page is accessible
       As a visitor using assistive technology
       I want every page the Educare template ships to be operable and perceivable

@@ -1,3 +1,4 @@
+@any @regression @content @news
 Feature: News - Filtering and paging the news listing
       As a site visitor
       I want to narrow the News listing with its filters and page through the rest

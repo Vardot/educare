@@ -1,3 +1,4 @@
+@any @regression @content @news
 Feature: News - News listing
       As a site visitor
       I want a News listing at /news with articles and filters

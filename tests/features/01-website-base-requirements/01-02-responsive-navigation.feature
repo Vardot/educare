@@ -1,3 +1,4 @@
+@any @regression @smoke @content
 Feature: Website Base Requirements - Responsive navigation and listings
       As a site visitor on a phone
       I want the navigation and the listings to work at a small viewport

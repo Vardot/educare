@@ -1,3 +1,4 @@
+@any @regression @perf
 Feature: Quality - Performance budgets on the Educare pages
       As a site owner
       I want the Educare pages to load within a budget

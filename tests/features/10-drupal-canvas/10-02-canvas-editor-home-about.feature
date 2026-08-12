@@ -1,3 +1,4 @@
+@any @regression @canvas @slow @flaky
 Feature: Drupal Canvas - Home and About open in the Canvas editor
       As a site builder taking over an Educare site
       I want the Home and About Canvas pages to open in the Canvas editor

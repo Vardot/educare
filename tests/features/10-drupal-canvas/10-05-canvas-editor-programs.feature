@@ -1,3 +1,4 @@
+@any @regression @canvas @slow @flaky
 Feature: Drupal Canvas - Explore programs opens in the Canvas editor
       As a site builder taking over an Educare site
       I want the Explore programs Canvas page to open in the Canvas editor

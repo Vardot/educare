@@ -1,3 +1,4 @@
+@any @regression @a11y
 Feature: Quality - Editorial accessibility checker on Educare content
       As an editor of an education site with an accessibility obligation
       I want the in-page accessibility checker to run while I edit Educare content

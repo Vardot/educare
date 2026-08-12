@@ -1,3 +1,4 @@
+@any @regression @content @editorial @acceptance
 Feature: Editorial - Media create, read, update and delete
       As a content editor
       I want to upload, read, rename and delete media through the admin UI

@@ -1,3 +1,4 @@
+@any @regression @content @contact @acceptance
 Feature: Contact - Contact form
       As a site visitor
       I want a Contact Us page with a working contact form

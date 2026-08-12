@@ -1,3 +1,4 @@
+@any @regression @canvas
 Feature: Drupal Canvas - The shipped Educare Canvas pages are listed
       As a site builder taking over an Educare site
       I want every Canvas page the recipe ships to open in the Canvas editor
