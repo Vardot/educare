@@ -38,6 +38,7 @@ default:
     -
       uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
       component_id: sdc.vartheme_bs5_educare.section
+      component_version: 9b679273be9319ad
       inputs:
         bg_edge2edge: false
         container_type: none
@@ -68,10 +69,11 @@ default:
         aos_delay: '0'
         aos_once: true
     -
-      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
-      slot: col_1
       uuid: 69647a62-5320-4ba2-ae21-0e34989c0db5
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
+      slot: col_1
       inputs:
         heading_text: 'Shape Your Future and Open Global Opportunities'
         level: 1
@@ -79,24 +81,27 @@ default:
         text_size: display-1
         font_weight: fw-bold
     -
-      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
-      slot: col_1
       uuid: 1a7d845d-2085-4100-ace5-1292babd58e8
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
+      slot: col_1
       inputs:
         size: py-5
     -
-      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
-      slot: col_1
       uuid: f12d1889-fb0d-4b15-95b0-7a2ca5499be1
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
+      slot: col_1
       inputs:
         size: py-3
     -
-      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
-      slot: col_1
       uuid: adfedc30-99bc-4d03-a993-4ec0e938a9a8
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
+      slot: col_1
       inputs:
         text:
           value: '<p>Choose from undergraduate, graduate, and doctoral programs designed to prepare you for leadership, innovation, and meaningful impact in your field.</p>'
@@ -104,17 +109,19 @@ default:
         text_size: none
         text_color: text-body
     -
-      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
-      slot: col_1
       uuid: 5b2d854a-1d91-4a2e-9b37-1a38649734a9
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
+      slot: col_1
       inputs:
         size: py-2
     -
-      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
-      slot: col_1
       uuid: 5d4c5de8-f63b-42c9-9b14-23b5220ef728
       component_id: sdc.vartheme_bs5_educare.button
+      component_version: a3bdd446d7020573
+      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
+      slot: col_1
       inputs:
         variant: btn-primary
         outline: false
@@ -134,10 +141,11 @@ default:
         icon_circle_white_text: false
         icon_circle_grow: true
     -
-      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
-      slot: col_1
       uuid: 4f4ea152-8e52-4145-898d-ad9a7899e48a
       component_id: sdc.vartheme_bs5_educare.button
+      component_version: a3bdd446d7020573
+      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
+      slot: col_1
       inputs:
         variant: btn-primary
         outline: false
@@ -157,10 +165,11 @@ default:
         icon_circle_white_text: false
         icon_circle_grow: true
     -
-      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
-      slot: col_2
       uuid: b096e9ab-b633-4a11-9c0a-5ebcd6b6ecda
       component_id: sdc.vartheme_bs5_educare.section
+      component_version: 9b679273be9319ad
+      parent_uuid: 3f0b9ecf-aa90-43fb-ad82-4d90704e64c7
+      slot: col_2
       inputs:
         bg_edge2edge: false
         container_type: none
@@ -191,15 +200,14 @@ default:
         aos_delay: '0'
         aos_once: true
     -
-      parent_uuid: b096e9ab-b633-4a11-9c0a-5ebcd6b6ecda
-      slot: col_1
       uuid: 00b8a53a-873c-4a37-969d-bd08702d284e
       component_id: sdc.vartheme_bs5_educare.image
+      component_version: 20b07c548b4cf729
+      parent_uuid: b096e9ab-b633-4a11-9c0a-5ebcd6b6ecda
+      slot: col_1
       inputs:
         media:
-          CANVAS_ENTITY_REFERENCE:
-            target_uuid: b9b98417-8aff-4476-a392-b5271633a980
-            target_type: media
+          target_id: '17'
         target: self
         ratio: ratio-auto
         fit: object-fit-cover
@@ -208,15 +216,14 @@ default:
         rounded: none
         loading: lazy
     -
-      parent_uuid: b096e9ab-b633-4a11-9c0a-5ebcd6b6ecda
-      slot: col_2
       uuid: c8bd9adc-9faf-4c75-b915-9971ae3e67cf
       component_id: sdc.vartheme_bs5_educare.image
+      component_version: 20b07c548b4cf729
+      parent_uuid: b096e9ab-b633-4a11-9c0a-5ebcd6b6ecda
+      slot: col_2
       inputs:
         media:
-          CANVAS_ENTITY_REFERENCE:
-            target_uuid: 5c4d6984-487f-4d0f-9cd0-fcbdd09d07f4
-            target_type: media
+          target_id: '6'
         target: self
         ratio: ratio-auto
         fit: object-fit-cover
@@ -225,17 +232,19 @@ default:
         rounded: none
         loading: lazy
     -
-      parent_uuid: b096e9ab-b633-4a11-9c0a-5ebcd6b6ecda
-      slot: col_2
       uuid: 796cb508-c9c8-491b-b4c7-02bfc2847b34
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: b096e9ab-b633-4a11-9c0a-5ebcd6b6ecda
+      slot: col_2
       inputs:
         size: py-2
     -
-      parent_uuid: b096e9ab-b633-4a11-9c0a-5ebcd6b6ecda
-      slot: col_2
       uuid: deae1f01-02a9-4a4b-9222-b5979aaa948e
       component_id: sdc.vartheme_bs5_educare.card-text
+      component_version: e029fefa26d20f4f
+      parent_uuid: b096e9ab-b633-4a11-9c0a-5ebcd6b6ecda
+      slot: col_2
       inputs:
         card_border: false
         background_color: bg-dark
@@ -248,36 +257,38 @@ default:
         icon_image: null
         icon_alignment: start
     -
-      parent_uuid: deae1f01-02a9-4a4b-9222-b5979aaa948e
-      slot: content
       uuid: 51a78644-789c-4318-b185-dab29ab917a1
       component_id: sdc.vartheme_bs5_educare.card-logo
+      component_version: 2f0dee83e01e6606
+      parent_uuid: deae1f01-02a9-4a4b-9222-b5979aaa948e
+      slot: content
       inputs:
         media:
-          CANVAS_ENTITY_REFERENCE:
-            target_uuid: 476c2835-79f8-4064-9de9-d946e0178a3b
-            target_type: media
+          target_id: '8'
         shadow: shadow-none
         alignment: left
     -
-      parent_uuid: deae1f01-02a9-4a4b-9222-b5979aaa948e
-      slot: content
       uuid: 6185729a-20a5-47ce-906f-4ad5ec96e5b7
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: deae1f01-02a9-4a4b-9222-b5979aaa948e
+      slot: content
       inputs:
         size: py-5
     -
-      parent_uuid: deae1f01-02a9-4a4b-9222-b5979aaa948e
-      slot: content
       uuid: c0d9c171-32af-4744-828d-aad70c5de082
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: deae1f01-02a9-4a4b-9222-b5979aaa948e
+      slot: content
       inputs:
         size: py-2
     -
-      parent_uuid: deae1f01-02a9-4a4b-9222-b5979aaa948e
-      slot: content
       uuid: 5fd06f84-a1cc-4429-b914-68a1700af390
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: deae1f01-02a9-4a4b-9222-b5979aaa948e
+      slot: content
       inputs:
         text:
           value: '<p>The scholarship program made it possible for me to pursue my dream of earning a world-class education.</p>'
@@ -285,10 +296,11 @@ default:
         text_size: fs-6
         text_color: text-white
     -
-      parent_uuid: deae1f01-02a9-4a4b-9222-b5979aaa948e
-      slot: content
       uuid: a4bf491e-2939-4a0a-8ead-a41e67ff21c8
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: deae1f01-02a9-4a4b-9222-b5979aaa948e
+      slot: content
       inputs:
         text:
           value: '<p>John Doe, &nbsp;Master’s in Economics</p>'
@@ -298,6 +310,7 @@ default:
     -
       uuid: b1bde110-d1f6-4943-8511-6632d9c36c99
       component_id: sdc.vartheme_bs5_educare.section
+      component_version: 9b679273be9319ad
       inputs:
         bg_edge2edge: false
         container_type: none
@@ -327,10 +340,11 @@ default:
         aos_delay: '0'
         aos_once: true
     -
-      parent_uuid: b1bde110-d1f6-4943-8511-6632d9c36c99
-      slot: header_slot
       uuid: 599bd409-5de5-43a5-9119-c05a5c1c237f
       component_id: sdc.vartheme_bs5_educare.section
+      component_version: 9b679273be9319ad
+      parent_uuid: b1bde110-d1f6-4943-8511-6632d9c36c99
+      slot: header_slot
       inputs:
         bg_edge2edge: false
         container_type: none
@@ -361,10 +375,11 @@ default:
         aos_delay: '0'
         aos_once: true
     -
-      parent_uuid: 599bd409-5de5-43a5-9119-c05a5c1c237f
-      slot: col_1
       uuid: 549fce2d-565d-4372-83c0-4a50f2c3b112
       component_id: sdc.vartheme_bs5_educare.subtitle
+      component_version: b86e67a882361219
+      parent_uuid: 599bd409-5de5-43a5-9119-c05a5c1c237f
+      slot: col_1
       inputs:
         subtitle_text: Programs
         font_size: small
@@ -373,19 +388,21 @@ default:
         line_position: start
         line_size: sm
     -
-      parent_uuid: 599bd409-5de5-43a5-9119-c05a5c1c237f
-      slot: col_1
       uuid: 9d83f972-ac46-489a-abaf-2bb112bf90bf
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: 599bd409-5de5-43a5-9119-c05a5c1c237f
+      slot: col_1
       inputs:
         heading_text: 'Find the Program That Matches Your Ambition'
         level: 2
         target: _self
     -
-      parent_uuid: 599bd409-5de5-43a5-9119-c05a5c1c237f
-      slot: col_1
       uuid: 0ea5a563-554a-4ced-8b71-281c9f7d452e
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 599bd409-5de5-43a5-9119-c05a5c1c237f
+      slot: col_1
       inputs:
         text:
           value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
@@ -393,10 +410,11 @@ default:
         text_size: fs-6
         text_color: text-muted
     -
-      parent_uuid: 599bd409-5de5-43a5-9119-c05a5c1c237f
-      slot: col_2
       uuid: fd44a1c0-6af9-4989-a902-876387767d9d
       component_id: sdc.vartheme_bs5_educare.button
+      component_version: a3bdd446d7020573
+      parent_uuid: 599bd409-5de5-43a5-9119-c05a5c1c237f
+      slot: col_2
       inputs:
         variant: btn-primary
         outline: false
@@ -413,10 +431,11 @@ default:
         icon_circle_white_text: false
         icon_circle_grow: true
     -
-      parent_uuid: b1bde110-d1f6-4943-8511-6632d9c36c99
-      slot: col_1
       uuid: 6ae47405-7637-415b-a7d5-454bb7019c7c
       component_id: sdc.vartheme_bs5_educare.card-action-text
+      component_version: b66d7dffa42a9998
+      parent_uuid: b1bde110-d1f6-4943-8511-6632d9c36c99
+      slot: col_1
       inputs:
         show_action_icon: true
         card_border: false
@@ -431,27 +450,30 @@ default:
           uri: 'internal:/about'
           options: {  }
     -
-      parent_uuid: 6ae47405-7637-415b-a7d5-454bb7019c7c
-      slot: content
       uuid: cd1a996f-3cee-4b49-a771-765eca8a8384
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: 6ae47405-7637-415b-a7d5-454bb7019c7c
+      slot: content
       inputs:
         heading_text: 'Computer Science & Artificial Intelligence'
         level: 3
         text_size: h5
         target: _self
     -
-      parent_uuid: 6ae47405-7637-415b-a7d5-454bb7019c7c
-      slot: content
       uuid: 3e0dec24-1f08-428b-a73f-80088da3b959
       component_id: sdc.vartheme_bs5_educare.spacer
-      inputs:
-        size: py-5
-    -
+      component_version: 80de1b3919d08f87
       parent_uuid: 6ae47405-7637-415b-a7d5-454bb7019c7c
       slot: content
+      inputs:
+        size: py-5
+    -
       uuid: 46a6655d-fc64-4727-8129-820a029df7dc
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 6ae47405-7637-415b-a7d5-454bb7019c7c
+      slot: content
       inputs:
         text:
           value: '<p>Develop expertise in software engineering, machine learning, cybersecurity, and data analytics through hands-on projects and industry collaboration.</p>'
@@ -459,10 +481,11 @@ default:
         text_size: fs-6
         text_color: text-muted
     -
-      parent_uuid: b1bde110-d1f6-4943-8511-6632d9c36c99
-      slot: col_2
       uuid: 6aaeb660-3ecd-4bb9-822b-1da1219df33f
       component_id: sdc.vartheme_bs5_educare.card-action-text
+      component_version: b66d7dffa42a9998
+      parent_uuid: b1bde110-d1f6-4943-8511-6632d9c36c99
+      slot: col_2
       inputs:
         show_action_icon: true
         card_border: false
@@ -477,27 +500,30 @@ default:
           uri: 'internal:/about'
           options: {  }
     -
-      parent_uuid: 6aaeb660-3ecd-4bb9-822b-1da1219df33f
-      slot: content
       uuid: 00f07035-9a77-4d7b-8f15-8456ea7bf364
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: 6aaeb660-3ecd-4bb9-822b-1da1219df33f
+      slot: content
       inputs:
         heading_text: 'Business Administration & Management'
         level: 3
         text_size: h5
         target: _self
     -
-      parent_uuid: 6aaeb660-3ecd-4bb9-822b-1da1219df33f
-      slot: content
       uuid: 6974ed5b-f190-4966-bf0b-c5351dc0b70c
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 6aaeb660-3ecd-4bb9-822b-1da1219df33f
+      slot: content
       inputs:
         size: py-5
     -
-      parent_uuid: 6aaeb660-3ecd-4bb9-822b-1da1219df33f
-      slot: content
       uuid: 574194db-a0a4-4a1f-984a-5116d65b180d
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 6aaeb660-3ecd-4bb9-822b-1da1219df33f
+      slot: content
       inputs:
         text:
           value: '<p>Develop expertise in software engineering, machine learning, cybersecurity, and data analytics through hands-on projects and industry collaboration.</p>'
@@ -505,10 +531,11 @@ default:
         text_size: fs-6
         text_color: text-muted
     -
-      parent_uuid: b1bde110-d1f6-4943-8511-6632d9c36c99
-      slot: col_3
       uuid: 3042f3d2-bc2c-4ba6-99c8-9c60062b991b
       component_id: sdc.vartheme_bs5_educare.card-action-text
+      component_version: b66d7dffa42a9998
+      parent_uuid: b1bde110-d1f6-4943-8511-6632d9c36c99
+      slot: col_3
       inputs:
         show_action_icon: true
         card_border: false
@@ -523,27 +550,30 @@ default:
           uri: 'internal:/about'
           options: {  }
     -
-      parent_uuid: 3042f3d2-bc2c-4ba6-99c8-9c60062b991b
-      slot: content
       uuid: 190724fd-517e-42bc-9227-757e603a375b
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: 3042f3d2-bc2c-4ba6-99c8-9c60062b991b
+      slot: content
       inputs:
         heading_text: 'Business Administration & Management'
         level: 3
         text_size: h5
         target: _self
     -
-      parent_uuid: 3042f3d2-bc2c-4ba6-99c8-9c60062b991b
-      slot: content
       uuid: 9e872409-4f35-4d51-be9d-9cddd851794b
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 3042f3d2-bc2c-4ba6-99c8-9c60062b991b
+      slot: content
       inputs:
         size: py-5
     -
-      parent_uuid: 3042f3d2-bc2c-4ba6-99c8-9c60062b991b
-      slot: content
       uuid: 7550e393-897d-49a7-8791-48602cf3b7c2
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 3042f3d2-bc2c-4ba6-99c8-9c60062b991b
+      slot: content
       inputs:
         text:
           value: '<p>Develop expertise in software engineering, machine learning, cybersecurity, and data analytics through hands-on projects and industry collaboration.</p>'
@@ -553,6 +583,7 @@ default:
     -
       uuid: 0c52765b-4378-4a00-b070-ba8937410500
       component_id: sdc.vartheme_bs5_educare.section
+      component_version: 9b679273be9319ad
       inputs:
         bg_edge2edge: false
         container_type: none
@@ -581,10 +612,11 @@ default:
         aos_delay: '0'
         aos_once: true
     -
-      parent_uuid: 0c52765b-4378-4a00-b070-ba8937410500
-      slot: col_1
       uuid: d68e188c-d882-46a5-a77c-be9adbd4073e
       component_id: sdc.vartheme_bs5_educare.card-action-text
+      component_version: b66d7dffa42a9998
+      parent_uuid: 0c52765b-4378-4a00-b070-ba8937410500
+      slot: col_1
       inputs:
         show_action_icon: true
         card_border: false
@@ -599,27 +631,30 @@ default:
           uri: 'internal:/about'
           options: {  }
     -
-      parent_uuid: d68e188c-d882-46a5-a77c-be9adbd4073e
-      slot: content
       uuid: 03017fe6-ea97-4027-ac97-ca15745518e8
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: d68e188c-d882-46a5-a77c-be9adbd4073e
+      slot: content
       inputs:
         heading_text: 'Digital Media & Design'
         level: 3
         text_size: h5
         target: _self
     -
-      parent_uuid: d68e188c-d882-46a5-a77c-be9adbd4073e
-      slot: content
       uuid: 5e61aa5f-6c35-442b-96f1-006d4bcac59f
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: d68e188c-d882-46a5-a77c-be9adbd4073e
+      slot: content
       inputs:
         size: py-5
     -
-      parent_uuid: d68e188c-d882-46a5-a77c-be9adbd4073e
-      slot: content
       uuid: e4ca5235-ade9-4c70-8a26-6664f23f7ab5
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: d68e188c-d882-46a5-a77c-be9adbd4073e
+      slot: content
       inputs:
         text:
           value: '<p>Combine creativity and technology to produce engaging digital experiences, visual communication, and interactive media.</p>'
@@ -627,10 +662,11 @@ default:
         text_size: fs-6
         text_color: text-muted
     -
-      parent_uuid: 0c52765b-4378-4a00-b070-ba8937410500
-      slot: col_2
       uuid: c48859ee-e28f-4092-b9eb-2ad756e08dbf
       component_id: sdc.vartheme_bs5_educare.card-action-text
+      component_version: b66d7dffa42a9998
+      parent_uuid: 0c52765b-4378-4a00-b070-ba8937410500
+      slot: col_2
       inputs:
         show_action_icon: true
         card_border: false
@@ -645,27 +681,30 @@ default:
           uri: 'internal:/about'
           options: {  }
     -
-      parent_uuid: c48859ee-e28f-4092-b9eb-2ad756e08dbf
-      slot: content
       uuid: d509dae4-3e7d-4483-98e5-0b3a696f4acd
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: c48859ee-e28f-4092-b9eb-2ad756e08dbf
+      slot: content
       inputs:
         heading_text: 'Engineering & Technology'
         level: 3
         text_size: h5
         target: _self
     -
-      parent_uuid: c48859ee-e28f-4092-b9eb-2ad756e08dbf
-      slot: content
       uuid: d8b46c29-8f1e-4f9f-ae4d-1618df1ebbd4
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: c48859ee-e28f-4092-b9eb-2ad756e08dbf
+      slot: content
       inputs:
         size: py-5
     -
-      parent_uuid: c48859ee-e28f-4092-b9eb-2ad756e08dbf
-      slot: content
       uuid: 6562a37d-6e83-412e-b3f4-c56f854f4aa5
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: c48859ee-e28f-4092-b9eb-2ad756e08dbf
+      slot: content
       inputs:
         text:
           value: '<p>Design innovative solutions for real-world challenges using advanced engineering methods and technologies.</p>'
@@ -673,10 +712,11 @@ default:
         text_size: fs-6
         text_color: text-muted
     -
-      parent_uuid: 0c52765b-4378-4a00-b070-ba8937410500
-      slot: col_3
       uuid: 55b03c8e-9624-47ee-9c82-d93ab578a128
       component_id: sdc.vartheme_bs5_educare.card-action-text
+      component_version: b66d7dffa42a9998
+      parent_uuid: 0c52765b-4378-4a00-b070-ba8937410500
+      slot: col_3
       inputs:
         show_action_icon: true
         card_border: false
@@ -691,27 +731,30 @@ default:
           uri: 'internal:/about'
           options: {  }
     -
-      parent_uuid: 55b03c8e-9624-47ee-9c82-d93ab578a128
-      slot: content
       uuid: 48dea322-d0ed-4827-8266-3ceacf81dcaf
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: 55b03c8e-9624-47ee-9c82-d93ab578a128
+      slot: content
       inputs:
         heading_text: 'Medicine & Health Sciences'
         level: 3
         text_size: h5
         target: _self
     -
-      parent_uuid: 55b03c8e-9624-47ee-9c82-d93ab578a128
-      slot: content
       uuid: c89dc7da-51af-46d6-b765-dd029f9e4ef0
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 55b03c8e-9624-47ee-9c82-d93ab578a128
+      slot: content
       inputs:
         size: py-5
     -
-      parent_uuid: 55b03c8e-9624-47ee-9c82-d93ab578a128
-      slot: content
       uuid: 61a569e7-7fcf-4825-8fd4-6ed6603d3e31
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 55b03c8e-9624-47ee-9c82-d93ab578a128
+      slot: content
       inputs:
         text:
           value: '<p>Prepare for impactful healthcare careers through modern laboratories, clinical practice, and research-driven education.</p>'
@@ -721,6 +764,7 @@ default:
     -
       uuid: dd6b70fb-c5e2-4ee7-94bd-e792e3f1ec0a
       component_id: sdc.vartheme_bs5_educare.section
+      component_version: 9b679273be9319ad
       inputs:
         bg_edge2edge: false
         container_type: none
@@ -751,15 +795,14 @@ default:
         aos_delay: '0'
         aos_once: true
     -
-      parent_uuid: dd6b70fb-c5e2-4ee7-94bd-e792e3f1ec0a
-      slot: col_1
       uuid: d3c8814b-15e8-447e-bfc6-0480823dfc40
       component_id: sdc.vartheme_bs5_educare.image
+      component_version: 20b07c548b4cf729
+      parent_uuid: dd6b70fb-c5e2-4ee7-94bd-e792e3f1ec0a
+      slot: col_1
       inputs:
         media:
-          CANVAS_ENTITY_REFERENCE:
-            target_uuid: 6c0a72fc-6f52-4454-8ae5-9f9617e556c7
-            target_type: media
+          target_id: '9'
         target: self
         ratio: ratio-auto
         fit: object-fit-cover
@@ -768,10 +811,11 @@ default:
         rounded: none
         loading: lazy
     -
-      parent_uuid: dd6b70fb-c5e2-4ee7-94bd-e792e3f1ec0a
-      slot: col_2
       uuid: fe2c547b-9eda-43c3-9c02-96b238059416
       component_id: sdc.vartheme_bs5_educare.subtitle
+      component_version: b86e67a882361219
+      parent_uuid: dd6b70fb-c5e2-4ee7-94bd-e792e3f1ec0a
+      slot: col_2
       inputs:
         subtitle_text: 'about us'
         font_size: small
@@ -780,19 +824,21 @@ default:
         line_position: start
         line_size: sm
     -
-      parent_uuid: dd6b70fb-c5e2-4ee7-94bd-e792e3f1ec0a
-      slot: col_2
       uuid: 5f21c150-449f-4c75-a80d-c41dfb4c1356
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: dd6b70fb-c5e2-4ee7-94bd-e792e3f1ec0a
+      slot: col_2
       inputs:
         heading_text: 'When Dreams Align With the Right Chance, the Possibilities Become Endless'
         level: 2
         target: _self
     -
-      parent_uuid: dd6b70fb-c5e2-4ee7-94bd-e792e3f1ec0a
-      slot: col_2
       uuid: 6057c4f3-0799-43f2-89fe-90e91587e676
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: dd6b70fb-c5e2-4ee7-94bd-e792e3f1ec0a
+      slot: col_2
       inputs:
         text:
           value: '<p>Founded in 1850, Eduzin is a community-driven institution renowned for its unique contributions.</p>'
@@ -802,6 +848,7 @@ default:
     -
       uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
       component_id: sdc.vartheme_bs5_educare.section
+      component_version: 9b679273be9319ad
       inputs:
         bg_edge2edge: false
         container_type: none
@@ -831,10 +878,11 @@ default:
         aos_delay: '0'
         aos_once: true
     -
-      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
-      slot: header_slot
       uuid: 3b2e0bc8-af15-456a-9247-87f5e76ea43f
       component_id: sdc.vartheme_bs5_educare.subtitle
+      component_version: b86e67a882361219
+      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
+      slot: header_slot
       inputs:
         subtitle_text: 'Why choose us'
         font_size: small
@@ -843,19 +891,21 @@ default:
         line_position: start
         line_size: sm
     -
-      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
-      slot: header_slot
       uuid: 175ec679-969e-45c7-9318-dc3bca87abc4
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
+      slot: header_slot
       inputs:
         heading_text: 'Why Students Choose Our University'
         level: 2
         target: _self
     -
-      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
-      slot: header_slot
       uuid: 3e821c2e-3371-4803-9468-c4e862bebcbd
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
+      slot: header_slot
       inputs:
         text:
           value: '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium&nbsp;</p>'
@@ -863,10 +913,11 @@ default:
         text_size: fs-6
         text_color: text-muted
     -
-      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
-      slot: col_1
       uuid: 814341c4-b0e3-494f-9f92-6e533b358ab8
       component_id: sdc.vartheme_bs5_educare.card-text
+      component_version: e029fefa26d20f4f
+      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
+      slot: col_1
       inputs:
         card_border: false
         background_color: bg-secondary-subtle
@@ -879,34 +930,38 @@ default:
         icon_image: null
         icon_alignment: start
     -
-      parent_uuid: 814341c4-b0e3-494f-9f92-6e533b358ab8
-      slot: content
       uuid: 0e0226d8-e684-4c85-b893-bbee58e68b77
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: 814341c4-b0e3-494f-9f92-6e533b358ab8
+      slot: content
       inputs:
         heading_text: 'Globally Recognised Degrees'
         level: 3
         text_size: h5
         target: _self
     -
-      parent_uuid: 814341c4-b0e3-494f-9f92-6e533b358ab8
-      slot: content
       uuid: 45708afa-0207-4efd-a146-f99efb373578
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 814341c4-b0e3-494f-9f92-6e533b358ab8
+      slot: content
       inputs:
         size: py-5
     -
-      parent_uuid: 814341c4-b0e3-494f-9f92-6e533b358ab8
-      slot: content
       uuid: d717c593-4908-4389-812a-a322bfcf0cd8
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 814341c4-b0e3-494f-9f92-6e533b358ab8
+      slot: content
       inputs:
         size: py-2
     -
-      parent_uuid: 814341c4-b0e3-494f-9f92-6e533b358ab8
-      slot: content
       uuid: dafd6520-8ca1-48cf-ae6c-cd0c81096a8a
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 814341c4-b0e3-494f-9f92-6e533b358ab8
+      slot: content
       inputs:
         text:
           value: '<p>Earn qualifications respected by employers and institutions worldwide.</p>'
@@ -914,17 +969,19 @@ default:
         text_size: fs-6
         text_color: text-body
     -
-      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
-      slot: col_1
       uuid: 365c4bdc-eb95-4054-b7e9-cf3b1e4f6194
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
+      slot: col_1
       inputs:
         size: py-3
     -
-      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
-      slot: col_1
       uuid: 7ff039e7-0a97-40b9-8872-4921960b940b
       component_id: sdc.vartheme_bs5_educare.card-text
+      component_version: e029fefa26d20f4f
+      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
+      slot: col_1
       inputs:
         card_border: false
         background_color: bg-secondary-subtle
@@ -937,34 +994,38 @@ default:
         icon_image: null
         icon_alignment: start
     -
-      parent_uuid: 7ff039e7-0a97-40b9-8872-4921960b940b
-      slot: content
       uuid: 191e1225-3b32-4d99-ba12-2a4ad8da1207
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: 7ff039e7-0a97-40b9-8872-4921960b940b
+      slot: content
       inputs:
         heading_text: 'Modern Campus and Facilities'
         level: 3
         text_size: h5
         target: _self
     -
-      parent_uuid: 7ff039e7-0a97-40b9-8872-4921960b940b
-      slot: content
       uuid: f8cf70f9-b6ba-4aa5-8315-04409dfe7e33
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 7ff039e7-0a97-40b9-8872-4921960b940b
+      slot: content
       inputs:
         size: py-5
     -
-      parent_uuid: 7ff039e7-0a97-40b9-8872-4921960b940b
-      slot: content
       uuid: 2ea60758-7785-4caf-ab56-8803130eab17
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 7ff039e7-0a97-40b9-8872-4921960b940b
+      slot: content
       inputs:
         size: py-1
     -
-      parent_uuid: 7ff039e7-0a97-40b9-8872-4921960b940b
-      slot: content
       uuid: 90e8a790-cfdd-47c5-a777-0c62a25a91e6
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 7ff039e7-0a97-40b9-8872-4921960b940b
+      slot: content
       inputs:
         text:
           value: '<p>Earn qualifications respected by employers and institutions worldwide.</p>'
@@ -972,10 +1033,11 @@ default:
         text_size: fs-6
         text_color: text-body
     -
-      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
-      slot: col_2
       uuid: 9f368bb6-1ded-42a9-8d4d-426b3381d4ce
       component_id: sdc.vartheme_bs5_educare.card-text
+      component_version: e029fefa26d20f4f
+      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
+      slot: col_2
       inputs:
         card_border: false
         background_color: bg-secondary-subtle
@@ -988,34 +1050,38 @@ default:
         icon_image: null
         icon_alignment: start
     -
-      parent_uuid: 9f368bb6-1ded-42a9-8d4d-426b3381d4ce
-      slot: content
       uuid: 559868eb-9677-43c3-b52f-0454200e2b13
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: 9f368bb6-1ded-42a9-8d4d-426b3381d4ce
+      slot: content
       inputs:
         heading_text: 'Expert Faculty'
         level: 3
         text_size: h5
         target: _self
     -
-      parent_uuid: 9f368bb6-1ded-42a9-8d4d-426b3381d4ce
-      slot: content
       uuid: a5e22c42-e198-4bd5-b04a-661629b97e89
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 9f368bb6-1ded-42a9-8d4d-426b3381d4ce
+      slot: content
       inputs:
         size: py-5
     -
-      parent_uuid: 9f368bb6-1ded-42a9-8d4d-426b3381d4ce
-      slot: content
       uuid: 206e2c90-2564-43eb-b39d-6cf5aea67c4a
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 9f368bb6-1ded-42a9-8d4d-426b3381d4ce
+      slot: content
       inputs:
         size: py-2
     -
-      parent_uuid: 9f368bb6-1ded-42a9-8d4d-426b3381d4ce
-      slot: content
       uuid: c2c5c2ca-6883-4a8b-834a-2fe3f497d867
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 9f368bb6-1ded-42a9-8d4d-426b3381d4ce
+      slot: content
       inputs:
         text:
           value: '<p>Earn qualifications respected by employers and institutions worldwide.</p>'
@@ -1023,17 +1089,19 @@ default:
         text_size: fs-6
         text_color: text-body
     -
-      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
-      slot: col_2
       uuid: e5ee1ab8-9133-41bd-b905-661bb1f94106
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
+      slot: col_2
       inputs:
         size: py-3
     -
-      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
-      slot: col_2
       uuid: 55d7d965-46d1-41c2-add9-a7654330d18f
       component_id: sdc.vartheme_bs5_educare.card-text
+      component_version: e029fefa26d20f4f
+      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
+      slot: col_2
       inputs:
         card_border: false
         background_color: bg-secondary-subtle
@@ -1046,34 +1114,38 @@ default:
         icon_image: null
         icon_alignment: start
     -
-      parent_uuid: 55d7d965-46d1-41c2-add9-a7654330d18f
-      slot: content
       uuid: eb257fd0-afb8-4a29-a6eb-4429590bfde3
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: 55d7d965-46d1-41c2-add9-a7654330d18f
+      slot: content
       inputs:
         heading_text: 'Global Perspective'
         level: 3
         text_size: h5
         target: _self
     -
-      parent_uuid: 55d7d965-46d1-41c2-add9-a7654330d18f
-      slot: content
       uuid: a9223729-31b7-4a35-89b8-078694f7de38
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 55d7d965-46d1-41c2-add9-a7654330d18f
+      slot: content
       inputs:
         size: py-5
     -
-      parent_uuid: 55d7d965-46d1-41c2-add9-a7654330d18f
-      slot: content
       uuid: f244f391-7ff1-4e25-acf3-db6bd2a228df
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 55d7d965-46d1-41c2-add9-a7654330d18f
+      slot: content
       inputs:
         size: py-1
     -
-      parent_uuid: 55d7d965-46d1-41c2-add9-a7654330d18f
-      slot: content
       uuid: 05d89ac7-9292-4446-b26d-e69feda44a63
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 55d7d965-46d1-41c2-add9-a7654330d18f
+      slot: content
       inputs:
         text:
           value: '<p>Earn qualifications respected by employers and institutions worldwide.</p>'
@@ -1081,15 +1153,14 @@ default:
         text_size: fs-6
         text_color: text-body
     -
-      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
-      slot: col_3
       uuid: d0366d03-d503-4235-8f79-5bc706055aa5
       component_id: sdc.vartheme_bs5_educare.image
+      component_version: 20b07c548b4cf729
+      parent_uuid: 302910b3-866f-49e0-a8d6-f8abe4b29ec0
+      slot: col_3
       inputs:
         media:
-          CANVAS_ENTITY_REFERENCE:
-            target_uuid: 3130ffd5-8609-494d-a071-9ca3442b46db
-            target_type: media
+          target_id: '10'
         target: self
         ratio: ratio-auto
         fit: object-fit-cover
@@ -1100,11 +1171,13 @@ default:
     -
       uuid: e33d0a39-fdce-48bf-9292-90abcef81920
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
       inputs:
         size: py-4
     -
       uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
       component_id: sdc.vartheme_bs5_educare.section
+      component_version: 9b679273be9319ad
       inputs:
         bg_edge2edge: true
         container_type: container
@@ -1135,17 +1208,19 @@ default:
         aos_delay: '0'
         aos_once: true
     -
-      parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
-      slot: header_slot
       uuid: e85f1229-e862-40bf-9c80-24ec0d3f4d82
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
+      slot: header_slot
       inputs:
         size: py-4
     -
-      parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
-      slot: header_slot
       uuid: e75a338a-a5ca-4c33-a89f-a8bddef2cc78
       component_id: sdc.vartheme_bs5_educare.section
+      component_version: 9b679273be9319ad
+      parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
+      slot: header_slot
       inputs:
         bg_edge2edge: false
         container_type: none
@@ -1176,10 +1251,11 @@ default:
         aos_delay: '0'
         aos_once: true
     -
-      parent_uuid: e75a338a-a5ca-4c33-a89f-a8bddef2cc78
-      slot: col_1
       uuid: 6df944f4-56a9-4bab-8e03-8d13a5ea3809
       component_id: sdc.vartheme_bs5_educare.subtitle
+      component_version: b86e67a882361219
+      parent_uuid: e75a338a-a5ca-4c33-a89f-a8bddef2cc78
+      slot: col_1
       inputs:
         subtitle_text: 'Our achievements'
         font_size: small
@@ -1188,19 +1264,21 @@ default:
         line_position: start
         line_size: sm
     -
-      parent_uuid: e75a338a-a5ca-4c33-a89f-a8bddef2cc78
-      slot: col_1
       uuid: 8068d097-40af-48af-b3f9-9d0b6385e586
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: e75a338a-a5ca-4c33-a89f-a8bddef2cc78
+      slot: col_1
       inputs:
         heading_text: 'A University Defined by Excellence'
         level: 2
         target: _self
     -
-      parent_uuid: e75a338a-a5ca-4c33-a89f-a8bddef2cc78
-      slot: col_1
       uuid: b37add70-e30c-49af-8354-2b50cda0d6a1
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: e75a338a-a5ca-4c33-a89f-a8bddef2cc78
+      slot: col_1
       inputs:
         text:
           value: '<p>Our achievements reflect the success of our students, faculty, and global community</p>'
@@ -1208,10 +1286,11 @@ default:
         text_size: fs-6
         text_color: text-secondary
     -
-      parent_uuid: e75a338a-a5ca-4c33-a89f-a8bddef2cc78
-      slot: col_2
       uuid: 22422e17-595f-414d-ae16-4771ed933485
       component_id: sdc.vartheme_bs5_educare.button
+      component_version: a3bdd446d7020573
+      parent_uuid: e75a338a-a5ca-4c33-a89f-a8bddef2cc78
+      slot: col_2
       inputs:
         variant: btn-primary
         outline: false
@@ -1231,10 +1310,11 @@ default:
           options: {  }
         icon_circle_grow: true
     -
-      parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
-      slot: col_1
       uuid: 68902380-ff03-466c-8a48-3e0b91d30e38
       component_id: sdc.vartheme_bs5_educare.figure
+      component_version: ed6b9060b56a6c35
+      parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
+      slot: col_1
       inputs:
         number: 20k
         suffix: +
@@ -1246,10 +1326,11 @@ default:
         description_size: fs-6
         description_color: text-white-50
     -
-      parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
-      slot: col_2
       uuid: 5b5363bf-1acb-41bf-a811-3082a80cb916
       component_id: sdc.vartheme_bs5_educare.figure
+      component_version: ed6b9060b56a6c35
+      parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
+      slot: col_2
       inputs:
         number: '120'
         suffix: +
@@ -1261,10 +1342,11 @@ default:
         description_size: fs-6
         description_color: text-white-50
     -
-      parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
-      slot: col_3
       uuid: c9913686-38fb-43ed-83dd-80805a8abd9e
       component_id: sdc.vartheme_bs5_educare.figure
+      component_version: ed6b9060b56a6c35
+      parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
+      slot: col_3
       inputs:
         number: '95'
         suffix: '%'
@@ -1276,15 +1358,17 @@ default:
         description_size: fs-6
         description_color: text-white-50
     -
-      parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
-      slot: footer_slot
       uuid: a5ce27e6-1531-4a43-bdb2-90002e75b908
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: c2ab1b06-d97d-4fc6-a8af-8399f293b541
+      slot: footer_slot
       inputs:
         size: py-3
     -
       uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
       component_id: sdc.vartheme_bs5_educare.section
+      component_version: 9b679273be9319ad
       inputs:
         bg_edge2edge: false
         container_type: none
@@ -1315,10 +1399,11 @@ default:
         aos_delay: '0'
         aos_once: true
     -
-      parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
-      slot: header_slot
       uuid: e8341ee0-a777-476d-b43e-71f05f070123
       component_id: sdc.vartheme_bs5_educare.section
+      component_version: 9b679273be9319ad
+      parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
+      slot: header_slot
       inputs:
         bg_edge2edge: false
         container_type: none
@@ -1349,10 +1434,11 @@ default:
         aos_delay: '0'
         aos_once: true
     -
-      parent_uuid: e8341ee0-a777-476d-b43e-71f05f070123
-      slot: col_1
       uuid: 1236fd90-04b6-495f-a904-55d5b1e2f520
       component_id: sdc.vartheme_bs5_educare.subtitle
+      component_version: b86e67a882361219
+      parent_uuid: e8341ee0-a777-476d-b43e-71f05f070123
+      slot: col_1
       inputs:
         subtitle_text: Stories
         font_size: small
@@ -1361,19 +1447,21 @@ default:
         line_position: start
         line_size: sm
     -
-      parent_uuid: e8341ee0-a777-476d-b43e-71f05f070123
-      slot: col_1
       uuid: dea28c43-fb8a-4320-ab18-ea7f4d0fb7aa
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: e8341ee0-a777-476d-b43e-71f05f070123
+      slot: col_1
       inputs:
         heading_text: 'How Our Students Are Thriving'
         level: 2
         target: _self
     -
-      parent_uuid: e8341ee0-a777-476d-b43e-71f05f070123
-      slot: col_1
       uuid: 5784095f-9d33-4469-b74d-89e63750eb8d
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: e8341ee0-a777-476d-b43e-71f05f070123
+      slot: col_1
       inputs:
         text:
           value: '<p>Preparing students to make meaningful contributions to society as engaged citizens and leaders in a complex world</p>'
@@ -1381,10 +1469,11 @@ default:
         text_size: fs-6
         text_color: text-muted
     -
-      parent_uuid: e8341ee0-a777-476d-b43e-71f05f070123
-      slot: col_2
       uuid: bb03abe1-238f-4a29-be51-0f25252c7eb5
       component_id: sdc.vartheme_bs5_educare.button
+      component_version: a3bdd446d7020573
+      parent_uuid: e8341ee0-a777-476d-b43e-71f05f070123
+      slot: col_2
       inputs:
         variant: btn-primary
         outline: false
@@ -1404,10 +1493,11 @@ default:
           options: {  }
         icon_circle_grow: true
     -
-      parent_uuid: e8341ee0-a777-476d-b43e-71f05f070123
-      slot: col_2
       uuid: a9bb69ac-982a-4d1c-85e6-66c48142612e
       component_id: sdc.vartheme_bs5_educare.button
+      component_version: a3bdd446d7020573
+      parent_uuid: e8341ee0-a777-476d-b43e-71f05f070123
+      slot: col_2
       inputs:
         variant: btn-primary
         outline: false
@@ -1427,225 +1517,33 @@ default:
           options: {  }
         icon_circle_grow: true
     -
+      uuid: 03edea59-2dfd-4f8d-b339-fa9dedacba78
+      component_id: block.views_block.events-latest
+      component_version: 6ed1e9aa7565cbad
       parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
       slot: col_1
-      uuid: cc779bdb-7227-4981-9660-42afa96e6cf2
-      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
       inputs:
-        date: '2026-09-03'
-        title: 'Open Day. Meet faculty, tour campus'
-        heading_level: h3
-        show_action_icon: true
-        card_border: false
-        background_color: bg-secondary-subtle
-        padded: false
-        box_shadow: shadow-none
-        corner_style: rounded-0
-        equal_height: false
-        stretched_link: true
-        link_target: default
-        link_url:
-          uri: 'internal:/events'
-          options: {  }
+        label: 'Upcoming events'
+        label_display: '0'
+        views_label: ''
+        items_per_page: 3
+        exposed: {  }
     -
-      parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
-      slot: col_1
-      uuid: 414f699c-3068-43b5-b23f-df4dd4afb98f
-      component_id: sdc.vartheme_bs5_educare.spacer
-      inputs:
-        size: py-3
-    -
-      parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
-      slot: col_1
-      uuid: 52248d91-bae0-4d79-98c5-073985246562
-      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
-      inputs:
-        date: '2026-09-10'
-        title: 'University Launches New Artificial Intelligence Research Center'
-        heading_level: h3
-        show_action_icon: true
-        card_border: false
-        background_color: bg-secondary-subtle
-        padded: false
-        box_shadow: shadow-none
-        corner_style: rounded-0
-        equal_height: false
-        stretched_link: true
-        link_target: default
-        link_url:
-          uri: 'internal:/news'
-          options: {  }
-    -
-      parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
-      slot: col_1
-      uuid: c3dbb1df-b73e-445d-afdb-f00ca08ef679
-      component_id: sdc.vartheme_bs5_educare.spacer
-      inputs:
-        size: py-3
-    -
-      parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
-      slot: col_1
-      uuid: 00515e8b-dc78-4220-b006-672d67af7bc4
-      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
-      inputs:
-        date: '2026-09-08'
-        title: 'University Launches New Artificial Intelligence Research Center'
-        heading_level: h3
-        show_action_icon: true
-        card_border: false
-        background_color: bg-secondary-subtle
-        padded: false
-        box_shadow: shadow-none
-        corner_style: rounded-0
-        equal_height: false
-        stretched_link: true
-        link_target: default
-        link_url:
-          uri: 'internal:/news'
-          options: {  }
-    -
-      parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
-      slot: col_1
-      uuid: c162ddc3-26f2-4714-8bfd-040a0cbb3c29
-      component_id: sdc.vartheme_bs5_educare.spacer
-      inputs:
-        size: py-3
-    -
-      parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
-      slot: col_1
-      uuid: 060ccfde-721b-4dd0-9cd2-b228c35aadc8
-      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
-      inputs:
-        date: '2026-09-07'
-        title: 'University Launches New Artificial Intelligence Research Center'
-        heading_level: h3
-        show_action_icon: true
-        card_border: false
-        background_color: bg-secondary-subtle
-        padded: false
-        box_shadow: shadow-none
-        corner_style: rounded-0
-        equal_height: false
-        stretched_link: true
-        link_target: default
-        link_url:
-          uri: 'internal:/news'
-          options: {  }
-    -
+      uuid: a5833ef6-c37d-4620-8f0b-de48159202da
+      component_id: block.views_block.news-featured
+      component_version: e096bc92df683e11
       parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
       slot: col_2
-      uuid: baebbe7d-5349-4a3b-9d19-844e640a2858
-      component_id: sdc.vartheme_bs5_educare.card-featured
       inputs:
-        media_position: start
-        media_image:
-          CANVAS_ENTITY_REFERENCE:
-            target_uuid: e243ed0a-1a7f-41dd-9cc0-0f3485b4d45f
-            target_type: media
-        ratio: ratio-auto
-        fit: object-fit-cover
-        card_border: false
-        corner_style: rounded-0
-        show_action_icon: true
-        padded: false
-        equal_height: false
-        stretched_link: true
-        link_target: default
-        content_vertical_alignment: align-items-center
-        gutters_between: 'g-2 g-lg-3'
-        columns_xs_size: '06_06'
-        columns_sm_size: '06_06'
-        columns_md_size: '06_06'
-        columns_lg_size: '06_06'
-        columns_xl_size: '06_06'
-        columns_xxl_size: '06_06'
-        link_url:
-          uri: 'internal:/news'
-          options: {  }
-    -
-      parent_uuid: baebbe7d-5349-4a3b-9d19-844e640a2858
-      slot: content
-      uuid: 23db581a-99b6-4684-8172-7260e1bf1850
-      component_id: sdc.vartheme_bs5_educare.date
-      inputs:
-        text_color: text-body
-        size: fs-6
-    -
-      parent_uuid: baebbe7d-5349-4a3b-9d19-844e640a2858
-      slot: content
-      uuid: 39a41e6c-2091-412c-aaa9-4071ad9f0800
-      component_id: sdc.vartheme_bs5_educare.heading
-      inputs:
-        heading_text: 'University Launches New Artificial Intelligence Research Center'
-        level: 3
-        text_size: h5
-        target: _self
-    -
-      parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
-      slot: col_2
-      uuid: 18eb61d6-52f9-42ca-b6f5-9beadb614a77
-      component_id: sdc.vartheme_bs5_educare.spacer
-      inputs:
-        size: py-2
-    -
-      parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
-      slot: col_2
-      uuid: 0a01832d-9bfa-4ae1-99fd-fe1fbe42eac7
-      component_id: sdc.vartheme_bs5_educare.spacer
-      inputs:
-        size: py-1
-    -
-      parent_uuid: 9829e07d-3ffa-43c1-83a7-f260a8025356
-      slot: col_2
-      uuid: 9a1fd507-a0d3-4027-820b-4bff687c93f2
-      component_id: sdc.vartheme_bs5_educare.card-featured
-      inputs:
-        media_position: start
-        media_image:
-          CANVAS_ENTITY_REFERENCE:
-            target_uuid: 734ebd92-74a9-4e14-93a3-b428af41f89e
-            target_type: media
-        ratio: ratio-auto
-        fit: object-fit-cover
-        card_border: false
-        corner_style: rounded-0
-        show_action_icon: true
-        padded: false
-        equal_height: false
-        stretched_link: true
-        link_target: default
-        content_vertical_alignment: align-items-center
-        gutters_between: 'g-2 g-lg-3'
-        columns_xs_size: '06_06'
-        columns_sm_size: '06_06'
-        columns_md_size: '06_06'
-        columns_lg_size: '06_06'
-        columns_xl_size: '06_06'
-        columns_xxl_size: '06_06'
-        link_url:
-          uri: 'internal:/news'
-          options: {  }
-    -
-      parent_uuid: 9a1fd507-a0d3-4027-820b-4bff687c93f2
-      slot: content
-      uuid: 6036877b-cbfa-4856-95ac-5383b2770da9
-      component_id: sdc.vartheme_bs5_educare.date
-      inputs:
-        text_color: text-body
-        size: fs-6
-    -
-      parent_uuid: 9a1fd507-a0d3-4027-820b-4bff687c93f2
-      slot: content
-      uuid: d8c23a94-61de-41a2-9105-74c504d6c07a
-      component_id: sdc.vartheme_bs5_educare.heading
-      inputs:
-        heading_text: 'University Launches New Artificial Intelligence Research Center'
-        level: 3
-        text_size: h5
-        target: _self
+        label: 'Featured news posts'
+        label_display: '0'
+        views_label: ''
+        items_per_page: 2
+        exposed: {  }
     -
       uuid: 61a0d047-f1ac-4747-a420-d9ef362deffd
       component_id: sdc.vartheme_bs5_educare.section
+      component_version: 9b679273be9319ad
       inputs:
         bg_edge2edge: false
         container_type: none
@@ -1674,10 +1572,11 @@ default:
         aos_delay: '0'
         aos_once: true
     -
-      parent_uuid: 61a0d047-f1ac-4747-a420-d9ef362deffd
-      slot: col_1
       uuid: 2f59b8e5-572d-4ba6-acf0-d35691e3e648
       component_id: sdc.vartheme_bs5_educare.card-action-text
+      component_version: b66d7dffa42a9998
+      parent_uuid: 61a0d047-f1ac-4747-a420-d9ef362deffd
+      slot: col_1
       inputs:
         show_action_icon: true
         card_border: false
@@ -1692,27 +1591,30 @@ default:
           options: {  }
         link_target: default
     -
-      parent_uuid: 2f59b8e5-572d-4ba6-acf0-d35691e3e648
-      slot: content
       uuid: a4166f69-5b2c-448e-a1dc-316d47bf142a
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: 2f59b8e5-572d-4ba6-acf0-d35691e3e648
+      slot: content
       inputs:
         heading_text: Admissions
         level: 3
         text_size: h5
         target: _self
     -
-      parent_uuid: 2f59b8e5-572d-4ba6-acf0-d35691e3e648
-      slot: content
       uuid: 44c0c5bb-99b0-46e6-b057-0cbd9273a5e7
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 2f59b8e5-572d-4ba6-acf0-d35691e3e648
+      slot: content
       inputs:
         size: py-5
     -
-      parent_uuid: 2f59b8e5-572d-4ba6-acf0-d35691e3e648
-      slot: content
       uuid: ef4d7aae-a428-4b51-9eca-63b48f74d4f3
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 2f59b8e5-572d-4ba6-acf0-d35691e3e648
+      slot: content
       inputs:
         text:
           value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
@@ -1720,10 +1622,11 @@ default:
         text_size: fs-6
         text_color: text-muted
     -
-      parent_uuid: 61a0d047-f1ac-4747-a420-d9ef362deffd
-      slot: col_2
       uuid: 2b56883b-dde2-40f1-8580-d5922352b349
       component_id: sdc.vartheme_bs5_educare.card-action-text
+      component_version: b66d7dffa42a9998
+      parent_uuid: 61a0d047-f1ac-4747-a420-d9ef362deffd
+      slot: col_2
       inputs:
         show_action_icon: true
         card_border: false
@@ -1738,27 +1641,30 @@ default:
           options: {  }
         link_target: default
     -
-      parent_uuid: 2b56883b-dde2-40f1-8580-d5922352b349
-      slot: content
       uuid: 0a90d8b3-cf53-4462-be02-9473645e4316
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: 2b56883b-dde2-40f1-8580-d5922352b349
+      slot: content
       inputs:
         heading_text: Programs
         level: 3
         text_size: h5
         target: _self
     -
-      parent_uuid: 2b56883b-dde2-40f1-8580-d5922352b349
-      slot: content
       uuid: 0dc7cb9d-b470-4c27-81c1-94999e349f6e
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: 2b56883b-dde2-40f1-8580-d5922352b349
+      slot: content
       inputs:
         size: py-5
     -
-      parent_uuid: 2b56883b-dde2-40f1-8580-d5922352b349
-      slot: content
       uuid: 94f7ba71-1231-421f-8bda-7a280a405c04
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 2b56883b-dde2-40f1-8580-d5922352b349
+      slot: content
       inputs:
         text:
           value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
@@ -1766,10 +1672,11 @@ default:
         text_size: fs-6
         text_color: text-muted
     -
-      parent_uuid: 61a0d047-f1ac-4747-a420-d9ef362deffd
-      slot: col_3
       uuid: eb7abe7b-0b11-49dd-853e-3b616c60f884
       component_id: sdc.vartheme_bs5_educare.card-action-text
+      component_version: b66d7dffa42a9998
+      parent_uuid: 61a0d047-f1ac-4747-a420-d9ef362deffd
+      slot: col_3
       inputs:
         show_action_icon: true
         card_border: false
@@ -1784,10 +1691,11 @@ default:
           options: {  }
         link_target: default
     -
-      parent_uuid: eb7abe7b-0b11-49dd-853e-3b616c60f884
-      slot: content
       uuid: 17cdce66-0f56-4c8e-ac8d-2ad8a6e2d3e1
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: eb7abe7b-0b11-49dd-853e-3b616c60f884
+      slot: content
       inputs:
         heading_text: 'Contact Us'
         level: 3
@@ -1795,17 +1703,19 @@ default:
         target: _self
         text_color: text-white
     -
-      parent_uuid: eb7abe7b-0b11-49dd-853e-3b616c60f884
-      slot: content
       uuid: a0253a94-ebb2-4403-ae4a-2b6183943ae3
       component_id: sdc.vartheme_bs5_educare.spacer
+      component_version: 80de1b3919d08f87
+      parent_uuid: eb7abe7b-0b11-49dd-853e-3b616c60f884
+      slot: content
       inputs:
         size: py-5
     -
-      parent_uuid: eb7abe7b-0b11-49dd-853e-3b616c60f884
-      slot: content
       uuid: e6e115be-69cc-46a6-b586-9081f2ecf5c5
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: eb7abe7b-0b11-49dd-853e-3b616c60f884
+      slot: content
       inputs:
         text:
           value: '<p>Explore degrees across business, technology, health sciences, engineering, arts, and more.</p>'
@@ -1815,6 +1725,7 @@ default:
     -
       uuid: 236ec750-2e55-4729-adad-562ff7f5a6aa
       component_id: sdc.vartheme_bs5_educare.section
+      component_version: 9b679273be9319ad
       inputs:
         bg_edge2edge: false
         container_type: none
@@ -1845,10 +1756,11 @@ default:
         aos_delay: '0'
         aos_once: true
     -
-      parent_uuid: 236ec750-2e55-4729-adad-562ff7f5a6aa
-      slot: col_1
       uuid: bf206872-41d4-4cc1-a7ca-988c1f176caa
       component_id: sdc.vartheme_bs5_educare.subtitle
+      component_version: b86e67a882361219
+      parent_uuid: 236ec750-2e55-4729-adad-562ff7f5a6aa
+      slot: col_1
       inputs:
         subtitle_text: FAQ
         font_size: small
@@ -1857,19 +1769,21 @@ default:
         line_position: start
         line_size: sm
     -
-      parent_uuid: 236ec750-2e55-4729-adad-562ff7f5a6aa
-      slot: col_1
       uuid: e211f58b-ce5a-4135-8c4c-84fa3641f4ae
       component_id: sdc.vartheme_bs5_educare.heading
+      component_version: 0889e2ce906c3164
+      parent_uuid: 236ec750-2e55-4729-adad-562ff7f5a6aa
+      slot: col_1
       inputs:
         heading_text: 'Frequently Asked Questions'
         level: 2
         target: _self
     -
-      parent_uuid: 236ec750-2e55-4729-adad-562ff7f5a6aa
-      slot: col_1
       uuid: 99cf2801-21aa-4780-be3b-eaff9d8c8e8d
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 236ec750-2e55-4729-adad-562ff7f5a6aa
+      slot: col_1
       inputs:
         text:
           value: '<p>Preparing students to make meaningful contributions to society as engaged citizens and leaders in a complex world</p>'
@@ -1877,10 +1791,11 @@ default:
         text_size: fs-6
         text_color: text-muted
     -
-      parent_uuid: 236ec750-2e55-4729-adad-562ff7f5a6aa
-      slot: col_1
       uuid: 4f9a13f2-d942-471b-a165-9c0456bb2e53
       component_id: sdc.vartheme_bs5_educare.button
+      component_version: a3bdd446d7020573
+      parent_uuid: 236ec750-2e55-4729-adad-562ff7f5a6aa
+      slot: col_1
       inputs:
         variant: btn-primary
         outline: false
@@ -1900,18 +1815,20 @@ default:
           options: {  }
         icon_circle_grow: true
     -
-      parent_uuid: 236ec750-2e55-4729-adad-562ff7f5a6aa
-      slot: col_2
       uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
       component_id: sdc.vartheme_bs5_educare.accordion-container
+      component_version: b57bfb879c784b04
+      parent_uuid: 236ec750-2e55-4729-adad-562ff7f5a6aa
+      slot: col_2
       inputs:
         flush: false
         always_open: false
     -
-      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
-      slot: accordion_content
       uuid: 26489441-26cc-4e2b-976f-31ea10b59ee8
       component_id: sdc.vartheme_bs5_educare.accordion-block
+      component_version: 3360731af25c8276
+      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
+      slot: accordion_content
       inputs:
         title: 'What programs do you offer?'
         heading_level: 3
@@ -1920,10 +1837,11 @@ default:
         color: inherit
         dash_indicator: hover
     -
-      parent_uuid: 26489441-26cc-4e2b-976f-31ea10b59ee8
-      slot: accordion_content
       uuid: 3488f022-08d1-4bee-b8b3-b41c5a9faad7
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 26489441-26cc-4e2b-976f-31ea10b59ee8
+      slot: accordion_content
       inputs:
         text_size: none
         text_color: text-body
@@ -1931,10 +1849,11 @@ default:
           value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
           format: canvas_html_block
     -
-      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
-      slot: accordion_content
       uuid: 19c92064-abcb-44e3-aef0-0934276a097e
       component_id: sdc.vartheme_bs5_educare.divider
+      component_version: 62f9294bba931609
+      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
+      slot: accordion_content
       inputs:
         border_width: border-1
         border_color: border-black
@@ -1942,10 +1861,11 @@ default:
         margin_top: mt-3
         margin_bottom: mb-3
     -
-      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
-      slot: accordion_content
       uuid: 74d72c9d-fc2c-4080-8c99-8c6b40f22b75
       component_id: sdc.vartheme_bs5_educare.accordion-block
+      component_version: 3360731af25c8276
+      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
+      slot: accordion_content
       inputs:
         title: 'What are the admission requirements?'
         heading_level: 3
@@ -1954,10 +1874,11 @@ default:
         color: inherit
         dash_indicator: hover
     -
-      parent_uuid: 74d72c9d-fc2c-4080-8c99-8c6b40f22b75
-      slot: accordion_content
       uuid: 93ca0407-58d3-4744-a742-ce7d8c9496ab
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 74d72c9d-fc2c-4080-8c99-8c6b40f22b75
+      slot: accordion_content
       inputs:
         text_size: none
         text_color: text-body
@@ -1965,10 +1886,11 @@ default:
           value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
           format: canvas_html_block
     -
-      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
-      slot: accordion_content
       uuid: 68ad3bdf-4f8b-4427-a0ce-ee0359c8cc3c
       component_id: sdc.vartheme_bs5_educare.divider
+      component_version: 62f9294bba931609
+      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
+      slot: accordion_content
       inputs:
         border_width: border-1
         border_color: border-black
@@ -1976,10 +1898,11 @@ default:
         margin_top: mt-3
         margin_bottom: mb-3
     -
-      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
-      slot: accordion_content
       uuid: 673e597f-39e0-4ce1-8617-6fb23fd009de
       component_id: sdc.vartheme_bs5_educare.accordion-block
+      component_version: 3360731af25c8276
+      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
+      slot: accordion_content
       inputs:
         title: 'Are scholarships available?'
         heading_level: 3
@@ -1988,10 +1911,11 @@ default:
         color: inherit
         dash_indicator: hover
     -
-      parent_uuid: 673e597f-39e0-4ce1-8617-6fb23fd009de
-      slot: accordion_content
       uuid: 5f96cabf-fb16-46ad-af8a-28705e33898c
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 673e597f-39e0-4ce1-8617-6fb23fd009de
+      slot: accordion_content
       inputs:
         text_size: none
         text_color: text-body
@@ -1999,10 +1923,11 @@ default:
           value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
           format: canvas_html_block
     -
-      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
-      slot: accordion_content
       uuid: 7954d7d9-bc05-48cf-8e94-bf10c8afc6d2
       component_id: sdc.vartheme_bs5_educare.divider
+      component_version: 62f9294bba931609
+      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
+      slot: accordion_content
       inputs:
         border_width: border-1
         border_color: border-black
@@ -2010,10 +1935,11 @@ default:
         margin_top: mt-3
         margin_bottom: mb-3
     -
-      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
-      slot: accordion_content
       uuid: 68a494c2-9bfa-4d6a-9c2c-126a5250f532
       component_id: sdc.vartheme_bs5_educare.accordion-block
+      component_version: 3360731af25c8276
+      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
+      slot: accordion_content
       inputs:
         title: 'Can international students apply?'
         heading_level: 3
@@ -2022,10 +1948,11 @@ default:
         color: inherit
         dash_indicator: hover
     -
-      parent_uuid: 68a494c2-9bfa-4d6a-9c2c-126a5250f532
-      slot: accordion_content
       uuid: 8ea03019-01b4-4edc-a9ec-c9eab3d753f0
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 68a494c2-9bfa-4d6a-9c2c-126a5250f532
+      slot: accordion_content
       inputs:
         text_size: none
         text_color: text-body
@@ -2033,10 +1960,11 @@ default:
           value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
           format: canvas_html_block
     -
-      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
-      slot: accordion_content
       uuid: 542f635b-d43e-4654-90e8-04d96557db94
       component_id: sdc.vartheme_bs5_educare.divider
+      component_version: 62f9294bba931609
+      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
+      slot: accordion_content
       inputs:
         border_width: border-1
         border_color: border-black
@@ -2044,10 +1972,11 @@ default:
         margin_top: mt-3
         margin_bottom: mb-3
     -
-      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
-      slot: accordion_content
       uuid: 71320361-1c09-43ee-adec-06a470e09574
       component_id: sdc.vartheme_bs5_educare.accordion-block
+      component_version: 3360731af25c8276
+      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
+      slot: accordion_content
       inputs:
         title: 'What is the application deadline?'
         heading_level: 3
@@ -2056,10 +1985,11 @@ default:
         color: inherit
         dash_indicator: hover
     -
-      parent_uuid: 71320361-1c09-43ee-adec-06a470e09574
-      slot: accordion_content
       uuid: a3188508-4ccd-4cb0-bd16-c585162cb099
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: 71320361-1c09-43ee-adec-06a470e09574
+      slot: accordion_content
       inputs:
         text_size: none
         text_color: text-body
@@ -2067,10 +1997,11 @@ default:
           value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
           format: canvas_html_block
     -
-      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
-      slot: accordion_content
       uuid: d8cca6d1-4206-4e09-b52c-3e188a96e89f
       component_id: sdc.vartheme_bs5_educare.divider
+      component_version: 62f9294bba931609
+      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
+      slot: accordion_content
       inputs:
         border_width: border-1
         border_color: border-black
@@ -2078,10 +2009,11 @@ default:
         margin_top: mt-3
         margin_bottom: mb-3
     -
-      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
-      slot: accordion_content
       uuid: c99a9da1-b8b0-49c7-90e6-9033c2cec34c
       component_id: sdc.vartheme_bs5_educare.accordion-block
+      component_version: 3360731af25c8276
+      parent_uuid: 40fbc65a-2838-4e96-8d82-85d3410a83c5
+      slot: accordion_content
       inputs:
         title: 'How do I access course materials?'
         heading_level: 3
@@ -2090,10 +2022,11 @@ default:
         color: inherit
         dash_indicator: hover
     -
-      parent_uuid: c99a9da1-b8b0-49c7-90e6-9033c2cec34c
-      slot: accordion_content
       uuid: d9e78039-a7ad-4c3d-a13a-0c775d920f6c
       component_id: sdc.vartheme_bs5_educare.text
+      component_version: c4ddb22de87220b3
+      parent_uuid: c99a9da1-b8b0-49c7-90e6-9033c2cec34c
+      slot: accordion_content
       inputs:
         text_size: none
         text_color: text-body
