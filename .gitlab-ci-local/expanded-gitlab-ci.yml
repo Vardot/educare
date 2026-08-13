@@ -1,0 +1,694 @@
+stages:
+  - .pre
+  - build
+  - validate
+  - pre-test
+  - test
+  - report
+  - .post
+variables:
+  COMPOSER_ALLOW_SUPERUSER: '1'
+  COMPOSER_MEMORY_LIMIT: '-1'
+  COMPOSER_NO_INTERACTION: '1'
+  VARBASE_PROJECT: drupal/varbase_project:11.0.x-dev
+  DRUPAL_ADMIN_USERNAME: webmaster
+  DRUPAL_ADMIN_PASSWORD: dD.123123ddd
+  SITE_DIR: $CI_PROJECT_DIR/testsite
+  WEB_ROOT: $CI_PROJECT_DIR/testsite/web
+  DB_URL: mysql://drupal:drupal@database/drupal
+  LAUNCH_URL: http://127.0.0.1:8888
+  FORCE_COLOR: '1'
+  VARBASE_E2E_REPORT_DISABLE: '1'
+  COMPOSER_CACHE_DIR: ${CI_PROJECT_DIR}/.cache/composer
+  PLAYWRIGHT_BROWSERS_PATH: ${CI_PROJECT_DIR}/.cache/ms-playwright
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH
+    - if: $CI_COMMIT_TAG
+.run_on_release_refs:
+  if: $CI_COMMIT_TAG || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  when: on_success
+.recipe_app_changes:
+  - composer.json
+  - .gitlab-ci.yml
+  - .gitlab-ci/**/*
+  - recipe.yml
+  - recommended.yml
+  - config/**/*
+  - content/**/*
+  - scripts/**/*
+  - tests/**/*
+  - package.json
+  - package-lock.json
+  - cucumber.js
+  - eslint.config.js
+  - playwright.config.ts
+.varbase_cache:
+  key: educare-build-v2-$CI_COMMIT_REF_SLUG
+  paths:
+    - .cache/composer
+    - .cache/ms-playwright
+    - testsite
+    - node_modules
+.test_cache:
+  key: educare-build-v2-$CI_COMMIT_REF_SLUG
+  policy: pull
+  paths:
+    - .cache/composer
+    - .cache/ms-playwright
+    - testsite
+    - node_modules
+.fragments:
+  host_php_setup:
+    - export DEBIAN_FRONTEND=noninteractive
+    - apt-get update -y
+    - >-
+      apt-get install -y --no-install-recommends software-properties-common
+      ca-certificates curl gnupg lsb-release
+    - add-apt-repository -y ppa:ondrej/php
+    - apt-get update -y
+    - >-
+      apt-get install -y --no-install-recommends php8.4-cli php8.4-mysql
+      php8.4-gd php8.4-curl php8.4-xml php8.4-mbstring php8.4-zip php8.4-intl
+      unzip git default-mysql-client webp imagemagick
+      libmagickcore-6.q16-6-extra
+    - >-
+      curl -sS https://getcomposer.org/installer | php --
+      --install-dir=/usr/local/bin --filename=composer
+    - corepack enable || true
+    - composer --version && php --version
+    - >-
+      sed -i 's/rights="none"\s*pattern="WEBP"/rights="read|write"
+      pattern="WEBP"/I' /etc/ImageMagick-*/policy.xml 2>/dev/null || true
+📦 Composer validate:
+  stage: build
+  rules:
+    - if: $CI_COMMIT_TAG || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: on_success
+    - changes:
+        - composer.json
+      when: on_success
+    - when: manual
+      allow_failure: false
+  image:
+    name: composer:2
+  script:
+    - composer --version
+    - composer validate --no-check-all --no-check-publish
+📐 YAML lint:
+  stage: validate
+  rules:
+    - if: $CI_COMMIT_TAG || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: on_success
+    - changes:
+        - '**/*.yml'
+        - '**/*.yaml'
+      when: on_success
+    - when: manual
+      allow_failure: false
+  image:
+    name: python:3.12-slim
+  needs: []
+  before_script:
+    - pip install --no-cache-dir pyyaml
+  script:
+    - |
+      python - <<'PY'
+      import sys, yaml
+      from pathlib import Path
+      class Loader(yaml.SafeLoader):
+          pass
+      Loader.add_multi_constructor('', lambda loader, suffix, node: None)
+      SKIP = ('node_modules/', '.cache/', 'tests/reports/', 'testsite/')
+      errors = count = 0
+      for path in sorted(Path('.').rglob('*.y*ml')):
+          rel = str(path)
+          if any(s in rel for s in SKIP):
+              continue
+          count += 1
+          try:
+              with open(path) as fh:
+                  list(yaml.load_all(fh, Loader=Loader))
+          except yaml.YAMLError as e:
+              errors += 1
+              print(f"INVALID: {rel}\n  {e}")
+      print(f"Checked {count} YAML files, {errors} invalid.")
+      sys.exit(1 if errors else 0)
+      PY
+  allow_failure: false
+🔤 Cspell:
+  stage: validate
+  rules:
+    - if: $CI_COMMIT_TAG || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: on_success
+    - changes:
+        - tests/**/*.feature
+        - tests/README.md
+        - cucumber.js
+        - eslint.config.js
+        - .cspell.json
+      when: on_success
+    - when: manual
+      allow_failure: false
+  image:
+    name: node:20
+  needs: []
+  before_script:
+    - npm install -g cspell
+  script:
+    - >-
+      cspell "tests/**/*.feature" "tests/README.md" "cucumber.js"
+      "eslint.config.js" --no-progress
+  allow_failure: false
+🟨 ESLint:
+  stage: validate
+  rules:
+    - if: $CI_COMMIT_TAG || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: on_success
+    - changes:
+        - '**/*.js'
+        - eslint.config.js
+        - package.json
+      when: on_success
+    - when: manual
+      allow_failure: false
+  image:
+    name: node:20
+  needs: []
+  before_script:
+    - npm install --no-audit --no-fund
+  script:
+    - node --version
+    - ./node_modules/.bin/eslint .
+🧩 Cucumber dry-run:
+  stage: validate
+  rules:
+    - if: $CI_COMMIT_TAG || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: on_success
+    - changes:
+        - tests/**/*
+        - cucumber.js
+        - package.json
+      when: on_success
+    - when: manual
+      allow_failure: false
+  image:
+    name: node:20
+  needs: []
+  before_script:
+    - npm install --no-audit --no-fund
+  script:
+    - >-
+      VARBASE_E2E_REPORT_DISABLE=1 ./node_modules/.bin/cucumber-js --config
+      cucumber.js --dry-run
+📦 (Varbase) Install Educare site template:
+  stage: pre-test
+  rules:
+    - if: $CI_COMMIT_TAG || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: on_success
+    - changes:
+        - composer.json
+        - .gitlab-ci.yml
+        - .gitlab-ci/**/*
+        - recipe.yml
+        - recommended.yml
+        - config/**/*
+        - content/**/*
+        - scripts/**/*
+        - tests/**/*
+        - package.json
+        - package-lock.json
+        - cucumber.js
+        - eslint.config.js
+        - playwright.config.ts
+      when: on_success
+    - when: manual
+      allow_failure: false
+  image:
+    name: mcr.microsoft.com/playwright:v1.56.0-noble
+  needs: []
+  timeout: 2h
+  retry:
+    max: 2
+    when:
+      - script_failure
+      - runner_system_failure
+      - stuck_or_timeout_failure
+  cache:
+    - key: educare-build-v2-$CI_COMMIT_REF_SLUG
+      paths:
+        - .cache/composer
+        - .cache/ms-playwright
+        - testsite
+        - node_modules
+      policy: pull-push
+      when: on_success
+  services:
+    - name: mariadb:10.11
+      alias: database
+      variables:
+        MARIADB_DATABASE: drupal
+        MARIADB_USER: drupal
+        MARIADB_PASSWORD: drupal
+        MARIADB_ROOT_PASSWORD: root
+  artifacts:
+    when: on_success
+    expire_in: 1 day
+    paths:
+      - educare-db.sql.gz
+  before_script:
+    - export DEBIAN_FRONTEND=noninteractive
+    - apt-get update -y
+    - >-
+      apt-get install -y --no-install-recommends software-properties-common
+      ca-certificates curl gnupg lsb-release
+    - add-apt-repository -y ppa:ondrej/php
+    - apt-get update -y
+    - >-
+      apt-get install -y --no-install-recommends php8.4-cli php8.4-mysql
+      php8.4-gd php8.4-curl php8.4-xml php8.4-mbstring php8.4-zip php8.4-intl
+      unzip git default-mysql-client webp imagemagick
+      libmagickcore-6.q16-6-extra
+    - >-
+      curl -sS https://getcomposer.org/installer | php --
+      --install-dir=/usr/local/bin --filename=composer
+    - corepack enable || true
+    - composer --version && php --version
+    - >-
+      sed -i 's/rights="none"\s*pattern="WEBP"/rights="read|write"
+      pattern="WEBP"/I' /etc/ImageMagick-*/policy.xml 2>/dev/null || true
+  script:
+    - rm -rf "$SITE_DIR"
+    - >-
+      composer create-project $VARBASE_PROJECT "$SITE_DIR" --no-interaction
+      --no-install --no-scripts
+    - cd "$SITE_DIR"
+    - composer config minimum-stability dev
+    - composer config repositories.educare path "$CI_PROJECT_DIR"
+    - >-
+      composer require drupal/educare:@dev --no-interaction --no-progress
+      --prefer-dist --with-all-dependencies
+    - >-
+      ./bin/drush site:install recipes/educare --db-url=$DB_URL
+      --account-name=$DRUPAL_ADMIN_USERNAME
+      --account-pass=$DRUPAL_ADMIN_PASSWORD --account-mail=webmaster@vardot.com
+      --site-name="Educare" --locale=en -y
+    - ./bin/drush pm:uninstall antibot -y || true
+    - ./bin/drush config:set user.flood ip_limit 1000000 -y
+    - ./bin/drush config:set user.flood user_limit 1000000 -y
+    - ./bin/drush config:set system.logging error_level all -y
+    - ./bin/drush cache:rebuild
+    - cd "$CI_PROJECT_DIR"
+    - npm install --no-audit --no-fund
+    - ./node_modules/.bin/playwright install chromium
+    - >-
+      $SITE_DIR/bin/drush --root=$WEB_ROOT sql:dump --gzip
+      --result-file=$CI_PROJECT_DIR/educare-db.sql
+  allow_failure: false
+🧩 (Drupal CMS) Install Educare site template:
+  stage: pre-test
+  rules:
+    - if: $CI_COMMIT_TAG || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: on_success
+    - changes:
+        - composer.json
+        - .gitlab-ci.yml
+        - .gitlab-ci/**/*
+        - recipe.yml
+        - recommended.yml
+        - config/**/*
+        - content/**/*
+        - scripts/**/*
+        - tests/**/*
+        - package.json
+        - package-lock.json
+        - cucumber.js
+        - eslint.config.js
+        - playwright.config.ts
+      when: on_success
+    - when: manual
+      allow_failure: false
+  image:
+    name: mcr.microsoft.com/playwright:v1.56.0-noble
+  needs: []
+  timeout: 2h
+  retry:
+    max: 2
+    when:
+      - script_failure
+      - runner_system_failure
+      - stuck_or_timeout_failure
+  cache:
+    - key: educare-build-v2-$CI_COMMIT_REF_SLUG
+      paths:
+        - .cache/composer
+        - .cache/ms-playwright
+        - testsite
+        - node_modules
+      policy: pull-push
+      when: on_success
+  services:
+    - name: mariadb:10.11
+      alias: database
+      variables:
+        MARIADB_DATABASE: drupal
+        MARIADB_USER: drupal
+        MARIADB_PASSWORD: drupal
+        MARIADB_ROOT_PASSWORD: root
+  variables:
+    CMS_SITE_DIR: $CI_PROJECT_DIR/cmssite
+  before_script:
+    - export DEBIAN_FRONTEND=noninteractive
+    - apt-get update -y
+    - >-
+      apt-get install -y --no-install-recommends software-properties-common
+      ca-certificates curl gnupg lsb-release
+    - add-apt-repository -y ppa:ondrej/php
+    - apt-get update -y
+    - >-
+      apt-get install -y --no-install-recommends php8.4-cli php8.4-mysql
+      php8.4-gd php8.4-curl php8.4-xml php8.4-mbstring php8.4-zip php8.4-intl
+      unzip git default-mysql-client webp imagemagick
+      libmagickcore-6.q16-6-extra
+    - >-
+      curl -sS https://getcomposer.org/installer | php --
+      --install-dir=/usr/local/bin --filename=composer
+    - corepack enable || true
+    - composer --version && php --version
+    - >-
+      sed -i 's/rights="none"\s*pattern="WEBP"/rights="read|write"
+      pattern="WEBP"/I' /etc/ImageMagick-*/policy.xml 2>/dev/null || true
+  script:
+    - >-
+      composer create-project drupal/cms "$CMS_SITE_DIR" --no-interaction
+      --no-install --no-scripts
+    - cd "$CMS_SITE_DIR"
+    - php "$CI_PROJECT_DIR/scripts/drupal-cms-wiring.php"
+    - >-
+      composer config repositories.educare
+      '{"type":"path","url":"'"$CI_PROJECT_DIR"'","options":{"symlink":false}}'
+      --json
+    - >-
+      composer require drupal/educare:@dev --no-interaction --no-progress
+      --prefer-dist --with-all-dependencies
+    - test -d recipes/educare || (echo "❌ recipes/educare missing" && exit 1)
+    - >-
+      test -d web/modules/contrib/canvas || (echo "❌ drupal/canvas missing" &&
+      exit 1)
+    - composer show vardot/varbase-patches
+    - |
+      php -r '
+        $c = json_decode(file_get_contents("composer.json"), TRUE);
+        $p = $c["config"]["allow-plugins"] ?? [];
+        $need = ["cweagans/composer-patches", "vardot/varbase-patches", "oomphinc/composer-installers-extender"];
+        foreach ($need as $k) {
+          if (($p[$k] ?? FALSE) !== TRUE) {
+            fwrite(STDERR, "❌ allow-plugins missing: $k\n");
+            exit(1);
+          }
+        }
+        if (($c["minimum-stability"] ?? "") !== "dev") {
+          fwrite(STDERR, "❌ minimum-stability is not dev\n");
+          exit(1);
+        }
+        // Dependencies that declare patches with a path relative to the project
+        // root cannot resolve here (drupal/ai_context is one), so patch
+        // resolution is default-deny and those are ignored outright, exactly as
+        // varbase_project does it.
+        $cp = $c["extra"]["composer-patches"] ?? [];
+        foreach (["vardot/varbase-patches", "vardot/drupal-core-patches"] as $a) {
+          if (!in_array($a, $cp["allowed-dependency-patches"] ?? [], TRUE)) {
+            fwrite(STDERR, "❌ allowed-dependency-patches missing: $a\n");
+            exit(1);
+          }
+        }
+        foreach (["drupal/*", "drupal/ai_context"] as $i) {
+          if (!in_array($i, $cp["ignore-dependency-patches"] ?? [], TRUE)) {
+            fwrite(STDERR, "❌ ignore-dependency-patches missing: $i\n");
+            exit(1);
+          }
+        }
+        print "✅ composer wiring in place\n";
+      '
+    - corepack enable && corepack yarn install --no-immutable
+    - |
+      php -r '
+        $libs = json_decode(file_get_contents("package.json"), TRUE)["drupal-libraries"]["libraries"] ?? [];
+        if (count($libs) < 6) {
+          fwrite(STDERR, "❌ the drupal-libraries block is not wired\n");
+          exit(1);
+        }
+        printf("✅ %d libraries declared\n", count($libs));
+      '
+    - ls web/libraries
+    - >-
+      ./vendor/bin/drush site:install drupal_cms_installer
+      installer_site_template_form.add_ons=educare --db-url=$DB_URL
+      --account-name=$DRUPAL_ADMIN_USERNAME
+      --account-pass=$DRUPAL_ADMIN_PASSWORD --account-mail=webmaster@vardot.com
+      --site-name="Educare on Drupal CMS" --locale=en -y
+    - ./vendor/bin/drush status --fields=drupal-version,theme,db-status
+    - >
+      THEME=$(./vendor/bin/drush config:get system.theme default
+      --format=string)
+
+      echo "default theme: $THEME"
+
+      test "$THEME" = "vartheme_bs5_educare" || (echo "❌ vartheme_bs5_educare is
+      not the default theme" && exit 1)
+  artifacts:
+    when: always
+    expire_in: 1 day
+    paths:
+      - cmssite/composer.json
+      - cmssite/package.json
+  allow_failure: false
+🧪 varbase-e2e:
+  stage: test
+  rules:
+    - if: $CI_COMMIT_TAG || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: on_success
+    - changes:
+        - composer.json
+        - .gitlab-ci.yml
+        - .gitlab-ci/**/*
+        - recipe.yml
+        - recommended.yml
+        - config/**/*
+        - content/**/*
+        - scripts/**/*
+        - tests/**/*
+        - package.json
+        - package-lock.json
+        - cucumber.js
+        - eslint.config.js
+        - playwright.config.ts
+      when: on_success
+    - when: manual
+      allow_failure: false
+  image:
+    name: mcr.microsoft.com/playwright:v1.56.0-noble
+  needs:
+    - job: 📦 (Varbase) Install Educare site template
+      artifacts: true
+      optional: false
+  timeout: 2h
+  retry:
+    max: 2
+    when:
+      - script_failure
+      - runner_system_failure
+      - stuck_or_timeout_failure
+  cache:
+    - key: educare-build-v2-$CI_COMMIT_REF_SLUG
+      paths:
+        - .cache/composer
+        - .cache/ms-playwright
+        - testsite
+        - node_modules
+      policy: pull
+      when: on_success
+  parallel:
+    matrix:
+      - SUITE:
+          - 01-website-base-requirements
+        FEATURES_GLOB:
+          - tests/features/01-website-base-requirements/**/*.feature
+      - SUITE:
+          - 02-news
+        FEATURES_GLOB:
+          - tests/features/02-news/**/*.feature
+      - SUITE:
+          - 03-events
+        FEATURES_GLOB:
+          - tests/features/03-events/**/*.feature
+      - SUITE:
+          - 04-programs
+        FEATURES_GLOB:
+          - tests/features/04-programs/**/*.feature
+      - SUITE:
+          - 05-exposed-filters
+        FEATURES_GLOB:
+          - tests/features/05-exposed-filters/**/*.feature
+      - SUITE:
+          - 06-contact
+        FEATURES_GLOB:
+          - tests/features/06-contact/**/*.feature
+      - SUITE:
+          - 07-quality
+        FEATURES_GLOB:
+          - tests/features/07-quality/**/*.feature
+      - SUITE:
+          - 08-seo
+        FEATURES_GLOB:
+          - tests/features/08-seo/**/*.feature
+      - SUITE:
+          - 09-editorial
+        FEATURES_GLOB:
+          - tests/features/09-editorial/**/*.feature
+      - SUITE:
+          - 10-01-canvas-pages-listed
+        FEATURES_GLOB:
+          - tests/features/10-drupal-canvas/10-01-canvas-pages-listed.feature
+      - SUITE:
+          - 10-02-canvas-home-about
+        FEATURES_GLOB:
+          - >-
+            tests/features/10-drupal-canvas/10-02-canvas-editor-home-about.feature
+      - SUITE:
+          - 10-03-canvas-admissions-studentlife
+        FEATURES_GLOB:
+          - >-
+            tests/features/10-drupal-canvas/10-03-canvas-editor-admissions-studentlife.feature
+      - SUITE:
+          - 10-04-canvas-research-contact
+        FEATURES_GLOB:
+          - >-
+            tests/features/10-drupal-canvas/10-04-canvas-editor-research-contact.feature
+      - SUITE:
+          - 10-05-canvas-programs
+        FEATURES_GLOB:
+          - tests/features/10-drupal-canvas/10-05-canvas-editor-programs.feature
+      - SUITE:
+          - 11-permissions
+        FEATURES_GLOB:
+          - tests/features/11-permissions/**/*.feature
+  services:
+    - name: mariadb:10.11
+      alias: database
+      variables:
+        MARIADB_DATABASE: drupal
+        MARIADB_USER: drupal
+        MARIADB_PASSWORD: drupal
+        MARIADB_ROOT_PASSWORD: root
+  variables:
+    CUCUMBER_JSON: cucumber_report--${SUITE}
+  artifacts:
+    when: always
+    paths:
+      - tests/reports/
+      - tests/screenshots/
+      - tests/videos/
+    expire_in: 30 days
+  before_script:
+    - export DEBIAN_FRONTEND=noninteractive
+    - apt-get update -y
+    - >-
+      apt-get install -y --no-install-recommends software-properties-common
+      ca-certificates curl gnupg lsb-release
+    - add-apt-repository -y ppa:ondrej/php
+    - apt-get update -y
+    - >-
+      apt-get install -y --no-install-recommends php8.4-cli php8.4-mysql
+      php8.4-gd php8.4-curl php8.4-xml php8.4-mbstring php8.4-zip php8.4-intl
+      unzip git default-mysql-client webp imagemagick
+      libmagickcore-6.q16-6-extra
+    - >-
+      curl -sS https://getcomposer.org/installer | php --
+      --install-dir=/usr/local/bin --filename=composer
+    - corepack enable || true
+    - composer --version && php --version
+    - >-
+      sed -i 's/rights="none"\s*pattern="WEBP"/rights="read|write"
+      pattern="WEBP"/I' /etc/ImageMagick-*/policy.xml 2>/dev/null || true
+    - >-
+      gunzip -c $CI_PROJECT_DIR/educare-db.sql.gz | $SITE_DIR/bin/drush
+      --root=$WEB_ROOT sql:cli
+    - $SITE_DIR/bin/drush --root=$WEB_ROOT cache:rebuild
+  script:
+    - >-
+      PHP_CLI_SERVER_WORKERS=8 $SITE_DIR/bin/drush --root=$WEB_ROOT runserver
+      127.0.0.1:8888 > $CI_PROJECT_DIR/runserver.log 2>&1 &
+    - sleep 8
+    - cd "$CI_PROJECT_DIR"
+    - >-
+      FEATURES="${FEATURES_GLOB}" VARBASE_E2E_REPORT_DISABLE=1
+      CUCUMBER_JSON="cucumber_report--${SUITE}" ./node_modules/.bin/cucumber-js
+      --config cucumber.js --tags "not @wip"
+  after_script:
+    - cd "$CI_PROJECT_DIR"
+    - >-
+      export
+      REPORT="educare--${CI_COMMIT_REF_SLUG:-local}--${SUITE}--automated-functional-testing-report--$(date
+      +%Y-%m-%d)--$(date +%H-%M)"
+    - >-
+      node ./node_modules/@vardot/varbase-e2e/bin/generate-reports.js --json
+      "tests/reports/cucumber_report--${SUITE}.json" --out 
+      "tests/reports/${REPORT}.html" --format all --pdf-out
+      "tests/reports/${REPORT}.pdf" || true
+  allow_failure: false
+📊 Create reports:
+  stage: report
+  rules:
+    - if: $CI_COMMIT_TAG || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: always
+    - changes:
+        - composer.json
+        - .gitlab-ci.yml
+        - .gitlab-ci/**/*
+        - recipe.yml
+        - recommended.yml
+        - config/**/*
+        - content/**/*
+        - scripts/**/*
+        - tests/**/*
+        - package.json
+        - package-lock.json
+        - cucumber.js
+        - eslint.config.js
+        - playwright.config.ts
+      when: always
+    - when: never
+  image:
+    name: node:20
+  needs:
+    - job: 🧪 varbase-e2e
+      artifacts: true
+      optional: false
+  dependencies:
+    - 🧪 varbase-e2e
+  before_script:
+    - apt-get update -y && apt-get install -y jq
+    - npm install --no-save --no-audit --no-fund @vardot/varbase-e2e
+    - ./node_modules/.bin/playwright install --with-deps chromium
+  script:
+    - >-
+      jq -s 'add' tests/reports/cucumber_report--*.json >
+      tests/reports/cucumber_report.json
+    - >-
+      export
+      REPORT="educare--${CI_COMMIT_REF_SLUG}--automated-functional-testing-report--$(date
+      +%Y-%m-%d)--$(date +%H-%M)"
+    - >-
+      node ./node_modules/@vardot/varbase-e2e/bin/generate-reports.js --json
+      tests/reports/cucumber_report.json --out  "tests/reports/${REPORT}.html"
+      --format all --pdf-out "tests/reports/${REPORT}.pdf"
+  artifacts:
+    when: always
+    paths:
+      - tests/reports/
+      - tests/screenshots/
+    expire_in: 30 days
+  allow_failure: false
+default: {}

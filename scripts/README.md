@@ -208,8 +208,32 @@ requiring separately: the wiring above only has to permit its plugin first.
 `-W` is required: a partial update keeps the locked `symfony/css-selector`, which
 `drupal/storybook` (via `varbase_dev_base`) conflicts with.
 
-Known limit: this produces a working codebase, but on a plain Drupal CMS base the
-install itself currently fails in the recipe config batch for a reason outside this
-recipe — `drupal_cms_search` clones every node view display and Drupal CMS installs
-`layout_builder`, so dependency calculation hits a null field definition. Varbase 11 is
-the supported base today.
+`drupal-recipe-unpack.on-require` is set to `false`. Left on, Composer flattens every
+dependency of a `drupal-recipe` into the root `composer.json` and drops the recipe
+itself, so `drupal/educare` disappears from the file and roughly 190 transitive entries
+take its place. With it off the root keeps a single named requirement, and the recipe is
+still installed into `recipes/`.
+
+Patch resolution is default-deny, and dependencies that declare patches with a path
+relative to the project root are ignored outright (`drupal/ai_context` is one). Those
+paths only resolve from a root that happens to ship the file, so leaving them enabled
+fails the require before the install begins. This mirrors `varbase_project`.
+
+The `🧩 (Drupal CMS) Install Educare site template` CI job runs exactly these steps on a
+plain `drupal/cms` codebase and asserts the result, so the wiring cannot rot unnoticed:
+it checks the recipe and Canvas are in place, the `allow-plugins` entries and both patch
+lists are set, at least six libraries are declared, the install completes, and
+`vartheme_bs5_educare` ends up the default theme.
+
+Known limit — the browser installer. `drush site:install` completes on a plain Drupal
+CMS base, but picking the template in the browser installer at `/core/install.php` fails
+at roughly 49%, for a reason outside this recipe:
+
+    Call to a member function getConfigDependencyName() on null in
+    Drupal\Core\Entity\EntityDisplayBase->calculateDependencies()
+
+Drupal CMS installs `layout_builder`, and `drupal_cms_search` clones every node view
+display (`cloneAs: node.%.search_index`), so LayoutBuilderEntityViewDisplay's dependency
+calculation hits a field definition that is null. Reproduced on more than one site
+template, so it is not specific to Educare. Use `drush site:install` on this base until
+it is fixed upstream; Varbase 11 has neither problem.

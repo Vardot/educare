@@ -214,9 +214,14 @@ Then install the site template, picking " . SITE_TEMPLATE_TITLE . " in the insta
 
    drush site:install drupal_cms_installer installer_site_template_form.add_ons=" . SITE_TEMPLATE_NAME . "
 
-⚠️  Known limit: on a plain Drupal CMS base the codebase builds, but the install
-   currently fails in the recipe config batch, outside this template's control:
-   drupal_cms_search clones every node view display and Drupal CMS installs
-   layout_builder, so dependency calculation hits a null field definition.
-   Varbase 11 is the supported base today.
+Patch resolution is default-deny, and a dependency that declares a patch with a
+   path relative to the project root is ignored outright (drupal/ai_context is
+   one). Such a path only resolves from a root that happens to ship the file, so
+   leaving it enabled aborts the require before the install begins.
+
+⚠️  Known limit: on a plain Drupal CMS base use `drush site:install`. Picking the
+   template in the browser installer fails around 49% with
+   \"getConfigDependencyName() on null\", because Drupal CMS installs layout_builder
+   and drupal_cms_search clones every node view display. That is outside this
+   template's control and is not specific to Educare.
 ";
