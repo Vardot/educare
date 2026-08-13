@@ -5,7 +5,7 @@
 # validate - lint YAML, spell-check + ESLint the suite, and a Cucumber dry-run
 #            that proves every step phrasing in the Varbase functional testing
 #            suite resolves (all reproducible offline in gitlab-ci-local).
-# pre-test - 📦 Install Varbase: build a Varbase 11 host project, require the
+# pre-test - 📦 Install Educare site template (varbase): build a Varbase 11 host project, require the
 #            checked-out Educare recipe, install it with
 #            `drush site:install recipes/educare`, prepare it for deterministic
 #            testing, then DUMP the DB (gzip). The built site (testsite/), the
@@ -79,12 +79,12 @@ workflow:
   - "eslint.config.js"
   - "playwright.config.ts"
 
-# Build cache populated by 📦 Install Varbase: the built host site (testsite/),
+# Build cache populated by 📦 Install Educare site template (varbase): the built host site (testsite/),
 # the varbase-e2e node_modules and the composer + Playwright download caches.
 # The test jobs pull this (see .test_cache) so they skip the whole host build
 # and only restore the DB dump.
 .varbase_cache: &varbase_cache
-  key: "educare-build-$CI_COMMIT_REF_SLUG"
+  key: "educare-build-v2-$CI_COMMIT_REF_SLUG"
   paths:
     - .cache/composer
     - .cache/ms-playwright
@@ -92,7 +92,7 @@ workflow:
     - node_modules
 
 .test_cache: &test_cache
-  key: "educare-build-$CI_COMMIT_REF_SLUG"
+  key: "educare-build-v2-$CI_COMMIT_REF_SLUG"
   policy: pull
   paths:
     - .cache/composer
@@ -237,7 +237,7 @@ workflow:
 
 # = pre-test = build the host Varbase site, apply the Educare recipe, seed the
 # site, dump the DB, and cache the built site + node_modules + browser.
-"📦 Install Varbase":
+"📦 Install Educare site template (varbase)":
   stage: pre-test
   rules:
     - <<: *run_on_release_refs
@@ -274,6 +274,9 @@ workflow:
     - !reference [.fragments, host_php_setup]
   script:
     # = Build a Varbase 11 project, then require the checked-out recipe =
+    # The build cache may restore a stale testsite/; composer create-project
+    # refuses a non-empty target, so start from a clean dir on every run.
+    - rm -rf "$SITE_DIR"
     - composer create-project $VARBASE_PROJECT "$SITE_DIR" --no-interaction --no-install --no-scripts
     - cd "$SITE_DIR"
     - composer config minimum-stability dev
@@ -298,7 +301,7 @@ workflow:
   allow_failure: false
 
 # = Automated Functional Acceptance Testing (varbase-e2e) - one parallel job per
-# feature bucket. Restores the built site + DB dump from 📦 Install Varbase.
+# feature bucket. Restores the built site + DB dump from 📦 Install Educare site template (varbase).
 "🧪 varbase-e2e":
   stage: test
   rules:
@@ -308,7 +311,7 @@ workflow:
     - when: manual
       allow_failure: false
   image: mcr.microsoft.com/playwright:v1.56.0-noble
-  needs: ["📦 Install Varbase"]
+  needs: ["📦 Install Educare site template (varbase)"]
   timeout: 2h
   retry:
     max: 2
