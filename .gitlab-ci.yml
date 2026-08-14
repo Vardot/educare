@@ -100,6 +100,19 @@ workflow:
     - testsite
     - node_modules
 
+# The Drupal CMS wiring job builds its own cmssite/ codebase and never runs
+# `npm install`. It must NOT share the build cache above: both pre-test jobs run
+# in parallel with pull-push, so whichever finishes last republishes what it
+# restored — and this job restores node_modules/testsite without ever refreshing
+# them. When it lands last it overwrites the good tree the Varbase job just
+# built, and the test jobs pull a stale node_modules (cucumber 13 against the
+# pinned @cucumber/pretty-formatter 1.0.1 -> "does not export a function/class").
+# Its own key, composer downloads only.
+.cms_cache: &cms_cache
+  key: "educare-cms-v1-$CI_COMMIT_REF_SLUG"
+  paths:
+    - .cache/composer
+
 # = Reusable before_script fragments =
 .fragments:
   # The Playwright image is Ubuntu noble (PHP 8.3 default); add ondrej/php for
@@ -325,7 +338,7 @@ workflow:
       - script_failure
       - runner_system_failure
       - stuck_or_timeout_failure
-  cache: *varbase_cache
+  cache: *cms_cache
   services:
     - name: mariadb:10.11
       alias: database
