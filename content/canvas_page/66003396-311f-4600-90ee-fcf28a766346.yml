@@ -447,47 +447,17 @@ default:
         full_width: false
         radius: rounded-1
     -
+      uuid: 09ab5c83-bd5a-4a6a-af49-3890f950c204
+      component_id: block.views_block.events-latest
+      component_version: 6ed1e9aa7565cbad
       parent_uuid: 382c783a-faa4-4025-b573-ceca36e88a5f
       slot: col_1
-      uuid: 29741a5e-d531-4ab8-8503-9fbec5687e40
-      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
       inputs:
-        date: '2026-09-03'
-        title: 'Tech & AI Innovation Conference'
-        heading_level: h3
-        show_action_icon: true
-        card_border: false
-        background_color: bg-secondary-subtle
-        padded: false
-        box_shadow: shadow-none
-        corner_style: rounded-0
-        equal_height: false
-        stretched_link: true
-        link_url:
-          uri: 'internal:/african-and-african-american-studies/'
-          options: {  }
-        link_target: default
-    -
-      parent_uuid: 382c783a-faa4-4025-b573-ceca36e88a5f
-      slot: col_2
-      uuid: 3c31d31a-76ec-4276-9e3f-8502deefbce1
-      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
-      inputs:
-        date: '2026-09-10'
-        title: 'Open Day. Meet faculty, tour campus, and learn about admissions'
-        heading_level: h3
-        show_action_icon: true
-        card_border: false
-        background_color: bg-secondary-subtle
-        padded: false
-        box_shadow: shadow-none
-        corner_style: rounded-0
-        equal_height: false
-        stretched_link: true
-        link_url:
-          uri: 'internal:/african-and-african-american-studies'
-          options: {  }
-        link_target: default
+        label: 'Upcoming events'
+        label_display: '0'
+        views_label: ''
+        items_per_page: 2
+        exposed: {  }
   path:
     -
       alias: /anthropology

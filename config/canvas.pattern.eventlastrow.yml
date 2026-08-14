@@ -114,47 +114,15 @@ component_tree:
       alignment: inline
       full_width: false
       radius: rounded-1
-  02701262-ea3c-43ba-a299-93f9d0b6821a:
+  0a1b2c3d-4e5f-4a6b-a7c8-d9e0f1a2b3c4:
     parent_uuid: 7f1747d3-dd5c-4c38-b93f-31a5514a1d0d
     slot: col_1
-    uuid: 02701262-ea3c-43ba-a299-93f9d0b6821a
-    component_id: sdc.vartheme_bs5_educare.card-dated-vertical
-    component_version: 1b941df5cf10c438
+    uuid: 0a1b2c3d-4e5f-4a6b-a7c8-d9e0f1a2b3c4
+    component_id: block.views_block.events-latest
+    component_version: 6ed1e9aa7565cbad
     inputs:
-      date: '2026-09-03'
-      title: 'Tech & AI Innovation Conference'
-      heading_level: h3
-      show_action_icon: true
-      card_border: false
-      background_color: bg-secondary-subtle
-      padded: false
-      box_shadow: shadow-none
-      corner_style: rounded-0
-      equal_height: false
-      stretched_link: true
-      link_url:
-        uri: 'internal:/african-and-african-american-studies/'
-        options: {  }
-      link_target: default
-  126bf760-8cbb-4195-af82-9196115a6a57:
-    parent_uuid: 7f1747d3-dd5c-4c38-b93f-31a5514a1d0d
-    slot: col_2
-    uuid: 126bf760-8cbb-4195-af82-9196115a6a57
-    component_id: sdc.vartheme_bs5_educare.card-dated-vertical
-    component_version: 1b941df5cf10c438
-    inputs:
-      date: '2026-09-10'
-      title: 'Open Day. Meet faculty, tour campus, and learn about admissions'
-      heading_level: h3
-      show_action_icon: true
-      card_border: false
-      background_color: bg-secondary-subtle
-      padded: false
-      box_shadow: shadow-none
-      corner_style: rounded-0
-      equal_height: false
-      stretched_link: true
-      link_url:
-        uri: 'internal:/african-and-african-american-studies'
-        options: {  }
-      link_target: default
+      label: 'Upcoming events'
+      label_display: '0'
+      views_label: ''
+      items_per_page: 2
+      exposed: {  }

@@ -496,222 +496,29 @@ default:
         full_width: false
         radius: rounded-1
     -
+      uuid: 93252cc4-43d9-4925-a2e7-0f135c802ec3
+      component_id: block.views_block.events-latest
+      component_version: 6ed1e9aa7565cbad
       parent_uuid: b5a91556-8b54-4f4b-9490-6f31a15a1849
       slot: col_1
-      uuid: 238680b9-27f5-4333-84d2-ebf369b82112
-      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
       inputs:
-        date: '2026-09-03'
-        title: 'Open Day. Meet faculty, tour campus'
-        heading_level: h3
-        show_action_icon: true
-        card_border: false
-        background_color: bg-secondary-subtle
-        padded: false
-        box_shadow: shadow-none
-        corner_style: rounded-0
-        equal_height: false
-        stretched_link: true
-        link_url:
-          uri: 'internal:/tech-ai-innovation-conference/'
-          options: {  }
-        link_target: default
+        label: 'Upcoming events'
+        label_display: '0'
+        views_label: ''
+        items_per_page: 4
+        exposed: {  }
     -
-      parent_uuid: b5a91556-8b54-4f4b-9490-6f31a15a1849
-      slot: col_1
-      uuid: c3cd4d68-209a-4418-be44-f92eb2a4e561
-      component_id: sdc.vartheme_bs5_educare.spacer
-      inputs:
-        size: py-3
-    -
-      parent_uuid: b5a91556-8b54-4f4b-9490-6f31a15a1849
-      slot: col_1
-      uuid: 57be8212-a704-4726-aefc-cf3d1b7e661f
-      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
-      inputs:
-        date: '2026-09-10'
-        title: 'University Launches New Artificial Intelligence Research Center'
-        heading_level: h3
-        show_action_icon: true
-        card_border: false
-        background_color: bg-secondary-subtle
-        padded: false
-        box_shadow: shadow-none
-        corner_style: rounded-0
-        equal_height: false
-        stretched_link: true
-        link_url:
-          uri: 'internal:/tech-ai-innovation-conference/'
-          options: {  }
-        link_target: default
-    -
-      parent_uuid: b5a91556-8b54-4f4b-9490-6f31a15a1849
-      slot: col_1
-      uuid: 039ddafc-b877-46f9-967d-736dee84ea7e
-      component_id: sdc.vartheme_bs5_educare.spacer
-      inputs:
-        size: py-3
-    -
-      parent_uuid: b5a91556-8b54-4f4b-9490-6f31a15a1849
-      slot: col_1
-      uuid: f717723f-b541-40ed-b5f8-57c433ad2635
-      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
-      inputs:
-        date: '2026-09-08'
-        title: 'University Launches New Artificial Intelligence Research Center'
-        heading_level: h3
-        show_action_icon: true
-        card_border: false
-        background_color: bg-secondary-subtle
-        padded: false
-        box_shadow: shadow-none
-        corner_style: rounded-0
-        equal_height: false
-        stretched_link: true
-        link_url:
-          uri: 'internal:/tech-ai-innovation-conference/'
-          options: {  }
-        link_target: default
-    -
-      parent_uuid: b5a91556-8b54-4f4b-9490-6f31a15a1849
-      slot: col_1
-      uuid: 223db210-d779-4bdf-831f-d15cdd2255b3
-      component_id: sdc.vartheme_bs5_educare.spacer
-      inputs:
-        size: py-3
-    -
-      parent_uuid: b5a91556-8b54-4f4b-9490-6f31a15a1849
-      slot: col_1
-      uuid: 565d4723-73ca-4784-a83e-85842738dea9
-      component_id: sdc.vartheme_bs5_educare.card-dated-vertical
-      inputs:
-        date: '2026-09-07'
-        title: 'University Launches New Artificial Intelligence Research Center'
-        heading_level: h3
-        show_action_icon: true
-        card_border: false
-        background_color: bg-secondary-subtle
-        padded: false
-        box_shadow: shadow-none
-        corner_style: rounded-0
-        equal_height: false
-        stretched_link: true
-        link_url:
-          uri: 'internal:/tech-ai-innovation-conference/'
-          options: {  }
-        link_target: default
-    -
+      uuid: e5d2efc4-79a6-477a-a87a-79df896ed059
+      component_id: block.views_block.news-featured
+      component_version: e096bc92df683e11
       parent_uuid: b5a91556-8b54-4f4b-9490-6f31a15a1849
       slot: col_2
-      uuid: f3f84b79-3d04-48bf-aa3d-2b5347c74ee5
-      component_id: sdc.vartheme_bs5_educare.card-featured
       inputs:
-        media_position: start
-        media_image:
-          CANVAS_ENTITY_REFERENCE:
-            target_uuid: e243ed0a-1a7f-41dd-9cc0-0f3485b4d45f
-            target_type: media
-        ratio: ratio-auto
-        fit: object-fit-cover
-        card_border: false
-        corner_style: rounded-0
-        show_action_icon: true
-        padded: false
-        equal_height: false
-        stretched_link: true
-        link_url:
-          uri: 'internal:/african-and-african-american-studies/'
-          options: {  }
-        link_target: default
-        content_vertical_alignment: align-items-center
-        gutters_between: 'g-2 g-lg-3'
-        columns_xs_size: '06_06'
-        columns_sm_size: '06_06'
-        columns_md_size: '06_06'
-        columns_lg_size: '06_06'
-        columns_xl_size: '06_06'
-        columns_xxl_size: '06_06'
-    -
-      parent_uuid: f3f84b79-3d04-48bf-aa3d-2b5347c74ee5
-      slot: content
-      uuid: 9ca287e9-f4b8-495c-af2e-1b9a01f1d86e
-      component_id: sdc.vartheme_bs5_educare.date
-      inputs:
-        text_color: text-body
-        size: fs-6
-    -
-      parent_uuid: f3f84b79-3d04-48bf-aa3d-2b5347c74ee5
-      slot: content
-      uuid: bae97e7d-33d5-4cab-9ee8-467f0dce14f3
-      component_id: sdc.vartheme_bs5_educare.heading
-      inputs:
-        heading_text: 'University Launches New Artificial Intelligence Research Center'
-        level: 3
-        text_size: h5
-        target: _self
-    -
-      parent_uuid: b5a91556-8b54-4f4b-9490-6f31a15a1849
-      slot: col_2
-      uuid: 044026b6-f320-461f-a714-05b7c17a5eb2
-      component_id: sdc.vartheme_bs5_educare.spacer
-      inputs:
-        size: py-2
-    -
-      parent_uuid: b5a91556-8b54-4f4b-9490-6f31a15a1849
-      slot: col_2
-      uuid: 31db5203-7d31-4bd7-b383-532d5a43c187
-      component_id: sdc.vartheme_bs5_educare.spacer
-      inputs:
-        size: py-1
-    -
-      parent_uuid: b5a91556-8b54-4f4b-9490-6f31a15a1849
-      slot: col_2
-      uuid: 0708ac4f-d3dd-4087-b133-670af74bec1d
-      component_id: sdc.vartheme_bs5_educare.card-featured
-      inputs:
-        media_position: start
-        media_image:
-          CANVAS_ENTITY_REFERENCE:
-            target_uuid: 734ebd92-74a9-4e14-93a3-b428af41f89e
-            target_type: media
-        ratio: ratio-auto
-        fit: object-fit-cover
-        card_border: false
-        corner_style: rounded-0
-        show_action_icon: true
-        padded: false
-        equal_height: false
-        stretched_link: true
-        link_url:
-          uri: 'internal:/african-and-african-american-studies/'
-          options: {  }
-        link_target: default
-        content_vertical_alignment: align-items-center
-        gutters_between: 'g-2 g-lg-3'
-        columns_xs_size: '06_06'
-        columns_sm_size: '06_06'
-        columns_md_size: '06_06'
-        columns_lg_size: '06_06'
-        columns_xl_size: '06_06'
-        columns_xxl_size: '06_06'
-    -
-      parent_uuid: 0708ac4f-d3dd-4087-b133-670af74bec1d
-      slot: content
-      uuid: 3074de2d-4b4c-4ecb-8c28-c77cfe568d07
-      component_id: sdc.vartheme_bs5_educare.date
-      inputs:
-        text_color: text-body
-        size: fs-6
-    -
-      parent_uuid: 0708ac4f-d3dd-4087-b133-670af74bec1d
-      slot: content
-      uuid: 6bcf4feb-1425-4173-b203-5597db872962
-      component_id: sdc.vartheme_bs5_educare.heading
-      inputs:
-        heading_text: 'University Launches New Artificial Intelligence Research Center'
-        level: 3
-        text_size: h5
-        target: _self
+        label: 'Featured news posts'
+        label_display: '0'
+        views_label: ''
+        items_per_page: 2
+        exposed: {  }
     -
       uuid: caada9d1-40f6-43dd-9469-48afde01ff13
       component_id: sdc.vartheme_bs5_educare.section
