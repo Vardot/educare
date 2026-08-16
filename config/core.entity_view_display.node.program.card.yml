@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.program.field_content
+    - field.field.node.program.field_degrees
+    - field.field.node.program.field_description
+    - field.field.node.program.field_program_type
+    - field.field.node.program.field_study_level
+    - node.type.program
+id: node.program.card
+targetEntityType: node
+bundle: program
+mode: card
+content: {  }
+hidden:
+  field_content: true
+  field_degrees: true
+  field_description: true
+  field_program_type: true
+  field_study_level: true
+  links: true
+  search_api_excerpt: true

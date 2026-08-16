@@ -331,7 +331,7 @@ default:
         label: 'Upcoming events'
         label_display: '0'
         views_label: ''
-        items_per_page: 4
+        items_per_page: 3
         exposed: {  }
     -
       uuid: bb03ec20-97ec-4b96-af89-6bdff265a414

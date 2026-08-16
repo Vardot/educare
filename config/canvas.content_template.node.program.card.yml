@@ -1,0 +1,69 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_educare.card-action-text
+    - canvas.component.sdc.vartheme_bs5_educare.heading
+    - canvas.component.sdc.vartheme_bs5_educare.spacer
+    - canvas.component.sdc.vartheme_bs5_educare.text
+    - core.entity_view_mode.node.card
+    - field.field.node.program.field_description
+    - node.type.program
+  module:
+    - node
+id: node.program.card
+content_entity_type_id: node
+content_entity_type_bundle: program
+content_entity_type_view_mode: card
+component_tree:
+  c3f1a2b4-0002-4b02-9b02-0000000000a1:
+    uuid: c3f1a2b4-0002-4b02-9b02-0000000000a1
+    component_id: sdc.vartheme_bs5_educare.card-action-text
+    component_version: b66d7dffa42a9998
+    inputs:
+      show_action_icon: true
+      card_border: false
+      background_color: bg-secondary-subtle
+      padded: true
+      box_shadow: shadow-none
+      corner_style: rounded-0
+      equal_height: true
+      stretched_link: true
+      link_url:
+        sourceType: host-entity-url
+        absolute: false
+      link_target: default
+  c3f1a2b4-0002-4b02-9b02-0000000000a2:
+    parent_uuid: c3f1a2b4-0002-4b02-9b02-0000000000a1
+    slot: content
+    uuid: c3f1a2b4-0002-4b02-9b02-0000000000a2
+    component_id: sdc.vartheme_bs5_educare.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: ℹ︎␜entity:node:program␝title␞␟value
+      level: 3
+      text_size: h5
+      target: _self
+  c3f1a2b4-0002-4b02-9b02-0000000000a3:
+    parent_uuid: c3f1a2b4-0002-4b02-9b02-0000000000a1
+    slot: content
+    uuid: c3f1a2b4-0002-4b02-9b02-0000000000a3
+    component_id: sdc.vartheme_bs5_educare.spacer
+    component_version: 80de1b3919d08f87
+    inputs:
+      size: py-5
+  c3f1a2b4-0002-4b02-9b02-0000000000a4:
+    parent_uuid: c3f1a2b4-0002-4b02-9b02-0000000000a1
+    slot: content
+    uuid: c3f1a2b4-0002-4b02-9b02-0000000000a4
+    component_id: sdc.vartheme_bs5_educare.text
+    component_version: c4ddb22de87220b3
+    inputs:
+      text:
+        sourceType: entity-field
+        expression: ℹ︎␜entity:node:program␝field_description␞␟value
+      text_size: fs-6
+      text_color: text-muted
+exposed_slots: {}

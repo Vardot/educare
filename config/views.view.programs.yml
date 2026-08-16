@@ -484,6 +484,86 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+  featured:
+    id: featured
+    display_title: 'Featured programs'
+    display_plugin: block
+    position: 2
+    display_options:
+      display_description: 'A short, unfiltered list of programs for placing in a page section, with no pager.'
+      block_description: 'Featured programs'
+      block_category: 'Lists (Views)'
+      defaults:
+        title: false
+        header: false
+        pager: false
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+      title: ''
+      header: {  }
+      style:
+        type: components_views_style
+        options:
+          uses_fields: false
+          component_id: 'vartheme_bs5_educare:views-view-grid'
+          rows_slot: rows
+          prop_mappings:
+            grid_utility_classes: 'g-4'
+            column_utility_classes: ''
+            col_xs: col-12
+            col_sm: ''
+            col_md: col-md-6
+            col_lg: col-lg-4
+            col_xl: ''
+            col_xxl: ''
+            attributes: ''
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 6
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            program: program
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   block_1:
     id: block_1
     display_title: 'Programs listing'
