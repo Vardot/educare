@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.search_index
+    - taxonomy.vocabulary.study_level
+id: taxonomy_term.study_level.search_index
+targetEntityType: taxonomy_term
+bundle: study_level
+mode: search_index
+content: {  }
+hidden: {  }

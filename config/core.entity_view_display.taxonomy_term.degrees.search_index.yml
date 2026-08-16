@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.search_index
+    - taxonomy.vocabulary.degrees
+id: taxonomy_term.degrees.search_index
+targetEntityType: taxonomy_term
+bundle: degrees
+mode: search_index
+content: {  }
+hidden: {  }
