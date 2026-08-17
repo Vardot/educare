@@ -25,7 +25,7 @@ Feature: Programs - Programs listing
     Given I am an anonymous user
      When I go to "/programs"
       And I wait until the page is loaded
-     Then "form.views-exposed-form" should be visible
+     Then "main form.views-exposed-form" should be visible
       And "input[placeholder='Enter keyword']" should be visible
       And I should see "Type"
 

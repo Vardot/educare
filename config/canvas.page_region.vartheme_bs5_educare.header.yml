@@ -4,7 +4,9 @@ dependencies:
   config:
     - canvas.component.block.system_branding_block
     - canvas.component.block.system_menu_block.main
+    - canvas.component.block.views_exposed_filter_block.search-block_1
     - canvas.component.sdc.vartheme_bs5_educare.group
+    - canvas.component.sdc.vartheme_bs5_educare.icon-toggle
     - canvas.component.sdc.vartheme_bs5_educare.section
   module:
     - options
@@ -23,15 +25,27 @@ component_tree:
       container_type: container
       background_color: none
       text_color: auto
-      columns: 25-75
+      columns: '100'
       gutter: 'gx-3 gy-3'
       padding_block_start: pt-3
       padding_block_end: pb-3
       section_header: false
       section_footer: false
-  589cc59f-4a7b-42c2-b285-8fd7b65e6439:
+  b7d6ef10-663c-4e98-9e2d-982dc7573a4c:
     parent_uuid: baa39131-18c3-466a-95ea-15034b6fb94a
     slot: col_1
+    uuid: b7d6ef10-663c-4e98-9e2d-982dc7573a4c
+    component_id: sdc.vartheme_bs5_educare.group
+    component_version: aef7f7b22127c944
+    inputs:
+      direction: horizontal
+      gap: gap-3
+      wrap: wrap
+      align_items: align-items-center
+      justify_content: justify-content-between
+  589cc59f-4a7b-42c2-b285-8fd7b65e6439:
+    parent_uuid: b7d6ef10-663c-4e98-9e2d-982dc7573a4c
+    slot: content
     uuid: 589cc59f-4a7b-42c2-b285-8fd7b65e6439
     component_id: block.system_branding_block
     component_version: 7d528e00f56b3abf
@@ -41,18 +55,6 @@ component_tree:
       use_site_logo: true
       use_site_name: false
       use_site_slogan: false
-  b7d6ef10-663c-4e98-9e2d-982dc7573a4c:
-    parent_uuid: baa39131-18c3-466a-95ea-15034b6fb94a
-    slot: col_2
-    uuid: b7d6ef10-663c-4e98-9e2d-982dc7573a4c
-    component_id: sdc.vartheme_bs5_educare.group
-    component_version: aef7f7b22127c944
-    inputs:
-      direction: horizontal
-      gap: gap-3
-      wrap: wrap
-      align_items: align-items-center
-      justify_content: justify-content-end
   d5f18bf8-f056-4581-a814-029b8c567d0b:
     parent_uuid: b7d6ef10-663c-4e98-9e2d-982dc7573a4c
     slot: content
@@ -65,3 +67,27 @@ component_tree:
       level: 1
       depth: 3
       expand_all_items: true
+  77119e05-adda-427e-9ad6-7e4b2157f57a:
+    parent_uuid: b7d6ef10-663c-4e98-9e2d-982dc7573a4c
+    slot: content
+    uuid: 77119e05-adda-427e-9ad6-7e4b2157f57a
+    component_id: sdc.vartheme_bs5_educare.icon-toggle
+    component_version: f94416574e5a0133
+    inputs:
+      icon: search
+      label: Search
+      open_label: 'Close search'
+      placement: end
+      panel: bar
+      show_label: true
+  4d8d4f0c-cfad-4223-ab50-eef74ed55c96:
+    parent_uuid: 77119e05-adda-427e-9ad6-7e4b2157f57a
+    slot: content
+    uuid: 4d8d4f0c-cfad-4223-ab50-eef74ed55c96
+    component_id: block.views_exposed_filter_block.search-block_1
+    component_version: abd3c7419d413cec
+    inputs:
+      label: Search
+      label_display: '0'
+      views_label: ''
+

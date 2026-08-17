@@ -37,7 +37,7 @@ function absolute(world, path) {
  * Example #5: And I select "- Any -" from the "Type" filter
  */
 When(/^(?:I |we )*select "([^"]*)" from the "([^"]*)" filter$/, async function (option, label) {
-  const form = this.page.locator('form.views-exposed-form');
+  const form = this.page.locator('main form.views-exposed-form');
   const select = form.getByLabel(label, { exact: true });
   try {
     await select.selectOption({ label: option }, { timeout: 5000 });
@@ -690,5 +690,152 @@ Then(/^(?:the page should have|(?:I |we )*should have) a working footer$/, async
     if ((await footer.getByRole('link', { name: network }).count()) === 0) {
       throw friendly(`Footer is missing the ${network} profile link.`, 'Check the Social media menu in the Canvas Footer region.');
     }
+  }
+});
+
+/**
+ * Open the header search panel and run a query from it, the way a visitor does.
+ *
+ * The header panel and the results page each carry an input named `keywords`,
+ * and the header one is the first in the DOM while still collapsed - a bare
+ * name lookup would type into a 0x0 element. This step scopes to the panel,
+ * and submits with Enter because the panel's submit control is visually
+ * removed in the bar layout.
+ *
+ * Example #1: When I search the header for "education"
+ * Example #2: When I search the header for "Scholarship"
+ * Example #3: And I search the header for "research"
+ * Example #4: When we search the header for "Campus"
+ * Example #5: And we search the header for "xylophone kumquat zeppelin"
+ */
+When(/^(?:I |we )*search the header for "([^"]*)"$/, async function (keywords) {
+  const toggle = this.page.locator('header[role="banner"] .icon-toggle__button').first();
+  const field = this.page.locator('header[role="banner"] .icon-toggle__panel input[name="keywords"]').first();
+  try {
+    await toggle.click({ timeout: 10000 });
+    await field.waitFor({ state: 'visible', timeout: 10000 });
+    await field.fill(keywords);
+    await field.press('Enter');
+  } catch (e) {
+    throw friendly(
+      `Could not run a header search for "${keywords}".`,
+      'Check the Icon Toggle in the Canvas Header region carries the search-block_1 exposed form. ' +
+      ((e.message || '').split('\n')[0])
+    );
+  }
+  await smartSettle(this.page, budget(this));
+});
+
+/**
+ * Assert every search result row carries exactly one heading and one link.
+ *
+ * The index holds nodes and Canvas pages, and the view ships a title field per
+ * entity type while only ever filling one - so a row that prints both sources
+ * raw shows an empty heading beside the real one, and a row that links both the
+ * heading and the title field offers the same destination twice.
+ *
+ * Example #1: Then every search result row should have one heading and one link
+ * Example #2: And every search result row should have one heading and one link
+ * Example #3: Then every search result row should have one heading and one link
+ * Example #4: And every search result row should have one heading and one link
+ * Example #5: Then every search result row should have one heading and one link
+ */
+Then(/^every search result row should have one heading and one link$/, async function () {
+  await smartSettle(this.page, budget(this));
+  const rows = this.page.locator('.view-search .view-content .views-row');
+  const total = await rows.count();
+  if (total === 0) {
+    throw friendly('No search result rows to check.', 'Run a query that returns at least one result first.');
+  }
+  for (let i = 0; i < total; i++) {
+    const row = rows.nth(i);
+    const headings = await row.locator('h1, h2, h3, h4, h5, h6').count();
+    const links = await row.locator('a').count();
+    const text = ((await row.locator('h1, h2, h3, h4, h5, h6').first().textContent()) || '').trim();
+    assert.strictEqual(headings, 1, `Row ${i + 1} has ${headings} headings, expected 1.`);
+    assert.strictEqual(links, 1, `Row ${i + 1} has ${links} links, expected 1.`);
+    assert.ok(text.length > 0, `Row ${i + 1} has an empty heading.`);
+  }
+});
+
+/**
+ * Refine the query from the results page's own filter bar.
+ *
+ * Both the collapsed header panel and the results page carry an input named
+ * `keywords`; the header one comes first in the DOM, so the generic fill step
+ * lands on a 0x0 element. This step scopes to the results page's filter bar.
+ *
+ * Example #1: When I refine the search to "programs"
+ * Example #2: When I refine the search to "Scholarship"
+ * Example #3: And I refine the search to "research"
+ * Example #4: When we refine the search to "Campus"
+ * Example #5: And we refine the search to "admissions"
+ */
+When(/^(?:I |we )*refine the search to "([^"]*)"$/, async function (keywords) {
+  const field = this.page.locator('.view-search .view-filters input[name="keywords"]').first();
+  const submit = this.page.locator('.view-search .view-filters .form-submit').first();
+  try {
+    await field.waitFor({ state: 'visible', timeout: 10000 });
+    await field.fill(keywords);
+    await submit.click({ timeout: 10000 });
+  } catch (e) {
+    throw friendly(
+      `Could not refine the search to "${keywords}".`,
+      'Check the search results page renders its exposed form inline. ' +
+      ((e.message || '').split('\n')[0])
+    );
+  }
+  await smartSettle(this.page, budget(this));
+});
+
+/**
+ * Assert the value of a field addressed by a registered selector name.
+ *
+ * Gherkin has no escape for a quote inside a quoted step argument, so a raw
+ * selector carrying an attribute filter cannot be written inline - the name
+ * from the selector registry stands in for it.
+ *
+ * Example #1: Then the "search field" should have the value "education"
+ * Example #2: And the "search field" should have the value "programs"
+ * Example #3: Then the "header search field" should have the value "research"
+ * Example #4: And the "search field" should have the value "Scholarship"
+ * Example #5: Then the "search field" should have the value "campus life"
+ */
+Then(/^the "([^"]*)" should have the value "([^"]*)"$/, async function (name, expected) {
+  const locator = this.page.locator(named(this, name)).first();
+  let actual = null;
+  const deadline = Date.now() + 5000;
+  while (Date.now() < deadline) {
+    actual = await locator.inputValue().catch(() => null);
+    if (actual === expected) return;
+    await this.page.waitForTimeout(100);
+  }
+  throw friendly(
+    `Expected "${name}" to hold "${expected}", found ${JSON.stringify(actual)}.`,
+    `"${name}" resolved to the selector "${named(this, name)}".`
+  );
+});
+
+/**
+ * Assert the search results page states how many results it is showing.
+ *
+ * The count comes from the view header, which the search view component prints
+ * under the filter bar - so this also proves the two are not swapped back.
+ *
+ * Example #1: Then the search results should be counted
+ * Example #2: And the search results should be counted
+ * Example #3: Then the search results should be counted
+ * Example #4: And the search results should be counted
+ * Example #5: Then the search results should be counted
+ */
+Then(/^the search results should be counted$/, async function () {
+  await smartSettle(this.page, budget(this));
+  const header = this.page.locator('.view-search .view-header').first();
+  const text = ((await header.textContent().catch(() => '')) || '').trim();
+  if (!/Displaying\s+\d+\s*-\s*\d+\s+of\s+\d+\s+results/i.test(text)) {
+    throw friendly(
+      `The result summary reads "${text}".`,
+      'Expected the view header to read "Displaying @start - @end of @total results".'
+    );
   }
 });

@@ -21,7 +21,7 @@ Feature: News - News listing
     Given I am an anonymous user
      When I go to "/news"
       And I wait until the page is loaded
-     Then "form.views-exposed-form" should be visible
+     Then "main form.views-exposed-form" should be visible
       And I should see "Search by"
       And I should see "Industry"
       And I should see "Type"

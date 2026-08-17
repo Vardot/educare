@@ -12,7 +12,7 @@ Feature: Exposed filters - Form-scoped listing filters
     Given I am an anonymous user
      When I go to "<path>"
       And I wait until the page is loaded
-     Then "form.views-exposed-form" should be visible
+     Then "main form.views-exposed-form" should be visible
       And I should see "Apply Filter"
       And I should see "Reset"
 
@@ -29,7 +29,7 @@ Feature: Exposed filters - Form-scoped listing filters
     Given I am an anonymous user
      When I go to "<path>"
       And I wait until the page is loaded
-     Then "form.views-exposed-form" should not be visible
+     Then "main form.views-exposed-form" should not be visible
 
     Examples:
       | name    | path     |

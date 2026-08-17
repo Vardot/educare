@@ -29,7 +29,7 @@ Feature: Events - Events listing
     Given I am an anonymous user
      When I go to "/events"
       And I wait until the page is loaded
-     Then "form.views-exposed-form" should be visible
+     Then "main form.views-exposed-form" should be visible
       And I should see "Search by keyword"
       And I should see "Type"
       And I should not see "Industry"

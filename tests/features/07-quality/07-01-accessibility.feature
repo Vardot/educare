@@ -47,10 +47,11 @@ Feature: Accessibility - Every shipped page is accessible
       | Privacy      | /privacy      |
 
     Examples: Content pages
-      | name         | path                                                         |
-      | News article | /news/undergraduate-robotics-team-wins-regional-championship |
-      | Event page   | /events/global-education-forum                               |
-      | Program page | /programs/biology                                            |
+      | name           | path                                                         |
+      | News article   | /news/undergraduate-robotics-team-wins-regional-championship |
+      | Event page     | /events/global-education-forum                               |
+      | Program page   | /programs/biology                                            |
+      | Search results | /search?keywords=education                                   |
 
   # The brand palette (navy, orange, cream) passes AA today. Naming the rule
   # means a designer changing a colour token gets a failure that says
@@ -67,15 +68,16 @@ Feature: Accessibility - Every shipped page is accessible
       And the page should pass the accessibility rules "aria-valid-attr, aria-valid-attr-value, aria-roles"
 
     Examples:
-      | name         | path                                                         |
-      | Home         | /                                                            |
-      | News         | /news                                                        |
-      | Events       | /events                                                      |
-      | Programs     | /programs                                                    |
-      | Contact Us   | /contact-us                                                  |
-      | News article | /news/undergraduate-robotics-team-wins-regional-championship |
-      | Event page   | /events/global-education-forum                               |
-      | Program page | /programs/biology                                            |
+      | name           | path                                                         |
+      | Home           | /                                                            |
+      | News           | /news                                                        |
+      | Events         | /events                                                      |
+      | Programs       | /programs                                                    |
+      | Contact Us     | /contact-us                                                  |
+      | News article   | /news/undergraduate-robotics-team-wins-regional-championship |
+      | Event page     | /events/global-education-forum                               |
+      | Program page   | /programs/biology                                            |
+      | Search results | /search?keywords=education                                   |
 
   # The structural facts a screen-reader user relies on to orient. 01-00 covers
   # the landmarks, skip link, language and title; these are the ones it does not:
@@ -98,17 +100,18 @@ Feature: Accessibility - Every shipped page is accessible
       And user zoom should be allowed
 
     Examples:
-      | name         | path                                                         |
-      | Home         | /                                                            |
-      | About        | /about                                                       |
-      | News         | /news                                                        |
-      | Events       | /events                                                      |
-      | Programs     | /programs                                                    |
-      | Contact Us   | /contact-us                                                  |
-      | Privacy      | /privacy                                                     |
-      | News article | /news/undergraduate-robotics-team-wins-regional-championship |
-      | Event page   | /events/global-education-forum                               |
-      | Program page | /programs/biology                                            |
+      | name           | path                                                         |
+      | Home           | /                                                            |
+      | About          | /about                                                       |
+      | News           | /news                                                        |
+      | Events         | /events                                                      |
+      | Programs       | /programs                                                    |
+      | Contact Us     | /contact-us                                                  |
+      | Privacy        | /privacy                                                     |
+      | News article   | /news/undergraduate-robotics-team-wins-regional-championship |
+      | Event page     | /events/global-education-forum                               |
+      | Program page   | /programs/biology                                            |
+      | Search results | /search?keywords=education                                   |
 
   # The exposed filter form is generated markup; its labels are what a screen
   # reader announces before each control. Auditing the form subtree on its own
@@ -118,7 +121,7 @@ Feature: Accessibility - Every shipped page is accessible
     Given I am an anonymous user
      When I go to "<path>"
       And I wait until the page is loaded
-     Then the element "form.views-exposed-form" should pass an accessibility audit
+     Then the element "main form.views-exposed-form" should pass an accessibility audit
 
     Examples:
       | name     | path      |
