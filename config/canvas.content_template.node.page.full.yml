@@ -17,7 +17,7 @@ component_tree:
   a6e4ccf8-b219-4fb7-8674-2ccaf7ba9d14:
     uuid: a6e4ccf8-b219-4fb7-8674-2ccaf7ba9d14
     component_id: block.system_breadcrumb_block
-    component_version: 0d7e961dd03aa710
+    component_version: active
     inputs:
       label: Breadcrumbs
       label_display: '0'

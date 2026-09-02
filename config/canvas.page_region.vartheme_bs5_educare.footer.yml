@@ -90,7 +90,7 @@ component_tree:
     slot: col_2
     uuid: 1b8d6230-40b5-4224-b5c1-db5e805d31ac
     component_id: block.system_menu_block.secondary
-    component_version: 7206ccf6a90c8941
+    component_version: active
     inputs:
       label: 'Footer sitemap menu'
       label_display: '0'
@@ -138,7 +138,7 @@ component_tree:
     slot: col_3
     uuid: b8266143-2902-4a49-b3f2-b8e4b1b623ed
     component_id: block.system_menu_block.social-media-menu
-    component_version: 0fcdbc0a997e263a
+    component_version: active
     inputs:
       label: 'Social media menu'
       label_display: '0'
@@ -179,7 +179,7 @@ component_tree:
     slot: col_1
     uuid: 8bea199b-c0d7-4dd3-9540-7be4f4017f47
     component_id: block.system_menu_block.footer
-    component_version: 075503dbc228a45c
+    component_version: active
     inputs:
       label: 'Footer menu'
       label_display: '0'

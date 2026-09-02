@@ -48,7 +48,7 @@ component_tree:
     slot: content
     uuid: 589cc59f-4a7b-42c2-b285-8fd7b65e6439
     component_id: block.system_branding_block
-    component_version: 7d528e00f56b3abf
+    component_version: active
     inputs:
       label: 'Site branding'
       label_display: '0'
@@ -60,7 +60,7 @@ component_tree:
     slot: content
     uuid: d5f18bf8-f056-4581-a814-029b8c567d0b
     component_id: block.system_menu_block.main
-    component_version: 322535c0078cf59c
+    component_version: active
     inputs:
       label: 'Main navigation'
       label_display: '0'
@@ -85,7 +85,7 @@ component_tree:
     slot: content
     uuid: 4d8d4f0c-cfad-4223-ab50-eef74ed55c96
     component_id: block.views_exposed_filter_block.search-block_1
-    component_version: abd3c7419d413cec
+    component_version: active
     inputs:
       label: Search
       label_display: '0'
