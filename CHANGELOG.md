@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-alpha3] - 2026-09-05
+### Changed
+- Re-exported the Canvas component configs for the Canvas Icon Picker. [#3620058](https://www.drupal.org/i/3620058)
+- Moved Search after Varbase Content Base in `recipe.yml`. [#3620242](https://www.drupal.org/i/3620242)
+- Pinned the block component versions to `active`, so a stale hash cannot 500 the Canvas pages. [#3620438](https://www.drupal.org/i/3620438)
+
+### Removed
+- The Varbase Patches requirement and the Drupal CMS wiring script from the recipe. [#3618244](https://www.drupal.org/i/3618244)
+- `drupal/varbase_dev_base` from `composer.json`: a development recipe that was required but never applied. [#3620331](https://www.drupal.org/i/3620331)
+- The dead `drupal-libraries-sync.js` script. [#3620349](https://www.drupal.org/i/3620349)
+
 ## [1.0.0-alpha2] - 2026-08-17
 ### Added
 - Header search box, a heading on the search results page, and one result per row. [#3617501](https://www.drupal.org/i/3617501)
@@ -26,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-alpha2...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-alpha3...1.0.x
+[1.0.0-alpha3]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-alpha2...1.0.0-alpha3
 [1.0.0-alpha2]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-alpha1...1.0.0-alpha2
 [1.0.0-alpha1]: https://git.drupalcode.org/project/educare/-/tags/1.0.0-alpha1

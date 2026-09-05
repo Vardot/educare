@@ -4,7 +4,7 @@
 
 # Educare
 [![pipeline status](https://git.drupalcode.org/project/educare/badges/1.0.x/pipeline.svg)](https://git.drupalcode.org/project/educare/-/pipelines)
-[![Educare](https://img.shields.io/badge/Educare-1.0.0--alpha2-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/educare/-/pipelines?ref=1.0.0-alpha2)
+[![Educare](https://img.shields.io/badge/Educare-1.0.0--alpha3-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/educare/-/pipelines?ref=1.0.0-alpha3)
 
 An **education site template** for schools, universities, academies and e-learning platforms, built on
 the [Varbase](https://www.drupal.org/project/varbase) distribution with the
