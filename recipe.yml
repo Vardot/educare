@@ -1,6 +1,6 @@
 name: Educare
 type: Site
-description: A site template recipe for education websites, built the Varbase recipe-first way.
+description: 'Designed for schools, universities and colleges, this template features ready-made pages for programs, admissions and student life, with program, news and event content, search and a contact form.'
 recipes:
 - varbase_users_base
 - drupal_cms_admin_ui
