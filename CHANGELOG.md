@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta1] - 2026-09-05
+### Changed
+- Gave the site template a properly framed installer screenshot and a description in the Drupal CMS house style. [#3620996](https://www.drupal.org/i/3620996)
+
 ## [1.0.0-alpha3] - 2026-09-05
 ### Changed
 - Re-exported the Canvas component configs for the Canvas Icon Picker. [#3620058](https://www.drupal.org/i/3620058)
@@ -37,7 +41,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-alpha3...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-beta1...1.0.x
+[1.0.0-beta1]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-alpha3...1.0.0-beta1
 [1.0.0-alpha3]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-alpha2...1.0.0-alpha3
 [1.0.0-alpha2]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-alpha1...1.0.0-alpha2
 [1.0.0-alpha1]: https://git.drupalcode.org/project/educare/-/tags/1.0.0-alpha1
