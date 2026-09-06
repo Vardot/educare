@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-09-06
+### Changed
+- First stable release. The recipe is unchanged from 1.0.0-rc1; every `drupal/varbase_*` and `drupal/vartheme_bs5_educare` dependency now resolves to a stable 1.0.0 release, so `composer require drupal/educare:~1` installs on a stock Drupal CMS project template at its default `minimum-stability: stable`.
+- Named the colour contrast and top-level heading accessibility rules in the home page regression scenarios. [#3621202](https://www.drupal.org/i/3621202)
+
 ## [1.0.0-rc1] - 2026-09-06
 ### Changed
 - Release candidate. No functional changes since 1.0.0-beta1; the dependencies are pinned to releases instead of `1.0.x-dev`.
@@ -45,7 +50,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-rc1...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.0...1.0.x
+[1.0.0]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-rc1...1.0.0
 [1.0.0-rc1]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-beta1...1.0.0-rc1
 [1.0.0-beta1]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-alpha3...1.0.0-beta1
 [1.0.0-alpha3]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-alpha2...1.0.0-alpha3
