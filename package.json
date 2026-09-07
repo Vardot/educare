@@ -14,7 +14,7 @@
     },
     "devDependencies": {
         "eslint": "^9.0.0",
-        "@vardot/varbase-e2e": "^2"
+        "@vardot/varbase-e2e": "^2.0.4"
     },
     "overrides": {
         "@cucumber/cucumber": "12.9.0",

@@ -173,68 +173,6 @@ Then(/^the canonical url should end with "([^"]*)"$/, async function (path) {
   assert.ok(href.endsWith(path), `The canonical url is "${href}", which does not end with "${path}".`);
 });
 
-/**
- * Assert the current user is refused a path — the site answers "403 Forbidden"
- * or "404 Not Found" and does not render the requested administrative screen.
- *
- * Asserts the HTTP status, not a message: a template can word "Access denied"
- * any way it likes, but a 200 on an editorial screen is a permission defect.
- *
- * Example #1: Then I should be refused "/admin/content"
- * Example #2: Then I should be refused "/node/add/program"
- * Example #3: And I should be refused "/admin/people"
- * Example #4: Then we should be refused "/admin/structure/taxonomy"
- * Example #5: And I should be refused "/admin/modules"
- */
-Then(/^(?:I |we )*should be refused "([^"]*)"$/, async function (path) {
-  const response = await this.page.goto(absolute(this, path), { waitUntil: 'domcontentloaded' });
-  const status = response ? response.status() : 0;
-  assert.ok(
-    status === 403 || status === 404,
-    `Expected "${path}" to be refused, but the site answered ${status}.`
-  );
-  await smartSettle(this.page, budget(this));
-});
-
-/**
- * Assert the current user may open a path — the site answers 200 and renders it.
- *
- * Pairs with "should be refused" so a permission scenario always carries the
- * positive half: a role that can reach nothing would otherwise pass every
- * refusal assertion.
- *
- * Example #1: Then I should be allowed "/admin/content"
- * Example #2: Then I should be allowed "/node/add/news"
- * Example #3: And I should be allowed "/admin/content/media"
- * Example #4: Then we should be allowed "/node/add/event"
- * Example #5: And I should be allowed "/admin/content/pages"
- */
-Then(/^(?:I |we )*should be allowed "([^"]*)"$/, async function (path) {
-  const response = await this.page.goto(absolute(this, path), { waitUntil: 'domcontentloaded' });
-  const status = response ? response.status() : 0;
-  assert.strictEqual(status, 200, `Expected "${path}" to be allowed, but the site answered ${status}.`);
-  await smartSettle(this.page, budget(this));
-});
-
-/**
- * Assert the document title. varbase-e2e only ships `the page should have a
- * title` (non-empty) and a `wait until the page title contains` wait, so there
- * is no way to state the SEO contract as an assertion.
- *
- * Example #1: Then the page title should contain "Biology"
- * Example #2: Then the page title should contain "Global Education Forum"
- * Example #3: And the page title should contain "Educare"
- * Example #4: Then the page title should contain "News"
- * Example #5: And the page title should contain "About"
- */
-Then(/^the page title should contain "([^"]*)"$/, async function (expected) {
-  const title = await this.page.title();
-  assert.ok(
-    title.toLowerCase().includes(expected.toLowerCase()),
-    `The page title is "${title}", which does not contain "${expected}".`
-  );
-});
-
 /** Read the "Showing 1-12 of 38" / "Shown articles: 1-12 of 15" total. */
 async function resultTotal(page) {
   return page.evaluate(() => {
