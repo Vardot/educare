@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-09-08
+### Changed
+- Pinned every base recipe and the Educare theme to their released versions instead of dev branches.
+
+### Fixes
+- Removed the four never-applied base recipes, so the template resolves on Stable for Drupal CMS. [#3621335](https://www.drupal.org/i/3621335)
+- Took the refused, allowed and page-title steps from the Varbase functional testing suite. [#3621385](https://www.drupal.org/i/3621385)
+
 ## [1.0.0] - 2026-09-06
 ### Changed
 - First stable release. The recipe is unchanged from 1.0.0-rc1; every `drupal/varbase_*` and `drupal/vartheme_bs5_educare` dependency now resolves to a stable 1.0.0 release, so `composer require drupal/educare:~1` installs on a stock Drupal CMS project template at its default `minimum-stability: stable`.
@@ -50,7 +58,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.0...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.1...1.0.x
+[1.0.1]: https://git.drupalcode.org/project/educare/-/compare/1.0.0...1.0.1
 [1.0.0]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-rc1...1.0.0
 [1.0.0-rc1]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-beta1...1.0.0-rc1
 [1.0.0-beta1]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-alpha3...1.0.0-beta1
