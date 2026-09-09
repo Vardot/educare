@@ -1063,51 +1063,9 @@ config:
       disable: []
     canvas.component.sdc.navigation.title:
       disable: []
-    canvas.component.sdc.vartheme_bs5_educare.details:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.field:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.fieldset:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.form:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.form-element:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.form-element-radiocheckbox:
-      disable: []
     canvas.component.sdc.vartheme_bs5_educare.input-checkbox:
       disable: []
     canvas.component.sdc.vartheme_bs5_educare.input-submit:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.links-dropbutton:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.list:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.local-tasks:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.page:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.page-footer:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.radios:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.region:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.select:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.social-auth:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.user:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.views-view:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.views-view-grid:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.views-view-list:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.views-view-summary:
-      disable: []
-    canvas.component.sdc.vartheme_bs5_educare.views-view-unformatted:
       disable: []
     core.entity_form_display.node.event.default:
       simpleConfigUpdate:
