@@ -21,16 +21,10 @@
 #              site:install / npm install per job.
 # report     - merge every bucket's cucumber JSON into one HTML + PDF report.
 #
-# = KNOWINGLY RED TODAY ========================================================
-# The install job cannot currently complete, for a defect OUTSIDE Educare: see
-# the long comment on the job itself (Canvas ComponentSourceHooks autowiring the
-# synthetic `kernel` service during a recipe install). Because that job now
-# gates the suite, everything downstream is SKIPPED and the pipeline is RED.
-#
-# That is deliberate. The job is `allow_failure: false` ON PURPOSE. Allowing it
-# to fail would turn the pipeline GREEN while executing ZERO tests - false
-# confidence, and strictly worse than an honest red. Do not mask it. It goes
-# green on its own, with no edit to this file, once Canvas is fixed upstream.
+# Every job here is `allow_failure: false`: the install job gates the functional
+# suite, so if it were allowed to fail the suite would be skipped and the
+# pipeline would report GREEN while running ZERO tests. Keep it unmasked - no
+# allow_failure, no `|| true` on the install command.
 #
 # = Automated Functional Acceptance Testing (@vardot/varbase-e2e) =
 ################################################################################
@@ -257,29 +251,23 @@ workflow:
 # the site, dump the DB, and cache the built site + node_modules + browser.
 # This is the ONLY host build, and it GATES the whole functional suite.
 #
-# NOTE ON `allow_failure: false` - this job is EXPECTED TO FAIL TODAY, and the
-# cause is upstream, not in Educare:
+# HISTORY, worth keeping: this job used to abort with
 #
 #   Symfony\...\RuntimeException: You have requested a synthetic service
 #   ("kernel"). The DIC does not know how to construct this service.
 #
-# drupal_cms_helper 2.1.4's RecipeSubscriber::onApply() saves system.site during
-# RecipeAppliedEvent -> Config::save() -> hasConfigSchema() ->
-# TypedConfigManager::alterDefinitions(), which resolves every
-# hook_config_schema_info_alter and so instantiates Canvas's
-# ComponentSourceHooks - a class that declares #[Hook('config_schema_info_alter')]
-# and constructor-injects #[Autowire(service: 'kernel')]. During install the
-# container is still a ContainerBuilder where `kernel` is synthetic. The autowire
-# entered between Canvas 1.4.2 and 1.5.2 (present in 1.11.0). It reproduces with
-# the stock drupal_cms_starter recipe and zero Educare code, and it also breaks
-# the browser installer at 98%.
+# Canvas installs canvas_page_template_component lazily, DURING
+# RecipeAppliedEvent. Installing a module part-way through that event rebuilds
+# the container, and in the rebuilt ContainerBuilder `kernel` is synthetic and
+# unset, so the next hook resolution needing it threw. Declaring the module in
+# the recipe's own `install:` list means it is installed before the event runs,
+# so there is no mid-event rebuild. Fixed in #3622106; found first on Horizon
+# Aid #3622092. If a future recipe change reintroduces a mid-event module
+# install, this is the failure it will look like.
 #
-# It is `allow_failure: false` ON PURPOSE, here and in the manual rule below.
-# This job gates the functional suite, so if it were allowed to fail the whole
-# suite would be SKIPPED and the pipeline would report GREEN while running ZERO
-# tests. An honest red beats false confidence. Do NOT mask this - no
-# allow_failure, no `|| true`. The job runs the real steps and reports the real
-# failure, and it goes green on its own once Canvas is fixed upstream.
+# `allow_failure: false`, here and in the manual rule below, is deliberate: the
+# job gates the functional suite, so allowing it to fail would skip the suite
+# and report GREEN while running ZERO tests. Do NOT mask it.
 "📦 Drupal CMS - Educare":
   stage: pre-test
   rules:
@@ -293,14 +281,14 @@ workflow:
   image: mcr.microsoft.com/playwright:v1.56.0-noble
   needs: []
   timeout: 2h
-  # Only infrastructure faults are retried. `script_failure` is deliberately NOT
-  # retried while the upstream defect above stands: the install is a guaranteed
-  # script failure today, and retrying it would burn three full builds to reach
-  # the same red. Restore `script_failure` here - it covers transient github
-  # rate limits on composer dists - once the install can actually succeed.
+  # composer pulls dists from github.com unauthenticated; a rate limit there is
+  # transient, so let the runner re-attempt before the pipeline goes red.
+  # `script_failure` was held back while the install could not pass at all; it
+  # is restored now that it can (#3622106).
   retry:
     max: 2
     when:
+      - script_failure
       - runner_system_failure
       - stuck_or_timeout_failure
   cache: *build_cache
