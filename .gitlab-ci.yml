@@ -8,7 +8,7 @@
 # validate   - lint YAML, spell-check + ESLint the suite, and a Cucumber dry-run
 #              that proves every step phrasing in the functional testing suite
 #              resolves (all reproducible offline in gitlab-ci-local).
-# pre-test   - 📦 (Drupal CMS) Install Educare site template: build a drupal/cms
+# pre-test   - 📦 Drupal CMS - Educare: build a drupal/cms
 #              host project, require the checked-out Educare recipe from a path
 #              repository, install it with `drush site:install recipes/educare`,
 #              prepare it for deterministic testing, then DUMP the DB (gzip).
@@ -97,7 +97,7 @@ workflow:
   - "eslint.config.js"
   - "playwright.config.ts"
 
-# Build cache populated by 📦 (Drupal CMS) Install Educare site template: the built
+# Build cache populated by 📦 Drupal CMS - Educare: the built
 # host site (testsite/), the node_modules and the composer + Playwright download
 # caches. The functional jobs pull this (see .functional_cache) so they skip the
 # whole host build and only restore the DB dump. One host now, so ONE key.
@@ -280,7 +280,7 @@ workflow:
 # tests. An honest red beats false confidence. Do NOT mask this - no
 # allow_failure, no `|| true`. The job runs the real steps and reports the real
 # failure, and it goes green on its own once Canvas is fixed upstream.
-"📦 (Drupal CMS) Install Educare site template":
+"📦 Drupal CMS - Educare":
   stage: pre-test
   rules:
     - <<: *run_on_release_refs
@@ -362,7 +362,7 @@ workflow:
 
 # = Automated Functional Acceptance Testing - one parallel job per feature
 # bucket. Restores the built site + DB dump from
-# 📦 (Drupal CMS) Install Educare site template.
+# 📦 Drupal CMS - Educare.
 "🧪 Functional":
   stage: functional
   rules:
@@ -372,7 +372,7 @@ workflow:
     - when: manual
       allow_failure: false
   image: mcr.microsoft.com/playwright:v1.56.0-noble
-  needs: ["📦 (Drupal CMS) Install Educare site template"]
+  needs: ["📦 Drupal CMS - Educare"]
   timeout: 2h
   retry:
     max: 2
