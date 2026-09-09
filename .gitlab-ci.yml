@@ -1,42 +1,60 @@
 ################################################################################
 # GitLab CI for the Educare site template recipe.
 #
-# build    - validate the recipe's composer.json.
-# validate - lint YAML, spell-check + ESLint the suite, and a Cucumber dry-run
-#            that proves every step phrasing in the Varbase functional testing
-#            suite resolves (all reproducible offline in gitlab-ci-local).
-# pre-test - 📦 (Varbase) Install Educare site template: build a Varbase 11 host project, require the
-#            checked-out Educare recipe, install it with
-#            `drush site:install recipes/educare`, prepare it for deterministic
-#            testing, then DUMP the DB (gzip). The built site (testsite/), the
-#            varbase-e2e node_modules and the Playwright browser are cached so
-#            the test jobs reuse them instead of rebuilding per job.
-# test     - one parallel varbase-e2e job per feature bucket: pull the build
-#            cache, restore the DB dump (seconds), serve the site and drive it
-#            through the browser. No composer create-project / require /
-#            site:install / npm install per job.
-# report   - merge every bucket's cucumber JSON into one HTML + PDF report.
+# Drupal CMS is the ONE AND ONLY host project. The Varbase host build was
+# removed in issue #3622091: automated testing now runs on drupal/cms alone.
 #
-# = Automated Functional Acceptance Testing (varbase-e2e) =
+# build      - validate the recipe's composer.json.
+# validate   - lint YAML, spell-check + ESLint the suite, and a Cucumber dry-run
+#              that proves every step phrasing in the functional testing suite
+#              resolves (all reproducible offline in gitlab-ci-local).
+# pre-test   - 📦 (Drupal CMS) Install Educare site template: build a drupal/cms
+#              host project, require the checked-out Educare recipe from a path
+#              repository, install it with `drush site:install recipes/educare`,
+#              prepare it for deterministic testing, then DUMP the DB (gzip).
+#              The built site (testsite/), the node_modules and the Playwright
+#              browser are cached so the functional jobs reuse them instead of
+#              rebuilding per job. THIS JOB GATES THE WHOLE SUITE.
+# functional - one parallel functional job per feature bucket: pull the build
+#              cache, restore the DB dump (seconds), serve the site and drive it
+#              through the browser. No composer create-project / require /
+#              site:install / npm install per job.
+# report     - merge every bucket's cucumber JSON into one HTML + PDF report.
+#
+# = KNOWINGLY RED TODAY ========================================================
+# The install job cannot currently complete, for a defect OUTSIDE Educare: see
+# the long comment on the job itself (Canvas ComponentSourceHooks autowiring the
+# synthetic `kernel` service during a recipe install). Because that job now
+# gates the suite, everything downstream is SKIPPED and the pipeline is RED.
+#
+# That is deliberate. The job is `allow_failure: false` ON PURPOSE. Allowing it
+# to fail would turn the pipeline GREEN while executing ZERO tests - false
+# confidence, and strictly worse than an honest red. Do not mask it. It goes
+# green on its own, with no edit to this file, once Canvas is fixed upstream.
+#
+# = Automated Functional Acceptance Testing (@vardot/varbase-e2e) =
 ################################################################################
 
 stages:
   - build
   - validate
   - pre-test
-  - test
+  - functional
   - report
 
 variables:
   COMPOSER_ALLOW_SUPERUSER: "1"
   COMPOSER_MEMORY_LIMIT: "-1"
   COMPOSER_NO_INTERACTION: "1"
-  VARBASE_PROJECT: "drupal/varbase_project:11.0.x-dev"
   DRUPAL_ADMIN_USERNAME: "webmaster"
   DRUPAL_ADMIN_PASSWORD: "dD.123123ddd"
-  # Host site is built under testsite/ (this repo is a recipe, not a docroot).
+  # The drupal/cms host site is built under testsite/ (this repo is a recipe,
+  # not a docroot). drupal/cms sets bin-dir to vendor/bin, so drush lives at
+  # $SITE_DIR/vendor/bin/drush - NOT $SITE_DIR/bin/drush as a Varbase project
+  # would. $DRUSH is that path, used by every job.
   SITE_DIR: "$CI_PROJECT_DIR/testsite"
   WEB_ROOT: "$CI_PROJECT_DIR/testsite/web"
+  DRUSH: "$CI_PROJECT_DIR/testsite/vendor/bin/drush"
   DB_URL: "mysql://drupal:drupal@database/drupal"
   LAUNCH_URL: "http://127.0.0.1:8888"
   FORCE_COLOR: "1"
@@ -79,20 +97,20 @@ workflow:
   - "eslint.config.js"
   - "playwright.config.ts"
 
-# Build cache populated by 📦 (Varbase) Install Educare site template: the built host site (testsite/),
-# the varbase-e2e node_modules and the composer + Playwright download caches.
-# The test jobs pull this (see .test_cache) so they skip the whole host build
-# and only restore the DB dump.
-.varbase_cache: &varbase_cache
-  key: "educare-build-v2-$CI_COMMIT_REF_SLUG"
+# Build cache populated by 📦 (Drupal CMS) Install Educare site template: the built
+# host site (testsite/), the node_modules and the composer + Playwright download
+# caches. The functional jobs pull this (see .functional_cache) so they skip the
+# whole host build and only restore the DB dump. One host now, so ONE key.
+.build_cache: &build_cache
+  key: "educare-cms-build-v1-$CI_COMMIT_REF_SLUG"
   paths:
     - .cache/composer
     - .cache/ms-playwright
     - testsite
     - node_modules
 
-.test_cache: &test_cache
-  key: "educare-build-v2-$CI_COMMIT_REF_SLUG"
+.functional_cache: &functional_cache
+  key: "educare-cms-build-v1-$CI_COMMIT_REF_SLUG"
   policy: pull
   paths:
     - .cache/composer
@@ -235,28 +253,57 @@ workflow:
   script:
     - VARBASE_E2E_REPORT_DISABLE=1 ./node_modules/.bin/cucumber-js --config cucumber.js --dry-run
 
-# = pre-test = build the host Varbase site, apply the Educare recipe, seed the
-# site, dump the DB, and cache the built site + node_modules + browser.
-"📦 (Varbase) Install Educare site template":
+# = pre-test = build the drupal/cms host site, apply the Educare recipe, seed
+# the site, dump the DB, and cache the built site + node_modules + browser.
+# This is the ONLY host build, and it GATES the whole functional suite.
+#
+# NOTE ON `allow_failure: false` - this job is EXPECTED TO FAIL TODAY, and the
+# cause is upstream, not in Educare:
+#
+#   Symfony\...\RuntimeException: You have requested a synthetic service
+#   ("kernel"). The DIC does not know how to construct this service.
+#
+# drupal_cms_helper 2.1.4's RecipeSubscriber::onApply() saves system.site during
+# RecipeAppliedEvent -> Config::save() -> hasConfigSchema() ->
+# TypedConfigManager::alterDefinitions(), which resolves every
+# hook_config_schema_info_alter and so instantiates Canvas's
+# ComponentSourceHooks - a class that declares #[Hook('config_schema_info_alter')]
+# and constructor-injects #[Autowire(service: 'kernel')]. During install the
+# container is still a ContainerBuilder where `kernel` is synthetic. The autowire
+# entered between Canvas 1.4.2 and 1.5.2 (present in 1.11.0). It reproduces with
+# the stock drupal_cms_starter recipe and zero Educare code, and it also breaks
+# the browser installer at 98%.
+#
+# It is `allow_failure: false` ON PURPOSE, here and in the manual rule below.
+# This job gates the functional suite, so if it were allowed to fail the whole
+# suite would be SKIPPED and the pipeline would report GREEN while running ZERO
+# tests. An honest red beats false confidence. Do NOT mask this - no
+# allow_failure, no `|| true`. The job runs the real steps and reports the real
+# failure, and it goes green on its own once Canvas is fixed upstream.
+"📦 (Drupal CMS) Install Educare site template":
   stage: pre-test
   rules:
     - <<: *run_on_release_refs
     - changes: *recipe_app_changes
       when: on_success
+    # Its files did not change: keep the job LISTED as a non-optional manual
+    # (play button). allow_failure stays false - when it IS run, it must pass.
     - when: manual
       allow_failure: false
   image: mcr.microsoft.com/playwright:v1.56.0-noble
   needs: []
   timeout: 2h
-  # composer pulls dists from github.com unauthenticated; a rate limit there is
-  # transient, so let the runner re-attempt before the pipeline goes red.
+  # Only infrastructure faults are retried. `script_failure` is deliberately NOT
+  # retried while the upstream defect above stands: the install is a guaranteed
+  # script failure today, and retrying it would burn three full builds to reach
+  # the same red. Restore `script_failure` here - it covers transient github
+  # rate limits on composer dists - once the install can actually succeed.
   retry:
     max: 2
     when:
-      - script_failure
       - runner_system_failure
       - stuck_or_timeout_failure
-  cache: *varbase_cache
+  cache: *build_cache
   services:
     - name: mariadb:10.11
       alias: database
@@ -273,38 +320,51 @@ workflow:
   before_script:
     - !reference [.fragments, host_php_setup]
   script:
-    # = Build a Varbase 11 project, then require the checked-out recipe =
+    # = Build a Drupal CMS project, then require the checked-out recipe =
     # The build cache may restore a stale testsite/; composer create-project
     # refuses a non-empty target, so start from a clean dir on every run.
     - rm -rf "$SITE_DIR"
-    - composer create-project $VARBASE_PROJECT "$SITE_DIR" --no-interaction --no-install --no-scripts
+    - composer create-project drupal/cms "$SITE_DIR" --no-interaction --no-install --no-scripts
     - cd "$SITE_DIR"
     - composer config minimum-stability dev
-    - composer config repositories.educare path "$CI_PROJECT_DIR"
+    # Test THIS branch, not the published drupal/educare on Packagist.
+    # symlink:false - the recipe must be COPIED in. A path-repo symlink points
+    # recipes/educare back at $CI_PROJECT_DIR, which contains this build, and any
+    # recursive scan then loops until "Too many levels of symbolic links". (See
+    # the job removed in 3ce017b, issue #3618244.)
+    - composer config repositories.educare '{"type":"path","url":"'"$CI_PROJECT_DIR"'","options":{"symlink":false}}' --json
     - composer require drupal/educare:@dev --no-interaction --no-progress --prefer-dist --with-all-dependencies
+    # The recipe chain imports default content that writes into public://
+    # (drupal_cms_admin_ui ships a login wallpaper). On a fresh CI checkout
+    # sites/default is not writable, so site:install cannot create the files
+    # directory and the import dies with "The specified file ... could not be
+    # copied because the destination directory 'public://' is not properly
+    # configured." Create it up front and make it writable.
+    - mkdir -p "$WEB_ROOT/sites/default/files"
+    - chmod -R 0777 "$WEB_ROOT/sites/default"
     # = Install the site from the Educare recipe =
-    - ./bin/drush site:install recipes/educare --db-url=$DB_URL
+    - $DRUSH site:install recipes/educare --db-url=$DB_URL
         --account-name=$DRUPAL_ADMIN_USERNAME --account-pass=$DRUPAL_ADMIN_PASSWORD
         --account-mail=webmaster@vardot.com --site-name="Educare" --locale=en -y
     # = Prepare for deterministic testing =
-    - ./bin/drush pm:uninstall antibot -y || true
-    - ./bin/drush config:set user.flood ip_limit 1000000 -y
-    - ./bin/drush config:set user.flood user_limit 1000000 -y
-    - ./bin/drush config:set system.logging error_level all -y
-    - ./bin/drush cache:rebuild
-    # = Install the varbase-e2e suite + the matching Chromium (cached) =
+    - $DRUSH pm:uninstall antibot -y || true
+    - $DRUSH config:set user.flood ip_limit 1000000 -y
+    - $DRUSH config:set user.flood user_limit 1000000 -y
+    - $DRUSH config:set system.logging error_level all -y
+    - $DRUSH cache:rebuild
+    # = Install the functional testing suite + the matching Chromium (cached) =
     - cd "$CI_PROJECT_DIR"
     - npm install --no-audit --no-fund
     - ./node_modules/.bin/playwright install chromium
-    # = Dump the prepared DB for the parallel test jobs =
-    - $SITE_DIR/bin/drush --root=$WEB_ROOT sql:dump --gzip --result-file=$CI_PROJECT_DIR/educare-db.sql
+    # = Dump the prepared DB for the parallel functional jobs =
+    - $DRUSH --root=$WEB_ROOT sql:dump --gzip --result-file=$CI_PROJECT_DIR/educare-db.sql
   allow_failure: false
 
-
-# = Automated Functional Acceptance Testing (varbase-e2e) - one parallel job per
-# feature bucket. Restores the built site + DB dump from 📦 (Varbase) Install Educare site template.
-"🧪 varbase-e2e":
-  stage: test
+# = Automated Functional Acceptance Testing - one parallel job per feature
+# bucket. Restores the built site + DB dump from
+# 📦 (Drupal CMS) Install Educare site template.
+"🧪 Functional":
+  stage: functional
   rules:
     - <<: *run_on_release_refs
     - changes: *recipe_app_changes
@@ -312,7 +372,7 @@ workflow:
     - when: manual
       allow_failure: false
   image: mcr.microsoft.com/playwright:v1.56.0-noble
-  needs: ["📦 (Varbase) Install Educare site template"]
+  needs: ["📦 (Drupal CMS) Install Educare site template"]
   timeout: 2h
   retry:
     max: 2
@@ -320,7 +380,7 @@ workflow:
       - script_failure
       - runner_system_failure
       - stuck_or_timeout_failure
-  cache: *test_cache
+  cache: *functional_cache
   parallel:
     matrix:
       - SUITE: "01-website-base-requirements"
@@ -376,11 +436,11 @@ workflow:
     # testsite/ + node_modules + the browser arrive from the pull-only cache;
     # only PHP (for drush) is added, then the seeded DB dump is restored.
     - !reference [.fragments, host_php_setup]
-    - gunzip -c $CI_PROJECT_DIR/educare-db.sql.gz | $SITE_DIR/bin/drush --root=$WEB_ROOT sql:cli
-    - $SITE_DIR/bin/drush --root=$WEB_ROOT cache:rebuild
+    - gunzip -c $CI_PROJECT_DIR/educare-db.sql.gz | $DRUSH --root=$WEB_ROOT sql:cli
+    - $DRUSH --root=$WEB_ROOT cache:rebuild
   script:
     # Serve the restored site (parallel workers for the Canvas editor mounts).
-    - PHP_CLI_SERVER_WORKERS=8 $SITE_DIR/bin/drush --root=$WEB_ROOT runserver 127.0.0.1:8888 > $CI_PROJECT_DIR/runserver.log 2>&1 &
+    - PHP_CLI_SERVER_WORKERS=8 $DRUSH --root=$WEB_ROOT runserver 127.0.0.1:8888 > $CI_PROJECT_DIR/runserver.log 2>&1 &
     - sleep 8
     - cd "$CI_PROJECT_DIR"
     # One feature bucket per matrix job. cucumber.js reads FEATURES.
@@ -408,14 +468,21 @@ workflow:
       when: always
     - when: never
   image: node:20
-  needs: ["🧪 varbase-e2e"]
+  needs: ["🧪 Functional"]
   dependencies:
-    - "🧪 varbase-e2e"
+    - "🧪 Functional"
   before_script:
     - apt-get update -y && apt-get install -y jq
     - npm install --no-save --no-audit --no-fund @vardot/varbase-e2e
     - ./node_modules/.bin/playwright install --with-deps chromium
   script:
+    # The functional jobs are skipped when the install gate fails, leaving no
+    # cucumber JSON. The glob would then reach jq unexpanded and this job would
+    # go red for having nothing to do, masking the real failure upstream.
+    - if ! ls tests/reports/cucumber_report--*.json >/dev/null 2>&1; then
+        echo "No cucumber JSON was produced - the functional jobs did not run. Nothing to report.";
+        exit 0;
+      fi
     - jq -s 'add' tests/reports/cucumber_report--*.json > tests/reports/cucumber_report.json
     - export REPORT="educare--${CI_COMMIT_REF_SLUG}--automated-functional-testing-report--$(date +%Y-%m-%d)--$(date +%H-%M)"
     - node ./node_modules/@vardot/varbase-e2e/bin/generate-reports.js
