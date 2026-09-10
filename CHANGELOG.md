@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-09-10
+### Changed
+- Added a Drupal CMS build-and-install CI job and switched functional testing to Drupal CMS only. [#3622091](https://www.drupal.org/i/3622091)
+- Pinned every base recipe and the Educare theme to their released versions instead of dev branches.
+
+### Fixes
+- Install `canvas_page_template_component` from the recipe, so `drush site:install` on a Drupal CMS host no longer aborts with a synthetic service ("kernel") error. [#3622106](https://www.drupal.org/i/3622106)
+- Removed the 21 Canvas component configs for noUi Vartheme BS5 Educare components shipped in a broken fallback state. [#3622085](https://www.drupal.org/i/3622085)
+
 ## [1.0.1] - 2026-09-08
 ### Changed
 - Pinned every base recipe and the Educare theme to their released versions instead of dev branches.
@@ -58,7 +67,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.1...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.2...1.0.x
+[1.0.2]: https://git.drupalcode.org/project/educare/-/compare/1.0.1...1.0.2
 [1.0.1]: https://git.drupalcode.org/project/educare/-/compare/1.0.0...1.0.1
 [1.0.0]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-rc1...1.0.0
 [1.0.0-rc1]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-beta1...1.0.0-rc1
