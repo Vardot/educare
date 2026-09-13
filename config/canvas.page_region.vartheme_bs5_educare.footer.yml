@@ -73,7 +73,7 @@ component_tree:
       size: btn-md
       label: SUBSCRIBE
       href:
-        uri: 'internal:/contact-us/'
+        uri: 'internal:/newsletter'
         options: {  }
       target: self
       disabled: false

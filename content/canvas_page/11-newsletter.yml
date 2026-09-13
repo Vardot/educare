@@ -1,0 +1,167 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000100
+  default_langcode: en
+default:
+  revision_user:
+  - target_id: 1
+  revision_log:
+  - value: Created the Newsletter page
+  status:
+  - value: true
+  owner:
+  - target_id: 1
+  title:
+  - value: Newsletter
+  components:
+  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000101
+    component_id: sdc.vartheme_bs5_educare.section
+    inputs:
+      bg_edge2edge: false
+      container_type: none
+      background_color: none
+      text_color: auto
+      columns: '100'
+      gutter: gx-3 gy-3
+      padding_block_start: pt-0
+      padding_block_end: pb-0
+      section_header: true
+      section_footer: false
+      aos_once: false
+  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000102
+    component_id: block.system_breadcrumb_block
+    inputs:
+      label: ''
+      label_display: '0'
+    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000101
+    slot: header_slot
+  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000103
+    component_id: sdc.vartheme_bs5_educare.heading
+    inputs:
+      heading_text: Newsletter
+      level: 1
+      text_size: h2
+      target: _self
+    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000101
+    slot: header_slot
+  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000104
+    component_id: sdc.vartheme_bs5_educare.spacer
+    inputs:
+      size: py-3
+  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
+    component_id: sdc.vartheme_bs5_educare.section
+    inputs:
+      bg_edge2edge: true
+      container_type: container
+      background_color: none
+      text_color: auto
+      columns: 67-33
+      gutter: gx-5 gy-5
+      padding_block_start: pt-0
+      padding_block_end: pb-5
+      section_header: false
+      section_footer: false
+      aos_once: false
+  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000106
+    component_id: sdc.vartheme_bs5_educare.heading
+    inputs:
+      heading_text: Be the first to hear
+      level: 2
+      text_size: h3
+      target: _self
+    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
+    slot: col_1
+  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000107
+    component_id: sdc.vartheme_bs5_educare.text
+    inputs:
+      text:
+        value: <p>Sign up for university events, news, and updates, sent straight to your inbox.</p>
+        format: canvas_html_block
+      text_size: none
+    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
+    slot: col_1
+  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000108
+    component_id: block.webform_block
+    inputs:
+      label: Newsletter Subscribe
+      label_display: '0'
+      webform_id: newsletter_subscribe
+      default_data: ''
+      redirect: false
+      lazy: false
+    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
+    slot: col_1
+  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000109
+    component_id: sdc.vartheme_bs5_educare.text
+    inputs:
+      text:
+        value: <p class="mb-0">No spam. Unsubscribe any time.</p>
+        format: canvas_html_block
+      text_size: none
+      text_color: text-body
+    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
+    slot: col_1
+  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000110
+    component_id: sdc.vartheme_bs5_educare.group
+    inputs:
+      background_color: bg-secondary-subtle
+      direction: vertical
+      gap: gap-3
+      align_items: align-items-start
+      justify_content: justify-content-start
+      padding_block_start: pt-4
+      padding_block_end: pb-4
+      padding_inline_start: ps-4
+      padding_inline_end: pe-4
+      margin_block_start: mt-0
+      margin_block_end: mb-0
+      margin_inline_start: ms-0
+      margin_inline_end: me-0
+      radius: rounded-3
+      border: none
+    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
+    slot: col_2
+  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000111
+    component_id: sdc.vartheme_bs5_educare.heading
+    inputs:
+      heading_text: What you will receive
+      level: 3
+      text_size: h5
+      target: _self
+    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000110
+    slot: content
+  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000112
+    component_id: sdc.vartheme_bs5_educare.text
+    inputs:
+      text:
+        value: <p class="mb-0"><strong>Campus news</strong><br>Announcements from across the university.</p>
+        format: canvas_html_block
+      text_size: none
+    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000110
+    slot: content
+  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000113
+    component_id: sdc.vartheme_bs5_educare.text
+    inputs:
+      text:
+        value: <p class="mb-0"><strong>Research highlights</strong><br>What our faculties and students are working on.</p>
+        format: canvas_html_block
+      text_size: none
+    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000110
+    slot: content
+  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000114
+    component_id: sdc.vartheme_bs5_educare.text
+    inputs:
+      text:
+        value: <p class="mb-0"><strong>Events</strong><br>Open days, lectures and deadlines, before they pass.</p>
+        format: canvas_html_block
+      text_size: none
+    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000110
+    slot: content
+  path:
+  - alias: /newsletter
+    langcode: en
+  revision_translation_affected:
+  - value: true
+  metatags:
+  - value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","title":"[canvas_page:title] | [site:name]"}'

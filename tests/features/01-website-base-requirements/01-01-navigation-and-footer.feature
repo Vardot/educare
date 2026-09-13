@@ -81,16 +81,27 @@ Feature: Website Base Requirements - Main navigation and footer
       And the "X-Twitter" link should be visible
 
   # The newsletter block is a call to action, not a form: its Subscribe button
-  # sends the visitor to the contact page. Asserting the destination catches the
-  # button being wired to a dead or placeholder URL.
+  # sends the visitor to the Newsletter Subscribe form. Asserting the destination
+  # catches the button being wired to a dead or placeholder URL, and catches it
+  # pointing somewhere that does not match its label.
   @check @local @development @staging @production
-  Scenario: The newsletter call to action invites a subscription and reaches the contact page
+  Scenario: The newsletter call to action invites a subscription and reaches the newsletter form
     Given I am an anonymous user
      When I go to "/"
       And I wait until the page is loaded
      Then I should see "Subscribe to Our Newsletters"
       And I should see "Be the first to hear about university events, news, and updates"
-      And the link "SUBSCRIBE" with the href "/contact-us" should exist
+      And the link "SUBSCRIBE" with the href "/newsletter" should exist
+
+  # Following the call to action must actually reach a form that collects an
+  # address, not merely a page that exists.
+  @check @local @development @staging @production
+  Scenario: The newsletter page collects an email address
+    Given I am an anonymous user
+     When I go to "/newsletter"
+      And I wait until the page is loaded
+     Then I should see a "Email" element
+      And I should see "Subscribe"
 
   # The breadcrumb trail on a detail page must name the section it belongs to,
   # so a visitor can climb back up. Each content type has its own trail.
