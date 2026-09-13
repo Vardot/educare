@@ -29,22 +29,22 @@ default:
       section_header: true
       section_footer: false
       aos_once: false
-  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000102
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000101
+    slot: header_slot
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000102
     component_id: block.system_breadcrumb_block
     inputs:
       label: ''
       label_display: '0'
-    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000101
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000101
     slot: header_slot
-  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000103
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000103
     component_id: sdc.vartheme_bs5_educare.heading
     inputs:
       heading_text: Newsletter
       level: 1
       text_size: h2
       target: _self
-    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000101
-    slot: header_slot
   - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000104
     component_id: sdc.vartheme_bs5_educare.spacer
     inputs:
@@ -63,25 +63,28 @@ default:
       section_header: false
       section_footer: false
       aos_once: false
-  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000106
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
+    slot: col_1
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000106
     component_id: sdc.vartheme_bs5_educare.heading
     inputs:
-      heading_text: Be the first to hear
+      heading_text: Stay informed
       level: 2
       text_size: h3
       target: _self
-    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
     slot: col_1
-  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000107
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000107
     component_id: sdc.vartheme_bs5_educare.text
     inputs:
       text:
-        value: <p>Sign up for university events, news, and updates, sent straight to your inbox.</p>
+        value: <p>Be the first to hear about university events, news, and updates.</p>
         format: canvas_html_block
       text_size: none
-    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
+      text_color: text-body
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
     slot: col_1
-  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000108
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000108
     component_id: block.webform_block
     inputs:
       label: Newsletter Subscribe
@@ -90,74 +93,142 @@ default:
       default_data: ''
       redirect: false
       lazy: false
-    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
     slot: col_1
-  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000109
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000109
     component_id: sdc.vartheme_bs5_educare.text
     inputs:
       text:
-        value: <p class="mb-0">No spam. Unsubscribe any time.</p>
+        value: <p>No spam. Unsubscribe any time.</p>
+        format: canvas_html_block
+      text_size: none
+      text_color: text-muted
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
+    slot: col_2
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000110
+    component_id: sdc.vartheme_bs5_educare.card-text
+    inputs:
+      card_border: false
+      background_color: bg-primary-subtle
+      padded: true
+      box_shadow: shadow-none
+      corner_style: rounded-4
+      equal_height: false
+      stretched_link: false
+      link_url: ''
+      link_target: default
+      icon_alignment: start
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000110
+    slot: content
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000111
+    component_id: sdc.vartheme_bs5_educare.icon
+    inputs:
+      icon: people
+      icon_size: fs-3
+      color: text-primary
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000110
+    slot: content
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000112
+    component_id: sdc.vartheme_bs5_educare.heading
+    inputs:
+      heading_text: Campus news
+      level: 3
+      text_size: h6
+      target: _self
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000110
+    slot: content
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000113
+    component_id: sdc.vartheme_bs5_educare.text
+    inputs:
+      text:
+        value: <p>Announcements from across the university.</p>
         format: canvas_html_block
       text_size: none
       text_color: text-body
-    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
-    slot: col_1
-  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000110
-    component_id: sdc.vartheme_bs5_educare.group
-    inputs:
-      background_color: bg-secondary-subtle
-      direction: vertical
-      gap: gap-3
-      align_items: align-items-start
-      justify_content: justify-content-start
-      padding_block_start: pt-4
-      padding_block_end: pb-4
-      padding_inline_start: ps-4
-      padding_inline_end: pe-4
-      margin_block_start: mt-0
-      margin_block_end: mb-0
-      margin_inline_start: ms-0
-      margin_inline_end: me-0
-      radius: rounded-3
-      border: none
-    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
     slot: col_2
-  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000111
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000114
+    component_id: sdc.vartheme_bs5_educare.card-text
+    inputs:
+      card_border: false
+      background_color: bg-primary-subtle
+      padded: true
+      box_shadow: shadow-none
+      corner_style: rounded-4
+      equal_height: false
+      stretched_link: false
+      link_url: ''
+      link_target: default
+      icon_alignment: start
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000114
+    slot: content
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000115
+    component_id: sdc.vartheme_bs5_educare.icon
+    inputs:
+      icon: check
+      icon_size: fs-3
+      color: text-primary
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000114
+    slot: content
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000116
     component_id: sdc.vartheme_bs5_educare.heading
     inputs:
-      heading_text: What you will receive
+      heading_text: Research highlights
       level: 3
-      text_size: h5
+      text_size: h6
       target: _self
-    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000110
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000114
     slot: content
-  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000112
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000117
     component_id: sdc.vartheme_bs5_educare.text
     inputs:
       text:
-        value: <p class="mb-0"><strong>Campus news</strong><br>Announcements from across the university.</p>
+        value: <p>What our faculties and students are working on.</p>
         format: canvas_html_block
       text_size: none
-    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000110
+      text_color: text-body
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000105
+    slot: col_2
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000118
+    component_id: sdc.vartheme_bs5_educare.card-text
+    inputs:
+      card_border: false
+      background_color: bg-primary-subtle
+      padded: true
+      box_shadow: shadow-none
+      corner_style: rounded-4
+      equal_height: false
+      stretched_link: false
+      link_url: ''
+      link_target: default
+      icon_alignment: start
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000118
     slot: content
-  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000113
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000119
+    component_id: sdc.vartheme_bs5_educare.icon
+    inputs:
+      icon: laptop
+      icon_size: fs-3
+      color: text-primary
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000118
+    slot: content
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000120
+    component_id: sdc.vartheme_bs5_educare.heading
+    inputs:
+      heading_text: Events
+      level: 3
+      text_size: h6
+      target: _self
+  - parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000118
+    slot: content
+    uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000121
     component_id: sdc.vartheme_bs5_educare.text
     inputs:
       text:
-        value: <p class="mb-0"><strong>Research highlights</strong><br>What our faculties and students are working on.</p>
+        value: <p>Open days, lectures and deadlines, before they pass.</p>
         format: canvas_html_block
       text_size: none
-    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000110
-    slot: content
-  - uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000114
-    component_id: sdc.vartheme_bs5_educare.text
-    inputs:
-      text:
-        value: <p class="mb-0"><strong>Events</strong><br>Open days, lectures and deadlines, before they pass.</p>
-        format: canvas_html_block
-      text_size: none
-    parent_uuid: 9a2b3c4d-5e6f-4a7b-8c9d-e00000000110
-    slot: content
+      text_color: text-body
   path:
   - alias: /newsletter
     langcode: en
