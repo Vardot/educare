@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.3] - 2026-09-14
+### Added
+- Newsletter Canvas page at `/newsletter`, built from the template's own
+  components and refined to the Educare design.
+  [#3622820](https://www.drupal.org/i/3622820)
+
+### Fixed
+- Footer SUBSCRIBE button linked to the contact page instead of the newsletter
+  form. [#3622820](https://www.drupal.org/i/3622820)
+
+### Changed
+- Require `drupal/varbase_webform_base:~1.0.2`, which carries the email field
+  height fixes the Newsletter page depends on.
+
 ## [1.0.2] - 2026-09-10
 ### Changed
 - Added a Drupal CMS build-and-install CI job and switched functional testing to Drupal CMS only. [#3622091](https://www.drupal.org/i/3622091)
