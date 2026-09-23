@@ -81,6 +81,17 @@ component_tree:
       heading_text: 'Contact Information'
       level: 3
     label: null
+  ee32062c-c51f-4c76-9b0d-4e2ab3065f06:
+    parent_uuid: 480e9841-537f-4933-802a-0f812955e215
+    slot: content
+    uuid: ee32062c-c51f-4c76-9b0d-4e2ab3065f06
+    component_id: sdc.vartheme_bs5_educare.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: 'US & Canada'
+      level: 4
+      text_size: h5
+    label: null
   b7cbfce3-2dc7-4c9c-8a42-37a1096ac719:
     parent_uuid: 480e9841-537f-4933-802a-0f812955e215
     slot: content
@@ -89,7 +100,7 @@ component_tree:
     component_version: c4ddb22de87220b3
     inputs:
       text:
-        value: '<p><strong>US &amp; Canada</strong></p><p>Phone Number: (408) 329 9888<br>Address: 3080 Olcott St, Suite A115, Santa Clara, CA 95054</p>'
+        value: '<p>Phone Number: (408) 329 9888<br>Address: 3080 Olcott St, Suite A115, Santa Clara, CA 95054</p>'
         format: canvas_html_block
       text_size: none
       text_color: text-body
