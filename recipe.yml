@@ -177,8 +177,91 @@ config:
           menu_name: main
           parent: ''
           context: '0'
+        # Canvas renders the page through its own chrome, so core's page-title
+        # block never runs and a views page display has no heading of its own.
+        # Each events page display carries its title as the first header area,
+        # keeping the result counter it already inherited from the default
+        # display.
+        display.page_1.display_options.defaults.header: false
+        display.page_1.display_options.header:
+          area_text_custom:
+            id: area_text_custom
+            table: views
+            field: area_text_custom
+            relationship: none
+            group_type: group
+            admin_label: ''
+            plugin_id: text_custom
+            empty: true
+            tokenize: false
+            content: '<h1 class="h2">Upcoming Events</h1>'
+          result:
+            id: result
+            table: views
+            field: result
+            relationship: none
+            group_type: group
+            admin_label: ''
+            plugin_id: result
+            empty: false
+            content: 'Showing @start-@end of @total'
+        display.page_2.display_options.defaults.header: false
+        display.page_2.display_options.header:
+          area_text_custom:
+            id: area_text_custom
+            table: views
+            field: area_text_custom
+            relationship: none
+            group_type: group
+            admin_label: ''
+            plugin_id: text_custom
+            empty: true
+            tokenize: false
+            content: '<h1 class="h2">Past Events</h1>'
+          result:
+            id: result
+            table: views
+            field: result
+            relationship: none
+            group_type: group
+            admin_label: ''
+            plugin_id: result
+            empty: false
+            content: 'Showing @start-@end of @total'
       setViewsComponentStyleTheme:
         theme: default
+    # Taxonomy term pages render through the core taxonomy term view, which is
+    # a views page display and therefore also has no heading under Canvas. The
+    # term name is the view argument's own title token. Core's own header area,
+    # which renders the term entity below it, is kept: simpleConfigUpdate
+    # replaces the header map rather than merging into it.
+    views.view.taxonomy_term:
+      simpleConfigUpdate:
+        display.default.display_options.header:
+          area_text_custom:
+            id: area_text_custom
+            table: views
+            field: area_text_custom
+            relationship: none
+            group_type: group
+            admin_label: ''
+            plugin_id: text_custom
+            empty: true
+            tokenize: true
+            content: '<h1 class="h2">{{ arguments.tid }}</h1>'
+          entity_taxonomy_term:
+            id: entity_taxonomy_term
+            table: views
+            field: entity_taxonomy_term
+            relationship: none
+            group_type: group
+            admin_label: ''
+            plugin_id: entity
+            empty: true
+            target: '{{ raw_arguments.tid }}'
+            view_mode: full
+            tokenize: true
+            bypass_access: false
     # The search field carries the header design's wording instead of the
     # Drupal CMS Search default, set here rather than by patching that
     # third-party recipe. It needs a real label as well as the placeholder: the
