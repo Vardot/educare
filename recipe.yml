@@ -815,6 +815,7 @@ config:
               bg_edge2edge: false
               container_type: container
               columns: 67-33
+              vertical_alignment: align-items-end
               padding_block_start: pt-4
               padding_block_end: pb-3
               section_header: false
