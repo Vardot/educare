@@ -11,11 +11,20 @@
 // Reports land in tests/reports/. Disable the auto HTML hook with
 // VARBASE_E2E_REPORT_DISABLE=1 and run `yarn generate-reports` in CI instead.
 
+// Cucumber step timeout. varbase-e2e calls setDefaultTimeout() when its step
+// definitions load, which overrides the `timeout` key below, so a value set
+// there alone is silently ignored. VARBASE_E2E_STEP_TIMEOUT is the supported
+// way to raise it (@vardot/varbase-e2e >= 2.0.6), and setting it here covers
+// local runs and CI alike. An explicit value in the environment still wins.
+process.env.VARBASE_E2E_STEP_TIMEOUT =
+  process.env.VARBASE_E2E_STEP_TIMEOUT || '60000';
+
 module.exports = {
   default: {
-    // Cucumber step timeout must exceed Playwright's default 30s so the
-    // try/catch wrappers in the step files surface a friendly Playwright
-    // error before cucumber's raw "function timed out".
+    // Must exceed Playwright's default 30s so the try/catch wrappers in the
+    // step files surface a friendly Playwright error before cucumber's raw
+    // "function timed out". Kept in step with VARBASE_E2E_STEP_TIMEOUT above,
+    // which is what actually takes effect.
     timeout: 60000,
     // Retry once to absorb transient step/assertion timeouts from cumulative
     // load on a single heavy site. Override per run with --retry N.

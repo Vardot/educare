@@ -436,6 +436,18 @@ workflow:
   after_script:
     - cd "$CI_PROJECT_DIR"
     - export REPORT="educare--${CI_COMMIT_REF_SLUG:-local}--${SUITE}--automated-functional-testing-report--$(date +%Y-%m-%d)--$(date +%H-%M)"
+    # When the job failed before the tests ran (a red install gate, a database
+    # that went away), there is no node_modules and no cucumber JSON. Say so in
+    # one line instead of letting node dump a MODULE_NOT_FOUND stack that buries
+    # the real failure higher up the log.
+    - if [ ! -f ./node_modules/@vardot/varbase-e2e/bin/generate-reports.js ]; then
+        echo "varbase-e2e is not installed - the job failed before the tests ran. No report to generate.";
+        exit 0;
+      fi
+    - if [ ! -f "tests/reports/cucumber_report--${SUITE}.json" ]; then
+        echo "No cucumber JSON for suite ${SUITE} - the tests did not run. No report to generate.";
+        exit 0;
+      fi
     - node ./node_modules/@vardot/varbase-e2e/bin/generate-reports.js
         --json "tests/reports/cucumber_report--${SUITE}.json"
         --out  "tests/reports/${REPORT}.html"
@@ -461,7 +473,9 @@ workflow:
     - "🧪 Functional"
   before_script:
     - apt-get update -y && apt-get install -y jq
-    - npm install --no-save --no-audit --no-fund @vardot/varbase-e2e
+    # Same floor as package.json devDependencies, so the report CLI in this
+    # job cannot drift to a different major than the one the tests ran on.
+    - npm install --no-save --no-audit --no-fund "@vardot/varbase-e2e@^2.0.6"
     - ./node_modules/.bin/playwright install --with-deps chromium
   script:
     # The functional jobs are skipped when the install gate fails, leaving no
