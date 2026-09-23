@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.4] - 2026-09-23
+### Fixed
+- Views and taxonomy pages rendered with no `h1`, because Canvas leaves the page
+  title out of those pages. [#3625285](https://www.drupal.org/i/3625285)
+- Contact region label was a bolded paragraph instead of a heading, so the
+  section had no heading in the outline.
+  [#3625240](https://www.drupal.org/i/3625240)
+- Share block sat at the top of the event title row instead of the bottom.
+  [#3625305](https://www.drupal.org/i/3625305)
+
+### Changed
+- Re-exported the Canvas component configs after the card heading-level props.
+  [#3625238](https://www.drupal.org/i/3625238)
+- Updated `@vardot/varbase-e2e` to 2.0.6 and made the step timeout actually take
+  effect. [#3625377](https://www.drupal.org/i/3625377)
+
 ## [1.0.3] - 2026-09-14
 ### Added
 - Newsletter Canvas page at `/newsletter`, built from the template's own
@@ -81,7 +97,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.2...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.4...1.0.x
+[1.0.4]: https://git.drupalcode.org/project/educare/-/compare/1.0.3...1.0.4
+[1.0.3]: https://git.drupalcode.org/project/educare/-/compare/1.0.2...1.0.3
 [1.0.2]: https://git.drupalcode.org/project/educare/-/compare/1.0.1...1.0.2
 [1.0.1]: https://git.drupalcode.org/project/educare/-/compare/1.0.0...1.0.1
 [1.0.0]: https://git.drupalcode.org/project/educare/-/compare/1.0.0-rc1...1.0.0
