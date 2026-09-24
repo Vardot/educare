@@ -17,13 +17,11 @@ Feature: Accessibility - Every shipped page is accessible
   #     ARIA), each named so a failure says which contract broke;
   #   - the structural facts a screen-reader user navigates by.
   #
-  # heading-order is deliberately NOT gated: it is a known open moderate finding
-  # and fixing it is a theme change (a heading-level prop on the card title
-  # components). A scenario asserting the full AA rule set would be red on
-  # arrival and would be muted rather than fixed. When the heading levels are
-  # decoupled from the visual size, add:
-  #     Then the page should pass an accessibility audit at level "AA"
-  # and delete this note.
+  # heading-order used to be exempt here: card titles hardcoded a deep heading
+  # level, so a full AA audit would have been red on arrival. #3625237 gave the
+  # card components a heading_level prop and #3625285 gave the views and
+  # taxonomy pages their missing h1, which is what that note was waiting for.
+  # The full AA audit is gated below.
 
   @check @a11y @local @development @staging @production
   Scenario Outline: The <name> page has no critical or serious accessibility violations
@@ -198,3 +196,59 @@ Feature: Accessibility - Every shipped page is accessible
      Then the page should not violate the accessibility rule "color-contrast"
       And the page should not violate the accessibility rule "page-has-heading-one"
       And the page should have exactly one h1
+
+  # The full AA rule set, now that the heading-order exemption above is retired.
+  # This is the gate the note at the top of this file was waiting for.
+  @check @a11y @local @development @staging @production
+  Scenario Outline: The <name> page passes a full AA accessibility audit
+    Given I am an anonymous user
+     When I go to "<path>"
+      And I wait until the page is loaded
+     Then the page should pass an accessibility audit at level "AA"
+
+    Examples: Canvas pages
+      | name         | path          |
+      | Home         | /             |
+      | About        | /about        |
+      | Admissions   | /admissions   |
+      | Student Life | /student-life |
+      | Research     | /research     |
+      | News         | /news         |
+      | Events       | /events       |
+      | Programs     | /programs     |
+      | Contact Us   | /contact-us   |
+      | Privacy      | /privacy      |
+
+    Examples: Content pages
+      | name           | path                                                         |
+      | News article   | /news/undergraduate-robotics-team-wins-regional-championship |
+      | Event page     | /events/global-education-forum                               |
+      | Program page   | /programs/biology                                            |
+      | Search results | /search?keywords=education                                   |
+
+  # One step, every axe rule and every structural probe, reporting all of the
+  # failures at once rather than stopping at the first.
+  @check @a11y @local @development @staging @production
+  Scenario Outline: The <name> page passes the full accessibility check
+    Given I am an anonymous user
+     When I go to "<path>"
+      And I wait until the page is loaded
+     Then the page should pass the full accessibility check
+
+    Examples:
+      | name         | path                           |
+      | Home         | /                              |
+      | News listing | /news                          |
+      | Programs     | /programs                      |
+      | News article | /news/undergraduate-robotics-team-wins-regional-championship |
+      | Event page   | /events/global-education-forum |
+      | Contact Us   | /contact-us                    |
+
+  # The home page is where every visitor lands, so it is held to the strictest
+  # gate the tool has: nothing at any impact, moderate and minor included.
+  @check @a11y @local @development @staging @production
+  Scenario: The home page has no accessibility violations at any impact
+    Given I am an anonymous user
+     When I go to "/"
+      And I wait until the page is loaded
+     Then the page should have no accessibility violations
