@@ -78,6 +78,15 @@ Feature: Events - Filtering and paging the events listing
 
   # The events listing shows 12 per page - that is pager configuration, not
   # content, so the page ranges are stable even as the total drifts.
+  #
+  # Page 1 is always full, so its card count is the page size and is safe to
+  # assert. The LAST page is not: it holds "total - 12", which moves every time
+  # a dated event drops out of the listing. The view filters
+  # field_when_end_value > now and the recipe ships events with fixed
+  # timestamps, so the total falls on its own as those dates pass. Asserting 12
+  # on page 2 was asserting how much content happens to be left, which is the
+  # one thing this scenario says it does not test. The page range assertion
+  # below already proves the pager carried on.
   @check @local @development @staging @production
   Scenario: The events listing pages 12 events at a time
     Given I am an anonymous user
@@ -89,7 +98,7 @@ Feature: Events - Filtering and paging the events listing
      When I click on the link with the title "Go to page 2"
       And I wait until the page is loaded
      Then I should see text matching "Showing 13-\d+ of \d+"
-      And the "events cards" should have a count of 12
+      And the "pagination" should be visible
 
   # An event card must reach the event it names. Which event is on the listing
   # today is read from the listing itself, so this never depends on a date.
