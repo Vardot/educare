@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.5] - 2026-09-27
+### Changed
+- Updated `@vardot/varbase-e2e` to 2.0.7 and gated the full AA accessibility
+  audit. [#3625578](https://www.drupal.org/i/3625578)
+- The events filters and paging test no longer asserts a fixed card count on the
+  last events page.
+
 ## [1.0.4] - 2026-09-23
 ### Fixed
 - Views and taxonomy pages rendered with no `h1`, because Canvas leaves the page
@@ -97,7 +104,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.4...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.5...1.0.x
+[1.0.5]: https://git.drupalcode.org/project/educare/-/compare/1.0.4...1.0.5
 [1.0.4]: https://git.drupalcode.org/project/educare/-/compare/1.0.3...1.0.4
 [1.0.3]: https://git.drupalcode.org/project/educare/-/compare/1.0.2...1.0.3
 [1.0.2]: https://git.drupalcode.org/project/educare/-/compare/1.0.1...1.0.2
