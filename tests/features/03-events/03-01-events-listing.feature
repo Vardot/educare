@@ -22,8 +22,8 @@ Feature: Events - Events listing
       And ".view-events .card-dated-vertical__title" should have a count of 12
 
   # The Events recipe exposes ONLY the keyword ("Search by keyword") and "Type"
-  # filters - "Industry" was removed. Assert it is absent so a regression that
-  # re-adds it is caught.
+  # filters - "Industry" was removed. Assert it is absent from the filter form, so a
+  # regression that re-adds it is caught; event titles may still say "Industry".
   @check @local @development @staging @production
   Scenario: The events listing exposes only the Search by keyword and Type filters
     Given I am an anonymous user
@@ -32,4 +32,4 @@ Feature: Events - Events listing
      Then "main form.views-exposed-form" should be visible
       And I should see "Search by keyword"
       And I should see "Type"
-      And I should not see "Industry"
+      And I should not see text matching "Industry" in the "main form.views-exposed-form" element
