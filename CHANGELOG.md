@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.6] - 2026-10-09
+### Fixed
+- Stop requiring the `drupal_cms_admin_ui`, `drupal_cms_media` and
+  `drupal_cms_privacy_basic` recipes, which Drupal CMS 2.2 removed, so Educare
+  installs on Drupal CMS 2.2.3 and later. Editors now land on the Varbase welcome
+  dashboard from Varbase Admin Base. [#3629382](https://www.drupal.org/i/3629382)
+
+### Changed
+- Cover the Varbase welcome dashboard in the functional testing suite, and check
+  the removed events "Industry" filter on the filter form only.
+
 ## [1.0.5] - 2026-09-27
 ### Changed
 - Updated `@vardot/varbase-e2e` to 2.0.7 and gated the full AA accessibility
@@ -104,7 +115,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.5...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.6...1.0.x
+[1.0.6]: https://git.drupalcode.org/project/educare/-/compare/1.0.5...1.0.6
 [1.0.5]: https://git.drupalcode.org/project/educare/-/compare/1.0.4...1.0.5
 [1.0.4]: https://git.drupalcode.org/project/educare/-/compare/1.0.3...1.0.4
 [1.0.3]: https://git.drupalcode.org/project/educare/-/compare/1.0.2...1.0.3
