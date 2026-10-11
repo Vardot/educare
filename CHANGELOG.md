@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.7] - 2026-10-11
+### Changed
+- Remove the temporary CI-only `enshrined/svg-sanitize` alias. `drupal/svg_image`
+  3.2.5 allows svg-sanitize 1.0, so installs no longer need the alias.
+  [#3629799](https://www.drupal.org/i/3629799)
+
 ## [1.0.6] - 2026-10-09
 ### Fixed
 - Stop requiring the `drupal_cms_admin_ui`, `drupal_cms_media` and
@@ -115,7 +121,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.6...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.7...1.0.x
+[1.0.7]: https://git.drupalcode.org/project/educare/-/compare/1.0.6...1.0.7
 [1.0.6]: https://git.drupalcode.org/project/educare/-/compare/1.0.5...1.0.6
 [1.0.5]: https://git.drupalcode.org/project/educare/-/compare/1.0.4...1.0.5
 [1.0.4]: https://git.drupalcode.org/project/educare/-/compare/1.0.3...1.0.4
