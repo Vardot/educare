@@ -1,0 +1,94 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_educare.card-featured
+    - canvas.component.sdc.vartheme_bs5_educare.date
+    - canvas.component.sdc.vartheme_bs5_educare.heading
+    - canvas.component.sdc.vartheme_bs5_educare.subtitle
+    - canvas.component.sdc.vartheme_bs5_educare.text
+    - core.entity_view_mode.node.search_result
+    - field.field.node.event.field_description
+    - node.type.event
+  module:
+    - canvas
+    - node
+id: node.event.search_result
+content_entity_type_id: node
+content_entity_type_bundle: event
+content_entity_type_view_mode: search_result
+component_tree:
+  f330c5aa-8131-51f0-a490-70025e106339:
+    uuid: f330c5aa-8131-51f0-a490-70025e106339
+    component_id: sdc.vartheme_bs5_educare.card-featured
+    component_version: active
+    inputs:
+      media_position: no-media
+      ratio: ratio-4x3
+      fit: object-fit-cover
+      card_border: false
+      corner_style: rounded-3
+      show_action_icon: false
+      padded: false
+      equal_height: false
+      stretched_link: true
+      link_url:
+        sourceType: host-entity-url
+        absolute: false
+      content_vertical_alignment: align-items-center
+      gutters_between: g-4
+      columns_xs_size: '12_12'
+      columns_sm_size: '12_12'
+      columns_md_size: '04_08'
+      columns_lg_size: '04_08'
+      columns_xl_size: '04_08'
+      columns_xxl_size: '04_08'
+  7eaf4910-d58d-56ac-a3fd-a178097a1e4d:
+    parent_uuid: f330c5aa-8131-51f0-a490-70025e106339
+    slot: content
+    uuid: 7eaf4910-d58d-56ac-a3fd-a178097a1e4d
+    component_id: sdc.vartheme_bs5_educare.subtitle
+    component_version: active
+    inputs:
+      subtitle_text: Event
+      font_size: small
+      text_transform: text-uppercase
+      line_position: start
+      line_size: sm
+  7618091a-3c42-5aa0-8689-f9eb5b06dc4c:
+    parent_uuid: f330c5aa-8131-51f0-a490-70025e106339
+    slot: content
+    uuid: 7618091a-3c42-5aa0-8689-f9eb5b06dc4c
+    component_id: sdc.vartheme_bs5_educare.heading
+    component_version: active
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:event␝title␞␟value'
+      level: 2
+      text_size: h4
+  7b434069-3780-5217-9f3f-b70a7db9e35c:
+    parent_uuid: f330c5aa-8131-51f0-a490-70025e106339
+    slot: content
+    uuid: 7b434069-3780-5217-9f3f-b70a7db9e35c
+    component_id: sdc.vartheme_bs5_educare.text
+    component_version: active
+    inputs:
+      text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:event␝field_description␞␟value'
+      text_size: none
+      text_color: text-body
+  873a3b40-844f-5b29-aa2d-0c4069c330de:
+    parent_uuid: f330c5aa-8131-51f0-a490-70025e106339
+    slot: content
+    uuid: 873a3b40-844f-5b29-aa2d-0c4069c330de
+    component_id: sdc.vartheme_bs5_educare.date
+    component_version: active
+    inputs:
+      date:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:event␝created␞␟value'
+        adapter: unix_to_date
+      text_color: text-muted
+exposed_slots: {  }

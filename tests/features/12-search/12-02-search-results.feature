@@ -5,8 +5,7 @@ Feature: Search results - The /search results page
       So that I can read what I searched for, refine it in place, and open any
       result from a single, unambiguous link.
 
-  # Drupal Canvas owns the content region, so no page title block runs on this
-  # route: the search view component prints the view title as the page <h1>.
+  # The results page is a Drupal Canvas page with its own heading.
   # Exactly one - a second one would break the heading order for everybody.
   @check @a11y @local @development @staging @production
   Scenario: The results page carries exactly one first-level heading
@@ -26,8 +25,8 @@ Feature: Search results - The /search results page
      Then the "search filter bar" should be visible
       And the "search field" should be visible
       And the "search submit" should be visible
-      And the element ".view-search .view-filters" should appear after the element ".view-search h1"
-      And the element ".view-search .view-header" should appear after the element ".view-search .view-filters"
+      And the element "[id^=views-exposed-form-search-results-block]" should appear after the element "main h1"
+      And the element ".view-search .view-header" should appear after the element "[id^=views-exposed-form-search-results-block]"
 
   # The box arrives filled in with what was searched for, so refining is an
   # edit rather than a retype.
@@ -46,9 +45,7 @@ Feature: Search results - The /search results page
       And I wait until the page is loaded
      Then the search results should be counted
 
-  # The index holds both nodes and Canvas pages and the view ships a title
-  # field per entity type, so a row must never print an empty second heading
-  # or offer the same destination twice.
+  # Each result is one row with one heading and one link.
   @check @local @development @staging @production
   Scenario: Every result row has one heading and one link
     Given I am an anonymous user

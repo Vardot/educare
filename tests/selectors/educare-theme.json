@@ -24,14 +24,17 @@
     "header search panel": "header[role=\"banner\"] .icon-toggle__panel",
     "header search field": "header[role=\"banner\"] .icon-toggle__panel input[name=\"keywords\"]",
     "search view": ".view-search",
-    "search filter bar": ".view-search .view-filters .views-exposed-filters",
-    "search field": ".view-search .view-filters input[name=\"keywords\"]",
-    "search submit": ".view-search .view-filters .form-submit",
+    "search filter bar": "main form[id^=\"views-exposed-form-search-results-block\"]",
+    "search field": "main form[id^=\"views-exposed-form-search-results-block\"] input[name=\"keywords\"]",
+    "search submit": "main form[id^=\"views-exposed-form-search-results-block\"] .form-submit",
     "search rows": ".view-search .view-content .views-row",
     "search row headings": ".view-search .view-content .views-row h2",
-    "search row links": ".view-search .view-content .views-row h2 a",
-    "search empty notice": ".view-search .view-empty--notice",
-    "search page heading": ".view-search > h1"
+    "search row links": ".view-search .view-content .views-row a",
+    "search empty notice": ".view-search .view-empty",
+    "search page heading": "main h1",
+    "search category facet": "main [data-drupal-facet-id=\"search_category\"]",
+    "search content type facet": "main [data-drupal-facet-id=\"search_content_type\"]",
+    "search date filter": "main form[id^=\"views-exposed-form-search-date-block\"] input[name=\"published\"]"
   },
   "xpath": {}
 }

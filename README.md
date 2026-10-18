@@ -54,7 +54,8 @@ only what is Educare's:
 |---|---|
 | Events — the Event content type, the events listing, related events | [Varbase Events Base](https://www.drupal.org/project/varbase_events_base) |
 | News — the News content type and its listing | [Varbase News Base](https://www.drupal.org/project/varbase_news_base) |
-| Pages, media, editor, workflow, SEO, search, forms, privacy, admin UI | the `varbase_*` and `drupal_cms_*` base recipes |
+| Search — the search index, the Content Type facet, the Date Published filter | [Varbase Search Base](https://www.drupal.org/project/varbase_search_base) |
+| Pages, media, editor, workflow, SEO, forms, privacy, admin UI | the `varbase_*` and `drupal_cms_*` base recipes |
 | The look of it all | [Vartheme BS5 Educare](https://www.drupal.org/project/vartheme_bs5_educare) |
 
 Educare itself owns its theme, its pages and patterns, its demo content, and the theme repointing: the

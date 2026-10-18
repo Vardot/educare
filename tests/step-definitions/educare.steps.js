@@ -710,8 +710,9 @@ Then(/^every search result row should have one heading and one link$/, async fun
  * Example #5: And we refine the search to "admissions"
  */
 When(/^(?:I |we )*refine the search to "([^"]*)"$/, async function (keywords) {
-  const field = this.page.locator('.view-search .view-filters input[name="keywords"]').first();
-  const submit = this.page.locator('.view-search .view-filters .form-submit').first();
+  const form = 'main form[id^="views-exposed-form-search-results-block"]';
+  const field = this.page.locator(`${form} input[name="keywords"]`).first();
+  const submit = this.page.locator(`${form} .form-submit`).first();
   try {
     await field.waitFor({ state: 'visible', timeout: 10000 });
     await field.fill(keywords);
@@ -719,7 +720,7 @@ When(/^(?:I |we )*refine the search to "([^"]*)"$/, async function (keywords) {
   } catch (e) {
     throw friendly(
       `Could not refine the search to "${keywords}".`,
-      'Check the search results page renders its exposed form inline. ' +
+      'Check the /search Canvas page places the search-results_block exposed form. ' +
       ((e.message || '').split('\n')[0])
     );
   }
@@ -757,8 +758,7 @@ Then(/^the "([^"]*)" should have the value "([^"]*)"$/, async function (name, ex
 /**
  * Assert the search results page states how many results it is showing.
  *
- * The count comes from the view header, which the search view component prints
- * under the filter bar - so this also proves the two are not swapped back.
+ * The count comes from the view header above the result rows.
  *
  * Example #1: Then the search results should be counted
  * Example #2: And the search results should be counted
@@ -770,10 +770,79 @@ Then(/^the search results should be counted$/, async function () {
   await smartSettle(this.page, budget(this));
   const header = this.page.locator('.view-search .view-header').first();
   const text = ((await header.textContent().catch(() => '')) || '').trim();
-  if (!/Displaying\s+\d+\s*-\s*\d+\s+of\s+\d+\s+results/i.test(text)) {
+  if (!/Showing\s+\d+\s*-\s*\d+\s+of\s+\d+/i.test(text)) {
     throw friendly(
       `The result summary reads "${text}".`,
-      'Expected the view header to read "Displaying @start - @end of @total results".'
+      'Expected the view header to read "Showing @start-@end of @total".'
     );
   }
+});
+
+/**
+ * Tick or clear a facet item in the /search filter rail by its label.
+ *
+ * Example #1: When I filter the search by the "Program" facet item
+ * Example #2: And I filter the search by the "Conference" facet item
+ * Example #3: When we filter the search by the "Event" facet item
+ * Example #4: And we filter the search by the "Sciences" facet item
+ * Example #5: When I filter the search by the "News post" facet item
+ */
+When(/^(?:I |we )*filter the search by the "([^"]*)" facet item$/, async function (label) {
+  const item = this.page.locator('main [data-drupal-facet-id] label').filter({ hasText: label }).first();
+  try {
+    await Promise.all([
+      this.page.waitForNavigation({ timeout: 15000 }),
+      item.click({ timeout: 10000 }),
+    ]);
+  } catch (e) {
+    throw friendly(
+      `Could not filter the search by the "${label}" facet item.`,
+      'Check the /search Canvas page places the facet blocks. ' + ((e.message || '').split('\n')[0])
+    );
+  }
+  await smartSettle(this.page, budget(this));
+});
+
+/**
+ * Pick a Date Published radio in the /search filter rail; it submits on change.
+ *
+ * Example #1: When I filter the search by the "Past Year" date
+ * Example #2: And I filter the search by the "Past Week" date
+ * Example #3: When we filter the search by the "Past Month" date
+ * Example #4: And we filter the search by the "Past 24 Hours" date
+ * Example #5: When I filter the search by the "Any time" date
+ */
+When(/^(?:I |we )*filter the search by the "([^"]*)" date$/, async function (label) {
+  const option = this.page.locator('main form[id^="views-exposed-form-search-date-block"] .js-form-type-radio label').filter({ hasText: label }).first();
+  try {
+    await Promise.all([
+      this.page.waitForNavigation({ timeout: 15000 }),
+      option.click({ timeout: 10000 }),
+    ]);
+  } catch (e) {
+    throw friendly(
+      `Could not filter the search by the "${label}" date.`,
+      'Check the /search Canvas page places the search-date_block exposed form. ' + ((e.message || '').split('\n')[0])
+    );
+  }
+  await smartSettle(this.page, budget(this));
+});
+
+/**
+ * Assert every result row on the page carries the given content type label.
+ *
+ * Example #1: Then every search result should be labelled "Program"
+ * Example #2: And every search result should be labelled "Event"
+ * Example #3: Then every search result should be labelled "News"
+ * Example #4: And every search result should be labelled "Page"
+ * Example #5: Then every search result should be labelled "Event"
+ */
+Then(/^every search result should be labelled "([^"]*)"$/, async function (label) {
+  await smartSettle(this.page, budget(this));
+  const labels = await this.page.locator('.view-search .views-row [data-component-id="vartheme_bs5_educare:subtitle"]').allTextContents();
+  if (labels.length === 0) {
+    throw friendly('No search result rows to check.', 'Run a query that returns at least one result first.');
+  }
+  const other = labels.map((t) => t.trim()).filter((t) => t !== label);
+  assert.strictEqual(other.length, 0, `Found results labelled ${JSON.stringify([...new Set(other)])}, expected only "${label}".`);
 });

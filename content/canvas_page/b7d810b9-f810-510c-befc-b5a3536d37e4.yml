@@ -1,0 +1,152 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: b7d810b9-f810-510c-befc-b5a3536d37e4
+  default_langcode: en
+default:
+  status:
+  - value: true
+  owner:
+  - target_id: 1
+  title:
+  - value: Search
+  components:
+  - uuid: abf1478b-59ee-5b37-a317-7436598afaa1
+    component_id: sdc.vartheme_bs5_educare.section
+    inputs:
+      bg_edge2edge: false
+      container_type: none
+      background_color: none
+      text_color: auto
+      background_overlay: none
+      columns: 67-33
+      gutter: gx-5 gy-5
+      padding_block_start: pt-0
+      padding_block_end: pb-5
+      padding_inline_start: ps-0
+      padding_inline_end: pe-0
+      margin_block_start: mt-0
+      margin_block_end: mb-0
+      margin_inline_start: ms-0
+      margin_inline_end: me-0
+      shadow: none
+      radius: none
+      border: none
+      border_color: none
+      border_width: none
+      vertical_alignment: align-items-start
+      horizontal_alignment: text-start
+      section_header: true
+      section_footer: false
+      aos_animation: none
+      aos_duration: default
+      aos_delay: '0'
+      aos_once: true
+  - parent_uuid: abf1478b-59ee-5b37-a317-7436598afaa1
+    slot: header_slot
+    uuid: f4c5f832-c9ca-53c4-9144-fa5804a9089f
+    component_id: block.system_breadcrumb_block
+    inputs:
+      label: Breadcrumbs
+      label_display: '0'
+  - parent_uuid: abf1478b-59ee-5b37-a317-7436598afaa1
+    slot: header_slot
+    uuid: a36a88a9-8711-5146-8411-c1e10d02726d
+    component_id: sdc.vartheme_bs5_educare.heading
+    inputs:
+      heading_text: Search
+      level: 1
+      text_size: h2
+      target: _self
+  - parent_uuid: abf1478b-59ee-5b37-a317-7436598afaa1
+    slot: header_slot
+    uuid: 81ba200b-afbe-522e-9499-2f35ba487e34
+    component_id: block.views_exposed_filter_block.search-results_block
+    inputs:
+      label: 'Search by keyword'
+      label_display: '0'
+      views_label: ''
+  - parent_uuid: abf1478b-59ee-5b37-a317-7436598afaa1
+    slot: col_1
+    uuid: 46bd31ba-d77f-5732-b7c5-884fbeac1537
+    component_id: block.views_block.search-results_block
+    inputs:
+      label: Search results
+      label_display: '0'
+      views_label: ''
+      items_per_page: null
+      exposed: {  }
+  - parent_uuid: abf1478b-59ee-5b37-a317-7436598afaa1
+    slot: col_2
+    uuid: d7df08c2-90e3-50b2-bdc7-949f57215389
+    component_id: sdc.vartheme_bs5_educare.heading
+    inputs:
+      heading_text: Category
+      level: 2
+      text_size: h5
+      target: _self
+  - parent_uuid: abf1478b-59ee-5b37-a317-7436598afaa1
+    slot: col_2
+    uuid: 2841bbfe-a074-566e-b460-c28771dad23e
+    component_id: block.facet_block.search_category
+    inputs:
+      label: Category
+      label_display: '0'
+  - parent_uuid: abf1478b-59ee-5b37-a317-7436598afaa1
+    slot: col_2
+    uuid: 44601583-fe9a-58c4-a937-6dab3d321fb2
+    component_id: sdc.vartheme_bs5_educare.divider
+    inputs:
+      border_width: border-1
+      border_color: none
+      opacity: opacity-100
+      margin_top: mt-4
+      margin_bottom: mb-4
+  - parent_uuid: abf1478b-59ee-5b37-a317-7436598afaa1
+    slot: col_2
+    uuid: 35452c95-8597-5ed1-8c0e-6361e8142780
+    component_id: sdc.vartheme_bs5_educare.heading
+    inputs:
+      heading_text: Content type
+      level: 2
+      text_size: h5
+      target: _self
+  - parent_uuid: abf1478b-59ee-5b37-a317-7436598afaa1
+    slot: col_2
+    uuid: 97e51c5f-9339-5826-984e-f5a4c6c4fc92
+    component_id: block.facet_block.search_content_type
+    inputs:
+      label: Content Type
+      label_display: '0'
+  - parent_uuid: abf1478b-59ee-5b37-a317-7436598afaa1
+    slot: col_2
+    uuid: f69e0d42-507c-5a85-9645-01cd0f80bbe5
+    component_id: sdc.vartheme_bs5_educare.divider
+    inputs:
+      border_width: border-1
+      border_color: none
+      opacity: opacity-100
+      margin_top: mt-4
+      margin_bottom: mb-4
+  - parent_uuid: abf1478b-59ee-5b37-a317-7436598afaa1
+    slot: col_2
+    uuid: fdad08c7-3eab-594b-ad26-73ba5cf623ba
+    component_id: sdc.vartheme_bs5_educare.heading
+    inputs:
+      heading_text: Date published
+      level: 2
+      text_size: h5
+      target: _self
+  - parent_uuid: abf1478b-59ee-5b37-a317-7436598afaa1
+    slot: col_2
+    uuid: 976f20dc-53ba-54f9-9193-00a8cad9b944
+    component_id: block.views_exposed_filter_block.search-date_block
+    inputs:
+      label: Date Published
+      label_display: '0'
+      views_label: ''
+  path:
+  - alias: /search
+    langcode: en
+  metatags:
+  - value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","title":"[canvas_page:title] | [site:name]"}'

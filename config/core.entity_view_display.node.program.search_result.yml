@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.program.field_content
+    - field.field.node.program.field_degrees
+    - field.field.node.program.field_description
+    - field.field.node.program.field_program_type
+    - field.field.node.program.field_study_level
+    - node.type.program
+  module:
+    - user
+id: node.program.search_result
+targetEntityType: node
+bundle: program
+mode: search_result
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_content: true
+  field_degrees: true
+  field_description: true
+  field_program_type: true
+  field_study_level: true
+  search_api_excerpt: true
