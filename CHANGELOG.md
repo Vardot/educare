@@ -6,16 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.0.8] - 2026-10-19
 ### Added
 - Search on Varbase Search Base: a Canvas search page at `/search` with a filter rail for
-  Category, Content type and Date Published, and result cards with image, summary and date (#3631205).
+  Category, Content type and Date Published, and result cards with image, summary and date.
+  [#3631205](https://www.drupal.org/i/3631205)
 - A Copy link item in the Social media menu, shipped disabled because the design does not show it
   in the footer. Enable it to copy the page address, through the HTMX handler in Vartheme BS5 Educare
-  (#3631093) (#3631094).
+  ([#3631093](https://www.drupal.org/i/3631093)). [#3631094](https://www.drupal.org/i/3631094)
 
 ### Changed
 - The search view's page display is disabled; the Canvas page owns `/search`, and the header search
-  still submits `keywords` to it (#3631205).
+  still submits `keywords` to it. [#3631205](https://www.drupal.org/i/3631205)
 
 ## [1.0.7] - 2026-10-11
 ### Changed
@@ -131,7 +134,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.7...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.8...1.0.x
+[1.0.8]: https://git.drupalcode.org/project/educare/-/compare/1.0.7...1.0.8
 [1.0.7]: https://git.drupalcode.org/project/educare/-/compare/1.0.6...1.0.7
 [1.0.6]: https://git.drupalcode.org/project/educare/-/compare/1.0.5...1.0.6
 [1.0.5]: https://git.drupalcode.org/project/educare/-/compare/1.0.4...1.0.5
