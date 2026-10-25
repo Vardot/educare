@@ -41,6 +41,19 @@ Finish the installation in the browser and choose **Educare** in the *Choose a s
 Educare is a `type: Site` recipe: it is applied **during** the site install, by the site-template
 picker — not with `drush recipe` on a site that is already installed.
 
+## Add Varbase AI
+
+Educare has no Blog content type, which Varbase AI Taxonomy Tagging tags by default. Point it at
+News when you apply Varbase AI Base:
+
+```bash
+ddev composer require drupal/varbase_ai_base:~1
+ddev drush recipe ../recipes/varbase_ai_base \
+  --input=varbase_ai_taxonomy_tagging.content_type=news
+```
+
+See [Varbase AI Base](https://docs.varbase.vardot.com/developers/understanding-varbase/varbase-ai-recipes/varbase-ai-base).
+
 ## What you get
 
 A fully configured education website — home, programs, admissions, research, student life, events,
