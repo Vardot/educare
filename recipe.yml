@@ -385,7 +385,6 @@ config:
             empty: true
             content: '<p>No results match your search. Try other keywords or clear a filter.</p>'
             tokenize: false
-        display.page.display_options.enabled: false
         display.results_block.display_options.row.options.view_modes.entity:node.event: search_result
         display.results_block.display_options.row.options.view_modes.entity:node.news: search_result
         display.results_block.display_options.row.options.view_modes.entity:node.page: search_result

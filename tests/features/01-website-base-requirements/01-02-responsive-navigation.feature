@@ -77,11 +77,13 @@ Feature: Website Base Requirements - Responsive navigation and listings
      When I set the viewport to the "xs" breakpoint
       And I go to "/events"
       And I wait until the page is loaded
-      And I fill in "Search by keyword" with "forum"
+      And I remember the first card title
+      And I remember the result total
+      And I fill in "Search by keyword" with the remembered card title
       And I click the "Apply Filter" button
       And I wait until the page is loaded
-     Then I should see "Sustainable Business Forum"
-      And I should not see "Future Leaders Summit"
+     Then the result total should be smaller than before
+      And I should see the remembered card title
 
   # The contact form is the site's one conversion point; it has to be fillable
   # on a phone.

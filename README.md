@@ -82,6 +82,10 @@ Educare with the config actions from
 - Drupal ~11.4, PHP 8.4
 - Varbase 11 (`drupal/varbase_project:~11.0.0`)
 
+## Telemetry
+
+Drupal CMS telemetry is off in this project's CI (`DRUPAL_CMS_TELEMETRY=0`). To keep it off on your own install, set `DRUPAL_CMS_TELEMETRY=0` in the environment before installing the site template.
+
 ## Learn more
 
 - [Educare on Drupal.org](https://www.drupal.org/project/educare)
