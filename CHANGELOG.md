@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.9] - 2026-11-01
+### Changed
+- Require Drupal CMS Search 2.2.7 or later. Its search view no longer has a page display, so the
+  recipe stops disabling it; the Canvas page still owns `/search`.
+  [#3633829](https://www.drupal.org/i/3633829)
+- Turn Drupal CMS telemetry off in CI (`DRUPAL_CMS_TELEMETRY=0`), and document how to keep it off
+  on your own install. [#3633829](https://www.drupal.org/i/3633829)
+- Document how to add Varbase AI without a Blog content type. Varbase AI Taxonomy Tagging now tags
+  Page, so Varbase AI Base needs no input. [#3633119](https://www.drupal.org/i/3633119)
+
 ## [1.0.8] - 2026-10-19
 ### Added
 - Search on Varbase Search Base: a Canvas search page at `/search` with a filter rail for
@@ -134,7 +144,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.8...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.9...1.0.x
+[1.0.9]: https://git.drupalcode.org/project/educare/-/compare/1.0.8...1.0.9
 [1.0.8]: https://git.drupalcode.org/project/educare/-/compare/1.0.7...1.0.8
 [1.0.7]: https://git.drupalcode.org/project/educare/-/compare/1.0.6...1.0.7
 [1.0.6]: https://git.drupalcode.org/project/educare/-/compare/1.0.5...1.0.6
