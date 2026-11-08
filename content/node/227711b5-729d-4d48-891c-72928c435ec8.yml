@@ -74,8 +74,8 @@ default:
       entity: 3ab8a507-e00c-4f54-9e4d-5222387a0bda
   field_when:
     -
-      value: 1792220400
-      end_value: 1792231200
+      value: 1823670000
+      end_value: 1823680800
       duration: 180
       rrule: 0
       rrule_index: 0

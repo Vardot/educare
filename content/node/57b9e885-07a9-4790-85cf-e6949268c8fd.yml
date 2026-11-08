@@ -22,7 +22,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Open Campus Day 2026'
+      value: 'Open Campus Day 2027'
   promote:
     -
       value: false
@@ -34,7 +34,7 @@ default:
       value: true
   path:
     -
-      alias: /events/open-campus-day-2026
+      alias: /events/open-campus-day-2027
       langcode: en
   body:
     -
@@ -74,8 +74,8 @@ default:
       entity: d022bed1-e3ad-43ab-89a0-c35c4e898359
   field_when:
     -
-      value: 1785222000
-      end_value: 1785229200
+      value: 1816671600
+      end_value: 1816678800
       duration: 120
       rrule: 0
       rrule_index: 0

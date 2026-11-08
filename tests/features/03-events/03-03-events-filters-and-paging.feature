@@ -87,12 +87,17 @@ Feature: Events - Filtering and paging the events listing
   # on page 2 was asserting how much content happens to be left, which is the
   # one thing this scenario says it does not test. The page range assertion
   # below already proves the pager carried on.
+  #
+  # A pager needs more than one page, so this scenario needs at least 13
+  # upcoming events. It asserts that first: when the shipped events run out,
+  # it fails on the total, not as a missing pager.
   @check @local @development @staging @production
   Scenario: The events listing pages 12 events at a time
     Given I am an anonymous user
      When I go to "/events"
       And I wait until the page is loaded
      Then I should see text matching "Showing 1-12 of \d+"
+      And the result total should be at least 13
       And the "pagination" should be visible
       And the "events cards" should have a count of 12
      When I click on the link with the title "Go to page 2"
