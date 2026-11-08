@@ -202,7 +202,7 @@ workflow:
       when: on_success
     - when: manual
       allow_failure: false
-  image: node:20
+  image: node:24
   needs: []
   before_script:
     - npm install -g cspell
@@ -221,7 +221,7 @@ workflow:
       when: on_success
     - when: manual
       allow_failure: false
-  image: node:20
+  image: node:24
   needs: []
   before_script:
     - npm install --no-audit --no-fund
@@ -241,7 +241,7 @@ workflow:
       when: on_success
     - when: manual
       allow_failure: false
-  image: node:20
+  image: node:24
   needs: []
   before_script:
     - npm install --no-audit --no-fund
@@ -473,7 +473,7 @@ workflow:
     - changes: *recipe_app_changes
       when: always
     - when: never
-  image: node:20
+  image: node:24
   needs: ["🧪 Functional"]
   dependencies:
     - "🧪 Functional"
