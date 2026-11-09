@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/sports-scholarship-trials
-      langcode: en
   body:
     -
       value: |-

@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/scholarships-financial-aid-session
-      langcode: en
   body:
     -
       value: |-

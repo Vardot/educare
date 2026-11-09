@@ -39,7 +39,6 @@ default:
   path:
     -
       alias: /news/university-signs-exchange-partnership-three-new-international-campuses
-      langcode: en
   field_content:
     -
       value: '<p>The university has signed exchange agreements with three international partner campuses, opening new study-abroad routes for undergraduates from next academic year.</p><p>The new partnerships extend an existing exchange network and were negotiated over the past eighteen months by the International Office, with input from department heads on which courses would transfer cleanly.</p><p>"A signed agreement is only the start," said the Director of International Partnerships. "The real work is making sure a semester away counts properly toward a student''s degree, and that took most of the eighteen months."</p><p>Applications for exchange places at the new campuses open in the spring term, with information sessions to follow.</p>'

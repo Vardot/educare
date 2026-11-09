@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/public-health-research-seminar
-      langcode: en
   body:
     -
       value: |-

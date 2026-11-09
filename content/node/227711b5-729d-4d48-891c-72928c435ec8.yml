@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/alumni-mentoring-launch
-      langcode: en
   body:
     -
       value: |-

@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/alumni-career-networking-night-0
-      langcode: en
   body:
     -
       value: |-

@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/creative-writing-masterclass
-      langcode: en
   body:
     -
       value: |-

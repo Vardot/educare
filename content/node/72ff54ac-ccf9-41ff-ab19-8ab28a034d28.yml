@@ -40,7 +40,6 @@ default:
   path:
     -
       alias: /news/local-schools-partner-university-weekend-tutoring-programme
-      langcode: en
   field_content:
     -
       value: '<p>A new weekend tutoring programme is pairing university students with local secondary school pupils preparing for exams, run out of the library on Saturday mornings.</p><p>The programme grew out of a conversation between the Widening Participation team and two local headteachers who were looking for free, low-pressure academic support for pupils who might not otherwise have access to tutoring.</p><p>University student volunteers, most of them former pupils of the partner schools, run small-group sessions in maths, English and science. "It''s strange being back on the other side of a desk," said one volunteer, a second-year student who attended one of the partner schools herself. "But it''s a good kind of strange."</p><p>The programme runs weekly through the school term and is open to any of the four partner schools.</p>'

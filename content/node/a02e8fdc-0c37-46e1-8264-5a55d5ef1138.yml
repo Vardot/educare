@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/international-students-welcome-week
-      langcode: en
   body:
     -
       value: |-

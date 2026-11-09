@@ -40,7 +40,6 @@ default:
   path:
     -
       alias: /news/faculty-led-study-finds-link-between-sleep-patterns-and-exam-performance
-      langcode: en
   field_content:
     -
       value: "<p>A study led by faculty in the Department of Public Health has found that consistency of sleep schedule, rather than total hours slept, was the stronger predictor of exam performance among first-year students.</p><p>Students who kept roughly the same bedtime and wake time through exam period, even a modest one, outperformed students with the same average sleep duration but a more irregular pattern.</p><p>The study used anonymised data from a sleep-tracking app that student volunteers opted into for one term, matched against final grades with student consent. Participation was voluntary and results were only ever seen in aggregate.</p><p>The department plans to share the findings with student support services ahead of next year's exam period, alongside practical guidance rather than a change to any policy.</p>"

@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/student-success-conference
-      langcode: en
   body:
     -
       value: |-

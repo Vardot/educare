@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/undergraduate-admissions-qa
-      langcode: en
   body:
     -
       value: |-

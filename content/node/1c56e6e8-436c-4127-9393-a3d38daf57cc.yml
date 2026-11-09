@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/study-abroad-information-evening
-      langcode: en
   body:
     -
       value: |-

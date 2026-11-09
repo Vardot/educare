@@ -518,7 +518,6 @@ default:
   path:
     -
       alias: /student-life
-      langcode: en
   revision_translation_affected:
     -
       value: true

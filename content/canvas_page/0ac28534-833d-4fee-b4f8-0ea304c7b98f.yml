@@ -200,7 +200,6 @@ default:
   path:
     -
       alias: /contact-us
-      langcode: en
   revision_translation_affected:
     -
       value: true

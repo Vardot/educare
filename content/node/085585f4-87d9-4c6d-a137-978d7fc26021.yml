@@ -40,7 +40,6 @@ default:
   path:
     -
       alias: /news/student-run-food-bank-marks-its-fifth-year-serving-campus
-      langcode: en
   field_content:
     -
       value: '<p>The student-run food bank marked its fifth anniversary this month, having grown from a single shelf in the union building to a weekly service supporting hundreds of students.</p><p>What began as an informal response to a handful of students struggling between loan payments is now run by a rotating team of volunteers, with donations coming from staff, local businesses, and a standing arrangement with the university''s catering service.</p><p>"We don''t ask why anyone is here," said one of the current volunteer coordinators. "You just come in, you take what you need, and that''s the whole system."</p><p>The team is currently recruiting volunteers for the coming term and welcomes both regular and one-off donations.</p>'

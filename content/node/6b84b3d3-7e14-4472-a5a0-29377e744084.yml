@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/theatre-performance-showcase
-      langcode: en
   body:
     -
       value: |-

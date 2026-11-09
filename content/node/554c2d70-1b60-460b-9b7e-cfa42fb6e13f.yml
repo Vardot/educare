@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/fine-art-degree-show-preview
-      langcode: en
   body:
     -
       value: |-

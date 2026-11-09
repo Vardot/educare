@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/sustainable-business-forum
-      langcode: en
   body:
     -
       value: |-

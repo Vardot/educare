@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/career-networking-expo
-      langcode: en
   body:
     -
       value: |-

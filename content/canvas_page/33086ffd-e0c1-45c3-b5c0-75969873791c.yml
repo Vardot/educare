@@ -138,7 +138,6 @@ default:
   path:
     -
       alias: /news
-      langcode: en
   revision_translation_affected:
     -
       value: true

@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/global-education-forum
-      langcode: en
   body:
     -
       value: |-

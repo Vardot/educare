@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/open-campus-day-2027
-      langcode: en
   body:
     -
       value: |-

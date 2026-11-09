@@ -39,7 +39,6 @@ default:
   path:
     -
       alias: /news/class-graduates-celebrates-commencement-record-numbers
-      langcode: en
   field_content:
     -
       value: '<p>This year''s commencement ceremony was the largest in the university''s history, with graduates crossing the stage across three back-to-back sessions over a single weekend.</p><p>Family and friends filled the grounds for each session, and a livestream let those who could not travel watch from home. Several graduates were the first in their family to complete a degree, a milestone the vice-chancellor singled out in her address.</p><p>"You will remember today less for what was said from this stage," she told graduates, "and more for who was sitting in the audience watching you hear it."</p><p>Degree certificates will be posted to graduates over the coming weeks, with digital copies available immediately through the student portal.</p>'

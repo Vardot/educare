@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/public-speaking-workshop
-      langcode: en
   body:
     -
       value: |-

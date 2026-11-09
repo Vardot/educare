@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/future-leaders-summit
-      langcode: en
   body:
     -
       value: |-

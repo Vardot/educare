@@ -20,8 +20,7 @@ default:
   revision_translation_affected:
   - value: true
   path:
-  - langcode: en
-    alias: null
+  - alias: null
   field_media_image:
   - alt: Two students standing on a campus path outside a brick building, going over their notes
     title: Two Students Talking on a Campus Path

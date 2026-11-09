@@ -40,7 +40,6 @@ default:
   path:
     -
       alias: /news/alumni-mentorship-programme-pairs-students-industry-professionals
-      langcode: en
   field_content:
     -
       value: '<p>A newly expanded alumni mentorship programme has paired more than two hundred students with graduates now working across a range of industries, offering a term of one-to-one career guidance outside the usual careers-service channels.</p><p>Matches are made on a mix of course background and stated interest, and pairs are encouraged to meet informally rather than follow a fixed curriculum. The alumni office says the informality is deliberate. "The best mentoring conversations are the ones that wander," the programme coordinator said. "We just make the introduction and get out of the way."</p><p>Several students from last year''s cohort have gone on to secure internships directly through their mentor''s network, though the programme is explicit that this is a welcome side effect rather than the goal.</p><p>Applications for next term''s cohort open shortly, on both the student and alumni side.</p>'

@@ -147,6 +147,5 @@ default:
       views_label: ''
   path:
   - alias: /search
-    langcode: en
   metatags:
   - value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","title":"[canvas_page:title] | [site:name]"}'

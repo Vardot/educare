@@ -726,7 +726,6 @@ default:
   path:
     -
       alias: /admissions
-      langcode: en
   revision_translation_affected:
     -
       value: true

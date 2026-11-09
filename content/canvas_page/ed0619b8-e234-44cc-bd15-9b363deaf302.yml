@@ -435,7 +435,6 @@ default:
   path:
     -
       alias: /tech-ai-innovation-conference
-      langcode: en
   revision_translation_affected:
     -
       value: true

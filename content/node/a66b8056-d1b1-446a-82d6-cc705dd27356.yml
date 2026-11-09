@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/quantum-computing-guest-lecture
-      langcode: en
   body:
     -
       value: |-

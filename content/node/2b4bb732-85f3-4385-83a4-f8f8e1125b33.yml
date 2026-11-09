@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/robotics-lab-open-evening
-      langcode: en
   body:
     -
       value: |-

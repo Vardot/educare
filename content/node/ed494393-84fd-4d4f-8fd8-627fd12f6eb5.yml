@@ -39,7 +39,6 @@ default:
   path:
     -
       alias: /news/international-student-enrolment-reaches-record-high-year
-      langcode: en
   field_content:
     -
       value: '<p>International student enrolment has reached a record high this academic year, with the largest increases coming from applicants in South and Southeast Asia.</p><p>The Admissions Office credits the growth to a combination of expanded scholarship funding, new articulation agreements with partner colleges, and a redesigned application process that cut the average decision time significantly.</p><p>"We didn''t change who we admit," the Director of Admissions said. "We changed how long it took a good applicant to hear back from us, and that mattered more than we expected."</p><p>The university has added additional orientation sessions and peer-mentor places to support the larger incoming cohort.</p>'

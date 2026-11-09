@@ -40,7 +40,6 @@ default:
   path:
     -
       alias: /news/students-return-semester-abroad-stories-four-continents
-      langcode: en
   field_content:
     -
       value: '<p>Students who spent the past semester on exchange returned this month with placements spanning four continents, from language immersion programmes in South America to laboratory placements in East Asia.</p><p>At a welcome-back session organised by the International Office, returning students described the adjustment as harder than expected in the first few weeks and worth it by the end. Several are already mentoring students preparing to leave next term.</p><p>"Nobody tells you how much of it is just logistics — a bank account, a phone plan, finding the right bus," one returning student said. "After that it gets easier, and then it gets good."</p><p>The International Office is compiling a short guide from this year''s cohort for next year''s outgoing students.</p>'

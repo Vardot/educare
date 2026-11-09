@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/university-launches-new-artificial-intelligence-research-center
-      langcode: en
   body:
     -
       value: |-

@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/careers-public-health-panel
-      langcode: en
   body:
     -
       value: |-

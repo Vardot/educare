@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/data-science-workshop-beginners
-      langcode: en
   body:
     -
       value: |-

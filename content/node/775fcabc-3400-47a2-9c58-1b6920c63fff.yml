@@ -39,7 +39,6 @@ default:
   path:
     -
       alias: /news/first-year-students-reflect-their-first-semester-campus
-      langcode: en
   field_content:
     -
       value: '<p>As the first semester draws to a close, new students shared what surprised them most about university life, from the freedom of an unstructured timetable to the work of making friends outside their own course.</p><p>Several students said the academic adjustment was smaller than they expected, and the social one was larger. "Nobody really tells you that most of your week isn''t in a lecture hall," one student said. "Figuring out what to do with that time was the actual first assignment."</p><p>Student Support Services runs regular drop-in sessions through the first semester specifically for this adjustment period, and staff say attendance tends to rise sharply in the weeks before exams.</p><p>A second cohort of first-year students will begin the same series of check-ins next term.</p>'

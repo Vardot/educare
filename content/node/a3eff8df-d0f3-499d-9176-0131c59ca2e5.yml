@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/tech-ai-innovation-conference
-      langcode: en
   body:
     -
       value: |-

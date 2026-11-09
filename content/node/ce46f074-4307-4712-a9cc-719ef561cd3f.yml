@@ -40,7 +40,6 @@ default:
   path:
     -
       alias: /news/engineering-researchers-unveil-low-cost-solar-desalination-prototype
-      langcode: en
   field_content:
     -
       value: '<p>Researchers in the School of Engineering have unveiled a small-scale solar desalination unit designed to run entirely without an external power supply, aimed at coastal communities without reliable grid access.</p><p>The prototype, built largely from off-the-shelf parts, uses a stepped solar still to produce a modest but steady output of fresh water through daylight hours. It is not intended to replace municipal infrastructure, the team is careful to note, but to bridge the gap where none currently exists.</p><p>"We wanted something a two-person crew could assemble on site with hand tools," said one of the postgraduate engineers on the project, "not something that needs a shipping container and a specialist to install."</p><p>A field version is being built for testing with a partner community later this year.</p>'

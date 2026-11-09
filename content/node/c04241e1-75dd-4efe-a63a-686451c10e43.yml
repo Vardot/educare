@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/robotics-competition-final
-      langcode: en
   body:
     -
       value: |-

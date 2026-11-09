@@ -385,7 +385,6 @@ default:
   path:
     -
       alias: /african-and-african-american-studies
-      langcode: en
   revision_translation_affected:
     -
       value: true

@@ -40,7 +40,6 @@ default:
   path:
     -
       alias: /news/undergraduate-robotics-team-wins-regional-championship
-      langcode: en
   field_content:
     -
       value: '<p>The undergraduate robotics team took first place at this year''s regional championship, beating fourteen other university teams with an autonomous sorting robot built almost entirely outside of scheduled coursework.</p><p>The team, made up mostly of second and third-year engineering and computer science students, spent most of the term meeting in the evenings in a borrowed workshop space, iterating on a design that failed its first two qualifying runs before the final version clicked into place.</p><p>"We rebuilt the gripper four times," the team captain said. "The version that won isn''t that different from the one that failed in week two — we just finally got the timing right."</p><p>The team will represent the university at the national championship later this year.</p>'

@@ -461,7 +461,6 @@ default:
   path:
     -
       alias: /anthropology
-      langcode: en
   revision_translation_affected:
     -
       value: true

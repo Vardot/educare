@@ -39,7 +39,6 @@ default:
   path:
     -
       alias: /news/community-clean-day-draws-record-volunteer-turnout
-      langcode: en
   field_content:
     -
       value: "<p>This year's community clean-up day drew a record number of student and staff volunteers, who spent the morning clearing litter and replanting native species along the river path that runs behind campus.</p><p>The event, now in its eighth year, is organised jointly by the Students' Union and the campus sustainability office, with support from the local council. This year's turnout was large enough that organisers ran out of gloves twice and had to send someone to the nearest hardware shop.</p><p>\"It's one of the only events where you'll see a professor and a first-year student both up to their elbows in the same stretch of riverbank,\" one of the organisers said.</p><p>Planning for next year's clean-up, and a proposed second event in spring, is already underway.</p>"

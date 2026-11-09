@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/postgraduate-funding-clinic
-      langcode: en
   body:
     -
       value: |-

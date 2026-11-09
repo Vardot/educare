@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/admissions-open-house
-      langcode: en
   body:
     -
       value: |-

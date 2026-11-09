@@ -39,7 +39,6 @@ default:
   path:
     -
       alias: /news/global-health-symposium-brings-together-researchers-20-countries
-      langcode: en
   field_content:
     -
       value: '<p>The annual Global Health Symposium drew researchers, clinicians and policy specialists from twenty countries to campus for two days of talks focused on health systems in low-resource settings.</p><p>Sessions ranged from vaccine cold-chain logistics to community health worker training, with a deliberate mix of academic papers and practitioner case studies. Organisers said the format is designed to keep the conversation grounded in what is actually deployable, not just what is publishable.</p><p>A recurring theme this year was data: several speakers argued that better use of the health data systems already in place would do more good, faster, than most new interventions.</p><p>Recordings of the keynote sessions will be made available to students and staff through the library shortly.</p>'

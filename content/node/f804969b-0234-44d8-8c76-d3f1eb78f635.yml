@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/clinical-research-methods-seminar
-      langcode: en
   body:
     -
       value: |-

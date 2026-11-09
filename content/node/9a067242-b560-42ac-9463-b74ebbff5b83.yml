@@ -35,7 +35,6 @@ default:
   path:
     -
       alias: /events/biomedical-engineering-showcase
-      langcode: en
   body:
     -
       value: |-
