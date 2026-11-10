@@ -52,7 +52,7 @@ default:
 
         <p>Lunch and refreshments are provided, and the breaks are deliberately long: most of what people remember from these events happens between the sessions rather than during them.</p>
 
-        <p>The venue is <strong>University 10 Jane Street, New York, NA 23367-2478, the main University hall</strong>. It is step-free throughout, a hearing loop is available, and if you have an access requirement we would rather hear about it in advance than improvise on the day.</p>
+        <p>The venue is <strong>The University Hall, Central Campus</strong>. It is step-free throughout, a hearing loop is available, and if you have an access requirement we would rather hear about it in advance than improvise on the day.</p>
 
         <p>Places are limited and they do go. If you would like to come, <a href="/contact-us">get in touch with the team</a> and we will hold you a place and send the joining details a week beforehand.</p>
 
@@ -67,7 +67,7 @@ default:
       entity: a772120f-a5bb-4e82-b7c7-e819940baae1
   field_location:
     -
-      value: 'University 10 Jane Street, New York, NA 23367-2478, the main University hall'
+      value: 'The University Hall, Central Campus'
   field_tags:
     -
       entity: 3ab8a507-e00c-4f54-9e4d-5222387a0bda

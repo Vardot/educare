@@ -3,6 +3,6 @@ status: true
 dependencies: {  }
 name: Degrees
 vid: degrees
-description: 'Academic degrees and credentials offered by a program (for example A.B., M.A., Ph.D.).'
+description: 'Academic degrees and credentials offered by a program (for example B.A., M.A., Ph.D.).'
 weight: 0
 new_revision: false

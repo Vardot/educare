@@ -65,8 +65,8 @@ Feature: Website Base Requirements - Main navigation and footer
      When I go to "/"
       And I wait until the page is loaded
      Then I should see "+1 489 239 2389" in the "footer" region
-      And I should see "john.doe@gmail.com" in the "footer" region
-      And I should see "450 Jane Stanford Way" in the "footer" region
+      And I should see "info@example.com" in the "footer" region
+      And I should see "1 University Avenue" in the "footer" region
 
   # The social profiles are icon links, so their accessible names are the only
   # thing a screen reader (or this test) can identify them by.

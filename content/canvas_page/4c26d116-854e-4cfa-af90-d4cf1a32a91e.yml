@@ -259,7 +259,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>02. MISSION STSTEMENT</p>'
+          value: '<p>02. MISSION STATEMENT</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -467,7 +467,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>The Institute’s board of trustees, known as “the Corporation,” includes 79 distinguished leaders in engineering, science, industry, education, and other professions.</p>'
+          value: '<p>Eduzin is governed by a board of trustees drawn from education, science, industry and public service, who set the university’s direction together with its senior leadership.</p>'
           format: canvas_html_block
         text_size: fs-6
         text_color: text-muted
@@ -668,7 +668,7 @@ default:
       inputs:
         number: '250'
         suffix: +
-        description: 'Active Research Projects driving innovation across science, technology, health, business, and the humanitie'
+        description: 'Active research projects driving innovation across science, technology, health, business and the humanities'
         background_color: bg-dark
         number_size: display-1
         number_color: text-white
@@ -683,7 +683,7 @@ default:
       inputs:
         number: $75M
         suffix: +
-        description: 'Active Research Projects driving innovation across science, technology, health, business, and the humanitie'
+        description: 'Active research projects driving innovation across science, technology, health, business and the humanities'
         background_color: bg-dark
         number_size: display-1
         number_color: text-white
@@ -698,7 +698,7 @@ default:
       inputs:
         number: '1,200'
         suffix: +
-        description: 'Active Research Projects driving innovation across science, technology, health, business, and the humanitie'
+        description: 'Active research projects driving innovation across science, technology, health, business and the humanities'
         background_color: bg-dark
         number_size: display-1
         number_color: text-white
@@ -747,7 +747,7 @@ default:
       inputs:
         number: '80'
         suffix: +
-        description: 'Active Research Projects driving innovation across science, technology, health, business, and the humanitie'
+        description: 'Active research projects driving innovation across science, technology, health, business and the humanities'
         background_color: bg-dark
         number_size: display-1
         number_color: text-white
@@ -762,7 +762,7 @@ default:
       inputs:
         number: '35'
         suffix: +
-        description: 'Active Research Projects driving innovation across science, technology, health, business, and the humanitie'
+        description: 'Active research projects driving innovation across science, technology, health, business and the humanities'
         background_color: bg-dark
         number_size: display-1
         number_color: text-white
@@ -777,7 +777,7 @@ default:
       inputs:
         number: '150'
         suffix: +
-        description: 'Active Research Projects driving innovation across science, technology, health, business, and the humanitie'
+        description: 'Active research projects driving innovation across science, technology, health, business and the humanities'
         background_color: bg-dark
         number_size: display-1
         number_color: text-white
@@ -868,7 +868,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>Founded to accelerate the nation’s industrial revolution, MIT is profoundly American. With ingenuity and drive, our graduates have invented fundamental technologies, launched new industries, and created millions of American jobs. At the same time, and without the slightest sense of contradiction, MIT is profoundly global. Our community gains tremendous strength as a magnet for talent from around the world. Through teaching, research, and innovation, MIT’s exceptional community pursues its mission of service to the nation and the world.</p>'
+          value: '<p>Eduzin began as a small college with a simple aim: to open higher education to anyone ready to work for it. That aim still guides us. Our graduates lead companies, schools, hospitals and public services, and our community brings together students and researchers from around the world. Through teaching, research and service, we work to make a lasting difference close to home and far beyond it.</p>'
           format: canvas_html_block
         text_size: fs-6
         text_color: text-muted

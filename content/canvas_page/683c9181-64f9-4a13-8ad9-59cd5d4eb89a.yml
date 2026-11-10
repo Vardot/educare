@@ -124,7 +124,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: "<p>It's something many of us have experienced: You go on your phone to check something and - in the blink of an eye - you've been scrolling for an hour.</p>"
+          value: '<p>Educare University has opened a new Artificial Intelligence Research Center, bringing together faculty and students from computer science, engineering, health, law and the humanities.</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -135,7 +135,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>People estimate more than a third of time on their phones is spent without a clear purpose, according to a new report.</p>'
+          value: '<p>The center will support research on how AI systems are designed, tested and used, with a focus on work that is open, explainable and useful to the communities around the university.</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -146,7 +146,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>Dr Eleanor Drage of Cambridge University said "this isn''t just a question of people making unwise choices," but that we are "undermined by the immersive nature of the technology".</p>'
+          value: '<p>“We want students to understand how these tools work, not only how to use them,” said the center’s founding director. “That means building them, questioning them and testing them together.”</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -157,7 +157,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>And while asking people to self-report their phone use can be unreliable, recognising our own habits is a "really important first step" to managing them, said Prof Pete Etchells of Bath Spa University.</p>'
+          value: '<p>In its first year, the center will fund twelve research projects, chosen through an open call across all faculties.</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -168,7 +168,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>Surveys commissioned by Virgin Media O2 found UK adults on average spent four hours per day on their phone, with 36% of this taking place unintentionally.</p>'
+          value: '<p>Projects already under way include tools that help clinicians read medical images, software that makes course materials accessible to students with disabilities, and studies of how AI changes the way people learn and work.</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -179,7 +179,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>The report also revealed many people are aware of tools to control their screen time, but struggle to find the will to use them.</p>'
+          value: '<p>Undergraduate and graduate students can join the center as research assistants, and a new minor in Responsible AI opens for applications next term.</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -190,7 +190,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>"Despite growing awareness of the downsides of habitual and excessive device use, people struggle to successfully manage their time online," said Drage, a senior research fellow at the University of Cambridge.</p>'
+          value: '<p>“Some of the most important questions about AI are not technical ones,” said a member of the center’s advisory board. “Philosophers, lawyers and historians belong in this room as much as engineers do.”</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -201,7 +201,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>Those surveyed reported their smartphone use was mostly intentional - comprising actions such as sending messages, using maps or checking the weather.</p>'
+          value: '<p>The center’s labs, seminar rooms and shared computing facilities are in the Engineering Building on South Campus and are open to all members of the university.</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -212,7 +212,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>But participants said they also spent time mindlessly scrolling or flicking through apps.</p>'
+          value: '<p>A public lecture series starts this autumn, with talks on AI in education, health and the creative arts.</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -223,7 +223,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>The survey suggested those who said they spend more time using their phone without a clear reason were also were more likely to report negative experiences - including feeling worse afterwards or seeing harmful or unpleasant content.</p>'
+          value: '<p>Faculty and students who would like to join a project, and partners who would like to work with the center, can contact the Office of Research for details.</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -268,7 +268,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: "<p>Location: \LUniversity 10 Jane Street, New York, NA 23367–2478, the main University hall</p>"
+          value: '<p>Location: The University Hall, Central Campus</p>'
           format: canvas_html_block
         text_size: fs-6
         text_color: text-secondary

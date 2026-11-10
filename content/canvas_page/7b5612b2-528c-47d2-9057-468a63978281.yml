@@ -549,7 +549,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
+          value: '<p>Eduzin offers undergraduate and graduate programs across the arts and humanities, the natural and social sciences, engineering, health, law, education and business. Students can combine subjects, join research early and learn alongside classmates from many backgrounds.</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -583,7 +583,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
+          value: '<p>Eduzin offers undergraduate and graduate programs across the arts and humanities, the natural and social sciences, engineering, health, law, education and business. Students can combine subjects, join research early and learn alongside classmates from many backgrounds.</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -617,7 +617,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
+          value: '<p>Eduzin offers undergraduate and graduate programs across the arts and humanities, the natural and social sciences, engineering, health, law, education and business. Students can combine subjects, join research early and learn alongside classmates from many backgrounds.</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -651,7 +651,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
+          value: '<p>Eduzin offers undergraduate and graduate programs across the arts and humanities, the natural and social sciences, engineering, health, law, education and business. Students can combine subjects, join research early and learn alongside classmates from many backgrounds.</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -685,7 +685,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
+          value: '<p>Eduzin offers undergraduate and graduate programs across the arts and humanities, the natural and social sciences, engineering, health, law, education and business. Students can combine subjects, join research early and learn alongside classmates from many backgrounds.</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body
@@ -719,7 +719,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.text
       inputs:
         text:
-          value: '<p>Stanford provides students the opportunity to engage with big ideas, to cross conceptual and disciplinary boundaries, and to become global citizens who embrace diversity of thought and experience. We offer broad and deep academic programs across multiple fields, including the arts and humanities, natural and social sciences, engineering, sustainability, medicine, law, education, and business.</p>'
+          value: '<p>Eduzin offers undergraduate and graduate programs across the arts and humanities, the natural and social sciences, engineering, health, law, education and business. Students can combine subjects, join research early and learn alongside classmates from many backgrounds.</p>'
           format: canvas_html_block
         text_size: none
         text_color: text-body

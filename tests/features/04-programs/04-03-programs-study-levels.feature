@@ -96,7 +96,7 @@ Feature: Programs - Study levels and program filtering
 
   # A program page must state the level and the degrees it awards - the two
   # facts a prospective student decides on. Biology is an Undergraduate program
-  # in Sciences awarding an A.B. and a B.S.
+  # in Sciences awarding a B.A. and a B.S.
   @check @local @development
   Scenario: A program page states its level, subject area and degrees
     Given I am an anonymous user
@@ -105,6 +105,6 @@ Feature: Programs - Study levels and program filtering
      Then I should see "Undergraduate"
       And I should see "Sciences"
       And I should see "Degrees"
-      And I should see "A.B."
+      And I should see "B.A."
       And I should see "B.S."
       And I should see "Ready to take the next step?"

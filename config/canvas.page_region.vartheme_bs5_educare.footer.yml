@@ -117,7 +117,7 @@ component_tree:
     component_version: c4ddb22de87220b3
     inputs:
       text:
-        value: '<p>john.doe@gmail.com</p>'
+        value: '<p>info@example.com</p>'
         format: canvas_html_block
       text_size: none
       text_color: text-body
@@ -129,7 +129,7 @@ component_tree:
     component_version: c4ddb22de87220b3
     inputs:
       text:
-        value: '<p>University 450 Jane Stanford Way, Stanford, CA 94305–2004</p>'
+        value: '<p>Educare University, 1 University Avenue, Eduzin</p>'
         format: canvas_html_block
       text_size: none
       text_color: text-body

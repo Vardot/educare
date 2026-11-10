@@ -100,7 +100,7 @@ component_tree:
     component_version: c4ddb22de87220b3
     inputs:
       text:
-        value: '<p>Phone Number: (408) 329 9888<br>Address: 3080 Olcott St, Suite A115, Santa Clara, CA 95054</p>'
+        value: '<p>Phone Number: +1 (555) 010 0199<br>Address: Educare University, 1 University Avenue, Eduzin</p>'
         format: canvas_html_block
       text_size: none
       text_color: text-body

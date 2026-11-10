@@ -16,7 +16,7 @@ default:
       value: true
   name:
     -
-      value: A.B.
+      value: B.A.
   weight:
     -
       value: 0
