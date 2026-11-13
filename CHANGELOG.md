@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Use the Educare Theme - Bootstrap 5 PNG email logo (`logo-email.png`) in HTML emails instead of
+  the SVG site logo, which many email clients do not show.
+  [#3637903](https://www.drupal.org/i/3637903)
 
 ## [1.0.9] - 2026-11-01
 ### Changed
