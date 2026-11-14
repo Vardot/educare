@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Installing in a language other than English no longer stops with "is not a version that exists
+  on component config entity": the recipe keeps the English version of each block component it
+  pins, beside the one Canvas made in the install language.
 
 ## [1.0.10] - 2026-11-13
 ### Fixed
