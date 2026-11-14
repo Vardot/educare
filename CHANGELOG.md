@@ -6,10 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.0.11] - 2026-11-14
 ### Fixed
 - Installing in a language other than English no longer stops with "is not a version that exists
   on component config entity": the recipe keeps the English version of each block component it
   pins, beside the one Canvas made in the install language.
+  [#3638219](https://www.drupal.org/i/3638219)
 
 ## [1.0.10] - 2026-11-13
 ### Fixed
@@ -166,7 +169,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.10...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.11...1.0.x
+[1.0.11]: https://git.drupalcode.org/project/educare/-/compare/1.0.10...1.0.11
 [1.0.10]: https://git.drupalcode.org/project/educare/-/compare/1.0.9...1.0.10
 [1.0.9]: https://git.drupalcode.org/project/educare/-/compare/1.0.8...1.0.9
 [1.0.8]: https://git.drupalcode.org/project/educare/-/compare/1.0.7...1.0.8
