@@ -6,10 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-### Changed
+
+## [1.0.10] - 2026-11-13
+### Fixed
+- Find the home page when the site's default language is not English.
+  [#3636516](https://www.drupal.org/i/3636516)
+- Confirm the contact form inline, in place of the form, so submitting it on its Canvas page no
+  longer shows an error. [#3636516](https://www.drupal.org/i/3636516)
 - Use the Educare Theme - Bootstrap 5 PNG email logo (`logo-email.png`) in HTML emails instead of
-  the SVG site logo, which many email clients do not show.
-  [#3637903](https://www.drupal.org/i/3637903)
+  the SVG site logo, which many email clients do not show. Needs Vartheme BS5 Educare 1.0.7 or
+  later. [#3637903](https://www.drupal.org/i/3637903)
+- Move the expired demo events forward so the Events listing pages again.
+  [#3636284](https://www.drupal.org/i/3636284)
+- Replace text copied from real universities and a news report, placeholders and typos in the
+  demo content. [#3636085](https://www.drupal.org/i/3636085)
+
+### Changed
+- Require Node.js 24 or later for the test tooling, and run the CI Node jobs on `node:24`.
+  [#3635692](https://www.drupal.org/i/3635692)
 
 ## [1.0.9] - 2026-11-01
 ### Changed
@@ -148,7 +162,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.9...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.10...1.0.x
+[1.0.10]: https://git.drupalcode.org/project/educare/-/compare/1.0.9...1.0.10
 [1.0.9]: https://git.drupalcode.org/project/educare/-/compare/1.0.8...1.0.9
 [1.0.8]: https://git.drupalcode.org/project/educare/-/compare/1.0.7...1.0.8
 [1.0.7]: https://git.drupalcode.org/project/educare/-/compare/1.0.6...1.0.7
