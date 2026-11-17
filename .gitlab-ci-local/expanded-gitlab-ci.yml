@@ -69,8 +69,8 @@ workflow:
     - add-apt-repository -y ppa:ondrej/php
     - apt-get update -y
     - >-
-      apt-get install -y --no-install-recommends php8.4-cli php8.4-mysql
-      php8.4-gd php8.4-curl php8.4-xml php8.4-mbstring php8.4-zip php8.4-intl
+      apt-get install -y --no-install-recommends php8.5-cli php8.5-mysql
+      php8.5-gd php8.5-curl php8.5-xml php8.5-mbstring php8.5-zip php8.5-intl
       unzip git default-mysql-client webp imagemagick
       libmagickcore-6.q16-6-extra
     - >-
@@ -266,8 +266,8 @@ workflow:
     - add-apt-repository -y ppa:ondrej/php
     - apt-get update -y
     - >-
-      apt-get install -y --no-install-recommends php8.4-cli php8.4-mysql
-      php8.4-gd php8.4-curl php8.4-xml php8.4-mbstring php8.4-zip php8.4-intl
+      apt-get install -y --no-install-recommends php8.5-cli php8.5-mysql
+      php8.5-gd php8.5-curl php8.5-xml php8.5-mbstring php8.5-zip php8.5-intl
       unzip git default-mysql-client webp imagemagick
       libmagickcore-6.q16-6-extra
     - >-
@@ -367,8 +367,8 @@ workflow:
     - add-apt-repository -y ppa:ondrej/php
     - apt-get update -y
     - >-
-      apt-get install -y --no-install-recommends php8.4-cli php8.4-mysql
-      php8.4-gd php8.4-curl php8.4-xml php8.4-mbstring php8.4-zip php8.4-intl
+      apt-get install -y --no-install-recommends php8.5-cli php8.5-mysql
+      php8.5-gd php8.5-curl php8.5-xml php8.5-mbstring php8.5-zip php8.5-intl
       unzip git default-mysql-client webp imagemagick
       libmagickcore-6.q16-6-extra
     - >-
@@ -600,8 +600,8 @@ workflow:
     - add-apt-repository -y ppa:ondrej/php
     - apt-get update -y
     - >-
-      apt-get install -y --no-install-recommends php8.4-cli php8.4-mysql
-      php8.4-gd php8.4-curl php8.4-xml php8.4-mbstring php8.4-zip php8.4-intl
+      apt-get install -y --no-install-recommends php8.5-cli php8.5-mysql
+      php8.5-gd php8.5-curl php8.5-xml php8.5-mbstring php8.5-zip php8.5-intl
       unzip git default-mysql-client webp imagemagick
       libmagickcore-6.q16-6-extra
     - >-
