@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- A Drupal Canvas brand kit that restyles the whole site: the Bootstrap 5.3 colour variables
+  as the default palette, global CSS that derives tints, utilities and buttons from them, and
+  the "Administer brand kit" permission for content editors and content admins.
+  [#3638670](https://www.drupal.org/i/3638670)
 
 ## [1.0.11] - 2026-11-14
 ### Fixed

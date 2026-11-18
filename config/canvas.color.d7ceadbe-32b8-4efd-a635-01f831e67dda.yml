@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {}
+uuid: d7ceadbe-32b8-4efd-a635-01f831e67dda
+name: 'Red'
+cssVariable: '--bs-red'
+value:
+  colorSpace: srgb
+  components:
+    - 0.862745
+    - 0.207843
+    - 0.270588
+  alpha: 1.0
+  hex: '#dc3545'
+displayFormat: hex
+weight: 26

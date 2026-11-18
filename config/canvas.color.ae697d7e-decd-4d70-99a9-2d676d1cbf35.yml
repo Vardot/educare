@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {}
+uuid: ae697d7e-decd-4d70-99a9-2d676d1cbf35
+name: 'Link hover'
+cssVariable: '--bs-link-hover-color'
+value:
+  colorSpace: srgb
+  components:
+    - 0.019608
+    - 0.031373
+    - 0.2
+  alpha: 1.0
+  hex: '#050833'
+displayFormat: hex
+weight: 17

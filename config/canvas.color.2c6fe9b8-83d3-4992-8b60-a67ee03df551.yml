@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {}
+uuid: 2c6fe9b8-83d3-4992-8b60-a67ee03df551
+name: 'Pink'
+cssVariable: '--bs-pink'
+value:
+  colorSpace: srgb
+  components:
+    - 0.839216
+    - 0.2
+    - 0.517647
+  alpha: 1.0
+  hex: '#d63384'
+displayFormat: hex
+weight: 25

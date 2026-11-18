@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {}
+uuid: 0a33b303-b059-4796-b9be-6e8d230c5b6f
+name: 'Cyan'
+cssVariable: '--bs-cyan'
+value:
+  colorSpace: srgb
+  components:
+    - 0.05098
+    - 0.792157
+    - 0.941176
+  alpha: 1.0
+  hex: '#0dcaf0'
+displayFormat: hex
+weight: 31

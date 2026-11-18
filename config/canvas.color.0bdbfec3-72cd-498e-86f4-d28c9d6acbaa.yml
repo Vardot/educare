@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {}
+uuid: 0bdbfec3-72cd-498e-86f4-d28c9d6acbaa
+name: 'Light'
+cssVariable: '--bs-light'
+value:
+  colorSpace: srgb
+  components:
+    - 0.972549
+    - 0.976471
+    - 0.980392
+  alpha: 1.0
+  hex: '#f8f9fa'
+displayFormat: hex
+weight: 6

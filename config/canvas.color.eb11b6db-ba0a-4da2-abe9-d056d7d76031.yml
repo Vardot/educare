@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {}
+uuid: eb11b6db-ba0a-4da2-abe9-d056d7d76031
+name: 'Blue'
+cssVariable: '--bs-blue'
+value:
+  colorSpace: srgb
+  components:
+    - 0.05098
+    - 0.431373
+    - 0.992157
+  alpha: 1.0
+  hex: '#0d6efd'
+displayFormat: hex
+weight: 22

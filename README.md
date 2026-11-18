@@ -77,6 +77,24 @@ Canvas templates that the base recipes ship against the base theme are repointed
 Educare with the config actions from
 [Varbase Recipes](https://www.drupal.org/project/varbase_recipes).
 
+## Brand kit
+
+Change the site's colours in Drupal Canvas, under **Brand kit**. Content editors and content
+admins can edit it.
+
+The Brand kit colours are the Bootstrap 5.3 colour variables themselves, with Bootstrap's names
+(`--bs-primary`, `--bs-body-bg`, `--bs-link-color`...), set to the colours the theme renders:
+
+- Theme colours: Primary, Secondary, Success, Info, Warning, Danger, Light, Dark.
+- Page colours: Body text, Body background, Emphasis, Secondary text and background, Tertiary
+  text and background, Headings, Link, Link hover, Border, Code, Highlight text and background.
+- Named colours: Blue, Indigo, Purple, Pink, Red, Orange, Yellow, Green, Teal, Cyan, White, Black,
+  Gray, Gray dark.
+
+Canvas's global CSS, set by this recipe, derives the rest from them: tints, the colour
+utilities, buttons, focus rings and active states. The Educare theme loads the Brand kit after
+its own CSS, so a Brand kit colour wins. Keep the variable names: renaming one disconnects it.
+
 ## Requirements
 
 - Drupal ~11.4, PHP 8.4
