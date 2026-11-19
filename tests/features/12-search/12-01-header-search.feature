@@ -36,11 +36,11 @@ Feature: Header search - The search toggle in the site header
      Then the "header search toggle" should be visible
 
     Examples:
-      | name     | path      |
-      | News     | /news     |
-      | Events   | /events   |
-      | Programs | /programs |
-      | Privacy  | /privacy  |
+      | name     | path            |
+      | News     | /news           |
+      | Events   | /events         |
+      | Programs | /programs       |
+      | Privacy  | /privacy-policy |
 
   # Submitting from the header has to land on the results page and carry the
   # query with it, so the results page opens already filtered.

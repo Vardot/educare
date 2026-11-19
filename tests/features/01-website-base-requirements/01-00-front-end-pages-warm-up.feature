@@ -33,17 +33,17 @@ Feature: Website Base Requirements - Front-end pages warm-up
      When I warm up "<path>" at all testing breakpoints
 
     Examples: Canvas pages
-      | name         | path          |
-      | Home         | /             |
-      | About        | /about        |
-      | Admissions   | /admissions   |
-      | Student Life | /student-life |
-      | Research     | /research     |
-      | News         | /news         |
-      | Events       | /events       |
-      | Programs     | /programs     |
-      | Contact Us   | /contact-us   |
-      | Privacy      | /privacy      |
+      | name         | path            |
+      | Home         | /               |
+      | About        | /about          |
+      | Admissions   | /admissions     |
+      | Student Life | /student-life   |
+      | Research     | /research       |
+      | News         | /news           |
+      | Events       | /events         |
+      | Programs     | /programs       |
+      | Contact Us   | /contact-us     |
+      | Privacy      | /privacy-policy |
 
     Examples: Content pages
       | name         | path                                                         |

@@ -162,7 +162,7 @@ Then(/^the "([^"]*)" meta tag should (be|contain) "([^"]*)"$/, async function (k
  * Example #2: Then the canonical url should end with "/events/global-education-forum"
  * Example #3: And the canonical url should end with "/news/undergraduate-robotics-team-wins-regional-championship"
  * Example #4: Then the canonical url should end with "/about"
- * Example #5: And the canonical url should end with "/privacy"
+ * Example #5: And the canonical url should end with "/privacy-policy"
  */
 Then(/^the canonical url should end with "([^"]*)"$/, async function (path) {
   const href = await this.page.evaluate(() => {

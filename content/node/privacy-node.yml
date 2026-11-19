@@ -24,12 +24,13 @@ default:
   moderation_state:
   - value: published
   path:
-  - alias: /privacy
+  - alias: /privacy-policy
     pathauto: 0
   field_description:
   - value: How this site collects, uses and protects your personal data.
   field_content:
   - value: |
+      <p><strong>Draft for demo only.</strong> This privacy policy is placeholder text. Editors must edit it and replace it with this site's own privacy statement before launch.</p>
       <h2>What information we collect</h2>
       <p>We collect information you give us directly, such as your name, email address and phone number when you fill in an admissions, enrolment or newsletter form. We also collect basic usage data (pages visited, browser type, approximate location) through cookies and similar technologies, described in our cookie settings.</p>
       <h2>How we use your information</h2>

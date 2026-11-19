@@ -24,14 +24,14 @@ Feature: Quality - Performance budgets on the Educare pages
      Then the page should load in less than 8 seconds
 
     Examples: Canvas pages
-      | name         | path          |
-      | Home         | /             |
-      | About        | /about        |
-      | Admissions   | /admissions   |
-      | Student Life | /student-life |
-      | Research     | /research     |
-      | Contact Us   | /contact-us   |
-      | Privacy      | /privacy      |
+      | name         | path            |
+      | Home         | /               |
+      | About        | /about          |
+      | Admissions   | /admissions     |
+      | Student Life | /student-life   |
+      | Research     | /research       |
+      | Contact Us   | /contact-us     |
+      | Privacy      | /privacy-policy |
 
   # The three listings each run a view with an exposed filter and a pager, so they
   # carry more query cost than a Canvas page and are the most likely to regress.

@@ -32,6 +32,6 @@ Feature: Exposed filters - Form-scoped listing filters
      Then "main form.views-exposed-form" should not be visible
 
     Examples:
-      | name    | path     |
-      | Home    | /        |
-      | Privacy | /privacy |
+      | name    | path            |
+      | Home    | /               |
+      | Privacy | /privacy-policy |

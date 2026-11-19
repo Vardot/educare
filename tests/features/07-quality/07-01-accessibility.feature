@@ -32,17 +32,17 @@ Feature: Accessibility - Every shipped page is accessible
       And the page should have no serious accessibility violations
 
     Examples: Canvas pages
-      | name         | path          |
-      | Home         | /             |
-      | About        | /about        |
-      | Admissions   | /admissions   |
-      | Student Life | /student-life |
-      | Research     | /research     |
-      | News         | /news         |
-      | Events       | /events       |
-      | Programs     | /programs     |
-      | Contact Us   | /contact-us   |
-      | Privacy      | /privacy      |
+      | name         | path            |
+      | Home         | /               |
+      | About        | /about          |
+      | Admissions   | /admissions     |
+      | Student Life | /student-life   |
+      | Research     | /research       |
+      | News         | /news           |
+      | Events       | /events         |
+      | Programs     | /programs       |
+      | Contact Us   | /contact-us     |
+      | Privacy      | /privacy-policy |
 
     Examples: Content pages
       | name           | path                                                         |
@@ -105,7 +105,7 @@ Feature: Accessibility - Every shipped page is accessible
       | Events         | /events                                                      |
       | Programs       | /programs                                                    |
       | Contact Us     | /contact-us                                                  |
-      | Privacy        | /privacy                                                     |
+      | Privacy        | /privacy-policy                                              |
       | News article   | /news/undergraduate-robotics-team-wins-regional-championship |
       | Event page     | /events/global-education-forum                               |
       | Program page   | /programs/biology                                            |
@@ -207,17 +207,17 @@ Feature: Accessibility - Every shipped page is accessible
      Then the page should pass an accessibility audit at level "AA"
 
     Examples: Canvas pages
-      | name         | path          |
-      | Home         | /             |
-      | About        | /about        |
-      | Admissions   | /admissions   |
-      | Student Life | /student-life |
-      | Research     | /research     |
-      | News         | /news         |
-      | Events       | /events       |
-      | Programs     | /programs     |
-      | Contact Us   | /contact-us   |
-      | Privacy      | /privacy      |
+      | name         | path            |
+      | Home         | /               |
+      | About        | /about          |
+      | Admissions   | /admissions     |
+      | Student Life | /student-life   |
+      | Research     | /research       |
+      | News         | /news           |
+      | Events       | /events         |
+      | Programs     | /programs       |
+      | Contact Us   | /contact-us     |
+      | Privacy      | /privacy-policy |
 
     Examples: Content pages
       | name           | path                                                         |

@@ -40,7 +40,7 @@ Feature: Search content types and combined filters - Every indexed type renders 
       And current url should have the "keywords" parameter with the "the" value
       And the "search rows" should have a count of 2
       And ".view-search .views-row a.stretched-link[href^='/news/']" should be attached
-      And ".view-search .views-row a.stretched-link[href='/privacy']" should be attached
+      And ".view-search .views-row a.stretched-link[href='/privacy-policy']" should be attached
 
   @check @local @development @staging @production
   Scenario: A Category box and a Content Type box combine

@@ -56,12 +56,12 @@ Feature: SEO - Metatags and sharing previews
      Then the canonical url should end with "<path>"
 
     Examples:
-      | name         | path                             |
-      | About        | /about                           |
-      | Admissions   | /admissions                      |
-      | Privacy      | /privacy                         |
-      | Event page   | /events/global-education-forum   |
-      | Program page | /programs/biology                |
+      | name         | path                           |
+      | About        | /about                         |
+      | Admissions   | /admissions                    |
+      | Privacy      | /privacy-policy                |
+      | Event page   | /events/global-education-forum |
+      | Program page | /programs/biology              |
 
   # Each page must put its own name in the browser and search-result title, not
   # just the site name.

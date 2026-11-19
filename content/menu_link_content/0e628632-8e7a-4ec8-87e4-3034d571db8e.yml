@@ -19,7 +19,7 @@ default:
       value: footer
   link:
     -
-      uri: 'internal:/privacy'
+      uri: 'internal:/privacy-policy'
       title: ''
       options: {  }
   external:

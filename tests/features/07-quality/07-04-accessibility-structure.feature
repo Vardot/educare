@@ -29,7 +29,7 @@ Feature: Quality - Accessibility structure
       | events listing | /events                                                      |
       | programs       | /programs                                                    |
       | contact us     | /contact-us                                                  |
-      | privacy        | /privacy                                                     |
+      | privacy        | /privacy-policy                                              |
       | news article   | /news/undergraduate-robotics-team-wins-regional-championship |
       | event page     | /events/global-education-forum                               |
       | program page   | /programs/biology                                            |
@@ -58,7 +58,7 @@ Feature: Quality - Accessibility structure
       | events listing | /events                                                      |
       | programs       | /programs                                                    |
       | contact us     | /contact-us                                                  |
-      | privacy        | /privacy                                                     |
+      | privacy        | /privacy-policy                                              |
       | news article   | /news/undergraduate-robotics-team-wins-regional-championship |
       | event page     | /events/global-education-forum                               |
       | program page   | /programs/biology                                            |

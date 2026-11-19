@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   as the default palette, global CSS that derives tints, utilities and buttons from them, and
   the "Administer brand kit" permission for content editors and content admins.
   [#3638670](https://www.drupal.org/i/3638670)
+### Fixed
+- Move the Privacy policy page from `/privacy` to `/privacy-policy`, where the contact form
+  consent link points, repoint the footer link and the cookie consent privacy link, and add a
+  draft-for-demo warning that tells editors to replace it with the site's own privacy statement
+  before launch.
+  [#3639417](https://www.drupal.org/i/3639417)
 
 ## [1.0.11] - 2026-11-14
 ### Fixed

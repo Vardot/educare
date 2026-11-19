@@ -623,7 +623,7 @@ config:
       setCKEditorMediaEmbedVersion: true
     klaro.texts:
       simpleConfigUpdate:
-        consentModal.privacyPolicy.url: internal:/privacy
+        consentModal.privacyPolicy.url: internal:/privacy-policy
     views.view.news:
       simpleConfigUpdate:
         display.all.display_options.style.options.component_id: vartheme_bs5_educare:grid
