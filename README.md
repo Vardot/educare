@@ -12,16 +12,16 @@ the [Varbase](https://www.drupal.org/project/varbase) distribution with the
 
 ## Install with Composer
 
-Start from a Varbase ~11.0.0 project:
+To install the most recent release of Varbase 11.0.x, run this command:
 
 ```bash
 composer create-project drupal/varbase_project:~11.0.0 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
-Then add the Educare site template:
+Then require the Educare site template:
 
 ```bash
-composer require drupal/educare:1.0.x-dev
+composer require drupal/educare:~1.0.0
 ```
 
 ## Local setup with DDEV
@@ -32,7 +32,7 @@ cd my_educare_site
 ddev config --project-type=drupal11 --docroot=web --php-version=8.4
 ddev start
 ddev composer create-project "drupal/varbase_project:~11.0.0"
-ddev composer require drupal/educare:1.0.x-dev
+ddev composer require drupal/educare:~1.0.0
 ddev launch
 ```
 
