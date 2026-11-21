@@ -22,6 +22,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   the Navbar Component config, which Canvas disables (the theme's Navbar has an empty value in its
   Placement options) and so could never bring up to date.
   [#3639418](https://git.drupalcode.org/project/educare/-/work_items/3639418)
+- Ship a published Terms and Conditions page at `/terms-and-conditions`, where the Contact Us
+  consent link points, with a footer link and the same draft-for-demo warning as the Privacy
+  policy. The link opened "Page not found".
+  [#3639421](https://git.drupalcode.org/project/educare/-/work_items/3639421)
 
 ## [1.0.11] - 2026-11-14
 ### Fixed

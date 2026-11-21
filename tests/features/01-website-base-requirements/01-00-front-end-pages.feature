@@ -22,17 +22,18 @@ Feature: Website Base Requirements - Front-end pages
       And the page should have a title
 
     Examples: Canvas pages
-      | name         | path            |
-      | Home         | /               |
-      | About        | /about          |
-      | Admissions   | /admissions     |
-      | Student Life | /student-life   |
-      | Research     | /research       |
-      | News         | /news           |
-      | Events       | /events         |
-      | Programs     | /programs       |
-      | Contact Us   | /contact-us     |
-      | Privacy      | /privacy-policy |
+      | name         | path                  |
+      | Home         | /                     |
+      | About        | /about                |
+      | Admissions   | /admissions           |
+      | Student Life | /student-life         |
+      | Research     | /research             |
+      | News         | /news                 |
+      | Events       | /events               |
+      | Programs     | /programs             |
+      | Contact Us   | /contact-us           |
+      | Privacy      | /privacy-policy       |
+      | Terms        | /terms-and-conditions |
 
   # A known piece of copy per landmark page proves the page rendered its own
   # content, not just a healthy shell.
@@ -44,10 +45,11 @@ Feature: Website Base Requirements - Front-end pages
      Then I should see "<text>"
 
     Examples: Landmark copy
-      | name     | path            | text                     |
-      | Home     | /               | Shape Your Future        |
-      | About    | /about          | We Are Here To Guide You |
-      | News     | /news           | Latest Updates           |
-      | Events   | /events         | Upcoming Events          |
-      | Programs | /programs       | All programs             |
-      | Privacy  | /privacy-policy | Privacy policy           |
+      | name     | path                  | text                     |
+      | Home     | /                     | Shape Your Future        |
+      | About    | /about                | We Are Here To Guide You |
+      | News     | /news                 | Latest Updates           |
+      | Events   | /events               | Upcoming Events          |
+      | Programs | /programs             | All programs             |
+      | Privacy  | /privacy-policy       | Privacy policy           |
+      | Terms    | /terms-and-conditions | Terms and Conditions     |

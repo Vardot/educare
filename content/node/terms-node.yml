@@ -1,0 +1,44 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 8bc84e6c-70e6-4f9f-8e60-d1b19e8fc9bf
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+  - target_id: 1
+  revision_log:
+  - value: Created new Utility page
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Terms and Conditions
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  revision_translation_affected:
+  - value: true
+  moderation_state:
+  - value: published
+  path:
+  - alias: /terms-and-conditions
+    pathauto: 0
+  field_description:
+  - value: The terms that govern the use of this site and the services offered through it.
+  field_content:
+  - value: |
+      <p><strong>Draft for demo only.</strong> These terms and conditions are placeholder text. Editors must edit them and replace them with this site's own terms before launch.</p>
+      <h2>Use of this site</h2>
+      <p>This site gives general information about the university, its programs, admissions, events and news. We may change or remove any of it at any time without notice.</p>
+      <h2>Applications and enquiries</h2>
+      <p>Information you send through an admissions, enrolment, enquiry or newsletter form must be accurate. Sending a form is not an offer of a place: admissions decisions follow the university's published admissions procedures.</p>
+      <h2>Intellectual property</h2>
+      <p>Unless stated otherwise, the text, images and other material on this site belong to the university or its licensors and may not be reused without permission.</p>
+      <h2>Links to other sites</h2>
+      <p>This site links to sites we do not run. We are not responsible for their content.</p>
+      <h2>Contact</h2>
+      <p>Questions about these terms can be sent to the address listed in the site footer.</p>
+    format: content_format

@@ -38,9 +38,10 @@ Feature: Search content types and combined filters - Every indexed type renders 
      Then "#content-type-page:checked" should have a count of 1 within 10 seconds
       And "#content-type-news:checked" should have a count of 1
       And current url should have the "keywords" parameter with the "the" value
-      And the "search rows" should have a count of 2
+      And the "search rows" should have a count of 3
       And ".view-search .views-row a.stretched-link[href^='/news/']" should be attached
       And ".view-search .views-row a.stretched-link[href='/privacy-policy']" should be attached
+      And ".view-search .views-row a.stretched-link[href='/terms-and-conditions']" should be attached
 
   @check @local @development @staging @production
   Scenario: A Category box and a Content Type box combine
