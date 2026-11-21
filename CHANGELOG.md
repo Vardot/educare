@@ -29,6 +29,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Site admins and SEO admins can add, edit and delete programs, as they can events, news and
   utility pages. They got "Access denied".
   [#3639422](https://git.drupalcode.org/project/educare/-/work_items/3639422)
+- Stop shipping the Card Hero Component config, made before the theme added the Border radius
+  prop. Canvas disables it (the theme's Card Hero has `#` as its button URL example, which
+  Canvas refuses) and so could never bring it up to date. Nothing in the recipe uses it.
+  [#3639424](https://git.drupalcode.org/project/educare/-/work_items/3639424)
 
 ## [1.0.11] - 2026-11-14
 ### Fixed
