@@ -183,6 +183,38 @@ config:
         - 'select terms in program_type'
         - 'select terms in study_level'
         - 'administer brand kit'
+    # Programs for Site admin and SEO admin, as the Varbase base recipes grant
+    # them events, news and pages.
+    user.role.site_admin:
+      grantPermissions:
+        - 'create program content'
+        - 'delete any program content'
+        - 'delete own program content'
+        - 'delete program revisions'
+        - 'edit any program content'
+        - 'edit own program content'
+        - 'revert program revisions'
+        - 'view program revisions'
+        - 'create terms in degrees'
+        - 'create terms in program_type'
+        - 'edit terms in degrees'
+        - 'edit terms in program_type'
+        - 'select terms in degrees'
+        - 'select terms in program_type'
+        - 'select terms in study_level'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'create program content'
+        - 'delete any program content'
+        - 'delete own program content'
+        - 'edit any program content'
+        - 'edit own program content'
+        - 'view program revisions'
+        - 'create terms in degrees'
+        - 'create terms in program_type'
+        - 'select terms in degrees'
+        - 'select terms in program_type'
+        - 'select terms in study_level'
     # The Brand kit colours are Bootstrap's own --bs-* variables (config/canvas.color.*).
     # This global CSS derives what Bootstrap compiles to literals or rgb triplets.
     # setProperties saves the entity, which writes the CSS file.

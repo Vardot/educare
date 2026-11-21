@@ -26,6 +26,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   consent link points, with a footer link and the same draft-for-demo warning as the Privacy
   policy. The link opened "Page not found".
   [#3639421](https://git.drupalcode.org/project/educare/-/work_items/3639421)
+- Site admins and SEO admins can add, edit and delete programs, as they can events, news and
+  utility pages. They got "Access denied".
+  [#3639422](https://git.drupalcode.org/project/educare/-/work_items/3639422)
 
 ## [1.0.11] - 2026-11-14
 ### Fixed
