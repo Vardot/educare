@@ -279,7 +279,7 @@ workflow:
     # (play button). allow_failure stays false - when it IS run, it must pass.
     - when: manual
       allow_failure: false
-  image: mcr.microsoft.com/playwright:v1.56.0-noble
+  image: mcr.microsoft.com/playwright:v1.63.0-noble
   needs: []
   timeout: 2h
   # composer pulls dists from github.com unauthenticated; a rate limit there is
@@ -363,7 +363,7 @@ workflow:
       when: on_success
     - when: manual
       allow_failure: false
-  image: mcr.microsoft.com/playwright:v1.56.0-noble
+  image: mcr.microsoft.com/playwright:v1.63.0-noble
   needs: ["📦 Drupal CMS - Educare"]
   timeout: 2h
   retry:
@@ -481,7 +481,7 @@ workflow:
     - apt-get update -y && apt-get install -y jq
     # Same floor as package.json devDependencies, so the report CLI in this
     # job cannot drift to a different major than the one the tests ran on.
-    - npm install --no-save --no-audit --no-fund "@vardot/varbase-e2e@^2.0.6"
+    - npm install --no-save --no-audit --no-fund "@vardot/varbase-e2e@^2.0.8"
     - ./node_modules/.bin/playwright install --with-deps chromium
   script:
     # The functional jobs are skipped when the install gate fails, leaving no
