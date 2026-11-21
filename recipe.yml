@@ -36,6 +36,20 @@ config:
     # Canvas made before this recipe has another version than the English one
     # the templates, patterns and regions pin. Keep the English version beside
     # it as an older version. Only blocks whose label is translated.
+    canvas.component.block.system_branding_block:
+      simpleConfigUpdate:
+        versioned_properties.7d528e00f56b3abf:
+          settings:
+            default_settings:
+              id: system_branding_block
+              label: Site branding
+              label_display: '0'
+              provider: system
+              use_site_logo: true
+              use_site_name: true
+              use_site_slogan: true
+          fallback_metadata:
+            slot_definitions: null
     canvas.component.block.system_breadcrumb_block:
       simpleConfigUpdate:
         versioned_properties.0d7e961dd03aa710:
@@ -1165,6 +1179,70 @@ config:
             display_extenders: {  }
             display_description: 'Exposed search form for the header region.'
             block_description: 'Header search form'
+    # The header search box is wired here, after the block_1 display exists,
+    # instead of in config/.
+    #
+    # A recipe imports everything under config/ before it runs config.actions.
+    # Shipping the component and the header placement as config files resolved
+    # the views_exposed_filter_block:search-block_1 block plugin while the
+    # display that provides it was still missing, and the install logged the
+    # plugin as not found three times. Creating the component and placing it in
+    # the header from here keeps both after the display. Varbase Starter does
+    # the same.
+    #
+    # setProperties validates the whole header region, so the region config
+    # pins real component versions, not `active`, which validation refuses.
+    canvas.component.block.views_exposed_filter_block.search-block_1:
+      createIfNotExists:
+        langcode: en
+        status: true
+        dependencies:
+          config:
+            - views.view.search
+          module:
+            - views
+        active_version: abd3c7419d413cec
+        versioned_properties:
+          active:
+            settings:
+              default_settings:
+                id: 'views_exposed_filter_block:search-block_1'
+                label: 'Exposed form: search-block_1'
+                label_display: '0'
+                provider: views
+                views_label: ''
+            fallback_metadata:
+              slot_definitions: null
+        label: 'Exposed form: search-block_1'
+        id: block.views_exposed_filter_block.search-block_1
+        provider: views
+        source: block
+        source_local_id: 'views_exposed_filter_block:search-block_1'
+      # Canvas may have made it already, labelled in the install language: keep
+      # the English version, as at the top.
+      simpleConfigUpdate:
+        versioned_properties.abd3c7419d413cec:
+          settings:
+            default_settings:
+              id: views_exposed_filter_block:search-block_1
+              label: 'Exposed form: search-block_1'
+              label_display: '0'
+              provider: views
+              views_label: ''
+          fallback_metadata:
+            slot_definitions: null
+    canvas.page_region.vartheme_bs5_educare.header:
+      setProperties:
+        component_tree.4d8d4f0c-cfad-4223-ab50-eef74ed55c96:
+          parent_uuid: 77119e05-adda-427e-9ad6-7e4b2157f57a
+          slot: content
+          uuid: 4d8d4f0c-cfad-4223-ab50-eef74ed55c96
+          component_id: block.views_exposed_filter_block.search-block_1
+          component_version: abd3c7419d413cec
+          inputs:
+            label: Search
+            label_display: '0'
+            views_label: ''
     canvas.content_template.node.program.full:
       simpleConfigUpdate:
         status: true

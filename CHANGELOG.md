@@ -33,6 +33,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   prop. Canvas disables it (the theme's Card Hero has `#` as its button URL example, which
   Canvas refuses) and so could never bring it up to date. Nothing in the recipe uses it.
   [#3639424](https://git.drupalcode.org/project/educare/-/work_items/3639424)
+- Create the header search block after the search view display that provides it, so the install
+  no longer warns three times that the `views_exposed_filter_block:search-block_1` block plugin
+  was not found. The header region now pins the site branding and main menu block versions, and
+  the recipe keeps the English site branding version on non-English installs, as Varbase Starter
+  does since 1.0.0-rc2.
+  [#3639423](https://git.drupalcode.org/project/educare/-/work_items/3639423)
 
 ## [1.0.11] - 2026-11-14
 ### Fixed
