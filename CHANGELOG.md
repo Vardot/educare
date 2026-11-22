@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.0.12] - 2026-11-22
 ### Added
 - A Drupal Canvas brand kit that restyles the whole site: the Bootstrap 5.3 colour variables
   as the default palette, global CSS that derives tints, utilities and buttons from them, and
@@ -39,6 +41,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   the recipe keeps the English site branding version on non-English installs, as Varbase Starter
   does since 1.0.0-rc2.
   [#3639423](https://git.drupalcode.org/project/educare/-/work_items/3639423)
+- Require the News category, the Event date and the Program type and study level, which the
+  Canvas templates bind. A News post, Event or Program saved without them broke its page with a
+  rendering error and an Event without a date was missing from the event listings.
+  [#3639425](https://git.drupalcode.org/project/educare/-/work_items/3639425)
+- Fit the All programs button in the Contact Us side card, whose label was clipped and overlapped
+  by its icon at tablet widths.
+  [#3639426](https://git.drupalcode.org/project/educare/-/work_items/3639426)
+
+### Changed
+- The README requires the released Educare (`~1.0.0`) on a released Varbase 11.0.x.
+  [#3639420](https://git.drupalcode.org/project/educare/-/work_items/3639420)
 
 ## [1.0.11] - 2026-11-14
 ### Fixed
@@ -202,7 +215,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.11...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.12...1.0.x
+[1.0.12]: https://git.drupalcode.org/project/educare/-/compare/1.0.11...1.0.12
 [1.0.11]: https://git.drupalcode.org/project/educare/-/compare/1.0.10...1.0.11
 [1.0.10]: https://git.drupalcode.org/project/educare/-/compare/1.0.9...1.0.10
 [1.0.9]: https://git.drupalcode.org/project/educare/-/compare/1.0.8...1.0.9
