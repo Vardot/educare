@@ -100,7 +100,7 @@ default:
       component_id: sdc.vartheme_bs5_educare.section
       inputs:
         bg_edge2edge: true
-        columns: 67-33
+        columns: 60-40
         section_header: false
         section_footer: false
         gutter: 'gx-5 gy-5'
@@ -138,8 +138,8 @@ default:
         aos_once: true
         padding_block_start: pt-5
         padding_block_end: pb-5
-        padding_inline_start: ps-5
-        padding_inline_end: pe-5
+        padding_inline_start: ps-4
+        padding_inline_end: pe-4
         direction: horizontal
     -
       parent_uuid: 073531b6-8ae0-4c15-99dc-60977c14325a
