@@ -31,6 +31,12 @@ install:
 config:
   strict: false
   actions:
+    # The news card badge and the event date bind delta 0 of these fields, and
+    # Canvas fails to render a missing delta, so an empty value must not save.
+    field.field.node.news.field_news_categories:
+      setRequired: true
+    field.field.node.event.field_when:
+      setRequired: true
     # Canvas makes a component for every block as soon as the block exists, and
     # labels it in the install language, so on a non-English install a component
     # Canvas made before this recipe has another version than the English one

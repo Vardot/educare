@@ -19,9 +19,9 @@ Feature: Editorial - News post create, read, update and delete
   #     and a re-run is not blocked by leftovers.
   #
   # Field set read from the running site: Title (required), Description
-  # (required), Content (rich text), Categories (Community / Global / Research /
-  # Students), Tags, SEO title, SEO description, and a "Save as" moderation state
-  # (Draft / In review / Published) from the Editorial workflow.
+  # (required), Content (rich text), Categories (required; Community / Global /
+  # Research / Students), Tags, SEO title, SEO description, and a "Save as"
+  # moderation state (Draft / In review / Published) from the Editorial workflow.
 
   @check @crud @local @development
   Scenario: A News post can be created, read, updated and deleted
@@ -33,6 +33,7 @@ Feature: Editorial - News post create, read, update and delete
      When I fill in "Title" with "Functional testing suite - news round trip"
       And I fill in "Description" with "A News post created by the Educare functional testing suite."
       And I fill in the WYSIWYG field "Content" with the "<p>The body of the round-trip News post.</p>"
+      And I select "Global" from "#edit-field-news-categories"
       And I select "Published" from "#edit-moderation-state-0-state"
       And I submit by id "edit-submit"
       And I wait until the page is loaded
@@ -75,7 +76,8 @@ Feature: Editorial - News post create, read, update and delete
      Then I should not see "Functional testing suite - news round trip (revised)"
 
   # A required field is only a required field if saving without it is refused.
-  # Description is required on News; Title is required on every bundle.
+  # Description and Categories are required on News; Title is required on every
+  # bundle.
   @check @crud @local @development
   Scenario: A News post cannot be saved without its required fields
     Given I am a logged in user with the "webmaster" user
@@ -86,6 +88,7 @@ Feature: Editorial - News post create, read, update and delete
       And I wait until the page is loaded
      Then I should see "Title field is required"
       And I should see "Description field is required"
+      And I should see "Categories field is required"
       And I should not see "has been created"
 
   # A News post saved as a Draft must not be readable by the public. This is the
@@ -98,6 +101,7 @@ Feature: Editorial - News post create, read, update and delete
       And I wait until the page is loaded
       And I fill in "Title" with "Functional testing suite - unpublished news"
       And I fill in "Description" with "This draft must never be readable by an anonymous visitor."
+      And I select "Global" from "#edit-field-news-categories"
       And I select "Draft" from "#edit-moderation-state-0-state"
       And I submit by id "edit-submit"
       And I wait until the page is loaded

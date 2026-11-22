@@ -123,6 +123,7 @@ Feature: Editorial - Media create, read, update and delete
       And I wait until the page is loaded
       And I fill in "Title" with "Functional testing suite - news with media"
       And I fill in "Description" with "A News post carrying an uploaded featured image."
+      And I select "Global" from "#edit-field-news-categories"
       And I press "Add media" by its "id" attribute
       And I wait for the modal to appear
      Then I should see "Add or select media" in the modal

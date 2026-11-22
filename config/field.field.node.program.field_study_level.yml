@@ -11,7 +11,7 @@ entity_type: node
 bundle: program
 label: 'Study level'
 description: 'Whether this is an undergraduate or graduate program. Drives the catalog toggle.'
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
