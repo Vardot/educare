@@ -29,7 +29,7 @@ composer require drupal/educare:~1.0.0
 ```bash
 mkdir my_educare_site
 cd my_educare_site
-ddev config --project-type=drupal11 --docroot=web --php-version=8.4
+ddev config --project-type=drupal11 --docroot=web --php-version=8.5
 ddev start
 ddev composer create-project "drupal/varbase_project:~11.0.0"
 ddev composer require drupal/educare:~1.0.0
