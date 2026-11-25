@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.14] - 2026-11-25
+### Changed
+- Use caret constraints with ^11.4 || ^12.0 to allow Drupal 11.5 and Drupal 12 in Educare
+  ([#3639430](https://git.drupalcode.org/project/educare/-/work_items/3639430)).
+- Update the DDEV PHP version to 8.5 in the README
+  ([#3639428](https://git.drupalcode.org/project/educare/-/work_items/3639428)).
+
 ## [1.0.12] - 2026-11-22
 ### Added
 - A Drupal Canvas brand kit that restyles the whole site: the Bootstrap 5.3 colour variables
@@ -215,7 +222,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.12...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.14...1.0.x
+[1.0.14]: https://git.drupalcode.org/project/educare/-/compare/1.0.12...1.0.14
 [1.0.12]: https://git.drupalcode.org/project/educare/-/compare/1.0.11...1.0.12
 [1.0.11]: https://git.drupalcode.org/project/educare/-/compare/1.0.10...1.0.11
 [1.0.10]: https://git.drupalcode.org/project/educare/-/compare/1.0.9...1.0.10
