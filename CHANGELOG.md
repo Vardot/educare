@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.15] - 2026-11-26
+### Fixed
+- Install fails on Drupal 11.5: the Navigation Shortcuts Canvas component needs the removed navigation_shortcuts block ([#3639432](https://git.drupalcode.org/project/educare/-/work_items/3639432)).
+
 ## [1.0.14] - 2026-11-25
 ### Changed
 - Use caret constraints with ^11.4 || ^12.0 to allow Drupal 11.5 and Drupal 12 in Educare
@@ -222,7 +226,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Educare site template recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.14...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/educare/-/compare/1.0.15...1.0.x
+[1.0.15]: https://git.drupalcode.org/project/educare/-/compare/1.0.14...1.0.15
 [1.0.14]: https://git.drupalcode.org/project/educare/-/compare/1.0.12...1.0.14
 [1.0.12]: https://git.drupalcode.org/project/educare/-/compare/1.0.11...1.0.12
 [1.0.11]: https://git.drupalcode.org/project/educare/-/compare/1.0.10...1.0.11
